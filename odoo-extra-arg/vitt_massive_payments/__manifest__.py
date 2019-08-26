@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Massive Payments",
+    'name': "Massive Payment  ",
     'summary': """Massive Payments""",
     'description': """This application adds the functionality to pay Supplier Invoices using Odoo's standard Payments.
     The invoices can be selected from the view list and by using the new Action 'Massive Payments' it allows the user to define 
