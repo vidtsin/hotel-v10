@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_analytic_tags_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-07 00:02+0000\n"
+"PO-Revision-Date: 2017-11-06 18:03-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_HN\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#. module: vitt_analytic_tags_sale
+#: model:ir.model.fields,field_description:vitt_analytic_tags_sale.field_sale_order_line_account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: vitt_analytic_tags_sale
+#: model:ir.model.fields,field_description:vitt_analytic_tags_sale.field_sale_order_analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "Etiquetas Analíticas"
+
+#. module: vitt_analytic_tags_sale
+#: model:ir.model,name:vitt_analytic_tags_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: vitt_analytic_tags_sale
+#: model:ir.model,name:vitt_analytic_tags_sale.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"

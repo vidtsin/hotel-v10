@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hotel_quick_reservation_hotel_quick_reservation_manager,hotel_quick_reservation.hotel_quick_reservation.manager,model_hotel_quick_reservation,hotel.group_hotel_manager,1,1,1,1
+,,,,,,,
+access_hotel_quick_reservation_hotel_quick_reservation_user,hotel_quick_reservation.hotel_quick_reservation.user,model_hotel_quick_reservation,hotel.group_hotel_user,1,1,1,0

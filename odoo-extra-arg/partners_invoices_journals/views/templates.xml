@@ -1,0 +1,96 @@
+<odoo>
+    <template id="qweb_customer_invoice_journal">
+        <t t-call="report.html_container">
+            <t t-call="report.external_layout">
+              <div class="page" style="font-size:9px;" >
+                <h2 t-if="type!='customer'">Partners Invoices Journals</h2>
+                <h2 t-if="type!='supplier'">Customer Invoices Journals</h2>
+                  <div class="row">
+                      <div class="col-xs-6" >
+                          <t t-foreach="filters2" t-as="filters">
+                              <span t-esc="filters"/><br/>
+                          </t>
+                      </div>
+                      <div class="col-xs-6" >
+                      </div>
+                  </div>
+                <table class="table table-condensed">
+                  <thead>
+                    <tr>
+                        <t t-foreach="len(list_titles)" t-as="title">
+                            <t t-if="list_align[title]=='center'">
+                                <th style="text-align:center;"><span t-esc="list_titles[title]"/></th>
+                            </t>
+                            <t t-if="list_align[title]=='right'">
+                                <th style="text-align:right;"><span t-esc="list_titles[title]"/></th>
+                            </t>
+                        </t>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <t t-set="qty" t-value="len(list_titles)"/>
+                    <tr t-foreach="print_data" t-as="data">
+                        <!--span t-esc="qty"/-->
+                        <t t-foreach="qty" t-as="index">
+                            <t t-if="list_align[index]=='center'">
+                                <td style="text-align:center;">
+                                   <span t-esc="data[1][index]"/>
+                                </td>
+                            </t>
+                            <t t-if="list_align[index]=='right'">
+                                <td style="text-align:right;">
+                                   <span t-esc="'%.2f' % data[1][index]"/>
+                                </td>
+                            </t>
+                        </t>
+                    </tr>
+                    <tr t-if="tot_cur>0">
+                        <t t-foreach="qty" t-as="index">
+                            <td style="text-align:right;">
+                                <t t-if="index==(qty-1)">
+                                    <span t-esc="'%.2f' % tot_cur"/>
+                                </t>
+                            </td>
+                        </t>
+                    </tr>
+                  </tbody>
+                </table>
+                  <br/>
+                <table class="table table-condensed">
+                  <thead>
+                      <tr>
+                          <th >Totales por Moneda</th>
+                          <th >Monto</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr t-foreach="curtotals" t-as="cur">
+                          <td>
+                              <span t-esc="cur"/>
+                          </td>
+                          <td>
+                              <span t-esc="curtotals[cur]"/>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>
+                  <br/>
+                <table class="table table-condensed">
+                  <tbody>
+                      <tr t-foreach="inv_qty" t-as="qty">
+                          <td>
+                              <span t-esc="qty"/>
+                          </td>
+                          <td>
+                              <span t-esc="inv_qty[qty]"/>
+                          </td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--template id="statement_document_template" inherit_id="customer_outstanding_statement.statement_document">
+        <xpath expr="//th[@name='td_sched_date_h']" position="after">
+            <th t-if="o.who_receive"><strong>Quien Recibe</strong></th>
+        </xpath>
+    </template-->
+    <record id="wizard_cos_report_view" model="ir.ui.view">
+        <field name="name">wizard_cos_report_view</field>
+        <field name="model">customer.outstanding.statement.wizard2</field>
+        <field name="inherit_id" ref="customer_outstanding_statement.customer_outstanding_statement_wizard_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/div" position="replace">
+            </xpath>
+            <xpath expr="//form/hr" position="replace">
+            </xpath>
+            <xpath expr="//button[@name='button_export_pdf']" position="replace">
+                <button name="doit" string="EXECUTE" type="object" default_focus="1" class="oe_highlight"/>
+            </xpath>
+            <field name="show_aging_buckets" position="after">
+                <field name="print_by"/>
+                <field name="type" invisible="1"/>
+            </field>
+            <field name="date_end" position="before">
+                <field name="c_partner_ids" widget="many2many_tags" attrs="{'invisible': [('type','=','supplier')]}"/>
+                <field name="p_partner_ids" widget="many2many_tags" attrs="{'invisible': [('type','=','customer')]}"/>
+            </field>
+
+        </field>
+    </record>
+
+    <record id="action_cos_report" model="ir.actions.act_window">
+        <field name="name">Customer Outstanding Statement</field>
+        <field name="res_model">customer.outstanding.statement.wizard2</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type': 'customer'}</field>
+    </record>
+    <record id="action_sos_report" model="ir.actions.act_window">
+        <field name="name">Supplier Outstanding Statement</field>
+        <field name="res_model">customer.outstanding.statement.wizard2</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type': 'supplier'}</field>
+    </record>
+    <record id="action_cos_report_c" model="ir.actions.act_window.view">
+        <field eval="1" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="vitt_customer_outstanding_statement.wizard_cos_report_view"/>
+        <field name="act_window_id" ref="action_sos_report"/>
+    </record>
+    <record id="action_cos_report_p" model="ir.actions.act_window.view">
+        <field eval="1" name="sequence"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="vitt_customer_outstanding_statement.wizard_cos_report_view"/>
+        <field name="act_window_id" ref="action_cos_report"/>
+    </record>
+
+    <menuitem name="Comercial Reports"
+        id="menu_comercial_report"
+        parent="account.menu_finance_reports"
+        sequence="6"
+    />
+    <menuitem name="Customer Outstanding Statement"
+        id="menu_cos_report"
+        parent="vitt_customer_outstanding_statement.menu_comercial_report"
+        action="action_cos_report"
+        sequence="6"
+    />
+    <menuitem name="Supplier Outstanding Statement"
+        id="menu_sos_report"
+        parent="vitt_customer_outstanding_statement.menu_comercial_report"
+        action="action_sos_report"
+        sequence="6"
+    />
+
+
+    #REPORT
+    <data noupdate="1">
+        <record id="pf_cos_report" model="report.paperformat">
+            <field name="name">Customer Outstanding Statement</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">45</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">40</field>
+            <field name="dpi">90</field>
+        </record>
+    </data>
+
+    <report id="action_print_customer_outstanding_statement"
+        model="res.partner"
+        report_type="qweb-html"
+        menu="False"
+        string="Statement Action to HTML"
+        name="vitt_customer_outstanding_statement.statement"
+        file="vitt_customer_outstanding_statement.statement"
+    />
+
+    <template id="statement">
+        <t t-call="customer_outstanding_statement.statement"/>
+    </template>
+
+</odoo>

@@ -1,0 +1,65 @@
+<odoo>
+    <data>
+        #route report
+        <record id="paperformat_route_report" model="report.paperformat">
+            <field name="name">Routes Report</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">20</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report
+            id="vitt_route_report_routereport"
+            model="stock.picking"
+            string="Informe de Ruta"
+            report_type="qweb-pdf"
+            name="vitt_route_report.routereport"
+            file="vitt_route_report.routereport"
+            paperformat="paperformat_route_report"
+            menu="False"
+        />
+
+        <record id="route_report_form" model="ir.ui.view">
+            <field name="model">catanese.report.route</field>
+            <field name="name">catanese.report.route</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date" />
+                        <field name="freight" />
+                        <field name="hours" />
+                    </group>
+                    <footer>
+                        <button string="Ejecutar" name="ex_routereport" type="object" class="oe_highlight"/>
+                        <button name="Print_to_excel" string="Print Excel" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="wizard_route_report" model="ir.actions.act_window">
+            <field name="name">Informe de Ruta</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="res_model">catanese.report.route</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_wizard_route report"
+            name="Informe de Ruta"
+            parent="stock.menu_warehouse_report"
+            action="vitt_route_report.wizard_route_report"
+            sequence="120"
+        />
+
+
+  </data>
+</odoo>

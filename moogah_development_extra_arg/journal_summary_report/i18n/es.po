@@ -1,0 +1,424 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* journal_summary_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-15 18:16+0000\n"
+"PO-Revision-Date: 2019-02-15 16:11-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:611
+#, python-format
+msgid "%s <br/>%s"
+msgstr "%s <br/>%s"
+
+#. module: journal_summary_report
+#: model:ir.model,name:journal_summary_report.model_account_report_context_common
+msgid "A particular context for a financial report"
+msgstr "Contexto particular de reporte financiero"
+
+#. module: journal_summary_report
+#: model:ir.model,name:journal_summary_report.model_journal_summary_context_report
+msgid "A particular context for the journal summary"
+msgstr "Un contexto particular para el Resumen de Asientos"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:452
+#: code:addons/journal_summary_report/models/journal_summary_report.py:455
+#, python-format
+msgid "Account No."
+msgstr "Nro. Cuenta"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_account_ids
+msgid "Account ids"
+msgstr "Cuentas"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_account_type_ids
+msgid "Account type ids"
+msgstr "Ids Tipo Cuenta"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_analytic
+msgid "Allow analytic accounting"
+msgstr "Permitir Contabilidad Analítica"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_multi_company
+msgid "Allow multi-company"
+msgstr "Permitir multi-compañía"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_analytic_account_ids
+msgid "Analytic account ids"
+msgstr "Ids Cuenta Analítica"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_analytic_tag_ids
+msgid "Analytic tag ids"
+msgstr "Ids Etiquetas Analíticas"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:14
+#, python-format
+msgid "April"
+msgstr "Abril"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:610
+#, python-format
+msgid "As of %s"
+msgstr "Tal como %s"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:18
+#, python-format
+msgid "August"
+msgstr "Agosto"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_available_company_ids
+msgid "Available company ids"
+msgstr "Ids disponibles en la compañía"
+
+#. module: journal_summary_report
+#: model:ir.ui.view,arch_db:journal_summary_report.view_journal_summary_report_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:455
+#, python-format
+msgid "Comment"
+msgstr "Comentario"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_company_ids
+msgid "Company ids"
+msgstr "Ids de Compañía"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_create_uid
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_create_date
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:452
+#: code:addons/journal_summary_report/models/journal_summary_report.py:455
+#, python-format
+msgid "Credit"
+msgstr "Crédito"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_customer_invoices
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_vendor_invoices
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_customer_invoices
+msgid "Customer Invoices"
+msgstr "Facturas Clientes"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_customer_receipts
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_customer_receipts
+msgid "Customer Receipts"
+msgstr "Recibos Clientes"
+
+#. module: journal_summary_report
+#: model:ir.ui.view,arch_db:journal_summary_report.internal_layout
+msgid "Daily Journal:"
+msgstr "Diario del Día:"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:447
+#: code:addons/journal_summary_report/models/journal_summary_report.py:449
+#: code:addons/journal_summary_report/models/journal_summary_report.py:455
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:452
+#: code:addons/journal_summary_report/models/journal_summary_report.py:455
+#, python-format
+msgid "Debit"
+msgstr "Débito"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:22
+#, python-format
+msgid "December"
+msgstr "Diciembre"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:452
+#: code:addons/journal_summary_report/models/journal_summary_report.py:455
+#, python-format
+msgid "Description"
+msgstr "Descripción"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_analytic_account_dimension_id
+msgid "Dimension"
+msgstr "Dimensión"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_display_name
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_display_name
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_end_date
+msgid "End Date"
+msgstr "Fecha de Fin"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:12
+#, python-format
+msgid "February"
+msgstr "Febrero"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_footnotes
+msgid "Footnotes"
+msgstr "Píes de Pagina"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_id
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_id
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:11
+#, python-format
+msgid "January"
+msgstr "Enero"
+
+#. module: journal_summary_report
+#: selection:journal.summary.context.report,sort_by:0
+#: selection:journal.summary.report.wizard,sort_by:0
+msgid "Journal Entry Date"
+msgstr "Fecha de Asiento"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:447
+#: code:addons/journal_summary_report/models/journal_summary_report.py:449
+#: code:addons/journal_summary_report/models/journal_summary_report.py:455
+#, python-format
+msgid "Journal Entry No"
+msgstr "Nro. de Asiento"
+
+#. module: journal_summary_report
+#: model:ir.ui.view,arch_db:journal_summary_report.view_journal_summary_report_wizard
+msgid "Journal Entry Summary for: (section)"
+msgstr "Resumen de Asientos para:"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:390
+#: model:ir.ui.menu,name:journal_summary_report.menu_action_journal_summary_report_wizard
+#, python-format
+msgid "Journal Summary"
+msgstr "Resumen de Asientos"
+
+#. module: journal_summary_report
+#: model:ir.actions.client,name:journal_summary_report.action_journal_summary_report
+#: model:ir.model,name:journal_summary_report.model_journal_summary_report
+msgid "Journal Summary Report"
+msgstr "Resumen de Asientos"
+
+#. module: journal_summary_report
+#: model:ir.actions.act_window,name:journal_summary_report.action_journal_summary_report_wizard
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_wizard_id
+msgid "Journal Summary Wizard"
+msgstr "Wizard de Resumen de Asientos"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:17
+#, python-format
+msgid "July"
+msgstr "Julio"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:16
+#, python-format
+msgid "June"
+msgstr "Junio"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report___last_update
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report___last_update
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_write_uid
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Actualización por"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_write_date
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización el"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_legal_no
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_legal_no
+msgid "Legal Ser.No."
+msgstr "Legal Ser.No."
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:13
+#, python-format
+msgid "March"
+msgstr "Marzo"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:15
+#, python-format
+msgid "May"
+msgstr "Mayo"
+
+#. module: journal_summary_report
+#: selection:journal.summary.context.report,sort_by:0
+#: selection:journal.summary.report.wizard,sort_by:0
+msgid "Monthly summary"
+msgstr "Resumen Mensual"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:21
+#, python-format
+msgid "November"
+msgstr "Noviembre"
+
+#. module: journal_summary_report
+#: selection:journal.summary.context.report,sort_by:0
+#: selection:journal.summary.report.wizard,sort_by:0
+msgid "Number"
+msgstr "Número"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:20
+#, python-format
+msgid "October"
+msgstr "Octubre"
+
+#. module: journal_summary_report
+#: model:ir.ui.view,arch_db:journal_summary_report.view_journal_summary_report_wizard
+msgid "Open"
+msgstr "Abiertos"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:347
+#, python-format
+msgid "Payments / "
+msgstr "Pagos / "
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:345
+#, python-format
+msgid "Purchases / "
+msgstr "Compras / "
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:603
+#, python-format
+msgid "Quarter #"
+msgstr "Trimestre #"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_account_range
+msgid "Range"
+msgstr "Rango"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:349
+#, python-format
+msgid "Receipts / "
+msgstr "Recibos / "
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:447
+#, python-format
+msgid "Reg. Number"
+msgstr "Número Reg."
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:343
+#, python-format
+msgid "Sales / "
+msgstr "Ventas / "
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:19
+#, python-format
+msgid "September"
+msgstr "Septiembre"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_show_reg_number
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_show_reg_number
+msgid "Show Reg. Number"
+msgstr "Mostrar Nro. Registro"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_sort_by
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_sort_by
+msgid "Sort by"
+msgstr "Ordenar por"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_start_date
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+#. module: journal_summary_report
+#: code:addons/journal_summary_report/models/journal_summary_report.py:356
+#: code:addons/journal_summary_report/models/journal_summary_report.py:371
+#, python-format
+msgid "Summary Journal Transaction"
+msgstr "Transacción Resumen de Asientos"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_supplier_payments
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_supplier_payments
+msgid "Supplier Payments"
+msgstr "Pagos Proveedor"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_context_report_unfolded_accounts
+msgid "Unfolded lines"
+msgstr "Líneas desplegadas"
+
+#. module: journal_summary_report
+#: model:ir.model.fields,field_description:journal_summary_report.field_journal_summary_report_wizard_vendor_invoices
+msgid "Vendor Bills"
+msgstr "Facturas Proveedor"
+
+#. module: journal_summary_report
+#: model:ir.model,name:journal_summary_report.model_journal_summary_report_wizard
+msgid "Wizard that show the journal summary report"
+msgstr "Wizard que muestra el Resumen de Asientos "

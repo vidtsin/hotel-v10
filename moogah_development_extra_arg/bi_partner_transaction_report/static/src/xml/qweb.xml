@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<templates xml:space="preserve">
+   <t t-extend="accountReports.searchView">
+        <t t-jquery="div.o_account_reports_date-filter" t-operation="after">
+            <div class="btn-group o_dropdown o_account_reports_date-filter-bool" t-if="context.new_filter_unfold_all">
+                <a type="button" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="fa fa-filter"/> Options:
+                    <span class="caret"/>
+                </a>
+                <ul class="dropdown-menu o_filters_menu" role="menu">
+                    <li t-if="!report_type.filter_unfold_all" title="Unfold" data-value="filter_unfold_all" t-att-class="'o_account_reports_one-filter-bool ' + (context.filter_unfold_all and 'selected' or '')"><a>Unfold All</a></li>
+                </ul>
+            </div>
+        </t>
+   </t>
+</templates>

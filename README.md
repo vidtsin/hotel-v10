@@ -1,1 +1,1 @@
-# hotel-v10
+# installation_tests_apps

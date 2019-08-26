@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="True">    
+        <!-- rename to Other Taxes and use sequence 10 -->
+        <!-- <record id="account.tax_group_taxes" model="account.tax.group">
+            <field name="name">Other Taxes</field>
+            <field name="sequence">10</field>
+        </record> -->
+    <!-- IVAS -->
+        <record model="account.tax.group" id="tax_group_iva_no_corresponde">
+            <field name="name">IVA No Corresponde</field>
+            <field name="afip_code">0</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_iva_no_gravado">
+            <field name="name">IVA No Gravado</field>
+            <field name="afip_code">1</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_iva_exento">
+            <field name="name">IVA Exento</field>
+            <field name="afip_code">2</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_iva_0">
+            <field name="name">IVA 0%</field>
+            <field name="afip_code">3</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_iva_10">
+            <field name="name">IVA 10.5%</field>
+            <field name="afip_code">4</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_iva_21">
+            <field name="name">IVA 21%</field>
+            <field name="afip_code">5</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_iva_27">
+            <field name="name">IVA 27%</field>
+            <field name="afip_code">6</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_iva_gravado">
+            <field name="name">IVA Gravado</field>
+            <field name="afip_code">7</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_iva_5">
+            <field name="name">IVA 5%</field>
+            <field name="afip_code">8</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_iva_25">
+            <field name="name">IVA 2,5%</field>
+            <field name="afip_code">9</field>
+            <field name="tax">vat</field>
+            <field name="type">tax</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+	<!-- Tax Groups created for special VAT Taxes where fiscal positions are used to replace the tax rates -->
+
+        <record model="account.tax.group" id="tax_group_c_mt">
+            <field name="name">Monotributo</field>
+            <field name="afip_code">0</field>
+            <field name="tax">other</field>
+            <field name="type">other</field>
+            <field name="application">others</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_c_cf">
+            <field name="name">Consumidor Final</field>
+            <field name="afip_code">0</field>
+            <field name="tax">other</field>
+            <field name="type">other</field>
+            <field name="application">others</field>
+        </record>
+
+
+    <!-- TODO, por ahora creamos sufrida y aplicada para cada uno porque entendemos que son impuestos diferentes pero tal vez en el futuro se puedan unidifcar, es mas facil unificar después que separarlos en el futuro -->
+    <!-- Percepción IVA -->
+
+        <record model="account.tax.group" id="tax_group_percepcion_iva_sufrida">
+            <field name="name">Percepción IVA sufrida</field>
+            <field name="afip_code">1</field>
+            <field name="tax">vat</field>
+            <field name="type">perception</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_percepcion_iva_aplicada">
+            <field name="name">Percepción IVA aplicada</field>
+            <field name="afip_code">1</field>
+            <field name="tax">vat</field>
+            <field name="type">perception</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+    <!-- Percepcion Ganancias -->
+        <record model="account.tax.group" id="tax_group_percepcion_ganancias_sufrida">
+            <field name="name">Percepción Ganancias sufrida</field>
+            <field name="afip_code">1</field>
+            <field name="tax">profits</field>
+            <field name="type">perception</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_percepcion_ganancias_aplicada">
+            <field name="name">Percepción Ganancias aplicada</field>
+            <field name="afip_code">1</field>
+            <field name="tax">profits</field>
+            <field name="type">perception</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+    <!-- Percepcion IIBB -->
+    <!-- Vamos a tratar de que la info de que provincia esté en el impuesto u otro lugar -->
+        <record model="account.tax.group" id="tax_group_percepcion_iibb_sufrida">
+            <field name="name">Percepción IIBB sufrida</field>
+            <field name="afip_code">2</field>
+            <field name="tax">gross_income</field>
+            <field name="type">perception</field>
+            <field name="application">provincial_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_percepcion_iibb_aplicada">
+            <field name="name">Percepción IIBB aplicada</field>
+            <field name="afip_code">2</field>
+            <field name="tax">gross_income</field>
+            <field name="type">perception</field>
+            <field name="application">provincial_taxes</field>
+        </record>
+
+    <!-- Internal Taxes Sales -->
+        <record model="account.tax.group" id="tax_group_internal_taxes_sufrido">
+            <field name="name">Impuestos Internos sufridos</field>
+            <field name="afip_code">4</field>
+            <field name="tax">other</field>
+            <field name="type">tax</field>
+            <field name="application">internal_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_internal_taxes_aplicado">
+            <field name="name">Impuestos Internos aplicados</field>
+            <field name="afip_code">4</field>
+            <field name="tax">other</field>
+            <field name="type">tax</field>
+            <field name="application">internal_taxes</field>
+        </record>
+
+    <!-- Retencion IVA -->
+
+        <record model="account.tax.group" id="tax_group_withholding_iva_sufrida">
+            <field name="name">Retención IVA sufrida</field>
+            <field name="afip_code">1</field>
+            <field name="tax">vat</field>
+            <field name="type">withholding</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_withholding_iva_aplicada">
+            <field name="name">Retención IVA aplicada</field>
+            <field name="afip_code">1</field>
+            <field name="tax">vat</field>
+            <field name="type">withholding</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+    <!-- Retencion Ganancias -->
+        <record model="account.tax.group" id="tax_group_withholding_ganancias_sufrida">
+            <field name="name">Retención Ganancias sufrida</field>
+            <field name="afip_code">1</field>
+            <field name="tax">profits</field>
+            <field name="type">withholding</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_withholding_ganancias_aplicada">
+            <field name="name">Retención Ganancias aplicada</field>
+            <field name="afip_code">1</field>
+            <field name="tax">profits</field>
+            <field name="type">withholding</field>
+            <field name="application">national_taxes</field>
+        </record>
+
+    <!-- Retención IIBB -->
+        <record model="account.tax.group" id="tax_group_withholding_iibb_sufrida">
+            <field name="name">Retención IIBB sufrida</field>
+            <field name="afip_code">2</field>
+            <field name="tax">gross_income</field>
+            <field name="type">withholding</field>
+            <field name="application">provincial_taxes</field>
+        </record>
+
+        <record model="account.tax.group" id="tax_group_withholding_iibb_aplicada">
+            <field name="name">Retención IIBB aplicada</field>
+            <field name="afip_code">2</field>
+            <field name="tax">gross_income</field>
+            <field name="type">withholding</field>
+            <field name="application">provincial_taxes</field>
+        </record>
+
+    <!-- Account Tags for Accounts used for the setup begins -->
+
+        <record id="tag_setup_01" model="account.account.tag">
+            <field name="name">Cuenta de Setup</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+    <!-- Account Tags for Accounts used for the setup ends -->
+    
+    <!-- Account Tags for Accounts used for the finantial reports -->
+
+        <record id="tag_acc_report_01" model="account.account.tag">
+            <field name="name">Tarjetas de Crédito</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_02" model="account.account.tag">
+            <field name="name">Activos Corrientes</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_03" model="account.account.tag">
+            <field name="name">Pasivos Corrientes</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_04" model="account.account.tag">
+            <field name="name">Depreciacion</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_05" model="account.account.tag">
+            <field name="name">Costos Directos</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_06" model="account.account.tag">
+            <field name="name">Patrimonio</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_07" model="account.account.tag">
+            <field name="name">Gastos</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_08" model="account.account.tag">
+            <field name="name">Activos Fijos</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_09" model="account.account.tag">
+            <field name="name">Caja y Bancos</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_10" model="account.account.tag">
+            <field name="name">Activos No Corrientes</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_11" model="account.account.tag">
+            <field name="name">Pasivos No Corrientes</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_12" model="account.account.tag">
+            <field name="name">Otros Ingresos</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_13" model="account.account.tag">
+            <field name="name">Cuentas x Pagar</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_14" model="account.account.tag">
+            <field name="name">Anticipos</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_15" model="account.account.tag">
+            <field name="name">Cuentas x Cobrar</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_16" model="account.account.tag">
+            <field name="name">Resultados</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_17" model="account.account.tag">
+            <field name="name">Creditos Fiscales</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_18" model="account.account.tag">
+            <field name="name">Otros Creditos</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_19" model="account.account.tag">
+            <field name="name">Otras Inversiones</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_20" model="account.account.tag">
+            <field name="name">Activos Intangibles</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_21" model="account.account.tag">
+            <field name="name">Otras Deudas a Pagar</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_22" model="account.account.tag">
+            <field name="name">Deudas Fiscales</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_23" model="account.account.tag">
+            <field name="name">Deudas Bancarias</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_24" model="account.account.tag">
+            <field name="name">Cargas Sociales</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_25" model="account.account.tag">
+            <field name="name">Ingresos</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_26" model="account.account.tag">
+            <field name="name">Gastos Administracion</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_27" model="account.account.tag">
+            <field name="name">Gastos Comercializacion</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_28" model="account.account.tag">
+            <field name="name">Gastos Estructura</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="tag_acc_report_29" model="account.account.tag">
+            <field name="name">Gastos Bancarios</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+    <!-- Account Tags for Accounts used for the finantial reports -->
+
+    </data>
+</odoo>

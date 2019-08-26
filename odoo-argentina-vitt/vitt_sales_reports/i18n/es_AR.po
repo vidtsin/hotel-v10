@@ -1,0 +1,1365 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_sales_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-15 16:59+0000\n"
+"PO-Revision-Date: 2019-03-15 14:03-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.menu_action_arba_perc_report
+msgid "ARBA Percepciones"
+msgstr "ARBA Percepciones"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.menu_action_arba_wh_report
+msgid "ARBA Withholdings"
+msgstr "ARBA Retenciones"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.act_arciba_norm_codes
+#: model:ir.ui.menu,name:vitt_sales_reports.menu_action_arciba_norm_codes
+msgid "ARCIBA - Norm Codes"
+msgstr "ARCIBA - Códigos de Norma"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.menu_action_arciba_report
+msgid "ARCIBA - Withholdings/Perceptions"
+msgstr "ARCIBA - Retenciones/Percepciones"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/account_payment.py:27
+#, python-format
+msgid "Already Exist an Invoice with the same number, not allowed"
+msgstr "Una Factura ya existe con este número, no está permitido registros con el mismo Nro. Oficial"
+
+#. module: vitt_sales_reports
+#: selection:arba.report.wizard,oper_type:0
+msgid "Alta"
+msgstr "Alta"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.act_arba_perc_report
+msgid "Arba Perceptions Report"
+msgstr "ARBA Informe de Percepciones"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.act_arba_wh_report
+msgid "Arba Withholdings Report"
+msgstr "ARBA Informe de Retenciones"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_account_tax_sicore_norm
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_name
+msgid "Arciba Norm Code"
+msgstr "ARCIBA - Código de Norma"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.act_arciba_report
+msgid "Arciba Report"
+msgstr "Informe ARCIBA"
+
+#. module: vitt_sales_reports
+#: selection:arba.report.wizard,oper_type:0
+msgid "Baja"
+msgstr "Baja"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:555
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:525
+#, python-format
+msgid "Base"
+msgstr "N.G."
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:244
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:271
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:226
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:253
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+#, python-format
+msgid "CUIT/CUIL"
+msgstr "CUIT/CUIL"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:217
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:198
+#, python-format
+msgid "CUIT: "
+msgstr "CUIT: "
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.SIFERE_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.SIRE_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.arba_report_wizard
+#: model:ir.ui.view,arch_db:vitt_sales_reports.arciba_customs_report_wizard
+#: model:ir.ui.view,arch_db:vitt_sales_reports.arciba_report_wizard
+#: model:ir.ui.view,arch_db:vitt_sales_reports.pl_vat_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.sicore_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.sl_vat_report_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,help:vitt_sales_reports.sicore_codes_action
+msgid "Click here to define a new code."
+msgstr "Hacer clic para definir un nuevo código."
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_vatcode_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_vatcode_id
+msgid "Cod IVA"
+msgstr "Cód. IVA"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_percep_code
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_percep_code
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_wh_id
+msgid "Cod Percepcion"
+msgstr "Cód. Percepción"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_wh_code
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_wh_code
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore_wh_code
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_wh_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_wh_id
+msgid "Cod Retencion"
+msgstr "Cód Retención"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_jurisd_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_jurisd_id
+msgid "Cod de jurisdiccion"
+msgstr "Cód. Jurisdicción"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_account_payment_sicore_tax_code
+msgid "Codigo SICORE"
+msgstr "Cód. SICORE"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_res_country_state_afip_code
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_codes_name
+msgid "Codigo SIFERE"
+msgstr "Cód. SICORE"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.view_account_payment2_from_group_tree_inherit
+msgid "Codigo Sicore"
+msgstr "Cód. SICORE"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_account_tax_sicore_tax_code
+msgid "Codigo afip"
+msgstr "Cód. SICORE"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_account_payment_regcode
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_account_tax_regcode
+msgid "Codigo de regimen"
+msgstr "Cód. Régimen"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.sicore_codes_action
+#: model:ir.ui.menu,name:vitt_sales_reports.menu_sicore_codes_action
+msgid "Codigos Sicore"
+msgstr "Lista Códigos SICORE"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_nl_setting_block_nc_acc_control
+msgid "Control en Notas de Credito para valores de Cuentas Contables"
+msgstr "Control en Notas de Credito para valores de Cuentas Contables"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.new_view_nl_setting
+msgid "Controles CITI"
+msgstr "Controles CITI"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.new_view_nl_setting
+msgid "Controles Notas de Crédito (Compras) - Imp. Retenciones"
+msgstr "Controles Notas de Crédito (Compras) - Imp. Retenciones"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.new_view_nl_setting
+msgid "Controles Notas de Crédito ARCIBA"
+msgstr "Controles Notas de Crédito ARCIBA"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_res_country_state
+msgid "Country state"
+msgstr "Provincia"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_extended_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvat_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvatpl_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_codes_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sire_extended_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportciti_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_create_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_extended_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvat_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvatpl_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_codes_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sire_extended_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportciti_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_create_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.nc_menu_pl_ledger
+#: model:ir.ui.menu,name:vitt_sales_reports.nc_menu_sl_ledger
+msgid "Credit Notes"
+msgstr "Notas de Crédito"
+
+#. module: vitt_sales_reports
+#: selection:sicore.norm.codes,tax_scope:0
+msgid "Customer Payment"
+msgstr "Pago de Cliente"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_date_from
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_date_from
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_date_from
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportciti_date_from
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore_date_from
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_date_from
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_date_from
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_date_from
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_date_from
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_date_from
+msgid "Date From"
+msgstr "Fecha Desde"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_date_to
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_date_to
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_date_to
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportciti_date_to
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore_date_to
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_date_to
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_date_to
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_date_to
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_date_to
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_date_to
+msgid "Date To"
+msgstr "Fecha Hasta"
+
+#. module: vitt_sales_reports
+#: model:nl.setting.block,overdue_msg:vitt_sales_reports.default_nl_setting
+msgid ""
+"Dear Sir/Madam,\n"
+"\n"
+"Our records indicate that some payments on your account are still due. Please find details below.\n"
+"If the amount has already been paid, please disregard this notice. Otherwise, please forward us the total amount stated below.\n"
+"If you have any queries regarding your account, Please contact us.\n"
+"\n"
+"Thank you in advance for your cooperation.\n"
+"Best Regards,"
+msgstr ""
+"Estimado/a,\n"
+"\n"
+"Nuestros registros indican que existen pagos pendiente en su cuenta. Por favor, revise el detalle incluido a continuación \n"
+"Si el monto indicado ya ha sido pagado, por favor ignore este aviso. De lo contrario, le solicitamos que realice el pago pendiente.\n"
+"Si tiene alguna pregunta respecto al estado de su cuenta, por favor contáctenos.\n"
+"\n"
+"Le agradecemos su cooperación.\n"
+"Atentamente,"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/ArcibaReport_wizard.py:76
+#, python-format
+msgid "Debe Completar al menos 1 campo, jurisdiccion o impuesto"
+msgstr "Debe Completar al menos un campo, Jurisdicción o Impuesto"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/ARBAReport_wizard.py:114
+#: code:addons/vitt_sales_reports/wizard/ArcibaReport_wizard.py:259
+#, python-format
+msgid "Debe Completar al menos un codigo de Percepcion"
+msgstr "Debe Completar al menos un Código de Percepción"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/ARBAReport_wizard.py:64
+#: code:addons/vitt_sales_reports/wizard/ArcibaReport_wizard.py:261
+#, python-format
+msgid "Debe Completar al menos un codigo de Retencion"
+msgstr "Debe Completar al menos un Código de Retención"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/ArcibaReport_wizard.py:74
+#, python-format
+msgid "Debe Completar solo 1 campo, jurisdiccion o impuesto"
+msgstr "Debe Completar solo 1 campo, Jurisdicción o Impuesto"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_comment
+msgid "Description"
+msgstr "Descripción"
+
+#. module: vitt_sales_reports
+#: selection:vitt_sales_reports.reportvat,det_level:0
+#: selection:vitt_sales_reports.reportvatpl,det_level:0
+msgid "Detallado"
+msgstr "Detallado"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/account_payment.py:111
+#, python-format
+msgid "Diferencias en valores contabilizados. La(s) Cta.(s) %s distinto en la(s) NC(s) que el registrado en la Factura de Proveedor. Por favor, revise los valores ingresados"
+msgstr "Diferencias en valores contabilizados. La(s) Cta.(s) %s distinto en la(s) NC(s) que el registrado en la Factura de Proveedor. Por favor, revise los valores ingresados"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_extended_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvat_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvatpl_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_codes_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sire_extended_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportciti_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_display_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_excel_file_p_alic
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_excel_file_p_cbte
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_excel_file_p_imp
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_excel_file_v_alic
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_excel_file_v_cbte
+msgid "Download"
+msgstr "Descargar"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_excel_file
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_excel_file2
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sire_extended_excel_file
+msgid "Download TXT"
+msgstr "Descargar TXT"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_extended_excel_file
+msgid "Download report Excel"
+msgstr "Download report Excel"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:215
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:196
+#, python-format
+msgid "Empresa: "
+msgstr "Empresa: "
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_errors
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_file_errors
+msgid "Errores"
+msgstr "Errores"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,help:vitt_sales_reports.field_nl_setting_block_nc_paym
+msgid "Esta opcion aplica un control que no permite validar las Notas de Credito generadas desde Facturas de Proveedor si la factura de origen ya tiene un pago asociado"
+msgstr "Esta opcion aplica un control que no permite validar las Notas de Credito generadas desde Facturas de Proveedor si la factura de origen ya tiene un pago asociado"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,help:vitt_sales_reports.field_nl_setting_block_nc_acc_control
+msgid "Esta opcion aplica un control que verifica que los valores de las Cuentas Contables en Notas de Credito vinculadas a Facturas de Proveedor no sean superiores a las registradas en estas facturas"
+msgstr "Esta opcion aplica un control que verifica que los valores de las Cuentas Contables en Notas de Credito vinculadas a Facturas de Proveedor no sean superiores a las registradas en estas facturas"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_extended_file_name
+msgid "Excel File"
+msgstr "Excel File"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.view_excel_citi_extended
+#: model:ir.ui.view,arch_db:vitt_sales_reports.view_excel_form_extended
+#: model:ir.ui.view,arch_db:vitt_sales_reports.view_sire_form_extended
+msgid "Excel Report file"
+msgstr "Archivo Informe en Excel"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:253
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:235
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+#, python-format
+msgid "Exento"
+msgstr "Exento"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.CITI_SL_Report_action
+msgid "Exportacion del CITI"
+msgstr "Exportaciones - CITI"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.CITI_Reports_SL
+msgid "Exportaciones CITI"
+msgstr "Exportaciones - CITI"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.arba_report_wizard
+msgid "Exportar ARBA Percepciones"
+msgstr "Exportar ARBA Percepciones"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.arba_report_wizard
+msgid "Exportar ARBA Retenciones"
+msgstr "Exportar ARBA Retenciones"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.citi_report_form
+msgid "Exportar CITI"
+msgstr "Exportar CITI"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.SIFERE_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.SIRE_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.sicore_report_form
+msgid "Exportar TXT"
+msgstr "Exportar TXT"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.arciba_customs_report_wizard
+#: model:ir.ui.view,arch_db:vitt_sales_reports.arciba_report_wizard
+msgid "Exportar a TXT"
+msgstr "Exportar a TXT"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "F. Factura"
+msgstr "Fecha"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "Factura"
+msgstr "Factura"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "Factura borrador"
+msgstr "Factura Borrador"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "Factura cancelada"
+msgstr "Factura Cancelada"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "Factura de Proveedor"
+msgstr "Factura Proveedor"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/models.py:67
+#: code:addons/vitt_sales_reports/models/models.py:74
+#: code:addons/vitt_sales_reports/models/models.py:106
+#: code:addons/vitt_sales_reports/models/models.py:113
+#, python-format
+msgid "Factura no es del mismo proveedor: "
+msgstr "La Factura no corresponde al mismo proveedor: "
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/models.py:118
+#, python-format
+msgid "Factura no esta en el recibo: "
+msgstr "Factura no esta en el recibo: "
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:234
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:267
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:216
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:249
+#, python-format
+msgid "Fecha"
+msgstr "Fecha"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "I.Int"
+msgstr "Imp.Int"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_extended_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvat_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvatpl_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_codes_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sire_extended_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportciti_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_id
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:287
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:269
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+#, python-format
+msgid "IVA"
+msgstr "IVA"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_nl_setting_block_sl_arciba_tax_ids
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_res_company_sl_arciba_taxes
+msgid "Impuestos ARCIBA Ventas"
+msgstr "Impuestos ARCIBA Ventas"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:259
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:291
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:241
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:273
+#, python-format
+msgid "Impuestos Internos"
+msgstr "Impuestos Internos"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_vepaym
+msgid "Incluir Pago a Proveedores"
+msgstr "Incluir Pago a Proveedores"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_cupaym
+msgid "Incluir Recibos a Clientes"
+msgstr "Incluir Recibos a Clientes"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_account_tax_vatreport_included
+msgid "Incluir en Libros Iva"
+msgstr "Incluir en Libros IVA"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Linea de Factura"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_account_invoice_refund
+msgid "Invoice Refund"
+msgstr "Nota de Crédito"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.action_invoice_refund_in_tree_nc
+#: model:ir.actions.act_window,name:vitt_sales_reports.action_invoice_refund_out_tree_nc
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_journal_ids
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_journal_ids
+msgid "Journal"
+msgstr "Diario"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/account_payment.py:39
+#, python-format
+msgid "La NC no puede registrar Impuestos de Percepción en un mes distinto al de la factura de Origen. Por favor, borre el impuesto de percepción para recalcular los valores."
+msgstr "La NC no puede registrar Impuestos de Percepción en un mes distinto al de la factura de Origen. Por favor, borre el impuesto de percepción para re-calcular los valores."
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/account_payment.py:70
+#, python-format
+msgid "La factura NC tiene una cuenta que no esta presente en la factura original"
+msgstr "La factura NC tiene una cuenta que no esta presente en la factura original"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_extended___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvat___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvatpl___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_codes___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sire_extended___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportciti___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat___last_update
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_extended_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvat_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvatpl_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_codes_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sire_extended_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportciti_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_write_uid
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_extended_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvat_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_report_vitt_sales_reports_reportvatpl_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_codes_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sire_extended_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportciti_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsicore_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_vtas_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsifere_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportsire_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_write_date
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:238
+#, python-format
+msgid "Letra"
+msgstr "Letra"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.VAT_Reports_PL
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "Libro IVA Compras"
+msgstr "Libro IVA Compras"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.VAT_Reports_SL
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+msgid "Libro IVA Ventas"
+msgstr "Libro IVA Ventas"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "M. Base"
+msgstr "Neto Gravado"
+
+#. module: vitt_sales_reports
+#: selection:arba.report.wizard,oper_type:0
+msgid "Modificado"
+msgstr "Modificado"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "N.G."
+msgstr "N.G."
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:248
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:283
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:230
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:265
+#, python-format
+msgid "Neto Gravado"
+msgstr "Neto Gravado"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvat_det_level
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_vitt_sales_reports_reportvatpl_det_level
+msgid "Nivel de Detalle"
+msgstr "Nivel de Detalle"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_nl_setting_block_no_nc_partial
+msgid "No Calcular Percepciones en NC Parciales y en Meses distintos"
+msgstr "No Calcular Percepciones en NC Parciales y en Meses distintos"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:261
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:285
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:243
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:267
+#, python-format
+msgid "No Gravado"
+msgstr "No Gravado"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_nl_setting_block_nc_paym
+msgid "No Permitir validacion de Notas de Credito si ya existen Pagos asociados"
+msgstr "No Permitir la validación de Notas de Crédito si ya existen Pagos asociados"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:246
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:269
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:228
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:251
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+#, python-format
+msgid "Nombre"
+msgstr "Nombre"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:195
+#, python-format
+msgid "Nombre del Informe: Libro IVA Compras"
+msgstr "Nombre del Informe: Libro IVA Compras"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:214
+#, python-format
+msgid "Nombre del Informe: Libro IVA Ventas"
+msgstr "Nombre del Informe: Libro IVA Ventas"
+
+#. module: vitt_sales_reports
+#: selection:sicore.norm.codes,tax_scope:0
+msgid "None"
+msgstr "Ninguno"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "Nota de Credito"
+msgstr "Nota de Crédito"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "Nota de Credito de Proveedor"
+msgstr "Nota de Crédito Proveedor"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:240
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:279
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:222
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:261
+#, python-format
+msgid "Nro. Comp"
+msgstr "Nro. Comp"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "Nro.Factura"
+msgstr "Nro. Comp."
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_operation_type
+msgid "Operation type"
+msgstr "Tipo de Operación"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "P.IIBB"
+msgstr "P.IIBB"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "P.IVA"
+msgstr "P.IVA"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_nl_setting_block_citi_pl_box
+msgid "PL CITI mandatory fields"
+msgstr "Campos Obligatorios - CITI Compras"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+msgid "PRO-FORMA"
+msgstr "PRO-FORMA"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_percep
+msgid "Percep"
+msgstr "Percep"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:257
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:239
+#, python-format
+msgid "Percepcion IIBB"
+msgstr "Percepcion IIBB"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:255
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:237
+#, python-format
+msgid "Percepcion IVA"
+msgstr "Percepcion IVA"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:289
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:271
+#, python-format
+msgid "Percepciones"
+msgstr "Percepciones"
+
+#. module: vitt_sales_reports
+#: selection:sicore.norm.codes,operation_type:0
+msgid "Perception"
+msgstr "Percepción"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_do_wh
+msgid "Perceptions"
+msgstr "Percepciones"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:218
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:199
+#, python-format
+msgid "Periodo "
+msgstr "Periodo "
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/account_payment.py:16
+#, python-format
+msgid "Please, Complete Partner fields main id number, category and responsability type first"
+msgstr "Por favor, antes complete los campos en la empresa de Nro.Id. Tributario, Categoría y Tipo de Responsabilidad"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.pl_vat_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.sl_vat_report_form
+msgid "Print Excel"
+msgstr "Imprimir a Excel"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes_region
+msgid "Provincia"
+msgstr "Provincia"
+
+#. module: vitt_sales_reports
+#: selection:sicore.norm.codes,tax_scope:0
+msgid "Purchases"
+msgstr "Compras"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_file_name_p_alic
+msgid "REGINFO_CV_COMPRAS_ALICUOTAS"
+msgstr "REGINFO_CV_COMPRAS_ALICUOTAS"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_file_name_p_cbte
+msgid "REGINFO_CV_COMPRAS_CBTE"
+msgstr "REGINFO_CV_COMPRAS_CBTE"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_file_name_p_imp
+msgid "REGINFO_CV_COMPRAS_IMPORTACIONES"
+msgstr "REGINFO_CV_COMPRAS_IMPORTACIONES"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_file_name_v_alic
+msgid "REGINFO_CV_VENTAS_ALICUOTAS"
+msgstr "REGINFO_CV_VENTAS_ALICUOTAS"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_excel_citi_extended_file_name_v_cbte
+msgid "REGINFO_CV_VENTAS_CBTE"
+msgstr "REGINFO_CV_VENTAS_CBTE"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.VAT_PL_Report_action
+msgid "Reporte IVA Compras"
+msgstr "Informe IVA Compras"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.VAT_SL_Report_action
+msgid "Reporte IVA Ventas"
+msgstr "Informe IVA Ventas"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.report.xml,name:vitt_sales_reports.plvat_account_invoices
+msgid "Reporte de IVA Compras"
+msgstr "Informe IVA Compras"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.report.xml,name:vitt_sales_reports.slvat_account_invoices
+msgid "Reporte de IVA VENTAS"
+msgstr "Informe IVA Ventas"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.menu_finance_vatreports
+msgid "Reportes ARG"
+msgstr "Informes ARG"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.action_excel_form
+msgid "Reportes Excel"
+msgstr "Informes Excel"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.action_sicore_form
+msgid "Reportes SICORE"
+msgstr "Exportación - SICORE"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.action_sire_form
+msgid "Reportes SIRE"
+msgstr "Exportación - SIRE"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:242
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:273
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:224
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:255
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+#, python-format
+msgid "Resp IVA"
+msgstr "Cond. IVA"
+
+#. module: vitt_sales_reports
+#: selection:vitt_sales_reports.reportvat,det_level:0
+#: selection:vitt_sales_reports.reportvatpl,det_level:0
+msgid "Resumido"
+msgstr "Resumido"
+
+#. module: vitt_sales_reports
+#: selection:account.tax,type:0
+msgid "Retencion Acumulada"
+msgstr "Retención Acumulada"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/models.py:97
+#, python-format
+msgid "Retencion de tipo acumulada sin tipo mensual/anual: "
+msgstr "Impuesto de Retención de tipo \"Retención Acumulada\" sin tipo 'Pagos Acumulados' Mes/Año: "
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/models.py:91
+#: code:addons/vitt_sales_reports/models/models.py:123
+#, python-format
+msgid "Retencion de tipo factura sin factura cliente asociada: "
+msgstr "Retencion de tipo factura sin factura cliente asociada: "
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/models.py:78
+#: code:addons/vitt_sales_reports/models/models.py:87
+#, python-format
+msgid "Retencion de tipo factura sin factura proveedor asociada: "
+msgstr "Retencion de tipo factura sin factura proveedor asociada: "
+
+#. module: vitt_sales_reports
+#: selection:account.tax,type:0
+msgid "Retencion por Factura Proveedor"
+msgstr "Retención por Factura Proveedor"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.sicore_Compras
+msgid "SICORE - Compras"
+msgstr "SICORE - Compras"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.menu_action_arciba_customs_report
+msgid "SIFERE - Custom Perceptions"
+msgstr "SIFERE - Percepciones Aduaneras"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.act_arciba_customs_report
+msgid "SIFERE Customs Perceptions"
+msgstr "SIFERE - Percepciones Aduaneras"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.SIFERE_Report_action
+#: model:ir.ui.menu,name:vitt_sales_reports.SIFERE_PL
+msgid "SIFERE Percepciones - Proveedores"
+msgstr "SIFERE Percepciones - Proveedores"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.SIFERE_Report_action_vtas
+#: model:ir.ui.menu,name:vitt_sales_reports.SIFERE_SL
+msgid "SIFERE Percepciones - Retenciones en Recibos"
+msgstr "SIFERE Percepciones - Retenciones en Recibos"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.SIRE_Report_action
+#: model:ir.ui.menu,name:vitt_sales_reports.SIRE_form_2004
+msgid "SIRE - Form 2004"
+msgstr "SIRE - Form 2004"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_nl_setting_block_citi_sl_box
+msgid "SL CITI mandatory fields"
+msgstr "Campos Obligatorios - CITI Ventas"
+
+#. module: vitt_sales_reports
+#: selection:sicore.norm.codes,tax_scope:0
+msgid "Sales"
+msgstr "Ventas"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:277
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:220
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:259
+#, python-format
+msgid "Serie"
+msgstr "Serie"
+
+#. module: vitt_sales_reports
+#: model:ir.actions.act_window,name:vitt_sales_reports.Sicore_Report_action
+msgid "Sicore Compras"
+msgstr "Exportación - SICORE Compras"
+
+#. module: vitt_sales_reports
+#: selection:sicore.norm.codes,tax_scope:0
+msgid "Supplier Payment"
+msgstr "Pago a Proveedor"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.menu_tax_exports
+msgid "TAX Exports"
+msgstr "Exportaciones Impositivas"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_file_name
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_extended_file_name2
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sire_extended_file_name
+msgid "TXT File"
+msgstr "Archivo TXT"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.view_sicore_form_extended
+msgid "TXT Report file"
+msgstr "Archivo Informe en TXT"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.menu,name:vitt_sales_reports.menu_tax_reports
+msgid "Tax Reports"
+msgstr "Informes Impositivos"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_norm_codes_tax_scope
+msgid "Tax Scope"
+msgstr "Ámbito del impuesto"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_tax_ids
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:236
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:275
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:218
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:257
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+#, python-format
+msgid "Tipo Doc"
+msgstr "Tipo Doc."
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_oper_type
+msgid "Tipo de Operacion"
+msgstr "Tipo de Operación"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:264
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:281
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:246
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:263
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvat
+#: model:ir.ui.view,arch_db:vitt_sales_reports.reportvatpl
+#, python-format
+msgid "Total"
+msgstr "Total"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:522
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:492
+#, python-format
+msgid "Totales"
+msgstr "Totales"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizard.py:544
+#: code:addons/vitt_sales_reports/wizard/VATReport_wizardPL.py:514
+#, python-format
+msgid "Totales Agrupados"
+msgstr "Totales Agrupados"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_account_tax_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/account_payment.py:43
+#, python-format
+msgid "Una NC parcial no puede registrar Impuestos de Percepción. Por favor, borre el impuesto de percepción para recalcular los valores"
+msgstr "Una NC parcial no puede registrar Impuestos de Percepción. Por favor, borre el impuesto de percepción para re-calcular los valores"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arba_report_wizard_wh
+msgid "Wh"
+msgstr "Ret."
+
+#. module: vitt_sales_reports
+#: selection:sicore.norm.codes,operation_type:0
+msgid "Withholding"
+msgstr "Retención"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba_report_wizard_do_percep
+msgid "Withholdings"
+msgstr "Retenciones"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_arba_report_wizard
+msgid "arba.report.wizard"
+msgstr "arba.report.wizard"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_arciba_report_wizard
+msgid "arciba.report.wizard"
+msgstr "arciba.report.wizard"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_arciba2_report_wizard
+msgid "arciba2.report.wizard"
+msgstr "arciba2.report.wizard"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_account_tax_jurisdiction_code
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_arciba2_report_wizard_jurisdiction_code_ids
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes_name
+msgid "codigo jurisdiccion"
+msgstr "Cód. Jurisdicción"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_jurisdiction_codes_desc
+msgid "descripcion"
+msgstr "Descripción"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_excel_citi_extended
+msgid "excel.citi.extended"
+msgstr "excel.citi.extended"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_excel_extended
+msgid "excel.extended"
+msgstr "excel.extended"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_jurisdiction_codes
+msgid "jurisdiction.codes"
+msgstr "jurisdiction.codes"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/CITIReport_wizard.py:717
+#, python-format
+msgid "la factura debe tener al menos un impuesto por linea"
+msgstr "la factura debe tener al menos un Código de Impuesto por linea"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/CITIReport_wizard.py:653
+#, python-format
+msgid "la factura debe tener fecha de vencimiento"
+msgstr "la factura debe tener ingresada una Fecha de Vencimiento"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/wizard/CITIReport_wizard.py:662
+#, python-format
+msgid "la factura debe tener termino de pago"
+msgstr "la factura debe tener ingresado un Término de Pago"
+
+#. module: vitt_sales_reports
+#: code:addons/vitt_sales_reports/models/account_payment.py:90
+#, python-format
+msgid "la factura no debe tener ningun pago asociado"
+msgstr "la factura no debe tener ningun pago asociado"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_nl_setting_block
+msgid "nl.setting.block"
+msgstr "nl.setting.block"
+
+#. module: vitt_sales_reports
+#: model:ir.ui.view,arch_db:vitt_sales_reports.SIFERE_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.SIRE_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.arciba_customs_report_wizard
+#: model:ir.ui.view,arch_db:vitt_sales_reports.arciba_report_wizard
+#: model:ir.ui.view,arch_db:vitt_sales_reports.pl_vat_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.sicore_report_form
+#: model:ir.ui.view,arch_db:vitt_sales_reports.sl_vat_report_form
+msgid "or"
+msgstr "o"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_report_vitt_sales_reports_reportvat
+msgid "report.vitt_sales_reports.reportvat"
+msgstr "report.vitt_sales_reports.reportvat"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_report_vitt_sales_reports_reportvatpl
+msgid "report.vitt_sales_reports.reportvatpl"
+msgstr "report.vitt_sales_reports.reportvatpl"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_sicore_codes
+msgid "sicore.codes"
+msgstr "sicore.codes"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_sicore_extended
+msgid "sicore.extended"
+msgstr "sicore.extended"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_sicore_norm_codes
+msgid "sicore.norm.codes"
+msgstr "sicore.norm.codes"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_sire_extended
+msgid "sire.extended"
+msgstr "sire.extended"
+
+#. module: vitt_sales_reports
+#: model:ir.model.fields,field_description:vitt_sales_reports.field_sicore_codes_comment
+msgid "texto"
+msgstr "Texto"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_vitt_sales_reports_reportciti
+msgid "vitt_sales_reports.reportciti"
+msgstr "vitt_sales_reports.reportciti"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_vitt_sales_reports_reportsicore
+msgid "vitt_sales_reports.reportsicore"
+msgstr "vitt_sales_reports.reportsicore"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_vitt_sales_reports_reportsifere
+msgid "vitt_sales_reports.reportsifere"
+msgstr "vitt_sales_reports.reportsifere"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_vitt_sales_reports_reportsifere_vtas
+msgid "vitt_sales_reports.reportsifere.vtas"
+msgstr "vitt_sales_reports.reportsifere.vtas"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_vitt_sales_reports_reportsire
+msgid "vitt_sales_reports.reportsire"
+msgstr "vitt_sales_reports.reportsire"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_vitt_sales_reports_reportvat
+msgid "vitt_sales_reports.reportvat"
+msgstr "vitt_sales_reports.reportvat"
+
+#. module: vitt_sales_reports
+#: model:ir.model,name:vitt_sales_reports.model_vitt_sales_reports_reportvatpl
+msgid "vitt_sales_reports.reportvatpl"
+msgstr "vitt_sales_reports.reportvatpl"

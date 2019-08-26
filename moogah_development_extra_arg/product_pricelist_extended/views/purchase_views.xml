@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="purchase_order_form_inherit_ppe" model="ir.ui.view">
+            <field name="name">purchase.order.form.ppe</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <field name="currency_id" position="after">
+                    <field name="update_product_cost" readonly="1"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="purchase_order_form_inherit_ppe_readonly" model="ir.ui.view">
+            <field name="name">purchase.order.form.ppe.readonly</field>
+            <field name="model">purchase.order</field>
+            <field name="groups_id" eval="[(6, 0, [ref('stock.group_stock_manager')])]"/>
+            <field name="inherit_id" ref="purchase_order_form_inherit_ppe"/>
+            <field name="arch" type="xml">
+                <field name="update_product_cost" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                    <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}</attribute>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

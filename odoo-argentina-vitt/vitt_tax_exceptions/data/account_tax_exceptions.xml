@@ -1,0 +1,12 @@
+<openerp>
+    <data noupdate="1">
+
+        <record id="seq_tax_exceptions" model="ir.sequence">
+            <field name="name">Tax Exceptions</field>
+            <field name="code">seq.tax.exceptions</field>
+            <field name="prefix">TE/</field>
+            <field name="padding">4</field>
+        </record>
+
+    </data>
+</openerp>

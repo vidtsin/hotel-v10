@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_nl_setting" model="ir.ui.view">
+        <field name="name">account.config.settings.new</field>
+        <field name="model">nl.setting.block</field>
+        <field name="arch" type="xml">
+            <form string="NL Settings">
+                <header>
+                    <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                    <button string="Cancel" type="object" name="cancel" class="oe_link" special="cancel"/>
+                </header>
+                <group name="main">
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_nl_setting" model="ir.actions.act_window">
+        <field name="name">Configure Accounting</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">nl.setting.block</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+    </record>
+
+    <menuitem
+        id="menu_nl_setting"
+        name="NL Settings"
+        sequence="80"
+        parent="account.account_account_menu"
+        action="action_nl_setting"
+    />
+
+</odoo>

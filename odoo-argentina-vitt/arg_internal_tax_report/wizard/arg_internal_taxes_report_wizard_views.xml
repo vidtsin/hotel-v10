@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <record id="arg_invoice_report_wizard_wizard_view" model="ir.ui.view">
+            <field name="name">arg.internal.taxes.report.wizard.form</field>
+            <field name="model">arg.internal.taxes.report.wizard</field>
+            <field name="arch" type="xml">
+            <form string="Internal Taxes" >
+                <group col="8" colspan="8">
+                    <group colspan="4">
+                        <field name="date_from"/>
+                        <field name="account_tax_id"/>
+                        <field name="format"/>
+                    </group>
+                    <group colspan="4">
+                        <field name="date_to"/>
+                        <field name="purchase_tax_id"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="print_report" string="Print" type="object" default_focus="1" class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel" />
+                </footer>
+            </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="arg_internal_taxes_report_wizard_act">
+            <field name="name">Internal Taxes</field>
+            <field name="res_model">arg.internal.taxes.report.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="arg_invoice_report_wizard_wizard_view"/>
+            <field name="target">new</field>
+        </record>
+
+    <menuitem name="Invoicing Reports" id="menu_inv_report" parent="account.menu_finance_reports" sequence="10"/>
+    <menuitem name="Internal Taxes" id="menu_arg_internal_taxes_report_wizard" parent="menu_inv_report" action="arg_internal_taxes_report_wizard_act" sequence="10"/>
+</odoo>

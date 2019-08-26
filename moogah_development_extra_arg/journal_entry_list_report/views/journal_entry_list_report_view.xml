@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="action_journal_entry_list_report" model="ir.actions.client">
+			<field name="name">Journal Entry List Report</field>
+			<field name="tag">account_report_generic</field>
+			<field name="context"
+				eval="{'url': '/account_reports/output_format/journal_entry_list/1', 'addActiveId': True, 'model': 'journal.entry_list.report'}" />
+		</record>
+
+		<record id="journal_entry_list_report_type" model="account.report.type">
+			<field name="date_range" eval="True" />
+			<field name="extra_options" eval="False" />
+			<field name="comparison" eval="False" />
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="product_template_form_view_inherit_ppe" model="ir.ui.view">
+            <field name="name">product.template.form.inherit.ppe</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <div name="standard_price_uom" position="after" >
+                    <field name="product_currency_id" readonly="1"/>
+                    <field name="last_po_cost" widget='monetary' options="{'currency_field': 'product_currency_id'}" readonly="1"/>
+                    <field name="update_last_po_cost" readonly="1"/>
+                    <field name="lp_base" widget='monetary' options="{'currency_field': 'product_currency_id'}" readonly="1"/>
+                    <field name="cost" widget='monetary' options="{'currency_field': 'product_currency_id'}" readonly="1"/>
+                </div>
+            </field>
+        </record>
+
+        <record id="product_template_form_view_inherit_ppe_readonly" model="ir.ui.view">
+            <field name="name">product.template.form.inherit.ppe.readonly</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product_template_form_view_inherit_ppe"/>
+            <field name="groups_id" eval="[(6, 0, [ref('stock.group_stock_manager')])]"/>
+            <field name="arch" type="xml">
+                <field name="product_currency_id" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </field>
+                <field name="update_last_po_cost" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </field>
+                <field name="lp_base" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </field>
+                <field name="cost" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

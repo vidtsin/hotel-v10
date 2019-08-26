@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <data noupdate="1">
+            <record model="ir.cron" id="booking_reminder_scheduler">
+                <field name="name">Reservation Reminder</field>
+                <field name="interval_number">1</field>
+                <field name="interval_type">days</field>
+                <field name="numbercall">-1</field>
+                <field name="doall" eval="False"/>
+                <field name="model" eval="'hotel.reservation'"/>
+                <field name="function" eval="'_send_reminder'"/>
+                <field name="args" eval="'()'" />
+            </record>
+    </data>
+</odoo>

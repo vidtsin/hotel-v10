@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<odoo>
+    <data>
+        <record id='view_freight_form' model='ir.ui.view'>
+            <field name='name'>freight.freight.form</field>
+            <field name='model'>freight.freight</field>
+            <field name='arch' type='xml'>
+                <form string="Freight">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button" options='{"terminology": "active"}'/>
+                            </button>
+                        </div>
+                        <div class="oe_title" name="title">
+                            <label for="name" string="Name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="e.g. Truck NHJ"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="partner_id" context="{'search_default_supplier':1}"/>
+                            <field name="vehicle"/>
+                            <field name="volume_max"/>
+                            <field name="weight_max"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_freight_tree" model="ir.ui.view">
+            <field name="name">freight.freight.tree</field>
+            <field name="model">freight.freight</field>
+            <field name="arch" type="xml">
+                <tree string="Freights">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="vehicle"/>
+                    <field name="volume_max"/>
+                    <field name="weight_max"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_freight_filter" model="ir.ui.view">
+            <field name="name">freight.freight.filter</field>
+            <field name="model">freight.freight</field>
+            <field name="arch" type="xml">
+                <search string="Search Freight">
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="vehicle"/>
+                    <field name="volume_max"/>
+                    <field name="weight_max"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Supplier" domain="[]" context="{'group_by':'partner_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_freight" model="ir.actions.act_window">
+            <field name="name">Freights</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">freight.freight</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_freight_filter"/>
+        </record>
+
+        <menuitem
+            id="freight_menu"
+            parent="delivery.sale_menu_delivery"
+            name="Freight Information"
+            action="action_freight"/>
+    </data>
+</odoo>

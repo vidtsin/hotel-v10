@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vitt_view_AccountAnalyticDimension_tree" model="ir.ui.view">
+        <field name="name">vitt.view.AccountAnalyticDimension.tree</field>
+        <field name="model">account.analytic.dimension</field>
+        <field name='inherit_id' ref='analytic_tag_dimension.view_AccountAnalyticDimension_tree'/>
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="code"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="account_analytic_tag_filter_dimensions" model="ir.filters">
+        <field name="name">Group by Analytic Dimension</field>
+        <field name="model_id">account.analytic.tag</field>
+        <field name="context">{'group_by': ['analytic_dimension_id']}</field>
+        <field name="user_id" eval="False"/>
+        <field name="is_default" eval="True"/>
+    </record>
+
+    <record id="account_analytic_tag_search_view" model="ir.ui.view">
+        <field name="name">account.analytic.tag.search</field>
+        <field name="model">account.analytic.tag</field>
+        <field name="context">{'search_default_dimension': True}</field>
+        <field name="arch" type="xml">
+            <search string="Analytic Tags" default_group_by="analytic_dimension_id">
+                <group expand="1">
+                    <filter string="Dimension" name='dimension' domain="" context="{'group_by':'analytic_dimension_id'}"/>
+                    <field name="code"/>
+                    <field name="name" filter_domain="['|', ('name','ilike',self), ('code','=like',str(self)+'%')]" string="Account"/>
+                    <field name="analytic_dimension_id"/>
+                    <field name='parent_tag_id'/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="vitt_view_AccountAnalyticDimension_form" model="ir.ui.view">
+        <field name="name">vitt.view.AccountAnalyticDimension.form</field>
+        <field name="model">account.analytic.dimension</field>
+        <field name='inherit_id' ref='analytic_tag_dimension.view_AccountAnalyticDimension_form'/>
+        <field name="arch" type="xml">
+            <field name="analytic_tag_ids" position="replace">
+                <notebook>
+                    <page string="Analytic Tags">
+                        <field name="analytic_tag_ids" position='replace'>
+                        </field>
+                    </page>
+                    <page string="Required Accounts">
+                        <!-- <field name="required_accounts_ids"></field> -->
+                        <!-- <field name="required_accounts_ids" widget="many2many_tags"></field> -->
+                        <field name="required_accounts_ids">
+                            <tree editable='bottom'>
+                              <field name="account_id"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </field>
+        </field>
+    </record>
+
+    <record id="vitt_account_analytic_tag_tree_view" model="ir.ui.view">
+        <field name="name">vitt.account.analytic.tag.dimension.form</field>
+        <field name="model">account.analytic.tag</field>
+        <field name='inherit_id' ref='analytic.account_analytic_tag_tree_view'/>
+        <field name="arch" type="xml">
+            <field name="name" position="replace">
+                <field name="code"/>
+                <field name="name"/>
+                <field name='parent_tag_id'/>
+                <field name="analytic_dimension_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="vitt_account_analytic_tag_form_view" model="ir.ui.view">
+        <field name="name">vitt.account.analytic.tag.dimension.form</field>
+        <field name="model">account.analytic.tag</field>
+        <field name='inherit_id' ref='analytic.account_analytic_tag_form_view'/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="replace">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;active&quot;}"/>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                        <field name="company_id"/>
+                        <field name="parent_tag_id"/>
+                        <field name="required_accounts_ids"/>
+                    </group>
+                </sheet>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

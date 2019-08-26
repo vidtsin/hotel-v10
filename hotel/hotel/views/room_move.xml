@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- Tree view of Hotel Room Move-->
+    <record id="view_hotel_room_move_tree" model="ir.ui.view">
+        <field name="name">hotel.room.move.tree</field>
+        <field name="model">hotel.room.move</field>
+        <field name="arch" type="xml">
+            <tree string="Room Movement" create="false" delete="false">
+                <field name="room_id" />
+                <field name="room_qty" />
+                <field name="check_in" />
+                <field name="check_out" />
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+    
+    <!-- Form View of Hotel Room Move-->
+    <record id="view_hotel_room_move_form" model="ir.ui.view">
+        <field name="name">hotel.room.move.form</field>
+        <field name="model">hotel.room.move</field>
+        <field name="arch" type="xml">
+            <form string="Room Movement" create="false" edit="false" delete="false">
+                <sheet>
+                    <group col="4" colspan="4">
+                        <field name="room_id" />
+                        <field name="room_qty" />
+                        <field name="check_in" />
+                        <field name="check_out" />
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        <field name="state" />
+                    </group>
+                    <notebook>
+                       <page name="room_move_line" string="Room Move Line">
+                           <field name="room_move_line_ids">
+                               <tree>
+                                   <field name="room_number_id"/>
+                                   <field name="state"/>
+                                   <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                               </tree>
+                           </field>
+                       </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--Search View of hotel room move-->
+    <record id="view_hotel_room_move_search" model="ir.ui.view">
+        <field name="name">hotel.room.move.search</field>
+        <field name="model">hotel.room.move</field>
+        <field name="arch" type="xml">
+            <search string="Search Room Movement">
+               <group expand="0" name="group_by" string="Group By">
+                   <filter name="room_no" string="Room No" domain="[]" context="{'group_by' : 'room_id'}" />
+               </group>
+           </search>
+        </field>
+    </record>
+
+    <!-- Action of hotel room move -->
+    <record id="action_hotel_room_move" model="ir.actions.act_window">
+        <field name="name">Room Movement</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hotel.room.move</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hotel_room_move_search"/>
+        <field name="context">{'search_default_room_no':1}</field>
+    </record>
+
+    <menuitem name="Room Movement" id="menu_hotel_room_move"
+        action="action_hotel_room_move" parent="hotel.menu_hotel_room"
+        sequence="7" groups="hotel.group_hotel_manager"/>
+
+    <!-- Tree view of Hotel Room Move Line-->
+    <record id="view_hotel_room_move_line_tree" model="ir.ui.view">
+        <field name="name">hotel.room.move.line.tree</field>
+        <field name="model">hotel.room.move.line</field>
+        <field name="arch" type="xml">
+            <tree string="Room Move Lines" create="false" edit="false" delete="false">
+                <field name="room_move_id" />
+                <field name="room_number_id" />
+                <field name="check_in" />
+                <field name="check_out" />
+                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+</odoo>

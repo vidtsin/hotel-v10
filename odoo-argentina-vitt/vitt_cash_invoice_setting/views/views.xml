@@ -1,0 +1,13 @@
+<odoo>
+    <record id="view_payment_term_form2" model="ir.ui.view">
+        <field name="name">view.payment.term.form2</field>
+        <field name="model">account.payment.term</field>
+        <field name="inherit_id" ref="account.view_payment_term_form"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="cash"/>
+                <field name="cash_account_id" attrs="{'invisible':[('cash','=', False)]}"/>
+            </field>
+        </field>
+    </record>
+</odoo>

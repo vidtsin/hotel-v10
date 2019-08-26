@@ -1,0 +1,90 @@
+<odoo>
+    <record model="ir.ui.view" id="view_account_invoice_form">
+        <field name="name">view.account.invoice.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <field name="reference" position="after">
+                <field name="obj_bool"
+                       attrs="{'invisible': [('residual', '&lt;=', '0.00')]}"
+                       groups="account.group_account_manager"/>
+                <field name="obj_value"
+                       attrs="{'invisible': [('obj_bool', '!=', True)]}"
+                       groups="account.group_account_manager"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_invoice_form2">
+        <field name="name">view.account.invoice.form2</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="obj_bool"
+                       attrs="{'invisible': [('residual', '&lt;=', '0.00')]}"
+                       groups="account.group_account_manager"/>
+                <field name="obj_value"
+                       attrs="{'invisible': [('obj_bool', '!=', True)]}"
+                       groups="account.group_account_manager"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_account_payment_group_form2">
+        <field name="name">view.account.payment.group.form2</field>
+        <field name="model">account.payment.group</field>
+        <field name="inherit_id" ref="account_payment_group.view_account_payment_group_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook[1]" position="inside">
+                <page string="Objetadas">
+                    <field name="objected_invoices_ids" />
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_invoice_objected_tree" model="ir.ui.view">
+        <field name="name">view.account.invoice.objected.tree</field>
+        <field name="model">account.invoice.objected</field>
+        <field name="arch" type="xml">
+            <tree string="Objetadas">
+                <field name="date"/>
+                <field name="duedate"/>
+                <field name="invoice_number"/>
+                <field name="total_amount"/>
+                <field name="objected_amount"/>
+                <field name="residual_amount"/>
+                <field name="amount_currency"/>
+                <field name="residual_amount_currency"/>
+                <field name="partner_id"/>
+                <field name="inv_id" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="ledger_sl_report_form2">
+        <field name="name">ledger.sl.report.form2</field>
+        <field name="model">report.sl.ledger</field>
+        <field name="inherit_id" ref="vitt_sales_purch_ledger.ledger_sl_report_form"/>
+        <field name="arch" type="xml">
+            <field name="team_id" position="after">
+                <field name="objected" attrs="{'invisible':[('extendedf', '=', False)]}"/>
+                <field name="extendedf" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="ledger_pl_report_form2">
+        <field name="name">ledger.pl.report.form2</field>
+        <field name="model">report.pl.ledger</field>
+        <field name="inherit_id" ref="vitt_sales_purch_ledger.ledger_pl_report_form"/>
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="objected" attrs="{'invisible':[('extendedf', '=', False)]}"/>
+                <field name="extendedf" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

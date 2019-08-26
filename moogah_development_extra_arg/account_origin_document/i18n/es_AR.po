@@ -1,0 +1,214 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_origin_document
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-01 19:13+0000\n"
+"PO-Revision-Date: 2018-03-01 16:24-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: account_origin_document
+#: model:ir.model,name:account_origin_document.model_account_check
+msgid "Account Check"
+msgstr "Cuenta de Cheque"
+
+#. module: account_origin_document
+#: model:ir.model,name:account_origin_document.model_account_move
+msgid "Account Entry"
+msgstr "Asiento Contable"
+
+#. module: account_origin_document
+#. openerp-web
+#: code:addons/account_origin_document/static/src/xml/account_payment.xml:24
+#, python-format
+msgid "Amount:"
+msgstr "Monto:"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Cash In"
+msgstr "Entrada de Caja"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Cash Out"
+msgstr "Salida de Caja"
+
+#. module: account_origin_document
+#: model:ir.actions.act_window,help:account_origin_document.action_account_payments_group_1
+msgid "Click to register a payment"
+msgstr "Clic para registrar un Pago"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Customer Invoices"
+msgstr "Customer Invoices"
+
+#. module: account_origin_document
+#: model:ir.actions.act_window,name:account_origin_document.action_account_payments_group_1
+msgid "Customer Receipts"
+msgstr "Recibos de Cliente"
+
+#. module: account_origin_document
+#. openerp-web
+#: code:addons/account_origin_document/static/src/xml/account_payment.xml:12
+#, python-format
+msgid "Date:"
+msgstr "Fecha:"
+
+#. module: account_origin_document
+#: model:ir.model.fields,field_description:account_origin_document.field_account_move_document_id
+msgid "Id Document"
+msgstr "Id Documento"
+
+#. module: account_origin_document
+#: model:ir.model,name:account_origin_document.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Issue Checks"
+msgstr "Cheques Emitidos"
+
+#. module: account_origin_document
+#: code:addons/account_origin_document/models/account_invoice.py:41
+#, python-format
+msgid "Less Payment"
+msgstr "Menos Pagos"
+
+#. module: account_origin_document
+#. openerp-web
+#: code:addons/account_origin_document/static/src/xml/account_payment.xml:20
+#, python-format
+msgid "Memo:"
+msgstr "Referencia:"
+
+#. module: account_origin_document
+#. openerp-web
+#: code:addons/account_origin_document/static/src/xml/account_payment.xml:8
+#, python-format
+msgid "Name:"
+msgstr "Nombre:"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Not origin document"
+msgstr "No es el documento de origen"
+
+#. module: account_origin_document
+#. openerp-web
+#: code:addons/account_origin_document/static/src/xml/account_payment.xml:38
+#, python-format
+msgid "Open Payment"
+msgstr "Abrir Pago"
+
+#. module: account_origin_document
+#: model:ir.model.fields,field_description:account_origin_document.field_account_move_origin_document
+msgid "Origin Document"
+msgstr "Documento de Origen"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Payment"
+msgstr "Pago"
+
+#. module: account_origin_document
+#: model:ir.model,name:account_origin_document.model_account_payment_group
+msgid "Payment Group"
+msgstr "Grupo de Pago"
+
+#. module: account_origin_document
+#. openerp-web
+#: code:addons/account_origin_document/static/src/js/account_payment_widget.js:55
+#, python-format
+msgid "Payment Information"
+msgstr "Información de Pago"
+
+#. module: account_origin_document
+#. openerp-web
+#: code:addons/account_origin_document/static/src/xml/account_payment.xml:16
+#, python-format
+msgid "Payment Method:"
+msgstr "Método de Pago:"
+
+#. module: account_origin_document
+#: model:ir.model,name:account_origin_document.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: account_origin_document
+#: model:ir.actions.act_window,help:account_origin_document.action_account_payments_group_1
+msgid ""
+"Payments are used to register liquidity movements (send or collect).\n"
+"                  You can then process those payments by your own means or by using installed facilities."
+msgstr ""
+"Los pagos son usados para registrar los movimientos en efectivo (enviar o recolectar).\n"
+"                  Ud. puede procesar los pagos por sus propios medios o usando las funcionalidades instaladas."
+
+#. module: account_origin_document
+#: model:ir.model,name:account_origin_document.model_stock_quant
+msgid "Quants"
+msgstr "Quants"
+
+#. module: account_origin_document
+#: model:ir.model.fields,help:account_origin_document.field_account_invoice_copy_origin
+msgid "Reference of the document that produced this invoice."
+msgstr "Referencia del documento que ha creado esta factura."
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Refund Customer Invoices"
+msgstr "Notas de Crédito de Clientes"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Refund Vendor Bills"
+msgstr "Notas de Crédito de Proveedores"
+
+#. module: account_origin_document
+#: model:ir.model.fields,field_description:account_origin_document.field_account_invoice_copy_origin
+msgid "Source Document"
+msgstr "Documento Origen"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Stock Pickings"
+msgstr "Movimientos de Stock"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Third Checks"
+msgstr "Cheques de 3ros"
+
+#. module: account_origin_document
+#: model:ir.model.fields,field_description:account_origin_document.field_account_move_type_document
+msgid "Type Document"
+msgstr "Tipo Documento"
+
+#. module: account_origin_document
+#. openerp-web
+#: code:addons/account_origin_document/static/src/xml/account_payment.xml:37
+#, python-format
+msgid "Unreconcile"
+msgstr "Sin Conciliar"
+
+#. module: account_origin_document
+#: selection:account.move,type_document:0
+msgid "Vendor Bills"
+msgstr "Facturas de Proveedor"
+
+#. module: account_origin_document
+#: model:ir.model,name:account_origin_document.model_account_cash_inout
+msgid "account.cash.inout"
+msgstr "account.cash.inout"

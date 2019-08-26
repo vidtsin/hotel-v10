@@ -1,0 +1,378 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* vitt_withholding_tax_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-15 17:04+0000\n"
+"PO-Revision-Date: 2019-03-15 17:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.ui.view,arch_db:vitt_withholding_tax_report.qweb_customer_invoice_journal
+msgid "<b>Impuesto de Retencion</b>"
+msgstr "<b>Impuesto de Retencion</b>"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.ui.view,arch_db:vitt_withholding_tax_report.qweb_customer_invoice_journal
+msgid "<b>Totales</b>"
+msgstr "<b>Totales</b>"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.ui.view,arch_db:vitt_withholding_tax_report.account_payment_whwizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:57
+#, python-format
+msgid "Company: "
+msgstr "Compañía: "
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_html_create_uid
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_pdf_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_html_create_date
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_pdf_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:86
+#, python-format
+msgid "Customer Id No"
+msgstr "Nro. Doc. Cliente"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:86
+#, python-format
+msgid "Customer Invoice No"
+msgstr "Nro. Factura Cliente"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:86
+#, python-format
+msgid "Customer Name"
+msgstr "Nombre Cliente"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_partner2_id
+msgid "Customers"
+msgstr "Clientes"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:54
+#, python-format
+msgid "Customers: "
+msgstr "Clientes: "
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_date_from
+msgid "Date From"
+msgstr "Fecha Desde"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_date_to
+msgid "Date To"
+msgstr "Fecha Hasta"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:186
+#, python-format
+msgid "Detail"
+msgstr "Detalle"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_display_name
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_html_display_name
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_pdf_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.ui.view,arch_db:vitt_withholding_tax_report.account_payment_whwizard_form
+msgid "Ejecutar"
+msgstr "Ejecutar"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:189
+#, python-format
+msgid "Empresa: "
+msgstr "Empresa: "
+
+#. module: vitt_withholding_tax_report
+#: selection:account.payment.whwizard,print_by:0
+msgid "Export xlsx"
+msgstr "Exportar xlsx"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_wh_group_by
+msgid "Group by Withholding Tax"
+msgstr "Agrupar por Impuesto de Retención"
+
+#. module: vitt_withholding_tax_report
+#: selection:account.payment.whwizard,print_by:0
+msgid "HTML"
+msgstr "HTML"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_html_id
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_pdf_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_include_link
+msgid "Include No. Link"
+msgstr "Incluir Link Reg. Pago/Recibo"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:65
+#, python-format
+msgid "Journal: "
+msgstr "Diario: "
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard___last_update
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_html___last_update
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_pdf___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_html_write_uid
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_pdf_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_html_write_date
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_report_vitt_withholding_tax_report_repoort_pdf_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:77
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:88
+#, python-format
+msgid "MB1 Amount"
+msgstr "Mon. Compañía"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:188
+#, python-format
+msgid "Nombre del Informe: Reporte de retenciones"
+msgstr "Nombre del Informe: Reporte de retenciones"
+
+#. module: vitt_withholding_tax_report
+#: selection:account.payment.whwizard,print_by:0
+msgid "PDF"
+msgstr "PDF"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:80
+#, python-format
+msgid "Payment Date"
+msgstr "Fecha Pago"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:75
+#, python-format
+msgid "Payment No"
+msgstr "Nro. Pago"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:83
+#, python-format
+msgid "Payment No. Link"
+msgstr "Link Nro. Pago"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.actions.act_window,name:vitt_withholding_tax_report.action_per_tax_report
+msgid "Perceptions Tax Report - Receipts"
+msgstr "Informe Imp. Retención - Recibos"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_print_by
+msgid "Printing Options"
+msgstr "Opciones de Impresión"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:91
+#, python-format
+msgid "Receipt Date"
+msgstr "Fecha Recibo"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:86
+#, python-format
+msgid "Receipt No"
+msgstr "Nro. Recibo"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:94
+#, python-format
+msgid "Receipt No. Link"
+msgstr "Link Nro. Recibo"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:75
+#, python-format
+msgid "Supplier Id No"
+msgstr "Nro. Doc. Proveedor"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:75
+#, python-format
+msgid "Supplier Invoice No"
+msgstr "Nro. Factura Proveedor"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:75
+#, python-format
+msgid "Supplier Name"
+msgstr "Nombre Proveedor"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_partner_id
+msgid "Suppliers"
+msgstr "Proveedores"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:51
+#, python-format
+msgid "Suppliers: "
+msgstr "Proveedores: "
+
+#. module: vitt_withholding_tax_report
+#: model:ir.actions.report.xml,name:vitt_withholding_tax_report.menu_per_temp_html
+#: model:ir.actions.report.xml,name:vitt_withholding_tax_report.menu_per_temp_pdf
+#: model:ir.actions.report.xml,name:vitt_withholding_tax_report.menu_wh_temp_html
+#: model:ir.actions.report.xml,name:vitt_withholding_tax_report.menu_wh_temp_pdf
+msgid "Tax Report"
+msgstr "Informe Impositivo"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:216
+#, python-format
+msgid "Totales Agrupados"
+msgstr "Totales Agrupados"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:76
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:87
+#, python-format
+msgid "Withholdable Amount"
+msgstr "Monto Retenible"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:76
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:87
+#, python-format
+msgid "Withholding Certificate No"
+msgstr "Nro. Certificado Retención"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:76
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:87
+#, python-format
+msgid "Withholding Rate"
+msgstr "Alicuota Retención"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:76
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:87
+#, python-format
+msgid "Withholding Tax"
+msgstr "Impuesto Retención"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_wh_tax_code
+msgid "Withholding Tax Code"
+msgstr "Cód. Imp. Retención"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model.fields,field_description:vitt_withholding_tax_report.field_account_payment_whwizard_journal_id
+msgid "Withholding Tax Journal"
+msgstr "Diario Imp. Retención"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.actions.act_window,name:vitt_withholding_tax_report.action_wh_tax_report
+#: model:ir.ui.menu,name:vitt_withholding_tax_report.menu_wh_tax_report
+#: model:ir.ui.view,arch_db:vitt_withholding_tax_report.qweb_customer_invoice_journal
+msgid "Withholding Tax Report - Payments"
+msgstr "Informe Imp. Retención - Pagos"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.ui.menu,name:vitt_withholding_tax_report.menu_per_tax_report
+#: model:ir.ui.view,arch_db:vitt_withholding_tax_report.qweb_customer_invoice_journal
+msgid "Withholding Tax Report - Receipts"
+msgstr "Informe Imp. Retención - Recibos"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:60
+#, python-format
+msgid "Withholding Tax: "
+msgstr "Impuesto Retención: "
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:77
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:88
+#, python-format
+msgid "Withholding Value"
+msgstr "Valor Retención"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model,name:vitt_withholding_tax_report.model_account_payment_whwizard
+msgid "account.payment.whwizard"
+msgstr "account.payment.whwizard"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:47
+#, python-format
+msgid "dates: "
+msgstr "Período: "
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:184
+#, python-format
+msgid "partners_invoices_journals.xls"
+msgstr "partners_invoices_journals.xls"
+
+#. module: vitt_withholding_tax_report
+#: code:addons/vitt_withholding_tax_report/wizard/wizard.py:163
+#, python-format
+msgid "report has more than 5000 lines, please use Excel instead"
+msgstr "El informe tiene más de 5000 líneas, por favor use el formato Excel"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model,name:vitt_withholding_tax_report.model_report_vitt_withholding_tax_report_repoort_html
+msgid "report.vitt_withholding_tax_report.repoort_html"
+msgstr "report.vitt_withholding_tax_report.repoort_html"
+
+#. module: vitt_withholding_tax_report
+#: model:ir.model,name:vitt_withholding_tax_report.model_report_vitt_withholding_tax_report_repoort_pdf
+msgid "report.vitt_withholding_tax_report.repoort_pdf"
+msgstr "report.vitt_withholding_tax_report.repoort_pdf"
+

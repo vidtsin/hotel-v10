@@ -1,0 +1,116 @@
+<odoo>
+    <data>
+
+        <record id="vitt_val2words_settings_tree_view" model="ir.ui.view">
+            <field name="name">vitt_val2words_settings_tree_view</field>
+            <field name="model">vitt_val2words.config_text</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"></field>
+                </tree>
+            </field>
+        </record>
+
+        <record id="vitt_val2words_settings_form_view" model="ir.ui.view">
+            <field name="name">vitt_val2words_settings_form_view</field>
+            <field name="model">vitt_val2words.config_text</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+            <form string="Values in words">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <notebook>
+                        <page string="Over hundred">
+                            <group col="4">
+                                <group>
+                                    <field name="bill1"/>
+                                    <field name="mill1"/>
+                                    <field name="thou1"/>
+                                    <field name="houn1"/>
+                                    <field name="houn4"/>
+                                    <field name="houn7"/>
+                                </group>
+                                <group>
+                                    <field name="bill4"/>
+                                    <field name="mill4"/>
+                                    <field name="thou4"/>
+                                    <field name="houn2"/>
+                                    <field name="houn5"/>
+                                    <field name="houn8"/>
+                                </group>
+                                <group>
+                                    <field name="bill9"/>
+                                    <field name="mill9"/>
+                                    <field name="thou9"/>
+                                    <field name="houn3"/>
+                                    <field name="houn6"/>
+                                    <field name="houn9"/>
+                                </group>
+                                <group>
+                                    <field name="bill10"/>
+                                    <field name="mill10"/>
+                                    <field name="thou10"/>
+                                    <field name="houn1single"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Down hundred">
+                            <field name="config_numbers_id" nolabel="1" widget="one2many_list">
+                                <tree editable="bottom" string="Tax Mapping">
+                                    <field name="numtext"/>
+                                    <field name="valtext"/>
+                                </tree>
+                                <form string="Tax Mapping">
+                                    <field name="numtext"/>
+                                    <field name="valtext"/>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Conjunction">
+                            <group col="3">
+                                <group>
+                                    <field name="mainpart"/>
+                                    <field name="decipart"/>
+                                    <field name="endtext"/>
+                                    <field name="zero"/>
+                                    <field name="negative"/>
+                                </group>
+                                <group>
+                                    <!-- <field name="print_currency" widget="radio"/> -->
+                                    <field name="dec_words" widget="radio"/>
+                                </group>
+                                <group>
+                                    <field name="cutdecimals"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Currency Names">
+                            <field name="currency_names_ids" nolabel="1" widget="one2many_list">
+                                <tree editable="bottom" string="Currency Names">
+                                    <field name="currency_id"/>
+                                    <field name="currency_name"/>
+                                </tree>
+                                <form string="Currency Name">
+                                    <field name="currency_id"/>
+                                    <field name="currency_name"/>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+            </field>
+        </record>
+        
+        <record id="vitt_val2words_settings_action" model="ir.actions.act_window" >
+            <field name="name">Values in words</field>
+            <field name="res_model">vitt_val2words.config_text</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="vitt_val2words_settings_menu" parent="account.menu_finance_configuration" name="Values in words"  sequence="11" action="vitt_val2words_settings_action"/>
+    </data>
+</odoo>

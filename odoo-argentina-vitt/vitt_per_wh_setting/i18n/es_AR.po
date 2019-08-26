@@ -1,0 +1,95 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_per_wh_setting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-18 15:43+0000\n"
+"PO-Revision-Date: 2018-05-18 12:47-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.7\n"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model,name:vitt_per_wh_setting.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model.fields,field_description:vitt_per_wh_setting.field_account_config_settings_country_id
+msgid "Country"
+msgstr "País"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model,name:vitt_per_wh_setting.model_res_country_state
+msgid "Country state"
+msgstr "Provincia"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model.fields,field_description:vitt_per_wh_setting.field_res_country_state_jurisd_id
+msgid "Jurisdiction Code"
+msgstr "Cód. Jurisdicción"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model.fields,field_description:vitt_per_wh_setting.field_account_config_settings_jurisdiction_ids
+#: model:ir.model.fields,field_description:vitt_per_wh_setting.field_res_company_jurisdiction_comp_ids
+#: model:ir.ui.view,arch_db:vitt_per_wh_setting.view_account_config_settings
+msgid "Jurisdictions"
+msgstr "Jurisdicciones"
+
+#. module: vitt_per_wh_setting
+#: selection:res.country.state,type_mandatory:0
+msgid "Mandatory with State Tax List"
+msgstr "Si es Obligatorio si existe Padrón"
+
+#. module: vitt_per_wh_setting
+#: selection:res.country.state,type_mandatory:0
+msgid "NOT Mandatory with State Tax List"
+msgstr "No es Obligatorio si existe Padrón"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model.fields,field_description:vitt_per_wh_setting.field_res_country_state_percep_id
+msgid "Perception Tax"
+msgstr "Imp. Percepción"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model.fields,field_description:vitt_per_wh_setting.field_res_country_state_perc_tax_base
+msgid "Perception Tax Base Rate"
+msgstr "Alicuota Base Imp. Percepción"
+
+#. module: vitt_per_wh_setting
+#: model:ir.ui.view,arch_db:vitt_per_wh_setting.new_country_state_form
+msgid "Tax Setup"
+msgstr "Configuración Impositiva"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model.fields,field_description:vitt_per_wh_setting.field_res_country_state_type_mandatory
+msgid "Type mandatory"
+msgstr "Tipo Obligatoriedad"
+
+#. module: vitt_per_wh_setting
+#: model:ir.ui.view,arch_db:vitt_per_wh_setting.view_account_config_settings
+msgid "Withholding & Perceptions Jurisdictions"
+msgstr "Jurisdicciones Retenciones & Percepciones"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model.fields,field_description:vitt_per_wh_setting.field_res_country_state_whtax_id
+msgid "Withholding Tax"
+msgstr "Imp. Retención"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model.fields,field_description:vitt_per_wh_setting.field_res_country_state_wh_tax_base
+msgid "Withholding Tax Base Rate"
+msgstr "Alicuota Base Imp. Retención"
+
+#. module: vitt_per_wh_setting
+#: model:ir.model,name:vitt_per_wh_setting.model_account_config_settings
+msgid "account.config.settings"
+msgstr "account.config.settings"

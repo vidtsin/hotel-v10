@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xml:space="preserve">
+    <t t-name="PaymentPopOver">
+        <div>
+            <table>
+                <tr>
+                    <td><strong>Name: </strong></td>
+                    <td style="text-align:right;"><t t-esc="name"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Date: </strong></td>
+                    <td style="text-align:right;"><t t-esc="date"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Payment Method: </strong></td>
+                    <td style="text-align:right;"><t t-esc="journal_name"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Memo: </strong></td>
+                    <td style="text-align:right;"><t t-esc="ref"/></td>
+                </tr>
+                <tr>
+                    <td><strong>Amount: </strong></td>
+                    <td style="text-align:right;">
+                        <t t-if="position === 'before'">
+                            <t t-esc="currency"/>
+                        </t>
+                        <t t-esc="amount"></t> 
+                        <t t-if="position === 'after'">
+                            <t t-esc="currency"/>
+                        </t>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <button class="btn btn-xs btn-primary js_unreconcile_payment pull-left" t-att-payment-id="payment_id" style="margin-top:5px; margin-bottom:5px;">Unreconcile</button>
+        <button class="btn btn-xs btn-default js_open_payment_origin pull-right" t-att-move-id="move_id" style="margin-top:5px; margin-bottom:5px;">Open Payment</button>
+    </t>
+
+</templates>

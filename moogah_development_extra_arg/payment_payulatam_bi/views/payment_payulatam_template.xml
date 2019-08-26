@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <template id="payment_payulatam_redirect" name="Payment PayuLATAM">
+        <script type="text/javascript">
+            window.location.href = '<t t-esc="return_url"/>';
+        </script>
+    </template>
+    </data>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_transaction_report_wizard" model="ir.ui.view">
+        <field name="name">Partner Transaction Report Wizard</field>
+        <field name="model">partner.transaction.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="initial_date" />
+                    <field name="end_date" />
+                    <field name="partner_ids" widget="many2many_tags" />
+                    <field name="type" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="%(action_multi_currency_customer_ledger_report)d"
+                            attrs="{'invisible':[('type','!=','customer')]}" type="action"
+                            class="btn-primary" string="Open" context="{'customer':True}"/>
+            		<button name="%(action_multi_currency_supplier_ledger_report)d"
+                            attrs="{'invisible':[('type','!=','supplier')]}" type="action"
+                            class="btn-primary" string="Open" context="{'supplier':True}"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_customer_transaction_report_wizard" model="ir.actions.act_window">
+        <field name="name">Customer Transaction Report Wizard</field>
+        <field name="res_model">partner.transaction.report.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_partner_transaction_report_wizard"/>
+        <field name="context">{'default_type':'customer'}</field>
+        <field name="target">new</field>
+    </record>
+
+    <record id="action_supplier_transaction_report_wizard" model="ir.actions.act_window">
+        <field name="name">Supplier Transaction Report Wizard</field>
+        <field name="res_model">partner.transaction.report.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_partner_transaction_report_wizard"/>
+        <field name="context">{'default_type':'supplier'}</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_sale_reports" name="Reports" parent="account.menu_finance_receivables"
+              groups="account.group_account_invoice" sequence="120"/>
+
+    <menuitem id="menu_purchase_reports" name="Reports" parent="account.menu_finance_payables"
+              groups="account.group_account_invoice" sequence="120"/>
+
+    <menuitem id="menu_action_customer_transaction_report_wizard" name="Customer Ledger"
+              action="action_customer_transaction_report_wizard"
+              parent="menu_sale_reports" />
+
+    <menuitem id="menu_action_supplier_transaction_report_wizard" name="Vendor Ledger"
+              action="action_supplier_transaction_report_wizard"
+              parent="menu_purchase_reports"/>
+
+</odoo>

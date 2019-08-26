@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="payu_acquirer_button">
+            <form t-if="acquirer.payulatam_merchantId" t-att-action="tx_url"
+                method="post" target="_self">
+                <input type="hidden" name="merchantId" t-att-value="merchantId" />
+                <input type="hidden" name="accountId" t-att-value="accountId" />
+                <input type="hidden" name="referenceCode" t-att-value="description" />
+                <input type="hidden" name="description" t-att-value="description" />
+                <input type="hidden" name="amount" t-att-value="amount" />
+                <input type="hidden" name="tax" t-att-value="tax" />
+                <input type="hidden" name="taxReturnBase" t-att-value="taxReturnBase" />
+                <input type="hidden" name="signature" t-att-value="signature" />
+                <input type="hidden" name="currency" t-att-value="currency" />
+                <input type="hidden" name="buyerEmail" t-att-value="buyerEmail" />
+                <input type="hidden" name="responseUrl" t-att-value="responseUrl" />
+                <!--input type="hidden" name="confirmationUrl" t-att-value="tx_values['confirmationUrl']" 
+                    / -->
+                <input type="hidden" name="test" t-att-value="test" />
+                <!-- submit -->
+                <button t-if="currency in currency_sel"
+                    t-att-class="submit_class" type="submit" width="100px">
+                    <img t-if="not submit_txt"
+                        src="/payment_payulatam_bi/static/src/img/payulatam_icon.png" />
+                    <span t-if="submit_txt">
+                        <t t-esc="submit_txt" />
+                        <span class="fa fa-long-arrow-right" />
+                    </span>
+                </button>
+                <div t-if="currency not in currency_sel"
+                    title="PayuMoney accepts only ARS,BRL,CLP,COP,MXN,PEN,USD(Argentenian Pesos, Brazilian Reales, Chilean Pesos, Colombian Pesos, Mexican Pesos, Peruvian New Soles, U.S. Dollars).">
+                    <script type="text/javascript" id="loading-script" t-raw="init">
+                        window.alert("PayuLatam accepts only
+                        ARS,BRL,CLP,COP,MXN,PEN,USD(Argentenian Pesos, Brazilian Reales,
+                        Chilean Pesos, Colombian Pesos, Mexican Pesos, Peruvian New Soles,
+                        U.S. Dollars");
+                        </script>
+
+                </div>
+            </form>
+        </template>
+    </data>
+</odoo>

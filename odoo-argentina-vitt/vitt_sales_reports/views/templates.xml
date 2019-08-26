@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="reportvat">
+        <t t-call="report.html_container">
+          <div class="page">
+            <h2> Libro IVA Ventas</h2>
+            <!--span t-esc="filter" /-->
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th class="text-right">F. Factura</th>
+                  <th class="text-right">Nro.Factura</th>
+                  <th class="text-right">Tipo Doc</th>
+                  <th class="text-right">Resp IVA</th>
+                  <th class="text-right">CUIT/CUIL</th>
+                  <th class="text-right">Nombre</th>
+                  <th class="text-right">M. Base</th>
+                  <th class="text-right">P.IVA</th>
+                  <th class="text-right">P.IIBB</th>
+                  <th class="text-right">I.Int</th>
+                  <th class="text-right">Exento</th>
+                  <th class="text-right">N.G.</th>
+                  <th class="text-right">IVA</th>
+                  <th class="text-right">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <t t-set="untaxed" t-value="0"/>
+                <t t-set="percep" t-value="0"/>
+                <t t-set="grossincome" t-value="0"/>
+                <t t-set="gettotinttaxes" t-value="0"/>
+                <t t-set="exempt" t-value="0"/>
+                <t t-set="novat" t-value="0"/>
+                <t t-set="vat" t-value="0"/>
+                <t t-set="total" t-value="0"/>
+                <tr t-foreach="docs" t-as="o">
+                  <td class="text-right">
+                    <span t-field="o.date_invoice"/>
+                  </td>
+                  <td class="text-right">
+                    <span t-field="o.display_name" />
+                  </td>
+                  <td class="text-right">
+                      <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura</span>
+                      <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span>
+                      <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Factura borrador</span>
+                      <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Factura cancelada</span>
+                      <span t-if="o.type == 'out_refund'">Nota de Credito</span>
+                      <span t-if="o.type == 'in_refund'">Nota de Credito de Proveedor</span>
+                      <span t-if="o.type == 'in_invoice'">Factura de Proveedor</span>
+                  </td>
+                  <td class="text-right">
+                    <span t-field="o.partner_id.afip_responsability_type_id" />
+                  </td>
+                  <td class="text-right">
+                    <span t-field="o.partner_id.main_id_number" />
+                  </td>
+                  <td class="text-right">
+                    <span t-field="o.partner_id.name" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.camount_untaxed()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotpercep()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotgrossincome()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotinttaxes()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotexempt()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotnovat()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotvat()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.camount_total()" />
+                  </td>
+                  <t t-if="total==0">
+                    <t t-set="untaxed" t-value="o.getgrandtotals('camount_untaxed',docs)"/>
+                    <t t-set="percep" t-value="o.getgrandtotals('gettotpercep',docs)"/>
+                    <t t-set="grossincome" t-value="o.getgrandtotals('gettotgrossincome',docs)"/>
+                    <t t-set="gettotinttaxes" t-value="o.getgrandtotals('gettotinttaxes',docs)"/>
+                    <t t-set="exempt" t-value="o.getgrandtotals('gettotexempt',docs)"/>
+                    <t t-set="novat" t-value="o.getgrandtotals('gettotnovat',docs)"/>
+                    <t t-set="vat" t-value="o.getgrandtotals('gettotvat',docs)"/>
+                    <t t-set="total" t-value="o.getgrandtotals('camount_total',docs)"/>
+                  </t>
+                </tr>
+                <tr>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right">
+                    <span t-esc="untaxed" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="percep" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="grossincome" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="gettotinttaxes" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="exempt" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="novat" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="vat" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="total" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </t>
+    </template>
+  </data>
+
+  <data>
+    <template id="reportvatpl">
+        <t t-call="report.html_container">
+          <div class="page">
+            <h2> Libro IVA Compras</h2>
+            <!--span t-esc="filter" /-->
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th class="text-right">F. Factura</th>
+                  <th class="text-right">Nro.Factura</th>
+                  <th class="text-right">Tipo Doc</th>
+                  <th class="text-right">Resp IVA</th>
+                  <th class="text-right">CUIT/CUIL</th>
+                  <th class="text-right">Nombre</th>
+                  <th class="text-right">M. Base</th>
+                  <th class="text-right">P.IVA</th>
+                  <th class="text-right">P.IIBB</th>
+                  <th class="text-right">I.Int</th>
+                  <th class="text-right">Exento</th>
+                  <th class="text-right">N.G.</th>
+                  <th class="text-right">IVA</th>
+                  <th class="text-right">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <t t-set="untaxed" t-value="0"/>
+                <t t-set="percep" t-value="0"/>
+                <t t-set="grossincome" t-value="0"/>
+                <t t-set="gettotinttaxes" t-value="0"/>
+                <t t-set="exempt" t-value="0"/>
+                <t t-set="novat" t-value="0"/>
+                <t t-set="vat" t-value="0"/>
+                <t t-set="total" t-value="0"/>
+                <tr t-foreach="docs" t-as="o">
+                  <td class="text-right">
+                    <span t-field="o.date_invoice"/>
+                  </td>
+                  <td class="text-right">
+                    <span t-field="o.display_name" />
+                  </td>
+                  <td class="text-right">
+                      <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura</span>
+                      <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span>
+                      <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Factura borrador</span>
+                      <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Factura cancelada</span>
+                      <span t-if="o.type == 'out_refund'">Nota de Credito</span>
+                      <span t-if="o.type == 'in_refund'">Nota de Credito de Proveedor</span>
+                      <span t-if="o.type == 'in_invoice'">Factura de Proveedor</span>
+                  </td>
+                  <td class="text-right">
+                    <span t-field="o.partner_id.afip_responsability_type_id" />
+                  </td>
+                  <td class="text-right">
+                    <span t-field="o.partner_id.main_id_number" />
+                  </td>
+                  <td class="text-right">
+                    <span t-field="o.partner_id.name" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.camount_untaxed()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotpercep()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotgrossincome()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotinttaxes()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotexempt()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotnovat()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.gettotvat()" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="o.camount_total()" />
+                  </td>
+                  <t t-if="total==0">
+                    <t t-set="untaxed" t-value="o.getgrandtotals('camount_untaxed',docs)"/>
+                    <t t-set="percep" t-value="o.getgrandtotals('gettotpercep',docs)"/>
+                    <t t-set="grossincome" t-value="o.getgrandtotals('gettotgrossincome',docs)"/>
+                    <t t-set="gettotinttaxes" t-value="o.getgrandtotals('gettotinttaxes',docs)"/>
+                    <t t-set="exempt" t-value="o.getgrandtotals('gettotexempt',docs)"/>
+                    <t t-set="novat" t-value="o.getgrandtotals('gettotnovat',docs)"/>
+                    <t t-set="vat" t-value="o.getgrandtotals('gettotvat',docs)"/>
+                    <t t-set="total" t-value="o.getgrandtotals('camount_total',docs)"/>
+                  </t>
+                </tr>
+                <tr>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right"></td>
+                  <td class="text-right">
+                    <span t-esc="untaxed" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="percep" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="grossincome" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="gettotinttaxes" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="exempt" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="novat" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="vat" />
+                  </td>
+                  <td class="text-right">
+                    <span t-esc="total" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </t>
+    </template>
+  </data>
+</odoo>

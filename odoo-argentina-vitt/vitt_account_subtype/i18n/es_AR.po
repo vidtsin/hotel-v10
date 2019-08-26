@@ -1,0 +1,82 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_account_subtype
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 14:14+0000\n"
+"PO-Revision-Date: 2018-02-14 11:15-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: vitt_account_subtype
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_setting_subtype_journal_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_account_subtype
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_setting_subtype_journal_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: vitt_account_subtype
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_setting_subtype_journal_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: vitt_account_subtype
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_setting_subtype_journal_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_account_subtype
+#: model:ir.model,name:vitt_account_subtype.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: vitt_account_subtype
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_setting_subtype_journal___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: vitt_account_subtype
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_setting_subtype_journal_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Modificación por"
+
+#. module: vitt_account_subtype
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_setting_subtype_journal_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: vitt_account_subtype
+#: model:ir.model,name:vitt_account_subtype.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: vitt_account_subtype
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_setting_subtype_journal_name
+msgid "Sub Journal"
+msgstr "Sub Diario"
+
+#. module: vitt_account_subtype
+#: model:ir.actions.act_window,name:vitt_account_subtype.action_subtypej_tree
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_account_journal_sub_journal
+#: model:ir.model.fields,field_description:vitt_account_subtype.field_account_payment_sub_journal
+#: model:ir.ui.menu,name:vitt_account_subtype.menu_subtype
+#: model:ir.ui.view,arch_db:vitt_account_subtype.view_subtypej_tree
+msgid "Sub Type"
+msgstr "Sub Tipo"
+
+#. module: vitt_account_subtype
+#: model:ir.model,name:vitt_account_subtype.model_setting_subtype_journal
+msgid "setting.subtype.journal"
+msgstr "setting.subtype.journal"

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vitt_analytic_tag_settings_form" model="ir.ui.view">
+        <field name="name">vitt.analytic.tag.settings.form</field>
+        <field name="model">account.config.settings</field>
+        <field name="inherit_id" ref="account.view_account_config_settings"/>
+        <field name="view_mode">form</field>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='group_analytic_accounting']" position="after">
+                <div attrs="{'invisible': [('group_analytic_accounting','=',False)]}">
+                    <field name='analytic_tags_to_rows'/>
+                    <label for='analytic_tags_to_rows'/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

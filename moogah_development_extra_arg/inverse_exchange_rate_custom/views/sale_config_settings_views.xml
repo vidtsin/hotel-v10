@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sales_config_inherit_exchange_rate" model="ir.ui.view">
+        <field name="name">exchange rate sale settings</field>
+        <field name="model">sale.config.settings</field>
+        <field name="inherit_id" ref="sale_stock.view_sales_config_inherit_sale_stock"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='main']" position="inside">
+                <group string="Exchange Rate Options">
+                    <field name="group_use_manual_exchange_rate" />
+                    <field name="keep_exchange_rate" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

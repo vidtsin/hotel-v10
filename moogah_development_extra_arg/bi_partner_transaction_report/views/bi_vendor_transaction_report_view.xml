@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="action_account_report_vendor_transaction" model="ir.actions.client">
+            <field name="name">Vendor Ledger</field>
+            <field name="tag">account_report_generic</field>
+            <field name="context" eval="{'url': '/account_reports/output_format/vendor_transaction_report/1', 'addActiveId': True, 'model': 'vendor.transaction.report', 'date_filter': 'this_month'}" />
+        </record>
+
+		<record id="bi_vendor_transaction_report_type" model="account.report.type">
+			<field name="date_range" eval="True" />
+			<field name="extra_options" eval="False" />
+			<field name="comparison" eval="False" />
+		</record>
+		
+
+	</data>
+</odoo>

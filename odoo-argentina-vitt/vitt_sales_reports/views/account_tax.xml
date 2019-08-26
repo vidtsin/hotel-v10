@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_tax3_form" model="ir.ui.view">
+            <field name="name">account.tax3.form</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="account.view_tax_form"/>
+            <field name="arch" type="xml">
+				<field position="after" name="active">
+					<field name="vatreport_included"/>
+			    </field>
+            </field>
+        </record>
+
+        <record id="view_account_position_form2" model="ir.ui.view">
+            <field name="name">view.account.position.form2</field>
+            <field name="model">account.fiscal.position</field>
+            <field name="inherit_id" ref="l10n_ar_account.view_account_position_form"/>
+            <field name="arch" type="xml">
+                <field name="afip_code" position="after">
+                    <field name="afip_code_purch"/>
+                </field>
+            </field>
+        </record>
+
+  </data>
+</odoo>

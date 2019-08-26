@@ -1,0 +1,11 @@
+
+<odoo>
+    <template id="web_timepicker_widget_assets_backend" name="web timepicker widget assets"
+              inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/web_timepicker_widget/static/src/lib/jquery.timepicker/jquery.timepicker.js"/>
+            <script type="text/javascript"  src="/web_timepicker_widget/static/src/js/web_timepicker_widget.js"/>
+            <link rel="stylesheet" href="/web_timepicker_widget/static/src/lib/jquery.timepicker/jquery.timepicker.css"/>
+        </xpath>
+    </template>
+</odoo>

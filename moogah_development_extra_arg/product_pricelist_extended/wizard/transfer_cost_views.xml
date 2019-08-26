@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="transfer_cost_view_form" model="ir.ui.view">
+            <field name="name">transfer.cost.form</field>
+            <field name="model">transfer.cost</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="categ_id"/>
+                            <field name="product_id"/>
+                        </group>
+                        <group>
+                            <field name="transfer_operation"/>
+                        </group>
+                    </group>
+                    <group colspan="4">
+                        <label string="Changes to be made are not reversible and will affect the normal use of the system while they are running.
+                        Please make sure to make a backup copy of the Database before executing this automatic operation and have the necessary time to complete the process."/>
+                    </group>
+                    <footer>
+                        <button string='Execute' name="execute" type="object"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-default"
+                                special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="transfer_cost_action" model="ir.actions.act_window">
+            <field name="name">Replacement Costs Conversion</field>
+            <field name="res_model">transfer.cost</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="transfer_cost_menu_action"
+                  name="Replacement Costs Conversion"
+                  action="transfer_cost_action"
+                  parent="account.menu_finance_receivables"
+                  groups="account.group_account_manager,base.group_system"/>
+
+    </data>
+</odoo>

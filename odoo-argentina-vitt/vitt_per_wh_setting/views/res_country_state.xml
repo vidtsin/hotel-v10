@@ -1,0 +1,19 @@
+<odoo>
+    <record id="new_country_state_form" model="ir.ui.view">
+        <field name="name">new.country.state.form</field>
+        <field name="model">res.country.state</field>
+        <field name="inherit_id" ref="vitt_sales_reports.view_country_state_form"/>
+        <field name="arch" type="xml">
+            <field name="afip_code" position="after">
+                <group string="Tax Setup">
+                    <field name="whtax_id"/>
+                    <field name="percep_id"/>
+                    <field name="jurisd_id"/>
+                    <field name="wh_tax_base"/>
+                    <field name="perc_tax_base"/>
+                    <field name="type_mandatory"/>
+                </group>
+            </field>
+        </field>
+    </record>
+</odoo>

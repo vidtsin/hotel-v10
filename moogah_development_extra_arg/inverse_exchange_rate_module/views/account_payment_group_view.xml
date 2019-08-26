@@ -1,0 +1,178 @@
+<odoo>
+    <data>
+        <record id="view_account_payment_group_form" model="ir.ui.view">
+            <field name="name">view.account.payment.group.form</field>
+            <field name="model">account.payment.group</field>
+            <field name="inherit_id" ref="account_payment_group.view_account_payment_group_form"/>
+            <field name="arch" type="xml">
+                <header position="after">
+                    <div class="alert alert-info alert-dismissible" role="alert" style="margin-bottom:0px;" attrs="{'invisible': [('show_message','=',False)]}">
+                        We recommend to add a payment reference to identity the unmatched values.
+                    </div>
+                </header>
+                <xpath expr="//field[@name='to_pay_amount']" position="after">
+                    <field name="currency_id" invisible="1"/>
+                    <field name="manual_currency_rate_active" invisible="1"/>
+                    <field name="edit_rate" invisible="1"/>
+            		<field name="manual_currency_rate" attrs="{'readonly':[('edit_rate','=',False)]}"/>
+                    <field name="currency_rate" attrs="{'readonly':[('edit_rate','=',False)]}"/>
+                    <field name="currency2_id" attrs="{'readonly':[('edit_rate','=',False)]}"/>
+                    <label for="tot_in_currency"/>
+                    <div name="tot_in_currency" class="o_row">
+                        <field name="tot_in_currency" options="{'currency_field': 'currency2_id'}" widget="monetary"/>
+                    </div>
+                    <label for="tot_in_company_currency"/>
+                    <div name="tot_in_company_currency" class="o_row">
+                        <field name="tot_in_company_currency" options="{'currency_field': 'currency_id'}" widget="monetary"/>
+                    </div>
+                    <field name="id" invisible="1"/>
+                    <field name="savedf" invisible="1"/>
+                </xpath>
+                <field name="unreconciled_amount" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+                <field name="unmatched_amount" position="after">
+                    <field name="unmatched_amount_payment_currency2" options="{'currency_field': 'currency2_id'}" widget="monetary" states="posted"/>
+                </field>
+                <field name="payment_difference" position="after">
+                    <label for="total_inv_currency2"/>
+                    <div name="total_inv_currency2" class="o_row">
+                        <field name="total_inv_currency2" options="{'currency_field': 'inv_currency_id'}" />
+                        <field name="inv_currency_id" invisible="1" options="{'no_create': True, 'no_open': True}" />
+                    </div>
+                    <field name="exchange_difference" options="{'currency_field': 'currency_id'}" states="posted"/>
+                    <field name="prepayment_reference" attrs="{'readonly':[('edit_reference','=',False)],'required':[('anticipate','=',True)]}" />
+                    <field name="paid_payment_currency" states="posted" />
+                    <field name="paid_company_currency" states="posted" />
+                    <field name="anticipate" invisible="1"/>
+                    <field name="edit_reference" invisible="1"/>
+                    <field name="edit_billing_users" invisible="1"/>
+                    <field name="show_message" invisible="1"/>
+                    <field name="to_pay_payment_currency" invisible="1"/>
+                    <field name="to_pay_company_currency" invisible="1"/>
+                </field>
+
+                <xpath expr="//field[@name='payment_ids']" position="attributes">
+                    <attribute name="context">{'payment_group_id': id,
+                        'default_payment_group_company_id': company_id,
+                        'default_payment_type': partner_type == 'supplier' and 'outbound' or 'inbound',
+                        'default_payment_date': payment_date,
+                        'default_partner_id': partner_id,
+                        'default_partner_type': partner_type,
+                        'default_currency_id': currency2_id,
+                        'default_manual_currency_rate_active': True,
+                        'default_manual_currency_rate': manual_currency_rate,
+                        'payment_group': True,
+                        'default_amount': payment_difference,
+                        'payment_ids': payment_ids,
+                        'to_pay_pay_curr': to_pay_payment_currency,
+                        'tree_view_ref': 'account_payment_group.view_account_payment_from_group_tree'}</attribute>
+                </xpath>
+                <xpath expr="//page[@name='payment_lines']" position="attributes">
+                    <attribute name="attrs">{'invisible':['|',('payment_subtype', '=', 'double_validation'),('state', '=', 'draft'),'|',('savedf', '=', False)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="view_account_payment_group_anticipate_tree" model="ir.ui.view">
+            <field name="name">account.payment.group.anticipate.tree</field>
+            <field name="model">account.payment.group</field>
+            <field name="arch" type="xml">
+                <tree create="0">
+                    <field name="display_name"/>
+                    <field name="payment_date"/>
+                    <field name="partner_id" string="Customer"/>
+                    <field name="payments_amount" position="before"/>
+                    <field name="unmatched_amount" sum="Total" />
+                    <field name="currency_id" invisible="1"/>
+                    <field name="state"/>
+                    <field name="prepayment_reference"/>
+                    <field name="anticipate" invisible="1"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_account_payment_group_anticipate_search" model="ir.ui.view">
+            <field name="name">account.payment.group.anticipate.search</field>
+            <field name="model">account.payment.group</field>
+            <field name="arch" type="xml">
+                <search string="Payments">
+                    <field name="partner_id" />
+                    <field name="payment_date" />
+                    <separator/>
+                    <filter string="Show reference" domain="[('prepayment_reference','!=',False)]"/>
+                    <separator/>
+                    <filter string="Partner" domain="[]" context="{'group_by': 'partner_id'}"/>
+                    <filter string="State" domain="[]" context="{'group_by': 'state'}"/>
+                </search>
+            </field>
+        </record>
+
+        <!--record id="action_account_payment_group_anticipate_supplier" model="ir.actions.act_window">
+            <field name="name">Supplier Anticipate List</field>
+            <field name="res_model">account.payment.group</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('anticipate', '=', True),('partner_type', '=', 'supplier')]</field>
+            <field name="search_view_id" ref="view_account_payment_group_anticipate_search"/>
+            <field name="view_id" ref="view_account_payment_group_anticipate_tree"/>
+        </record>
+
+        <record id="action_account_payment_group_anticipate" model="ir.actions.act_window">
+            <field name="name">Customer Anticipate List</field>
+            <field name="res_model">account.payment.group</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('anticipate', '=', True),('partner_type', '=', 'customer')]</field>
+            <field name="search_view_id" ref="view_account_payment_group_anticipate_search"/>
+            <field name="view_id" ref="view_account_payment_group_anticipate_tree"/>
+        </record-->
+
+
+        <record model="ir.actions.act_window" id="account_payment_group.action_account_payments_group_payable">
+            <field name="view_type">form</field>
+             <field name="search_view_id" ref="account_payment_group.view_account_payment_group_search"/>
+            <field name="view_id" ref="account_payment_group.view_account_payment_group_tree"/>
+        </record>
+
+        <record model="ir.actions.act_window" id="account_payment_group.action_account_payments_group">
+            <field name="view_type">form</field>
+             <field name="search_view_id" ref="account_payment_group.view_account_payment_group_search"/>
+            <field name="view_id" ref="account_payment_group.view_account_payment_group_tree"/>
+        </record>
+
+        <!--menuitem action="action_account_payment_group_anticipate" id="menu_action_account_payments_group_anticipate" parent="account.menu_finance_receivables" sequence="30" />
+        <menuitem action="action_account_payment_group_anticipate_supplier" id="menu_action_account_payments_group_anticipate_supplier" parent="account.menu_finance_payables" sequence="30" /-->
+
+
+        <record id="view_account_payment_group_search2" model="ir.ui.view">
+            <field name="name">account.payment.group.search2</field>
+            <field name="model">account.payment.group</field>
+            <field name="inherit_id" ref="account_payment_group.view_account_payment_group_search"/>
+            <field name="arch" type="xml">
+                <filter name="state_draft" position="after">
+                    <filter string="Prepayments" domain="[('prepayment_reference','!=','False')]" name='prepayments'/>
+                </filter>
+                <filter name="currency" position="replace">
+                    <filter string="Currency" domain="[]" context="{'group_by': 'currency2_id'}" groups="base.group_multi_currency"/>
+                </filter>
+            </field>
+        </record>
+
+        <!--record id="view_account_payment_group_tree2" model="ir.ui.view">
+            <field name="name">account.payment.group.tree2</field>
+            <field name="model">account.payment.group</field>
+            <field name="inherit_id" ref="account_payment_group.view_account_payment_group_tree"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="unmatched_amount"/>
+                    <field name="unmatched_amount_payment_currency2"/>
+                </field>
+            </field>
+        </record-->
+
+
+    </data>
+</odoo>

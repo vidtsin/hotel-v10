@@ -1,0 +1,239 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_customer_outstanding_statement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-14 17:04+0000\n"
+"PO-Revision-Date: 2019-05-14 14:11-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:183
+#, python-format
+msgid "+120 Days Due"
+msgstr "+120 Días"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:175
+#, python-format
+msgid "1-30 Days Due"
+msgstr "1-30 Días"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:177
+#, python-format
+msgid "30-60 Days Due"
+msgstr "30-60 Días"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:179
+#, python-format
+msgid "60-90 Days Due"
+msgstr "60-90 Días"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:181
+#, python-format
+msgid "90-120 Days Due"
+msgstr "90-120 Días"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:137
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:185
+#, python-format
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.ui.menu,name:vitt_customer_outstanding_statement.menu_comercial_report
+msgid "Comercial Reports"
+msgstr "Reportes Comerciales"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:173
+#, python-format
+msgid "Current Due"
+msgstr "Pendiente a la Fecha"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.actions.act_window,name:vitt_customer_outstanding_statement.action_cos_report
+#: model:ir.ui.menu,name:vitt_customer_outstanding_statement.menu_cos_report
+msgid "Customer Outstanding Statement"
+msgstr "Estado de Cuenta de Cliente"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_c_partner_ids
+msgid "Customers"
+msgstr "Clientes"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:127
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:131
+#, python-format
+msgid "Description"
+msgstr "Descripción"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_display_name
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_report_vitt_customer_outstanding_statement_statement_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:129
+#, python-format
+msgid "Due Date"
+msgstr "Fecha de Vencimiento"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.ui.view,arch_db:vitt_customer_outstanding_statement.wizard_cos_report_view
+msgid "EXECUTE"
+msgstr "EJECUTAR"
+
+#. module: vitt_customer_outstanding_statement
+#: selection:customer.outstanding.statement.wizard2,print_by:0
+msgid "Export xlsx"
+msgstr "Exportar xlsx"
+
+#. module: vitt_customer_outstanding_statement
+#: selection:customer.outstanding.statement.wizard2,print_by:0
+msgid "HTML"
+msgstr "HTML"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_id
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_report_vitt_customer_outstanding_statement_statement_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2___last_update
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_report_vitt_customer_outstanding_statement_statement___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_number_partner_ids
+msgid "Number partner ids"
+msgstr "ids de Número de Cliente"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:135
+#, python-format
+msgid "Open Amount"
+msgstr "Monto Abierto"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:133
+#, python-format
+msgid "Original Amount"
+msgstr "Monto Original"
+
+#. module: vitt_customer_outstanding_statement
+#: selection:customer.outstanding.statement.wizard2,print_by:0
+msgid "PDF"
+msgstr "PDF"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:117
+#, python-format
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_print_by
+msgid "Printing Options"
+msgstr "Opciones de Impresión"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:125
+#, python-format
+msgid "Reference number"
+msgstr "Número de Referencia"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.actions.report.xml,name:vitt_customer_outstanding_statement.action_print_customer_outstanding_statement
+msgid "Statement Action to HTML"
+msgstr "Informe a HTML"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.actions.act_window,name:vitt_customer_outstanding_statement.action_sos_report
+#: model:ir.ui.menu,name:vitt_customer_outstanding_statement.menu_sos_report
+msgid "Supplier Outstanding Statement"
+msgstr "Estado de Cuenta Proveedor"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_p_partner_ids
+msgid "Suppliers"
+msgstr "Proveedores"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model.fields,field_description:vitt_customer_outstanding_statement.field_customer_outstanding_statement_wizard2_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: vitt_customer_outstanding_statement
+#: code:addons/vitt_customer_outstanding_statement/models/models.py:169
+#, python-format
+msgid "aging report at "
+msgstr "Reporte de Vencimientos por Antigüedad al"
+
+#. module: vitt_customer_outstanding_statement
+#: selection:customer.outstanding.statement.wizard2,type:0
+msgid "customer"
+msgstr "cliente"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model,name:vitt_customer_outstanding_statement.model_customer_outstanding_statement_wizard2
+msgid "customer.outstanding.statement.wizard2"
+msgstr "customer.outstanding.statement.wizard2"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model,name:vitt_customer_outstanding_statement.model_report_customer_outstanding_statement_statement
+msgid "report.customer_outstanding_statement.statement"
+msgstr "report.customer_outstanding_statement.statement"
+
+#. module: vitt_customer_outstanding_statement
+#: model:ir.model,name:vitt_customer_outstanding_statement.model_report_vitt_customer_outstanding_statement_statement
+msgid "report.vitt_customer_outstanding_statement.statement"
+msgstr "report.vitt_customer_outstanding_statement.statement"
+
+#. module: vitt_customer_outstanding_statement
+#: selection:customer.outstanding.statement.wizard2,type:0
+msgid "supplier"
+msgstr "proveedor"

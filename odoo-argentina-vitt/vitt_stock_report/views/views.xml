@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        string="Delivery Slip 2"
+        id="action_report_delivery2"
+        model="stock.picking"
+        report_type="qweb-html"
+        name="vitt_stock_report.report_deliveryslip2"
+        file="vitt_stock_report.report_deliveryslip2"
+    />
+    <report
+        string="Delivery Slip overview"
+        id="action_report_delivery3"
+        model="stock.picking"
+        report_type="qweb-html"
+        name="vitt_stock_report.report_deliveryslip3"
+        file="vitt_stock_report.report_deliveryslip3"
+    />
+        <report
+            string="Delivery Slip"
+            id="stock.action_report_delivery"
+            model="stock.picking"
+            report_type="qweb-pdf"
+            name="stock.report_deliveryslip"
+            file="stock.report_deliveryslip"
+            menu="False"
+        />
+
+
+
+</odoo>
+

@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_ar_afipws_fe2
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-18 20:02+0000\n"
+"PO-Revision-Date: 2019-01-18 17:17-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: l10n_ar_afipws_fe2
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:343
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:347
+#, python-format
+msgid "AFIP Validation Error. %s"
+msgstr "Error Validación AFIP %s"
+
+#. module: l10n_ar_afipws_fe2
+#: model:ir.model,name:l10n_ar_afipws_fe2.model_afipws_connection
+msgid "AFIP WS Connection"
+msgstr "Conexión a WS AFIP"
+
+#. module: l10n_ar_afipws_fe2
+#: model:ir.model.fields,field_description:l10n_ar_afipws_fe2.field_product_product_mercosur_code
+#: model:ir.model.fields,field_description:l10n_ar_afipws_fe2.field_product_template_mercosur_code
+msgid "Codigo Mercosur"
+msgstr "Cód. Mercosur"
+
+#. module: l10n_ar_afipws_fe2
+#: model:ir.model.fields,field_description:l10n_ar_afipws_fe2.field_product_product_secretaria_code
+#: model:ir.model.fields,field_description:l10n_ar_afipws_fe2.field_product_template_secretaria_code
+msgid "Codigo Secretaria"
+msgstr "Cód. Secretaria"
+
+#. module: l10n_ar_afipws_fe2
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:74
+#, python-format
+msgid "Error!Invoice id: %iNext invoice number should be %i and not %i"
+msgstr "Error!Factura id: %iEl siguiente número debería ser %i y no %i"
+
+#. module: l10n_ar_afipws_fe2
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:65
+#, python-format
+msgid "For WS \"%s\" country afip code is mandatoryCountry: %s"
+msgstr "Para WS \"%s\" el cód. AFIP de País es Obligatorio: %s"
+
+#. module: l10n_ar_afipws_fe2
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:60
+#, python-format
+msgid "For WS \"%s\" country code is mandatoryCountry: %s"
+msgstr "Para WS \"%s\" el código de País es obligatorio : %s"
+
+#. module: l10n_ar_afipws_fe2
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:55
+#, python-format
+msgid "For WS \"%s\" country is required on partner"
+msgstr "Para WS \"%s\" el país es requerido en el cliente"
+
+#. module: l10n_ar_afipws_fe2
+#: model:ir.model,name:l10n_ar_afipws_fe2.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_ar_afipws_fe2
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:153
+#, python-format
+msgid "No vat defined for the partner and also no CUIT set on country"
+msgstr "No hay Impuestos definidos para el Cliente, ni campo el valor del CUIT en el país"
+
+#. module: l10n_ar_afipws_fe2
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:249
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:268
+#, python-format
+msgid "Not afip code con producto UOM %s"
+msgstr "Sin código AFIP en el producto UOM %s"
+
+#. module: l10n_ar_afipws_fe2
+#: model:ir.model,name:l10n_ar_afipws_fe2.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de Producto"
+
+#. module: l10n_ar_afipws_fe2
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:276
+#, python-format
+msgid "WS wsmtxca Not implemented yet"
+msgstr "WS wsmtxca Not implemented yet"
+
+#. module: l10n_ar_afipws_fe2
+#: code:addons/l10n_ar_afipws_fe2/models/models.py:259
+#, python-format
+msgid "just numbers in Mercosur Code %s"
+msgstr "El Cód. Mercosur del producto solo debe tener números %s"

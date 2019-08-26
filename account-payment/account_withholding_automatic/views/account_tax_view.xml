@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data> 
+
+        <record id="view_tax_form" model="ir.ui.view">
+            <field name="name">account.tax.form</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="account.view_tax_form"/>
+            <field name="arch" type="xml">
+                <field name="refund_account_id" position="attributes">
+                    <attribute name="attrs">{'invisible': [('type_tax_use','=','customer')]}</attribute>
+                </field>
+                <xpath expr="//page" position="inside">
+                    <group attrs="{'invisible': [('type_tax_use', '!=', 'supplier')]}">
+                        <group attrs="{'invisible':[('withholding_type', '=', 'none')]}">
+                            <field name="withholding_advances" invisible="1"/>
+                        </group>
+                    </group>
+                </xpath>
+
+                    <notebook>
+                        <page string="TAX Calculations">
+                            <p>
+                            <label for="withholding_type"/>
+                            <field name="withholding_type" class="oe_inline" />
+                            </p>
+                            <p>
+                            <button name="account_withholding_automatic.action_withholding_automatic_domain1_wizard" type="action" string="Insertar Regla" /> <!-- states="draft" -->
+                            </p>
+                            <p>
+                            <field name="withholding_python_compute" attrs="{'invisible': [('withholding_type', '!=', 'code')]}" class="oe_inline" nolabel="1" colspan="2"/>
+                            <field name="withholding_rule_ids"  class="oe_inline" nolabel="1" colspan="2">
+                                <tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="domain"/>
+                                    <field name="percentage"/>
+                                    <field name="fix_amount"/>
+                                </tree>
+                            </field>
+                            </p>
+                            <group attrs="{'invisible':[('withholding_type', '=', 'none')]}">
+                                <label for="withholding_amount_type" attrs="{'required':[('withholding_type', '!=', 'none')]}"/>
+                                <div for="withholding_amount_type" attrs="{'required':[('withholding_type', '!=', 'none')]}">
+                                    <field name="withholding_amount_type" attrs="{'required':[('withholding_type', '!=', 'none')]}" class="oe_inline"/>
+                                </div>
+                                <field name="withholding_accumulated_payments"/>
+                                <field name="withholding_non_taxable_minimum"/>
+                                <field name="withholding_non_taxable_amount"/>
+                                <field name="withholding_user_error_message" invisible="1"/>
+                                <field name="withholding_user_error_domain" attrs="{'invisible': [('withholding_user_error_message', '=', False)]}"/>
+                                <!--<button name="account_withholding_automatic.action_withholding_automatic_domain2_wizard" type="action" string="Insertar Regla" attrs="{'invisible': [('withholding_type', '!=', 'based_on_rule')]}"/>--> <!-- states="draft" -->
+                            </group>
+                        </page>
+                    </notebook>
+            </field>
+        </record>
+
+    </data>
+</openerp>

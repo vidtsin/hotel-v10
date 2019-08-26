@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_receipt_and_payment_journal_line" inherit_id="account_reports.report_financial_line"
+                  primary="True">
+            <td t-att-data-id="a.get('id')" position="replace"/>
+            <t t-set="column" t-value="0" position="after">
+                <t t-set="style_tr" t-value="a.get('style')"/>
+            </t>
+            <tr t-att-data-type="a['type']" position="attributes">
+                <attribute name="t-att-style">style_tr</attribute>
+            </tr>
+            <t t-set="column" position="after">
+                <t t-set="style_td" t-value="'white-space: nowrap;'"/>
+            </t>
+            <t t-set="style" t-value="c[1]" position="before">
+                <t t-if="len(c)>2">
+                    <t t-set="style_td" t-value="c[2]+'white-space: nowrap;'"/>
+                </t>
+            </t>
+            <t t-set="columns_types" t-value="context.get_columns_types()[-len(a['columns']):]" position="replace">
+                <t t-if="context.get_report_obj().get_name() in ['payment_journal','receipt_journal'] and context.detail_level in ['per_supplier','per_customer']">
+                    <t t-set="columns_types" t-value="context.get_per_partner_columns_types()[-len(a['columns']):]"/>
+                </t>
+                <t t-if="context.get_report_obj().get_name() in ['payment_journal','receipt_journal'] and context.detail_level == 'overview'">
+                    <t t-set="columns_types" t-value="context.get_columns_types()[-len(a['columns']):]"/>
+                </t>
+            </t>
+            <t t-if="a['type'] != 'total'" position="replace">
+                <t t-if="a['type'] != 'total'">
+                    <t t-if="context.get_report_obj().get_name() in ['payment_journal','receipt_journal'] and context.detail_level in ['per_supplier','per_customer']">
+                        <t t-if="len(columns_types) != column">
+                            <td t-att-class="columns_types[column - 1] == 'number' and  'text-right' or columns_types[column - 1] == 'text' and  'text-left' or columns_types[column - 1] == 'date' and 'text-left' or 'text-center'"
+                                style="white-space: nowrap;" t-att-summary="context._get_summary(column)">
+                                <span class="annotable" t-att-style="style">
+                                    <t t-raw="c"/>
+                                    <t t-call="account_reports.report_financial_footnote_sup"/>
+                                </span>
+                            </td>
+                        </t>
+                        <t t-if="len(columns_types) == column">
+                            <td t-att-class="columns_types[column - 1] == 'number' and  'text-right' or columns_types[column - 1] == 'text' and  'text-right' or columns_types[column - 1] == 'date' and 'text-left' or 'text-center'"
+                                style="white-space: nowrap;" t-att-summary="context._get_summary(column)">
+                                <span class="annotable" t-att-style="style">
+                                    <t t-raw="c"/>
+                                    <t t-call="account_reports.report_financial_footnote_sup"/>
+                                </span>
+                            </td>
+                        </t>
+                    </t>
+                    <t t-if="context.get_report_obj().get_name() in ['payment_journal','receipt_journal'] and context.detail_level == 'overview'">
+                        <t t-if="len(columns_types) != column">
+                            <td t-att-class="columns_types[column - 1] == 'number' and  'text-right' or columns_types[column - 1] == 'text' and  'text-left' or 'text-center'"
+                                style="white-space: nowrap;" t-att-summary="context._get_summary(column)">
+                                <span class="annotable" t-att-style="style">
+                                    <t t-raw="c"/>
+                                    <t t-call="account_reports.report_financial_footnote_sup"/>
+                                </span>
+                            </td>
+                        </t>
+                        <t t-if="len(columns_types) == column">
+                            <td t-att-class="columns_types[column - 1] == 'number' and  'text-right' or columns_types[column - 1] == 'text' and  'text-right' or 'text-center'"
+                                style="white-space: nowrap;" t-att-summary="context._get_summary(column)">
+                                <span class="annotable" t-att-style="style">
+                                    <t t-raw="c"/>
+                                    <t t-call="account_reports.report_financial_footnote_sup"/>
+                                </span>
+                            </td>
+                        </t>
+                    </t>
+                </t>
+            </t>
+            <t t-if="a['type'] == 'total'" position="replace">
+                <t t-if="a['type'] == 'total'">
+                    <t t-if="context.get_report_obj().get_name() in ['payment_journal','receipt_journal']">
+                        <t t-if="len(columns_types) != column">
+                            <td t-att-class="columns_types[column - 1] == 'number' and  'text-right' or columns_types[column - 1] == 'text' and  'text-left' or 'text-center'"
+                                style="white-space: nowrap;"
+                                t-att-summary="column in (1,2) and context._get_summary(1) or ''">
+                                <span class="annotable" t-att-style="style_td">
+                                    <t t-raw="c"/>
+                                    <t t-call="account_reports.report_financial_footnote_sup"/>
+                                </span>
+                            </td>
+                        </t>
+                        <t t-if="len(columns_types) == column">
+                            <td t-att-class="columns_types[column - 1] == 'number' and  'text-right' or columns_types[column - 1] == 'text' and  'text-right' or 'text-center'"
+                                style="white-space: nowrap;"
+                                t-att-summary="column in (1,2) and context._get_summary(1) or ''">
+                                <span class="annotable" t-att-style="style_td">
+                                    <t t-raw="c"/>
+                                    <t t-call="account_reports.report_financial_footnote_sup"/>
+                                </span>
+                            </td>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <template id="report_receipt_and_payment_journal_body" inherit_id="account_reports.report_financial_body"
+                  primary="True">
+            <div class="row" t-if="mode == 'print' and not context.env.context.get('public')"
+                 style='margin-top: 20px; margin-bottom: 20px;' position="replace">
+                <div class="row" t-if="not context.env.context.get('public')"
+                     style='margin-top: 20px; margin-bottom: 20px;font-size:0.9em;'>
+                    <div class="col-xs-4">
+                        <t t-raw="context.get_full_date_names(context.date_to, context.date_from)"/>
+                    </div>
+                    <br/>
+                    <div class="col-xs-4">
+                        <t t-raw="context.get_payment_journals(context.journal_ids)"/>
+                    </div>
+                    <br/>
+                    <div class="col-xs-4">
+                        <t t-raw="context.get_partner(context.partner_id)"/>
+                    </div>
+                    <t t-if="context.get_report_obj().get_name() == 'payment_journal'">
+                        <br/>
+                        <div class="col-xs-4">
+                            <t t-raw="context.get_analytic_tag(context.analytic_tag_id)"/>
+                        </div>
+                    </t>
+                    <br/>
+                    <div class="col-xs-4">
+                        <t t-if="context.get_report_obj().get_name() == 'payment_journal'">
+                            <t t-raw="context.get_status(context.confirmed, context.posted)"/>
+                        </t>
+                        <t t-if="context.get_report_obj().get_name() == 'receipt_journal'">
+                            <t t-raw="context.get_status(context.draft, context.posted)"/>
+                        </t>
+                    </div>
+                    <br/>
+                    <div class="col-xs-4">
+                        <t t-raw="context.get_detail_level(context.detail_level)"/>
+                    </div>
+                </div>
+            </div>
+
+            <xpath expr="//table/thead" position="replace">
+                <thead>
+                    <t t-if="context.get_report_obj().get_name() in ['payment_journal','receipt_journal'] and context.detail_level == 'overview'">
+                        <tr>
+                            <t t-set="column" t-value="0"/>
+                            <t t-foreach="context.get_columns_names()" t-as="column_name">
+                                <t t-set="column" t-value="column + 1"/>
+                                <t t-if="len(context.get_columns_types()) == column">
+                                    <th t-att-class="context.get_columns_types()[column - 1] == 'number' and 'text-right' or context.get_columns_types()[column - 1] == 'text' and  'text-right' or 'text-center'"
+                                        t-raw="column_name"
+                                        t-att-width="context.get_columns_types()[column - 1] == 'number' and '1%' or ''"
+                                        style='padding-left: 15px;' t-att-summary="context._get_summary(column)"/>
+                                </t>
+                                <t t-if="len(context.get_columns_types()) != column">
+                                    <th t-att-class="context.get_columns_types()[column - 1] == 'number' and 'text-right' or context.get_columns_types()[column - 1] == 'text' and  'text-left' or 'text-center'"
+                                        t-raw="column_name"
+                                        t-att-width="context.get_columns_types()[column - 1] == 'number' and '1%' or ''"
+                                        style='padding-left: 15px;' t-att-summary="context._get_summary(column)"/>
+                                </t>
+                            </t>
+                        </tr>
+                    </t>
+                    <t t-if="context.get_report_obj().get_name() in ['payment_journal','receipt_journal'] and context.detail_level in ['per_supplier','per_customer']">
+                        <tr>
+                            <th id="ref_number"></th>
+                            <t t-set="column" t-value="0"/>
+                            <t t-foreach="context.get_per_partner_columns_names()" t-as="column_name">
+                                <t t-set="column" t-value="column + 1"/>
+                                <t t-if="len(context.get_per_partner_columns_types())-1 == column">
+                                    <th t-att-class="context.get_per_partner_columns_types()[column - 1] == 'number' and 'text-right' or context.get_per_partner_columns_types()[column - 1] == 'text' and 'text-right' or 'text-center'"
+                                        t-raw="column_name"
+                                        t-att-width="context.get_per_partner_columns_types()[column - 1] == 'number' and '1%' or ''"
+                                        t-att-summary="context._get_summary(column)"/>
+                                </t>
+                                <t t-if="len(context.get_per_partner_columns_types())-1 != column">
+                                    <th t-att-class="context.get_per_partner_columns_types()[column - 1] == 'number' and 'text-right' or context.get_per_partner_columns_types()[column - 1] == 'text' and 'text-left' or context.get_per_partner_columns_types()[column - 1] == 'date' and 'text-left' or 'text-center'"
+                                        t-raw="column_name"
+                                        t-att-width="context.get_per_partner_columns_types()[column - 1] == 'number' and '1%' or ''"
+                                        style='padding-left: 15px;' t-att-summary="context._get_summary(column)"/>
+                                </t>
+                            </t>
+                        </tr>
+                    </t>
+                </thead>
+            </xpath>
+
+
+            <xpath expr="//t[@t-call='account_reports.report_financial_line']" position="replace">
+                <t t-call='receipt_and_payment_journal_report.report_receipt_and_payment_journal_line'/>
+            </xpath>
+
+            <div t-att-class="mode != 'print' and 'table-responsive' or None" position="after">
+                <t t-if="mode == 'print'">
+                    <br></br>
+                </t>
+                <t t-if="context.get_report_obj().get_name() in ['payment_journal','receipt_journal'] and journal_lines">
+                    <div>
+                        <table width='100%' class="o_account_reports_table">
+                            <thead style="font_color: #FFFFFF; bold: True; pattern: 1">
+                                <tr>
+                                    <th>Payment Journals</th>
+                                    <th class="text-right">Total in Currency</th>
+                                    <th class="text-right">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="journal_lines" t-as="journal_line">
+                                    <tr>
+                                        <th>
+                                            <span>
+                                                <t t-esc="journal_line['journal_name']"/>
+                                            </span>
+                                        </th>
+                                        <th class="text-right">
+                                            <span>
+                                                <t t-esc="journal_line['total_journal_in_currency']"/>
+                                            </span>
+                                        </th>
+                                        <th class="text-right">
+                                            <span>
+                                                <t t-esc="journal_line['total_journal']"/>
+                                            </span>
+                                        </th>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                    <br/>
+                    <t t-if="has_payment">
+                        <p class="footnote">
+                            <span class='text'><t t-raw="'*' + '. '"/>This payment does not have any payment line
+                                entered yet.
+                            </span>
+                        </p>
+                    </t>
+                </t>
+            </div>
+        </template>
+
+        <template id="report_receipt_and_payment_journal" inherit_id="account_reports.report_financial" primary="True">
+            <xpath expr="//t[@t-call='account_reports.report_financial_body']" position="replace">
+                <t t-call='receipt_and_payment_journal_report.report_receipt_and_payment_journal_body'/>
+            </xpath>
+        </template>
+
+        <template id="report_receipt_and_payment_journal_letter" inherit_id="account_reports.report_financial_letter"
+                  primary="True">
+            <xpath expr="//t[@t-call='account_reports.report_financial']" position="replace">
+                <t t-call='receipt_and_payment_journal_report.report_receipt_and_payment_journal'/>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

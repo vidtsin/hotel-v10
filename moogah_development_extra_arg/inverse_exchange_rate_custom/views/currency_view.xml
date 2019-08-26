@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+    <record model="ir.ui.view" id="view_currency_form_inherit_add_inverse_field">
+        <field name="name">view.currency.form.inherit.add.inverse.field</field>
+        <field name="model">res.currency</field>
+        <field name="inherit_id" ref="base.view_currency_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//field[@name='rate']" position="after">
+                <field name="inverse_rate"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_currency_rate_form_inherit_add_inverse_field">
+        <field name="name">view.currency.rate.form.inherit.add.inverse.field</field>
+        <field name="model">res.currency.rate</field>
+        <field name="inherit_id" ref="base.view_currency_rate_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='rate']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='rate']" position="after">
+                <field name="inverse_rate"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_currency_rate_tree_inherit_add_inverse_field">
+        <field name="name">view.currency.rate.tree.inherit.add.inverse.field</field>
+        <field name="model">res.currency.rate</field>
+        <field name="inherit_id" ref="base.view_currency_rate_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='rate']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='rate']" position="after">
+                <field name="inverse_rate"/>
+            </xpath>
+        </field>
+    </record>
+
+  </data>	
+</openerp>
+

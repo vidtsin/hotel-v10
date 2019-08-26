@@ -1,0 +1,54 @@
+<templates>
+    <t t-name="hotel_room_availability.RoomPricelist">
+        <div class="oe_room_availability_weekly">
+            <table class="table table-condensed table-responsive">
+                <tr class="default-tr">
+                    <!-- <th></th> -->
+                    <th class="oe_timesheet_first_col oe_postion" colspan="3"/>
+                    <t t-foreach="widget.dates" t-as="date">
+                        <th t-att-class="'oe_timesheet_weekly_date_head' + (moment().format('DD-MM-YYYY') === moment(date).format('DD-MM-YYYY') ? ' oe_timesheet_weekly_today' : '')">
+                            <t t-esc="moment(date).format('ddd')"/><br/>
+                            <t t-esc="moment(date).format('MMM DD')"/>
+                        </th>
+                    </t>
+                    <th class="oe_timesheet_weekly_date_head">Total</th>
+                </tr>
+                <t t-foreach="widget.rooms_types" t-as="room">
+                    <tbody class="tbody_group">
+                        <tr t-att-caption="room.name" t-att-id="'room_name-'+room.id" t-att-data-room="room.id" t-att-class="widget.mode=='edit' ? 'input-tr room_name' : 'value-tr room_name'">
+                            <th class="oe_timesheet_weekly_account oe_postion oe_whitesmoke" t-att-id="'room_caption-'+room.id" colspan="2">
+                                <a href="javascript:void(0)" t-att-data-id="JSON.stringify(room.id)"><t t-esc="room.name"/></a>
+                            </th>
+                            <td></td>
+                            <td></td>
+                            <!-- <t t-set="day_count" t-value="0"/>
+                            <t t-foreach="widget.dates" t-as="day">
+                                <td t-att-width="100/widget.dates.length+4" t-att-class="moment().format('DD-MM-YYYY') === moment(day.day).format('DD-MM-YYYY') ? 'oe_timesheet_weekly_today' : 'pricelist_td'">
+                                    <input t-if="widget.mode=='edit'" class="oe_timesheet_weekly_input full-width" t-att-data-room="room.product_id" t-att-data-day-count="day_count" type="text"/>
+                                    <span t-if="!widget.mode=='edit'" t-att-data-room="room.product_id" t-att-data-day-count="day_count" class="oe_timesheet_weekly_box"/>
+                                    <t t-set="day_count" t-value="day_count + 1"/>
+                                </td>
+                            </t> -->
+                            <!-- <td t-att-data-room-total="room.product_id" class="oe_timesheet_total"/> -->
+                        </tr>
+                    </tbody>
+                </t>
+                <!-- <tbody class="tbody_group pricelist_tbody">
+                    <tr>
+                        <th class="oe_timesheet_total oe_postion">
+                            Total
+                        </th>
+                        <t t-set="day_count" t-value="0"/>
+                        <t t-foreach="widget.dates" t-as="date">
+                            <td class="oe_timesheet_total">
+                                <span class="oe_timesheet_weekly_box" t-att-data-day-total="day_count"/>
+                                <t t-set="day_count" t-value="day_count + 1"/>
+                            </td>
+                        </t>
+                        <td class="oe_timesheet_weekly_supertotal oe_timesheet_total"/>
+                    </tr>
+                </tbody> -->
+            </table>
+        </div>
+    </t>
+</templates>

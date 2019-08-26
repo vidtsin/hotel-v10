@@ -1,0 +1,191 @@
+<odoo>
+    <data>
+
+        <record id="account_cash_inout_view_form" model="ir.ui.view">
+            <field name="name">account.cash.inout.form</field>
+            <field name="model">account.cash.inout</field>
+            <field name="arch" type="xml">
+                <form string="Cash Ledger">
+                    <header>
+                        <button name="validate_cash" states="draft" string="Validate"
+                                type="object" class="oe_highlight"/>
+                        <button name="revert_validate" states="validated" string="cancel cash IN/OUT"
+                                type="object" class="oe_highlight"/>
+                        <button name="todraft_cash" states="cancelled" string="send to draft"
+                                type="object" class="oe_highlight"/>
+                        <button name="vitt_cashin_cashout.action_account_change_check_wizard2" states="validated" string="Change Check"
+                                type="action" class="oe_highlight"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,validated,cancelled" />
+                    </header>
+                    <sheet>
+                        <h1>
+                            <!--label string="Cash Out" /-->
+                            <field name="name" class="oe_inline" />
+                        </h1>
+                        <group name="main">
+                            <group name="left">
+                                <field name="deposit_date" string="Payment Date"/>
+                                <field name="type" invisible="1"/>
+                                <field name="sub_journal"/>
+                                <field name="journal_id"
+                                    widget="selection"
+                                    domain="[('type', 'in', ['bank','cash']),('sub_journal','=', sub_journal)]"
+                                    attrs="{'required': True}"
+                                />
+                                <field name="cash_account_id"
+                                       domain="[('wtaxf', '=', 'cashin_out')]"
+                                />
+                                <field name="currency_id"
+                                    groups="base.group_multi_currency"/>
+                                <field name="total_amount" widget="monetary"
+                                    options="{'currency_field': 'currency_id'}"/>
+                                <field name="cash_reference"/>
+                            </group>
+                            <group name="right">
+                                <field name="company_id" invisible="1"/>
+                                <field name="move_id"/>
+                                <field name="receiptbook_id" domain="[('document_type_id.internal_type', 'in', ['cash_in','cash_out'])]"/>
+                                <field name="paym_account_analytic_id"
+                                       domain="[('company_id', '=', company_id)]"
+                                       groups="analytic.group_analytic_accounting"
+                                       widget="many2many_tags"
+                                />
+                                <field name="cash_account_analytic_id"
+                                       domain="[('company_id', '=', company_id)]"
+                                       groups="analytic.group_analytic_accounting"
+                                       widget="many2many_tags"
+                                />
+                                <field name="benefitiary_type"
+                                       attrs="{'required':[('journal_has_checks','=', True),('type', '=', 'cash_out')],
+                                               'invisible': [('type', '=', 'cash_in')]}"/>
+                                <field name="benefitiary_id"
+                                       attrs="{'invisible': [('benefitiary_type', '!=', 'supplier')],
+                                               'required':[('benefitiary_type', '=', 'supplier'),('journal_has_checks','=', True)]}"
+                                       domain="[('supplier','=',True)]"
+                                />
+                                <field name="employee_id"
+                                       attrs="{'invisible': [('benefitiary_type', '!=', 'employee')],
+                                               'required':[('benefitiary_type', '=', 'employee'),('journal_has_checks','=', True)]}"
+                                />
+                                <field name="number_of_checks" attrs="{'invisible': [('journal_has_checks', '=', False)]}"/>
+                                <field name="journal_has_checks" invisible="1"/>
+                            </group>
+                        </group>
+                        <group string="Checks" name="check_payments" attrs="{'invisible': ['|',('journal_has_checks', '=', False),('type', '=', 'cash_in')]}">
+                            <field name="check_line_ids"
+                                   nolabel="1"
+                                   widget="many2many"
+                                   domain="[('state','=','draft'),('type','=','issue_check'),
+                                            '|',('partner_id.employee_id','=', employee_id),('partner_id','=', benefitiary_id),
+                                            '|',('partner_id','=', False)]"
+                                   context="{'from_cash': True}">
+
+                                <tree>
+                                    <field name="issue_date"/>
+                                    <field name="cashin_out_id" invisible="1"/>
+                                    <field name="number"/>
+                                    <field name="bank_id"/>
+                                    <field name="partner_id"/>
+                                    <field name="amount_cash"/>
+                                    <field name="state" invisible="1"/>
+                                    <field name="type" invisible="1"/>
+                                    <!--field name="currency_id"/-->
+                                    <!--field name="company_currency_id"/-->
+                                    <!--field name="currency_header_id"/-->
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="account_cash_inout_view_search" model="ir.ui.view">
+            <field name="name">account.cash.inout.search</field>
+            <field name="model">account.cash.inout</field>
+            <field eval="10" name="priority"/>
+            <field name="arch" type="xml">
+                <search string="cancelled">
+                    <field name="cash_reference" string="Referencia" filter_domain="[('cash_reference', 'ilike', self)]"/>
+                    <field name="name" string="Salida de Caja" filter_domain="[('name','ilike',self)]"/>
+                    <field name="cash_account_id" string="Cuenta de Gastos" filter_domain="[('cash_account_id','ilike',self)]"/>
+                    <field name="journal_id" string="Diario" filter_domain="[('journal_id', 'ilike', self)]"/>
+                    <field name="employee_id" string="Beneficiario" filter_domain="['|', ('benefitiary_id','ilike',self), ('employee_id','ilike',self)]"/>
+                    <field name="state"/>
+                    <filter string="Cancelled" domain="[('state','=','cancelled')]"/>
+                    <filter string="Validated" domain="[('state','=','validated')]"/>
+                    <filter string="Draft" domain="[('state','=','draft')]"/>
+                </search>
+            </field>
+        </record>
+
+
+        <record id="account_cash_inout_view_tree" model="ir.ui.view">
+            <field name="name">account.cash.inout.tree</field>
+            <field name="model">account.cash.inout</field>
+            <field name="arch" type="xml">
+                <tree string="" colors="blue:state=='draft';">
+                    <field name="name"/>
+                    <field name="cash_reference" string="Reference"/>
+                    <field name="deposit_date" string="Pay Date"/>
+                    <field name="journal_id" string="Payment Jurnal"/>
+                    <field name="cash_account_id" string="Expense Acc"/>
+                    <field name="total_amount"/>
+                    <field name="currency_id" groups="base.group_multi_currency"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_account_chash_inout_calendar">
+            <field name="name">account.cash.inout.calendar</field>
+            <field name="model">account.cash.inout</field>
+            <field name="arch" type="xml">
+                <calendar string="Checks"
+                        mode="month"
+                        date_start="deposit_date"
+                        color="journal_id">
+                    <field name="total_amount"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_cash_out">
+            <field name="name">Cash Out</field>
+            <field name="res_model">account.cash.inout</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">[('type','=','cash_out')]</field>
+            <field name="context">{'search_default_state':'draft','default_type':'cash_out'}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_cash_in">
+            <field name="name">Cash In</field>
+            <field name="res_model">account.cash.inout</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name="domain">[('type','=','cash_in')]</field>
+            <field name="context">{'search_default_state':'draft','default_type':'cash_in'}</field>
+        </record>
+
+        <menuitem
+            name="Cash Registers"
+            id="menu_cash_menu"
+            sequence="54"
+            parent="account.menu_finance_bank_and_cash"/>
+
+        <menuitem
+            action="action_cash_out"
+            id="menu_cash_out"
+            sequence="1"
+            parent="vitt_cashin_cashout.menu_cash_menu"/>
+
+        <menuitem
+            action="action_cash_in"
+            id="menu_cash_in"
+            sequence="2"
+            parent="vitt_cashin_cashout.menu_cash_menu"/>
+
+    </data>
+</odoo>

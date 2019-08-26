@@ -1,0 +1,14 @@
+<odoo>
+    <data noupdate="True">
+        <record id="ar_moogah_chart_template_checks" model="account.config.settings">
+            <field name="own_check_rejected_account_id" ref="2111030"/>
+            <field name="own_check_cancelled_account_id" ref="2111020"/>
+            <field name="deferred_check_account_id" ref="2111010"/>
+            <field name="third_party_checks_cancelled_account_id" ref="1114020"/>
+            <field name="third_party_checks_bounced_endorsed_account_id" ref="1114040"/>
+            <field name="rejected_check_account_id" ref="1114030"/>
+            <field name="holding_check_account_id" ref="1114010"/>
+        </record>
+<!--function model="account.config.settings" name="execute" ref="ar_moogah_chart_template_checks"/-->
+    </data>
+</odoo>

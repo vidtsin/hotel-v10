@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vitt_view_account_analytic_dimension_form" model="ir.ui.view">
+        <field name="name">vitt.account.account.analytic.dimension.form</field>
+        <field name="model">account.account</field>
+        <field name='inherit_id' ref='account.view_account_form'/>
+        <field name="arch" type="xml">
+            <field name="deprecated" position="after">
+                <field name="analytic_dimension_ids" invisible='1'>
+                    <tree editable='bottom'>
+                        <field name='analytic_dimension_id' />
+                    </tree>
+                </field>
+            </field>
+        </field>
+    </record>
+</odoo>

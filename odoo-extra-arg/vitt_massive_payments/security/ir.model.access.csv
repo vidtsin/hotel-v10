@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_massive_payment,access_massive_payment,model_massive_payment,account.group_account_manager,1,1,1,1
+access_account_payment_type,access_account_payment_type,model_account_payment_type,account.group_account_manager,1,1,1,1
+access_massive_payment_invoices,access_massive_payment_invoices,model_massive_payment_invoices,account.group_account_manager,1,1,1,1
+access_massive_payment_user,access_massive_payment,model_massive_payment,account.group_account_user,1,1,0,0
+access_account_payment_type_user,access_account_payment_type,model_account_payment_type,account.group_account_user,1,1,0,0
+access_massive_payment_invoices_user,access_massive_payment_invoices,model_massive_payment_invoices,account.group_account_user,1,1,0,0

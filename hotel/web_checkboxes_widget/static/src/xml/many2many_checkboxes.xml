@@ -1,0 +1,59 @@
+<templates>
+    <t t-extend="FieldMany2ManyCheckBoxes">
+    <t t-jquery="div:first" t-operation="replace">
+        <div class="o_group">
+            <table class="o_group o_inner_group o_group_col_6">
+                <tbody>
+                    <t t-foreach="widget.get('records')" t-as="record">
+                        <t t-if="record_parity == 'even'">
+                            <tr>
+                                <td colspan="1" class="o_td_label">
+                                    <label for="o_field_input_28" class="o_form_label" data-original-title="" title="">
+                                        <span t-esc="record[1]"/>
+                                    </label>
+                                </td>
+
+                                <td colspan="1" style="width: 50%;">
+                                    <div class="o_checkbox o_form_field_boolean o_form_field">
+                                        <div class="o_checkbox">
+                                            <input t-if="widget.get('value').indexOf(record[0]) !== -1" type="checkbox" t-att-data-record-id="JSON.stringify(record[0])" checked="checked"/>
+                                            <input t-if="widget.get('value').indexOf(record[0]) === -1" type="checkbox" t-att-data-record-id="JSON.stringify(record[0])"/>
+                                            <span/>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                </tbody>
+            </table>
+
+            <table class="o_group o_inner_group o_group_col_6 pull-right">
+                <tbody>
+                    <t t-foreach="widget.get('records')" t-as="record">
+                        <t t-if="record_parity == 'odd'">
+                            <tr>
+                                <td colspan="1" class="o_td_label">
+                                    <label for="o_field_input_28" class="o_form_label" data-original-title="" title="">
+                                        <span t-esc="record[1]"/>
+                                    </label>
+                                </td>
+
+                                <td colspan="1" style="width: 50%;">
+                                    <div class="o_checkbox o_form_field_boolean o_form_field">
+                                        <div class="o_checkbox">
+                                            <input t-if="widget.get('value').indexOf(record[0]) !== -1" type="checkbox" t-att-data-record-id="JSON.stringify(record[0])" checked="checked"/>
+                                            <input t-if="widget.get('value').indexOf(record[0]) === -1" type="checkbox" t-att-data-record-id="JSON.stringify(record[0])"/>
+                                            <span/>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+    </t>
+</t>
+</templates>

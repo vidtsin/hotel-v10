@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="hotel_frontdesk_kanban_view" model="ir.ui.view">
+        <field name="name">Hotel Frontdesk</field>
+        <field name="model">hotel.frontdesk</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="date" create="false">
+                <field name="name"/>
+                <templates>
+                    <t t-name="hotel_frontdesk_template"></t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Action Front Desk -->
+    <record id="hotel_frontdesk_act" model="ir.actions.act_window">
+        <field name="name">Hotel Frontdesk</field>
+        <field name="res_model">hotel.frontdesk</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">hotel_frontdesk_view</field>
+        <field name="context">{'hotel_frontdesk_view_view_ref': 'hotel_frontdesk.hotel_frontdesk_kanban_view'}</field>
+    </record>
+
+    <!-- Menu of Front Desk -->
+    <menuitem id="menu_hotel_frontdesk" name="Frontdesk" action="hotel_frontdesk_act" sequence="0" parent="hotel.hotel_management_menu" icon="fa-user-tie" web_icon="hotel_frontdesk,static/description/dashboard.png" groups="hotel.group_hotel_manager"/>
+
+</odoo>

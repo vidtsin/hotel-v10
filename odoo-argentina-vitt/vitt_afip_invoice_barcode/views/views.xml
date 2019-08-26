@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+
+    <template id="report_invoice_document_inherit_vitt_afip_invoice_barcode" inherit_id="account.report_invoice_document">
+        <xpath expr="//p[@t-if='o.fiscal_position_id.note']" position="after">
+            <div>
+                <img t-attf-src="data:image/*;base64,{{o.afip_barcode_img}}"/> <br></br>
+                <span t-field="o.afip_barcode"/>
+            </div>
+        </xpath>
+    </template>
+
+  </data>
+</odoo>

@@ -1,0 +1,212 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_analytic_tags
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-10 23:02+0000\n"
+"PO-Revision-Date: 2017-11-03 17:46-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_HN\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#. module: vitt_analytic_tags
+#: model:ir.model,name:vitt_analytic_tags.model_account_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_account_id
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts_account_id
+#: model:ir.ui.view,arch_db:vitt_analytic_tags.account_analytic_tag_search_view
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_tag_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: vitt_analytic_tags
+#: model:ir.model,name:vitt_analytic_tags.model_account_analytic_tag
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_product_product_analytic_tag_ids
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_product_template_analytic_tag_ids
+#: model:ir.ui.view,arch_db:vitt_analytic_tags.account_analytic_tag_search_view
+#: model:ir.ui.view,arch_db:vitt_analytic_tags.vitt_view_AccountAnalyticDimension_form
+msgid "Analytic Tags"
+msgstr "Etiquetas analíticas"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_config_settings_analytic_tags_to_rows
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_res_company_analytic_tags_to_rows
+msgid "Analytic Tags from Header To Rows"
+msgstr "Trasladar Etiquetas Analíticas del Encabezado a las Filas"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_tag_code
+msgid "Code"
+msgstr "Código"
+
+#. module: vitt_analytic_tags
+#: model:ir.model,name:vitt_analytic_tags.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_tag_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_create_uid
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_create_date
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_product_product_taxes_id
+msgid "Customer Taxes"
+msgstr "Impuestos cliente"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_analytic_dimension_id
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts_analytic_dimension_id
+#: model:ir.ui.view,arch_db:vitt_analytic_tags.account_analytic_tag_search_view
+msgid "Dimension"
+msgstr "Dimensión"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_ids
+msgid "Dimensions"
+msgstr "Dimensiones"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_display_name
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_product_product_property_account_expense_id
+msgid "Expense Account"
+msgstr "Cuenta de gasto"
+
+#. module: vitt_analytic_tags
+#: model:ir.filters,name:vitt_analytic_tags.account_analytic_tag_filter_dimensions
+msgid "Group by Analytic Dimension"
+msgstr "Agrupado por Dimensión Analítica"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_id
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_product_product_property_account_income_id
+msgid "Income Account"
+msgstr "Cuenta de ingresos"
+
+#. module: vitt_analytic_tags
+#: model:ir.model,name:vitt_analytic_tags.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Linea de Factura"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension___last_update
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_write_uid
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_write_date
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_account_analytic_dimension_name
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_accounts_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_tag_parent_tag_id
+msgid "Parent Tag"
+msgstr "Etiqueta Padre"
+
+#. module: vitt_analytic_tags
+#: model:ir.model,name:vitt_analytic_tags.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: vitt_analytic_tags
+#: model:ir.ui.view,arch_db:vitt_analytic_tags.vitt_view_AccountAnalyticDimension_form
+msgid "Required Accounts"
+msgstr "Cuentas Requeridas"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_dimension_required_accounts_ids
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_account_analytic_tag_required_accounts_ids
+msgid "Required in Accounts"
+msgstr "Requerido en las cuentas"
+
+#. module: vitt_analytic_tags
+#: code:addons/vitt_analytic_tags/models/account.py:32
+#, python-format
+msgid "The Account '%s' requires a tag of dimension; %s"
+msgstr "La Cuenta '%s' Requiere una Etiqueta de Dimensión; %s"
+
+#. module: vitt_analytic_tags
+#: sql_constraint:account.analytic.dimension.accounts:0
+msgid "The account must be unique per Dimension!"
+msgstr "La cuenta debe ser unica por Dimensión!"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,help:vitt_analytic_tags.field_product_product_property_account_expense_id
+msgid "This account will be used for invoices instead of the default one to value expenses for the current product."
+msgstr "Esta cuenta será usada para facturas en vez de la cuenta por defecto para valorar los gastos del producto vigente"
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,help:vitt_analytic_tags.field_product_product_property_account_income_id
+msgid "This account will be used for invoices instead of the default one to value sales for the current product."
+msgstr "Esta cuenta se utilizará en facturas, en lugar de la cuenta por defecto, para valorar los ingresos de este producto."
+
+#. module: vitt_analytic_tags
+#: model:ir.model.fields,field_description:vitt_analytic_tags.field_product_product_supplier_taxes_id
+msgid "Vendor Taxes"
+msgstr "Impuestos de proveedor"
+
+#. module: vitt_analytic_tags
+#: model:ir.model,name:vitt_analytic_tags.model_account_account_analytic_dimension
+msgid "account.account.analytic.dimension"
+msgstr "account.account.analytic.dimension"
+
+#. module: vitt_analytic_tags
+#: model:ir.model,name:vitt_analytic_tags.model_account_analytic_dimension
+msgid "account.analytic.dimension"
+msgstr "account.analytic.dimension"
+
+#. module: vitt_analytic_tags
+#: model:ir.model,name:vitt_analytic_tags.model_account_analytic_dimension_accounts
+msgid "account.analytic.dimension.accounts"
+msgstr "account.analytic.dimension.accounts"
+
+#. module: vitt_analytic_tags
+#: model:ir.model,name:vitt_analytic_tags.model_account_config_settings
+msgid "account.config.settings"
+msgstr "account.config.settings"

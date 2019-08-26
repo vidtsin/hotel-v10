@@ -1,0 +1,364 @@
+<odoo>
+    <data noupdate="1">
+        <record id="paperformat_inv_vitt" model="report.paperformat">
+            <field name="name">paperformat_inv_vitt</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">23</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">30</field>
+            <field name="dpi">90</field>
+        </record>
+    </data>
+
+    <data>
+        <template id="report_invoice_document_inherit_vitt_afip_invoice_format_invoice" inherit_id="account.report_invoice_document">
+            <xpath expr="//t[@t-call='report.external_layout']" position="replace">
+                <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+                <div class="page" style="font-size:11px;">
+                    <!--div class="header"-->
+                        <!-- style="padding:10px; width:100%;font-size:12px;" -->
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img t-if="o.company_id.logo" t-att-src="'data:image/png;base64,%s' % o.company_id.logo" style="max-height: 70px;padding-top:5px;" />
+                            </div>
+                            <div class="col-xs-4" style="text-align:center;font-size:20px;padding:3px;">
+                                <strong t-if="o.journal_document_type_id.document_type_id.document_letter_id">
+                                    <span t-field="o.journal_document_type_id.document_type_id.document_letter_id" />
+                                </strong>
+                                <br />
+                                <strong style="display:inline-block;text-align:center;font-size:10px;">Cód.</strong>
+                                <span t-if="o.journal_document_type_id.document_type_id.code">
+                                    <span t-field="o.journal_document_type_id.document_type_id.code" style="display:inline-block; font-size:11px;" /></span>
+                            </div>
+                            <div class="col-xs-4" style="text-align:right;font-size:16px;">
+                                <h2>
+                                    <t t-if="o.journal_document_type_id.document_type_id.internal_type == 'debit_note'">
+                                        <span>Nota de Debito</span>
+                                    </t>
+                                    <t t-if="o.journal_document_type_id.document_type_id.internal_type != 'debit_note'">
+                                        <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura</span>
+                                        <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span>
+                                        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Factura borrador</span>
+                                        <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Factura cancelada</span>
+                                        <span t-if="o.type == 'out_refund'">Nota de Crédito</span>
+                                        <span t-if="o.type == 'in_refund'">Nota de Crédito de Proveedor</span>
+                                        <span t-if="o.type == 'in_invoice'">Factura de Proveedor</span>
+                                    </t>
+                                    <!-- span t-field="o.display_name" / -->
+                                </h2>
+                            </div>
+                            <!-- div class="col-xs-12 text-right" style="margin-top:30px;" t-field="o.company_id.rml_header1" / -->
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6" name="o.company_id.company_partner" style="margin-top:1%;">
+                                <strong>
+                                    <span t-field="o.company_id.partner_id.ref" style="display:inline-block;line-height:20px;font-size:14px;" />
+                                </strong>
+                            </div>
+                            <div class="col-xs-6" style="display:inline-block;line-height:20px;font-size:14px;margin-top:1%;">
+                                <strong>Nro. Factura:</strong>
+                                <span t-field="o.display_name" />
+                            </div>
+                            <div class="col-xs-6">
+                                <strong>
+                                    <span style="display:inline-block;line-height:20px;font-size:14px;" />
+                                </strong>
+                            </div>
+                            <div class="col-xs-6" t-if="o.date_invoice" style="display:inline-block;line-height:20px;font-size:12px;">
+                                <strong>Fecha factura:</strong>
+                                <span t-field="o.date_invoice" />
+                            </div>
+                            <div class="col-xs-6" style="line-height:20px;">
+                                <strong>Razón Social:</strong>
+                                <span t-field="o.company_id.name" />
+                            </div>
+                            <div class="col-xs-6" style="line-height:20px;align:right;">
+                                <strong t-field="o.company_id.main_id_category_id">:</strong>
+                                <span t-field="o.company_id.main_id_number" />
+                            </div>
+                            <div class="col-xs-6">
+                                <strong style="display:inline-block;line-height:20px;">Dirección:</strong>
+                                <span t-field="o.company_id.street" />-
+                                <span t-field="o.company_id.street2" />-
+                                <span t-field="o.company_id.zip" />-
+                                <span t-field="o.company_id.city" />-
+                                <span t-field="o.company_id.state_id" />
+                            </div>
+                            <div class="col-xs-6">
+                                <span>
+                                    <strong style="display:inline-block;line-height:20px;">Ing. Brutos:</strong>
+                                    <span t-if="o.company_id.gross_income_number">
+                                        <span t-field="o.company_id.gross_income_type" style="display:inline-block;" />
+                                        <strong style="display:inline-block;">Nro.:</strong>
+                                        <span t-field="o.company_id.gross_income_number" style="display:inline-block;" /></span>
+                                </span>
+                            </div>
+                            <div class="col-xs-6">
+                                <strong style="display:inline-block;line-height:20px;">Condición IVA:</strong>
+                                <span t-field="o.company_id.afip_responsability_type_id" />
+                            </div>
+                            <div class="col-xs-6">
+                                <strong style="line-height:20px;">Fecha de Inicio de Actividades:</strong>
+                                <span t-field="o.company_id.start_date" />
+                            </div>
+                        </div>
+                    <!--/div-->
+                    <div class="row">
+                        <div name="invoice_address" style="font-size:12px;margin-top:1%;margin-bottom:1%;padding:10px;background-color:#f4f4f6;" class="col-xs-12">
+                            <div class="col-xs-6" style="line-height:20px;">
+                                <strong>Razón Social: </strong>
+                                <span t-field="o.partner_id.name" />
+                            </div>
+                            <div class="col-xs-6" style="line-height:20px;">
+                                <span t-if="o.partner_id.main_id_category_id">
+                                    <strong>
+                                        <span t-field="o.partner_id.main_id_category_id"/>
+                                    </strong>
+                                </span>
+                                <span t-if="o.partner_id.main_id_number">
+                                    <strong>Nro: </strong>
+                                    <span t-field="o.partner_id.main_id_number"/></span>
+                            </div>
+                            <div class="col-xs-6" style="line-height:20px;">
+                                <span t-if="o.partner_id.afip_responsability_type_id">
+                                    <strong>Condición IVA: </strong>
+                                    <span t-field="o.partner_id.afip_responsability_type_id"/></span>
+                            </div>
+                            <div class="col-xs-6">
+                                <strong style="display:inline-block;line-height:20px;">Domicilio de Entrega: </strong>
+                                <span t-field="o.partner_shipping_id"/>.
+                            </div>
+                            <div class="col-xs-6">
+                                <strong style="display:inline-block;line-height:20px;">Domicilio Comercial: </strong>
+                                <span t-field="o.partner_id.street"/>-  
+                        
+                                <span t-field="o.partner_id.street2"/>- 
+                        
+                                <span t-field="o.partner_id.city"/>-
+                        
+                                <span t-field="o.partner_id.state_id"/>.
+                            </div>
+                            <div class="col-xs-6" style="line-height:20px;">
+                                <span t-if="o.partner_id.gross_income_type">
+                                    <strong>Ingresos Brutos: </strong>
+                                    <span t-field="o.partner_id.gross_income_type"/></span>
+                                <span t-if="o.partner_id.gross_income_number">
+                                    <strong>Nro: </strong>
+                                    <span t-field="o.partner_id.gross_income_number"/></span>
+                            </div>
+                            <div class="col-xs-6" style="line-height:20px;">
+                                <span t-if="o.payment_term_id">
+                                    <strong>Término de Pago: </strong>
+                                    <span t-field="o.payment_term_id.note"/></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- h2><span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Factura</span><span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span><span t-if="o.type == 'out_invoice' and o.state == 'draft'">Factura borrador</span><span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Factura cancelada</span><span t-if="o.type == 'out_refund'">Reembolso</span><span t-if="o.type == 'in_refund'">Reembolso/NC de Proveedor</span><span t-if="o.type == 'in_invoice'">Factura de Proveedor</span><span t-field="o.display_name"/></h2 -->
+                    <div class="row mt32 mb32" style="margin-top:1%;">
+                        <div class="col-xs-12" t-if="o.name" name="div_desc">
+                            <strong>Descripci&#243;n:</strong>
+                            <p t-field="o.name"/>
+                        </div>
+                        <div class="col-xs-4" t-if="o.date_due and o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">
+                            <strong>Fecha Venc.:</strong>
+                            <p t-field="o.date_due"/>
+                        </div>
+                        <div class="col-xs-4" t-if="o.origin">
+                            <strong>Origen:</strong>
+                            <p t-field="o.origin"/>
+                        </div>
+                        <div class="col-xs-4" t-if="o.partner_id.ref">
+                            <strong>Código de cliente:</strong>
+                            <p t-field="o.partner_id.ref"/>
+                        </div>
+                        <div name="reference" class="col-xs-12" t-if="o.reference and o.type == 'in_invoice'">
+                            <strong>Referencia:</strong>
+                            <p t-field="o.reference"/>
+                        </div>
+                        <div class="col-xs-6" style="line-height:20px;">
+                            <span t-if="o.partner_id.country_id">
+                                <strong>País: </strong>
+                                <span t-field="o.partner_id.country_id"/></span>
+                        </div>
+                        <div class="col-xs-6" style="line-height:20px;">
+                            <span t-if="o.afip_incoterm_id.name">
+                                <strong>Incoterm: </strong>
+                                <span t-field="o.afip_incoterm_id.name"/></span>
+                        </div>
+                        <div class="col-xs-6" style="line-height:20px;">
+                            <span t-if="o.currency_id.name">
+                                <strong>Moneda: </strong>
+                                <span t-field="o.currency_id.name"/></span>
+                        </div>
+                        <div class="col-xs-6" style="line-height:20px;">
+                            <span t-if="o.currency_rate">
+                                <strong>T.C.: </strong>
+                                <span t-field="o.currency_rate"/></span>
+                        </div>
+                    </div>
+                    <!-- Is there a discount on at least one line? -->
+                    <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
+                    <div name="items_matrix">
+                        <table class="table" style="margin-top:2%;">
+                            <thead>
+                                <tr>
+                                    <th>Descripción</th>
+                                    <th class="hidden">Documento origen</th>
+                                    <th class="text-right">Cantidad</th>
+                                    <th class="text-right">Precio unitario</th>
+                                    <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Desc.(%)</th>
+                                    <th class="text-right">Impuestos</th>
+                                    <th class="text-right">Suma</th>
+                                </tr>
+                            </thead>
+                            <tbody class="invoice_tbody">
+                                <tr t-foreach="o.invoice_line_ids" t-as="l">
+                                    <td>
+                                        <span t-field="l.name"/>
+                                    </td>
+                                    <td class="hidden">
+                                        <span t-field="l.origin"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.quantity"/>
+                                        <span t-field="l.uom_id" groups="product.group_uom"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.report_price_unit"/>
+                                    </td>
+                                    <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                                        <span t-field="l.discount"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="', '.join(map(lambda x: (x.description or x.name), l.invoice_line_tax_ids))"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-field="l.report_price_subtotal" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+<!-- attempt to place barcode here - begins --> 
+                    <div class="row">
+                        <div class="col-xs-12">  
+
+                            <div class="col-xs-8 pull-left" style="line-height:20px;">  
+                                <img t-attf-src="data:image/*;base64,{{o.afip_barcode_img}}"/>
+                            <br></br>
+                            <span t-field="o.afip_barcode"/>
+                            <br></br>
+                                <span t-if="o.afip_auth_code">
+                                    <strong>Codigo CAE:</strong>
+                                    <span t-field="o.afip_auth_code"/></span>
+                                <br></br>
+                                <span t-if="o.afip_auth_code_due">
+                                    <strong>Fecha Expiración CAE:</strong>
+                                    <span t-field="o.afip_auth_code_due"/></span>
+                            </div>
+                    
+<!-- attempt to place barcode here - ends --> 
+                    
+                    
+                            <div class="col-xs-4 pull-right">
+                                <table class="table table-condensed" style="background-color:#eeeeee;font-size:12px;">
+                                    <tr class="border-black">
+                                        <td>
+                                            <strong>Subtotal</strong>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="o.report_amount_tax" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                        </td>
+                                    </tr>
+                                    <t t-foreach="o._get_tax_amount_by_group2()" t-as="amount_by_group">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="amount_by_group[0]"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-esc="amount_by_group[1]"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                    <tr class="border-black">
+                                        <td>
+                                            <strong>Total</strong>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="o.amount_total" t-options="{&quot;widget&quot;: &quot;monetary&quot;, &quot;display_currency&quot;: o.currency_id}"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+       
+                    <div name="payment" class="col-xs-12" style="line-height:20px;margin-top:20px;font-size:11px;">
+                        <strong>Información de Pago:</strong>
+                    </div>
+                    <div class="col-xs-12" style="line-height:20px;font-size:11px;">
+                        
+                    </div>
+                    <div class="col-xs-12" style="line-height:20px;font-size:10px;">
+                        <span t-if="o.company_id.name">
+                            <strong>Titular:</strong>
+                            <span t-field="o.company_id.name"/></span>
+                    </div>
+                    <t t-foreach="o.company_id.partner_id.bank_ids" t-as="bank">
+                        <t t-if="bank.show_onprint">
+                            <div class="col-xs-4" style="line-height:20px;font-size:10px;">
+                                <strong>Banco:</strong>
+                                <span t-field="bank.bank_id.name"/>
+                            </div>
+                            <div class="col-xs-4" style="line-height:20px;font-size:10px;">
+                                <strong>Nro.Cta:</strong>
+                                <span t-field="bank.acc_number"/>
+                            </div>
+                            <div class="col-xs-4" style="line-height:20px;font-size:10px;">
+                                <strong>CBU:</strong>
+                                <span t-field="bank.cbu"/>
+                            </div>
+                        </t>
+                    </t>
+
+                    <div class="col-xs-12" style="line-height:20px;margin-top:10px;">
+                        <p t-if="o.fiscal_position_id.note">
+                            <strong>Posición fiscal:</strong>
+                            <span t-field="o.fiscal_position_id.note"/>
+                        </p>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+        <report
+            id="account.account_invoices"
+            model="account.invoice"
+            string="Invoices"
+            report_type="qweb-pdf"
+            name="account.report_invoice"
+            file="account.report_invoice"
+            attachment_use="True"
+            attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
+            paperformat="vitt_arg_einvoice_format.paperformat_inv_vitt"
+        />
+
+        <report
+            id="account.account_invoice_action_report_duplicate"
+            model="account.invoice"
+            string="Duplicates"
+            report_type="qweb-pdf"
+            name="account.account_invoice_report_duplicate_main"
+            file="account.report_invoice_duplicate"
+            attachment_use="False"
+            paperformat="vitt_arg_einvoice_format.paperformat_inv_vitt"
+        />
+
+    </data>
+</odoo>
+

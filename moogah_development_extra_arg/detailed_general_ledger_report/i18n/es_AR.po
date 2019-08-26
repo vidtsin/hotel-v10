@@ -1,0 +1,985 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* detailed_general_ledger_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-14 21:11+0000\n"
+"PO-Revision-Date: 2019-02-14 18:33-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: detailed_general_ledger_report
+#: model:ir.ui.view,arch_db:detailed_general_ledger_report.report_financial_line_detailed
+msgid "&amp;nbsp;"
+msgstr "&amp;nbsp;"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model,name:detailed_general_ledger_report.model_account_report_context_common
+msgid "A particular context for a financial report"
+msgstr "Contexto particular de reporte financiero"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model,name:detailed_general_ledger_report.model_account_context_detail_general_ledger
+msgid "A particular context for the general ledger"
+msgstr "Contexto particular para el libro mayor"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:182
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:187
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:218
+#, python-format
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_payable_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_receivable_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_coa_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_general_ledger_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_financial_html_report_context_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_partner_ledger_context_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_bank_rec_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_common_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_followup_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_tax_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_customer_ledger_context_report_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_vendor_ledger_context_report_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_journal_summary_context_report_account_manager_id_8762
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_partner_transection_context_report_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_payment_journal_context_report_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_receipt_journal_context_report_account_manager_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_vendor_transection_context_report_account_manager_id
+msgid "Account Filters Manager"
+msgstr "Gestión Filtros de Cuenta"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:195
+#, python-format
+msgid "Account Selecction"
+msgstr "Selección de Cuentas"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:199
+#, python-format
+msgid "Account Type"
+msgstr "Tipos de Cuenta"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_payable_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_receivable_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_coa_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_general_ledger_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_financial_html_report_context_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_partner_ledger_context_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_bank_rec_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_common_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_followup_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_tax_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_customer_ledger_context_report_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_vendor_ledger_context_report_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_partner_transection_context_report_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_payment_journal_context_report_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_receipt_journal_context_report_account_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_vendor_transection_context_report_account_ids
+msgid "Account ids"
+msgstr "Cuentas"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_payable_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_receivable_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_coa_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_general_ledger_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_financial_html_report_context_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_partner_ledger_context_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_bank_rec_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_common_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_followup_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_tax_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_customer_ledger_context_report_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_vendor_ledger_context_report_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_partner_transection_context_report_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_payment_journal_context_report_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_receipt_journal_context_report_account_type_ids
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_vendor_transection_context_report_account_type_ids
+msgid "Account type ids"
+msgstr "Ids Tipo Cuenta"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:124
+#, python-format
+msgid "Accrual Basis,"
+msgstr "Base p/Devengados,"
+
+#. module: detailed_general_ledger_report
+#: selection:account.context.aged.payable,balance:0
+#: selection:account.context.aged.receivable,balance:0
+#: selection:account.context.coa,balance:0
+#: selection:account.context.detail.general.ledger,balance:0
+#: selection:account.context.general.ledger,balance:0
+#: selection:account.financial.html.report.context,balance:0
+#: selection:account.partner.ledger.context,balance:0
+#: selection:account.report.context.bank.rec,balance:0
+#: selection:account.report.context.common,balance:0
+#: selection:account.report.context.followup,balance:0
+#: selection:account.report.context.tax,balance:0
+#: selection:currencies.customer.ledger.context.report,balance:0
+#: selection:currencies.vendor.ledger.context.report,balance:0
+#: selection:journal.summary.context.report,balance:0
+#: selection:partner.transection.context.report,balance:0
+#: selection:payment.journal.context.report,balance:0
+#: selection:receipt.journal.context.report,balance:0
+#: selection:vendor.transection.context.report,balance:0
+msgid "All Balance"
+msgstr "Todos los Saldos"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:152
+#, python-format
+msgid "All journals"
+msgstr "Todos los Diarios"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_analytic
+msgid "Allow analytic accounting"
+msgstr "Permitir Contabilidad Analítica"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_multi_company
+msgid "Allow multi-company"
+msgstr "Permitir multi-compañía"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:213
+#, python-format
+msgid "Analytic"
+msgstr "Cont. Analítica"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:235
+#, python-format
+msgid "Analytic Dimension"
+msgstr "Dimensión Analítica"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_analytic_account_ids
+msgid "Analytic account ids"
+msgstr "Ids cuenta analítica"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_analytic_tag_ids
+msgid "Analytic tag ids"
+msgstr "Ids etiquetas analíticas"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:54
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:74
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:81
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:101
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:207
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:246
+#, python-format
+msgid "Apply"
+msgstr "Aplicar"
+
+#. module: detailed_general_ledger_report
+#: model:ir.ui.menu,name:detailed_general_ledger_report.account_reports_argentinean_legal_menu
+msgid "Argentinean Legal Reports"
+msgstr "Informes Legales Argentina"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_available_company_ids
+msgid "Available company ids"
+msgstr "Ids disponibles en la compañía"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_available_journal_ids
+msgid "Available journal ids"
+msgstr "Ids Diarios disponibles"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:847
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_payable_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_receivable_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_coa_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_general_ledger_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_financial_html_report_context_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_partner_ledger_context_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_bank_rec_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_common_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_followup_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_tax_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_customer_ledger_context_report_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_vendor_ledger_context_report_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_journal_summary_context_report_balance_8751
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_partner_transection_context_report_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_payment_journal_context_report_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_receipt_journal_context_report_balance
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_vendor_transection_context_report_balance
+#, python-format
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:107
+#, python-format
+msgid "Balance:"
+msgstr "Saldo:"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:585
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:787
+#, python-format
+msgid "Base Amount"
+msgstr "Monto Base"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:131
+#, python-format
+msgid "Cash Basis Method"
+msgstr "Método Base Caja"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:123
+#, python-format
+msgid "Cash Basis,"
+msgstr "Base Caja,"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:239
+#, python-format
+msgid "Choose..."
+msgstr "Escoger..."
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:847
+#, python-format
+msgid "Communication"
+msgstr "Comunicación"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:138
+#, python-format
+msgid "Companies:"
+msgstr "Compañías:"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_company_ids
+msgid "Company ids"
+msgstr "Ids de Compañía"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:60
+#, python-format
+msgid "Comparison:"
+msgstr "Comparación:"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_create_uid
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_create_date
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:847
+#, python-format
+msgid "Credit"
+msgstr "Crédito"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:847
+#, python-format
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:17
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:37
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:64
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:84
+#, python-format
+msgid "Custom"
+msgstr "Customizado"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:169
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:175
+#, python-format
+msgid "Customers"
+msgstr "Clientes"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:171
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:177
+#, python-format
+msgid "Customers and suppliers"
+msgstr "Clientes y Proveedores"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:847
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:47
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:94
+#, python-format
+msgid "Date :"
+msgstr "Fecha :"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/js/account_reports_backend.js:199
+#, python-format
+msgid "Date cannot be empty"
+msgstr "La Fecha no puede estar vacía"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:8
+#, python-format
+msgid "Date:"
+msgstr "Fecha:"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:847
+#, python-format
+msgid "Debit"
+msgstr "Débito"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:810
+#: model:ir.actions.client,name:detailed_general_ledger_report.action_account_detailed_general_ledger
+#: model:ir.ui.menu,name:detailed_general_ledger_report.menu_action_detailed_general_ledger
+#, python-format
+msgid "Detailed General Ledger"
+msgstr "Libro Mayor Contable Detallado"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model,name:detailed_general_ledger_report.model_account_detail_general_ledger
+msgid "Detailed General Ledger Report"
+msgstr "Informe Mayor Contable Detallado"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_payable_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_receivable_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_coa_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_general_ledger_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_financial_html_report_context_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_partner_ledger_context_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_analytic_manager_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_bank_rec_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_common_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_followup_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_tax_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_customer_ledger_context_report_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_vendor_ledger_context_report_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_partner_transection_context_report_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_payment_journal_context_report_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_receipt_journal_context_report_analytic_account_dimension_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_vendor_transection_context_report_analytic_account_dimension_id
+msgid "Dimension"
+msgstr "Dimensión"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_display_name
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_detail_general_ledger_display_name
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:847
+#, python-format
+msgid "Document"
+msgstr "Documento"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:46
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:93
+#, python-format
+msgid "End Date :"
+msgstr "Fecha Fin :"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:25
+#, python-format
+msgid "End of Last Financial Year"
+msgstr "Fin del Ult. Año Financiero"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:23
+#, python-format
+msgid "End of Last Month"
+msgstr "Fin del Ult. Mes"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:24
+#, python-format
+msgid "End of Last Quarter"
+msgstr "Fin del Ult. Trimestre"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_footnotes
+msgid "Footnotes"
+msgstr "Píes de Pagina"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:133
+#, python-format
+msgid "Hierarchy"
+msgstr "Jerarquía"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:133
+#, python-format
+msgid "Hierarchy and Subtotals"
+msgstr "Jerarquía y Subtotales"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_detail_general_ledger_id
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager_id
+msgid "ID"
+msgstr "ID"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:132
+#, python-format
+msgid "Include Unposted Entries"
+msgstr "Incluir Asientos sin Contabilizar"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:132
+#, python-format
+msgid "Include unposted entries"
+msgstr "Incluir Asientos sin Contabilizar"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:480
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:678
+#, python-format
+msgid "Initial Balance"
+msgstr "Saldo Inicial"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model,name:detailed_general_ledger_report.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte Contable"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_journal_ids
+msgid "Journal ids"
+msgstr "Ids Diarios"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:149
+#, python-format
+msgid "Journals:"
+msgstr "Diarios:"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:34
+#, python-format
+msgid "Last Financial Year"
+msgstr "Ult. Año Financiero"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger___last_update
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_detail_general_ledger___last_update
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:11
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:32
+#, python-format
+msgid "Last Month"
+msgstr "Ult. Mes"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:12
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:33
+#, python-format
+msgid "Last Quarter"
+msgstr "Ult. Trimestre"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_write_uid
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Modificación por"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_write_date
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:13
+#, python-format
+msgid "Last Year"
+msgstr "Ult. Año"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:583
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:785
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:68
+#, python-format
+msgid "No Comparison"
+msgstr "Sin Comparación"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:61
+#, python-format
+msgid "None"
+msgstr "Ninguno"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:72
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:79
+#, python-format
+msgid "Number of periods :"
+msgstr "Número de períodos :"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:109
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:115
+#, python-format
+msgid "Only with Balance"
+msgstr "Solo Con Saldo"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:110
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:116
+#, python-format
+msgid "Only without Balance"
+msgstr "Solo Sin Saldo"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:121
+#, python-format
+msgid "Options:"
+msgstr "Opciones:"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:847
+#, python-format
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:9
+#, python-format
+msgid "Period:"
+msgstr "Período:"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:127
+#, python-format
+msgid "Posted Entries Only"
+msgstr "Solo Asientos Contabilizados"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:70
+#, python-format
+msgid "Previous Period"
+msgstr "Período Previo"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:62
+#, python-format
+msgid "Previous Periods"
+msgstr "Períodos Previos"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_payable_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_aged_receivable_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_coa_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_general_ledger_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_financial_html_report_context_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_partner_ledger_context_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_account_manager_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_bank_rec_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_common_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_followup_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_context_tax_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_customer_ledger_context_report_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_currencies_vendor_ledger_context_report_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_partner_transection_context_report_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_payment_journal_context_report_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_receipt_journal_context_report_account_range
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_vendor_transection_context_report_account_range
+msgid "Range"
+msgstr "Rango"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_type_account
+msgid "Reports enable the account filter"
+msgstr "Informes habilitan el filtro de cuenta"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_type_balance
+msgid "Reports enable the balance filter"
+msgstr "Informes habilitan el filtro de saldo"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_report_type_dimension
+msgid "Reports enable the dimension filter"
+msgstr "Informes habilitan el filtro de dimensión"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:63
+#, python-format
+msgid "Same Last Year"
+msgstr "Igual Año Pasado"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:77
+#, python-format
+msgid "Same Period Last Year"
+msgstr "Mismo Período Año Pasado"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:108
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:114
+#, python-format
+msgid "Show All"
+msgstr "Mostrar Todo"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:39
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:86
+#, python-format
+msgid "Start Date :"
+msgstr "Fecha Inicio :"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:170
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:176
+#, python-format
+msgid "Suppliers"
+msgstr "Proveedores"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:226
+#, python-format
+msgid "Tag"
+msgstr "Etiqueta"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:585
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:787
+#, python-format
+msgid "Tax Amount"
+msgstr "Monto Impuesto"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:573
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:775
+#, python-format
+msgid "Tax Declaration"
+msgstr "Declaración Impuestos"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:548
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:750
+#, python-format
+msgid "There are more than 80 items in this list, click here to see all of them"
+msgstr "Hay mas de 80 ítems en esta lista, clic para poder ver todos"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:30
+#, python-format
+msgid "This Financial Year"
+msgstr "Este Año Financiero"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:16
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:28
+#, python-format
+msgid "This Month"
+msgstr "Este Mes"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:15
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:29
+#, python-format
+msgid "This Quarter"
+msgstr "Este Trimestre"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:14
+#, python-format
+msgid "This Year"
+msgstr "Este Año"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:10
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:22
+#, python-format
+msgid "Today"
+msgstr "Hoy"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:562
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:764
+#, python-format
+msgid "Total"
+msgstr "Total"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:536
+#: code:addons/detailed_general_ledger_report/models/account_detail_general_ledger.py:737
+#, python-format
+msgid "Total "
+msgstr "Total "
+
+#. module: detailed_general_ledger_report
+#: model:ir.model.fields,field_description:detailed_general_ledger_report.field_account_context_detail_general_ledger_unfolded_accounts
+msgid "Unfolded lines"
+msgstr "Líneas desplegadas"
+
+#. module: detailed_general_ledger_report
+#: selection:account.context.aged.payable,balance:0
+#: selection:account.context.aged.receivable,balance:0
+#: selection:account.context.coa,balance:0
+#: selection:account.context.detail.general.ledger,balance:0
+#: selection:account.context.general.ledger,balance:0
+#: selection:account.financial.html.report.context,balance:0
+#: selection:account.partner.ledger.context,balance:0
+#: selection:account.report.context.bank.rec,balance:0
+#: selection:account.report.context.common,balance:0
+#: selection:account.report.context.followup,balance:0
+#: selection:account.report.context.tax,balance:0
+#: selection:currencies.customer.ledger.context.report,balance:0
+#: selection:currencies.vendor.ledger.context.report,balance:0
+#: selection:journal.summary.context.report,balance:0
+#: selection:partner.transection.context.report,balance:0
+#: selection:payment.journal.context.report,balance:0
+#: selection:receipt.journal.context.report,balance:0
+#: selection:vendor.transection.context.report,balance:0
+msgid "With Balance"
+msgstr "Con Saldo"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:126
+#, python-format
+msgid "With Draft Entries"
+msgstr "Con Asientos en Borrador"
+
+#. module: detailed_general_ledger_report
+#: selection:account.context.aged.payable,balance:0
+#: selection:account.context.aged.receivable,balance:0
+#: selection:account.context.coa,balance:0
+#: selection:account.context.detail.general.ledger,balance:0
+#: selection:account.context.general.ledger,balance:0
+#: selection:account.financial.html.report.context,balance:0
+#: selection:account.partner.ledger.context,balance:0
+#: selection:account.report.context.bank.rec,balance:0
+#: selection:account.report.context.common,balance:0
+#: selection:account.report.context.followup,balance:0
+#: selection:account.report.context.tax,balance:0
+#: selection:currencies.customer.ledger.context.report,balance:0
+#: selection:currencies.vendor.ledger.context.report,balance:0
+#: selection:journal.summary.context.report,balance:0
+#: selection:partner.transection.context.report,balance:0
+#: selection:payment.journal.context.report,balance:0
+#: selection:receipt.journal.context.report,balance:0
+#: selection:vendor.transection.context.report,balance:0
+msgid "Without Balance"
+msgstr "Sin Saldo"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model,name:detailed_general_ledger_report.model_account_report_type
+msgid "account.report.type"
+msgstr "account.report.type"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model,name:detailed_general_ledger_report.model_account_report_account_manager
+msgid "manages account filters for reports"
+msgstr "manages account filters for reports"
+
+#. module: detailed_general_ledger_report
+#: model:ir.model,name:detailed_general_ledger_report.model_account_report_analytic_manager
+msgid "manages analytic filters for reports"
+msgstr "manages analytic filters for reports"
+
+#. module: detailed_general_ledger_report
+#: code:addons/detailed_general_ledger_report/models/account_move_line.py:78
+#, python-format
+msgid "sintaxsis incorrecta."
+msgstr "sintaxsis incorrecta."
+
+#. module: detailed_general_ledger_report
+#: model:ir.ui.view,arch_db:detailed_general_ledger_report.report_financial_line_detailed
+msgid "⇒ journal entries"
+msgstr "⇒ asientos contables"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:253
+#, python-format
+msgid "Initial Balance:"
+msgstr "Saldo Inicial:"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:254
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:259
+#, python-format
+msgid "With Initial Balance"
+msgstr "Con Saldo Inicial"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:255
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:260
+#, python-format
+msgid "Without Initial Balance"
+msgstr "Sin Saldo Inicial"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:216
+#, python-format
+msgid "Accounts to Include"
+msgstr "Cuentas a Incluir:"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:219
+#: code:addons/detailed_general_ledger_report/static/src/js/account_reports_backend.js:356
+#, python-format
+msgid "Only Active Analytic Accounts"
+msgstr "Solo Cuentas Analíticas Activas"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:220
+#: code:addons/detailed_general_ledger_report/static/src/js/account_reports_backend.js:359
+#, python-format
+msgid "Only Archived Analytic Accounts"
+msgstr "Solo Cuentas Analíticas Archivadas"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:221
+#: code:addons/detailed_general_ledger_report/static/src/js/account_reports_backend.js:362
+#, python-format
+msgid "Active & Archived Analytic Accounts"
+msgstr "Cuentas Analítica Activas y Archivadas"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:232
+#, python-format
+msgid "Tags to Include"
+msgstr "Etiquetas a Incluir:"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:235
+#: code:addons/detailed_general_ledger_report/static/src/js/account_reports_backend.js:373
+#, python-format
+msgid "Only Active Analytic Tags"
+msgstr "Solo Etiquetas Analítica Activas"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:236
+#: code:addons/detailed_general_ledger_report/static/src/js/account_reports_backend.js:376
+#, python-format
+msgid "Only Archived Analytic Tags"
+msgstr "Solo Etiquetas Analítica Archivadas"
+
+#. module: detailed_general_ledger_report
+#. openerp-web
+#: code:addons/detailed_general_ledger_report/static/src/xml/account_report_backend.xml:237
+#: code:addons/detailed_general_ledger_report/static/src/js/account_reports_backend.js:379
+#, python-format
+msgid "Active & Archived Analytic Tags"
+msgstr "Etiquetas Analítica Activas y Archivadas"

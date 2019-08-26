@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ReceiptBook Records -->
+    <data noupdate="True">
+	    <record id="recbook_payment_01" model="account.payment.receiptbook">
+	        <field name="name">Pagos</field>
+	        <field name="document_type_id" ref="dc_orden_pago_x"/>
+        	<field name="partner_type">supplier</field>
+        	<field name="sequence_id" ref="recbook_seq_data_01"/>
+        	<field name="sequence_type">automatic</field>
+    	</record>
+
+	    <record id="recbook_payment_02" model="account.payment.receiptbook">
+    	    <field name="name">Recibos</field>
+    	    <field name="document_type_id" ref="dc_recibo_x"/>
+    	    <field name="partner_type">customer</field>
+    	    <field name="sequence_id" ref="recbook_seq_data_02"/>
+        	<field name="sequence_type">automatic</field>
+    	</record>
+	</data>
+</odoo>

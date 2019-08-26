@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_partner_form_view_inherit_transection_report">
+            <field name="name">res.partner.form.view.inherit.transection.report</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="groups_id" eval="[(4, ref('account.group_account_invoice'))]"/>
+            <field name="arch" type="xml">
+            	 <button name="toggle_active" position="after">
+                     <button name="%(action_account_report_partner_transaction)d" attrs="{'invisible':[('customer','!=',True)]}" type="action" class="oe_stat_button" icon="fa-book" string="Customer Ledger"/>
+            		<button name="%(action_account_report_vendor_transaction)d" attrs="{'invisible':[('supplier','!=',True)]}" type="action" class="oe_stat_button" icon="fa-book" string="Vendor Ledger"/>
+            	</button>
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>

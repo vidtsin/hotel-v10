@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_tax_new_form" model="ir.ui.view">
+        <field name="name">account.tax.new.form</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='children_tax_ids']" position="before">
+                <group attrs="{'invisible': [('amount_type','!=','code2')]}">
+                    <group>
+                        <field name="service_id" attrs="{'required':[('amount_type','=','code2')]}" />
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_tax_exceptions_form" model="ir.ui.view">
+        <field name="name">account.tax.exceptions.form</field>
+        <field name="model">account.tax.exceptions</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="sequence_id"/>
+                    </group>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="main_id_number"/>
+                    </group>
+                    <notebook>
+                        <page string="Tax Exception">
+                            <group>
+                                <group>
+                                    <field name="per_tax_code"/>
+                                    <field name="wh_tax_code"/>
+                                    <field name="income_reg_code"/>
+                                </group>
+                                <group>
+                                    <field name="ex_type"/>
+                                    <field name="ex_rate" attrs="{'invisible':[('ex_type','!=','parcial')]}"/>
+                                    <field name="wh_ex_rate" attrs="{'invisible':[('ex_type','!=','parcial')]}"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Tax Exception Period">
+                            <group>
+                                <field name="sdate"/>
+                                <field name="edate"/>
+                                <field name="active"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tax_exceptions_tree" model="ir.ui.view">
+        <field name="name">account.tax.exceptions.tree</field>
+        <field name="model">account.tax.exceptions</field>
+        <field name="arch" type="xml">
+            <tree string="Tax Exceptions">
+                <field name="sequence_id"/>
+                <field name="partner_id"/>
+                <field name="per_tax_code"/>
+                <field name="wh_tax_code"/>
+                <field name="sdate"/>
+                <field name="edate"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_exceptions_tax_form" model="ir.actions.act_window">
+        <field name="name">Tax Exceptions </field>
+        <field name="res_model">account.tax.exceptions</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem action="action_exceptions_tax_form" id="menu_tax_exceptions_form" parent="account.account_account_menu" sequence="1"/>
+</odoo>

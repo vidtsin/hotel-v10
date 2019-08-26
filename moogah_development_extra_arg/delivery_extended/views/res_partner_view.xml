@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<odoo>
+    <data>
+        <record id='view_partner_form_inherit_freight' model='ir.ui.view'>
+            <field name='name'>res.partner.form.inherit.freight</field>
+            <field name='model'>res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//form/sheet/group/group/div/div[@class='o_address_format']/../.." position="inside">
+                        <field name="transport_id" attrs="{'invisible': [('type','!=', 'delivery')]}"/>
+                    </xpath>
+                    <xpath expr="//kanban/field[@name='name']" position="before">
+                        <field name="transport_id"/>
+                    </xpath>
+                    <xpath expr="//kanban/templates/t/div/div[@class='oe_kanban_details']//field[@name='name']" position="before">
+                        <div t-if="record.type.raw_value == 'delivery' and record.transport_id.raw_value">Transport: <field name="transport_id"/></div>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="check_rep">
+            <t t-call="report.html_container">
+                <div class="page">
+                    <h2>Historia de Cheques</h2>
+                    <!--span t-esc="filter" /-->
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th class="text-right">Numero</th>
+                                <th class="text-right">Monto</th>
+                                <th class="text-right">Fecha Emision</th>
+                                <th class="text-right">Fecha Pago</th>
+                                <th class="text-right">Estado</th>
+                                <th class="text-right">Banco</th>
+                                <th class="text-right">Empresa</th>
+                                <t t-if="mode=='overview'">
+                                	<th class="text-right">Notas</th>
+                                </t>
+                                <t t-if="mode=='detailed'">
+                                    <th class="text-right">Notas</th>
+                                	<th class="text-right">Fecha Estado</th>
+                                </t>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="total" t-value="0"/>
+                            <tr t-foreach="docs" t-as="o">
+                                <td class="text-right">
+                                    <!--a t-attf-href="#{prepare_backend_url('account_check.action_third_check', 'form')}&amp;id=#{o.check_id.id}"
+                                        target="_blank">
+                                            <t t-esc="o.check_id.name" />
+                                    </a-->
+                                    <!--a t-attf-href="/web#view_type=form&amp;model=account.check&amp;id=#{o.check_id.id}&amp;action=account_check.action_third_check"-->
+                                        <span t-field="o.check_id.name"/>
+                                    <!--/a-->
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="o.check_id.amount"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="o.check_id.issue_date"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="o.check_id.payment_date"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="o.operation"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="o.check_id.bank_id"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="o.check_id.partner_id"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="o.check_id.notes"/>
+                                </td>
+                                <t t-if="mode=='detailed'">
+                                    <td class="text-right">
+                                        <span t-field="o.transdate_move_id"/>
+                                    </td>
+                                </t>
+                                <t t-if="total==0">
+                                    <t t-set="total" t-value="o.getgrandtotals('camount_total',docs,datat,datai,type)"/>
+                                </t>
+                            </tr>
+                            <tr>
+                                <td class="text-right"></td>
+                                <td class="text-right">
+                                    <span t-esc="total" />
+                                </td>
+                                <td class="text-right"></td>
+                                <td class="text-right"></td>
+                                <td class="text-right"></td>
+                                <td class="text-right"></td>
+                                <td class="text-right"></td>
+                                <t t-if="mode=='detailed'">
+                                    <td class="text-right"></td>
+                                </t>
+                                <td class="text-right"></td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,87 @@
+<odoo>
+    <template id="qweb_customer_invoice_journal">
+        <t t-call="report.html_container">
+            <t t-call="report.external_layout">
+                <div class="page" style="font-size:9px;" >
+                    <h2 t-if="type=='customer'">Withholding Tax Report - Receipts</h2>
+                    <h2 t-if="type=='supplier'">Withholding Tax Report - Payments</h2>
+                    <div class="row">
+                        <div class="col-xs-6" >
+                            <t t-foreach="filters2" t-as="filters">
+                                <span t-esc="filters"/><br/>
+                            </t>
+                        </div>
+                        <div class="col-xs-6" >
+                        </div>
+                    </div>
+                    <br/>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <t t-foreach="len(list_titles)" t-as="title">
+                                    <t t-if="list_align[title]=='center'">
+                                        <th style="text-align:center;"><span t-esc="list_titles[title]"/></th>
+                                    </t>
+                                    <t t-if="list_align[title]=='right'">
+                                        <th style="text-align:right;"><span t-esc="list_titles[title]"/></th>
+                                    </t>
+                                </t>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-set="qty" t-value="len(list_titles)"/>
+                            <tr t-foreach="print_data" t-as="data">
+                                <!--td><span t-esc="data[1]"/></td-->
+                                <!--span t-esc="qty"/-->
+                                <t t-foreach="qty" t-as="index">
+                                    <t t-if="list_align[index]=='center'">
+                                        <td t-if="data[1][index+1]!=''" style="text-align:center;">
+                                            <span t-esc="data[1][index]"/>
+                                        </td>
+                                        <td t-if="data[1][index+1]==''" style="text-align:center;">
+                                            <b><span t-esc="data[1][index]"/></b>
+                                        </td>
+                                    </t>
+                                    <t t-if="list_align[index]=='right'">
+                                        <td style="text-align:right;">
+                                            <span t-esc="'%.2f' % data[1][index]"/>
+                                        </td>
+                                    </t>
+                                </t>
+                            </tr>
+                            <tr><td><br/><br/><br/><br/><br/></td></tr>
+                            <tr>
+                                <td>
+                                    <b>Impuesto de Retencion</b>
+                                </td>
+                            </tr>
+                            <t t-set="tot" t-value="0.0"/>
+                            <tr t-foreach="tot_wh" t-as="data">
+                                <td style="text-align:center;">
+                                    <span t-esc="data"/>
+                                </td>
+                                <td style="text-align:right;">
+                                    <span t-esc="'%.2f' % tot_wh[data]"/>
+                                    <t t-set="tot" t-value="tot+tot_wh[data]"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Totales</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:center;">
+                                </td>
+                                <td style="text-align:right;">
+                                    <span t-esc="'%.2f' % tot"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+
+</odoo>

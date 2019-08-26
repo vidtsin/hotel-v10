@@ -1,0 +1,602 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_cashin_cashout
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-27 16:37+0000\n"
+"PO-Revision-Date: 2018-08-27 14:08-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.8\n"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_paym_account_analytic_id
+msgid " Payment Analytic Tag"
+msgstr " Etiqueta Analítica (Pago)"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid ""
+"<br/>\n"
+"                            <strong><span>Detalle de Cheques</span></strong>"
+msgstr ""
+"<br/>\n"
+"                            <strong><span>Detalle de Cheques</span></strong>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid ""
+"<br/>\n"
+"                        <span>Recibido _________________________________   </span>"
+msgstr ""
+"<br/>\n"
+"                        <span>Recibido _________________________________   </span>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "<span>Beneficiario: </span>"
+msgstr "<span>Beneficiario: </span>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "<span>Entrada de Caja: </span>"
+msgstr "<span>Entrada de Caja: </span>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "<span>Fecha: </span>"
+msgstr "<span>Fecha: </span>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "<span>Salida de Caja: </span>"
+msgstr "<span>Salida de Caja: </span>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "<strong><span>Referencia: </span></strong>"
+msgstr "<strong><span>Referencia: </span></strong>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "<strong>Cuenta:</strong>"
+msgstr "<strong>Cuenta: </strong>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "<strong>Forma de pago:</strong>"
+msgstr "<strong>Forma de pago:</strong>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "<strong>Moneda:</strong>"
+msgstr "<strong>Moneda:</strong>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "<strong>Monto Total:</strong>"
+msgstr "<strong>Monto Total:</strong>"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model,name:vitt_cashin_cashout.model_account_account
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model,name:vitt_cashin_cashout.model_account_check
+msgid "Account Check"
+msgstr "Cuenta de Cheque"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model,name:vitt_cashin_cashout.model_account_document_type
+msgid "Account Document Type"
+msgstr "Tipo de Comprobantes"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "Banco"
+msgstr "Banco"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_bank_id
+msgid "Bank"
+msgstr "Banco"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_employee_id
+msgid "Benefitiary Employee"
+msgstr "Benef. - Empleado"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_benefitiary_id
+msgid "Benefitiary Supplier"
+msgstr "Benef. - Proveedor"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_benefitiary_type
+msgid "Benefitiary Type"
+msgstr "Tipo Beneficiario"
+
+#. module: vitt_cashin_cashout
+#: model:ir.actions.report.xml,name:vitt_cashin_cashout.report_cashout_printout
+msgid "Caja"
+msgstr "Caja"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:21
+#, python-format
+msgid "Can't Create it from here"
+msgstr "No está permitido crear los registros desde esta ventana"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.view_account_change_check_wizard2
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: vitt_cashin_cashout
+#: selection:account.cash.inout,state:0
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_search
+msgid "Cancelled"
+msgstr "Cancelada"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_cash_account_analytic_id
+msgid "Cash Analytic Tag"
+msgstr "Etiqueta Analítica (Caja/Gasto)"
+
+#. module: vitt_cashin_cashout
+#: model:ir.actions.act_window,name:vitt_cashin_cashout.action_cash_in
+#: model:ir.ui.menu,name:vitt_cashin_cashout.menu_cash_in
+msgid "Cash In"
+msgstr "Entrada de Caja"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_form
+msgid "Cash Ledger"
+msgstr "Registro de Caja"
+
+#. module: vitt_cashin_cashout
+#: model:ir.actions.act_window,name:vitt_cashin_cashout.action_cash_out
+#: model:ir.ui.menu,name:vitt_cashin_cashout.menu_cash_out
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_form
+msgid "Cash Out"
+msgstr "Salida de Caja"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.menu,name:vitt_cashin_cashout.menu_cash_menu
+msgid "Cash Registers"
+msgstr "Registros de Caja"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_cash_account_id
+msgid "Cash account"
+msgstr "Cuenta de Caja/Gastos"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:160
+#, python-format
+msgid "Cash account checked as deprecated, not allowed"
+msgstr "No está permitido tener Cuentas de Caja/Gastos identificadas como obsoletas"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_check_cashin_out_id
+msgid "Cashin out id"
+msgstr "ID Salida/Entrada de Caja"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_form
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.view_account_change_check_wizard2
+msgid "Change Check"
+msgstr "Reemplazar Cheque"
+
+#. module: vitt_cashin_cashout
+#: model:ir.actions.act_window,name:vitt_cashin_cashout.action_account_change_check_wizard2
+msgid "Change Check Operation"
+msgstr "Operación Reemplazo de Cheque"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/wizard/change_check_wizard.py:95
+#, python-format
+msgid "Check Number Can't be Zero !"
+msgstr "El Número de Cheque No Puede ser Cero !"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_checkbook_id
+msgid "Checkbook"
+msgstr "Chequera"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_check_line_ids
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_form
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.view_account_chash_inout_calendar
+msgid "Checks"
+msgstr "Cheques"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.view_account_change_check_wizard2
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_create_uid
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_create_date
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_deposit_date
+msgid "Deposit Date"
+msgstr "Fecha de Depósito"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_display_name
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: vitt_cashin_cashout
+#: selection:account.cash.inout,state:0
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_search
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: vitt_cashin_cashout
+#: selection:account.cash.inout,benefitiary_type:0
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_res_partner_employee_id
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_res_users_employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: vitt_cashin_cashout
+#: selection:account.cash.inout,type:0
+msgid "Entrada de Caja"
+msgstr "Entrada de Caja"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:205
+#, python-format
+msgid "Entrada de Caja \"%s\""
+msgstr "Entrada de Caja \"%s\""
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/wizard/change_check_wizard.py:160
+#, python-format
+msgid "Error in Number"
+msgstr "Error en Número"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_tree
+msgid "Expense Acc"
+msgstr "Cta. Caja/Gastos"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "Fecha"
+msgstr "Fecha"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_id
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:128
+#, python-format
+msgid "Issue Check Journal not allowed here"
+msgstr "No está permitido tener un Diario de Cheques Propios"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_issue_check_subtype
+msgid "Issue Check Subtype"
+msgstr "Subtipo de Cheque Propio"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_issue_date
+msgid "Issue Date"
+msgstr "Fecha de Emisión"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_journal_id
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_move_id
+msgid "Journal Entry"
+msgstr "Asiento Contable"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:158
+#, python-format
+msgid "Journal account checked as deprecated, not allowed"
+msgstr "No está permitido tener Cuentas en Diario identificadas como obsoletas"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_journal_has_checks
+msgid "Journal has checks"
+msgstr "El Diario tiene cheques"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:125
+#, python-format
+msgid "Journal has more than 1 option in debit method"
+msgstr "Diario tiene más de 1 opción en método de débito"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:123
+#, python-format
+msgid "Journal has more than 1 option in payment method"
+msgstr "Diario tiene más de 1 opción en método de pago"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout___last_update
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_write_uid
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Modificación por"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_write_date
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_line_ids
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_check_amount_cash
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "Monto"
+msgstr "Monto"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_number
+msgid "Number"
+msgstr "Número"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_number_of_checks
+msgid "Number of checks"
+msgstr "Número de Cheques"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.cashout_printout_sub
+msgid "Numero"
+msgstr "Número"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,help:vitt_cashin_cashout.field_account_change_check_wizard2_payment_date
+msgid "Only if this check is post dated"
+msgstr "Solo si el Cheque es diferido"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_original_check_id
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_original_check_id2
+msgid "Original Check"
+msgstr "Cheque Original"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_owner_name
+msgid "Owner Name"
+msgstr "Nombre de Propietario"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_owner_vat
+msgid "Owner Vat"
+msgstr "CUIT de Propietario"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model,name:vitt_cashin_cashout.model_res_partner
+msgid "Partner"
+msgstr "Cliente/Proveedor"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_tree
+msgid "Pay Date"
+msgstr "Fecha de Pago"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_payment_date
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_form
+msgid "Payment Date"
+msgstr "Fecha de Pago"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_tree
+msgid "Payment Jurnal"
+msgstr "Diario de Pago"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:172
+#, python-format
+msgid "Please, Select a Contact first"
+msgstr "Por favor, antes seleccione un Contacto"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:169
+#, python-format
+msgid "Please, Select a benefitiray type first"
+msgstr "Por favor, antes seleccione un Tipo de Beneficiario"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:174
+#, python-format
+msgid "Please, Select an Employee first"
+msgstr "Por favor, antes seleccione un Empleado"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_receiptbook_id
+msgid "ReceiptBook"
+msgstr "Talonario de Recibo"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_tree
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_cash_reference
+msgid "Referencia"
+msgstr "Referencia"
+
+#. module: vitt_cashin_cashout
+#: selection:account.cash.inout,type:0
+msgid "Salida de Caja"
+msgstr "Salida de Caja"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:226
+#, python-format
+msgid "Salida de Caja \"%s\""
+msgstr "Salida de Caja \"%s\""
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_state
+msgid "Status"
+msgstr "Estado"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_sub_journal
+msgid "Sub Type"
+msgstr "Sub Tipo"
+
+#. module: vitt_cashin_cashout
+#: selection:account.cash.inout,benefitiary_type:0
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,help:vitt_cashin_cashout.field_account_change_check_wizard2_issue_check_subtype
+msgid "The only difference bewteen Deferred and Currents is that when delivering a Deferred check a Payment Date is Require"
+msgstr "La única diferencia entre Cheques Diferidos y Corrientes es que al entregar un Cheque diferido la Fecha de Pago es Requerida"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:193
+#, python-format
+msgid "There are compromised checks, not allowed"
+msgstr "No está permitido tener cheques comprometidos"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_total_amount
+msgid "Total Amount"
+msgstr "Total Monto"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_cash_inout_type
+#: model:ir.model.fields,field_description:vitt_cashin_cashout.field_account_change_check_wizard2_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_form
+msgid "Validate"
+msgstr "Validar"
+
+#. module: vitt_cashin_cashout
+#: selection:account.cash.inout,state:0
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_search
+msgid "Validated"
+msgstr "Validado"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model,name:vitt_cashin_cashout.model_account_cash_inout
+msgid "account.cash.inout"
+msgstr "account.cash.inout"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model,name:vitt_cashin_cashout.model_account_cash_inout_line
+msgid "account.cash.inout.line"
+msgstr "account.cash.inout.line"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model,name:vitt_cashin_cashout.model_account_change_check_wizard2
+msgid "account.change.check.wizard2"
+msgstr "account.change.check.wizard2"
+
+#. module: vitt_cashin_cashout
+#: model:ir.model,name:vitt_cashin_cashout.model_account_check_operation
+msgid "account.check.operation"
+msgstr "account.check.operation"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_form
+msgid "cancel cash IN/OUT"
+msgstr "Cancelar Entrada/Salida de CAJA"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_search
+msgid "cancelled"
+msgstr "Cancelada"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:181
+#, python-format
+msgid "employee in check %s not the same as cash legder"
+msgstr "El empleado en el cheque %s no es el mismo que el del registro de Caja"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:167
+#, python-format
+msgid "issue check journal type not allowed in cash-in"
+msgstr "Los diarios con sub-tipo Cheques Propios no están permitidos en Entradas de Caja"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:164
+#, python-format
+msgid "journal Third Checks type not allowed"
+msgstr "Los Diarios de tipo Cheques de Terceros no están permitidos en este registro"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.view_account_change_check_wizard2
+msgid "or"
+msgstr "o"
+
+#. module: vitt_cashin_cashout
+#: code:addons/vitt_cashin_cashout/models/account_cash.py:178
+#, python-format
+msgid "partner in check %s not the same as cash legder"
+msgstr "el proveedor en el cheque %s no es el mismo que el del registro de Caja"
+
+#. module: vitt_cashin_cashout
+#: model:ir.ui.view,arch_db:vitt_cashin_cashout.account_cash_inout_view_form
+msgid "send to draft"
+msgstr "Cambiar a Borrador"

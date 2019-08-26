@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_company_inherit_form">
+            <field name="name">res.company.form.inherit</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="model">res.company</field>
+            <field name="arch" type="xml">
+                <xpath expr="/form/*" position="before">
+                    <header>
+                        <button name="test_pyafipws_dummy" string="CUIT Dummy Test" help="Dummy test to check connection to selected webservice" type="object"/>
+                    </header>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

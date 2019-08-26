@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="authorizations_config_settings_view_form" model="ir.ui.view">
+            <field name="name">authorizations.settings</field>
+            <field name="model">authorizations.config.settings</field>
+            <field name="arch" type="xml">
+                <form string="Configure authorizations" class="oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <field name="company_id" invisible="1"/>
+                    <group col="6">
+                        <group string="Minimum authorization values" colspan="2">
+                            <field name="purchase_invoices"/>
+                            <field name="sales_invoices"/>
+                            <field name="purchase_orders"/>
+                            <field name="sales_orders"/>
+                        </group>
+                    </group>
+                    <group col="4">
+                        <group string="Approving users" colspan="2">
+                            <field name="purchase_invoices_user_ids" widget="many2many_tags"/>
+                            <field name="sales_invoices_user_ids" widget="many2many_tags"/>
+                            <field name="purchase_orders_user_ids" widget="many2many_tags"/>
+                            <field name="sales_orders_user_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="authorizations_settings_action" model="ir.actions.act_window">
+            <field name="name">Authorizations settings</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">authorizations.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem action="authorizations_settings_action"
+                  id="authorizations_settings_action_menu"
+                  parent="account.account_management_menu"/>
+
+    </data>
+</odoo>

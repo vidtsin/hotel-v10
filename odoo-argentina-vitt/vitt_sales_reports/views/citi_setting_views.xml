@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="new_view_nl_setting" model="ir.ui.view">
+        <field name="name">account.config.settings.new</field>
+        <field name="model">nl.setting.block</field>
+        <field name="inherit_id" ref="vitt_nl_setting.view_nl_setting" />
+        <field name="arch" type="xml">
+                <xpath expr="//group[@name='main']" position="inside">
+                    <group string="Controles CITI">
+                            <field name="citi_pl_box"/>
+                            <field name="citi_sl_box"/>
+                    </group>
+                    <group string="Controles Notas de Crédito ARCIBA">
+                        <field name="sl_arciba_tax_ids"
+                               widget="many2many_tags"
+                               domain="[('type_tax_use','=','sale'),('jurisdiction_code','!=',False)]"
+                        />
+                        <field name="no_nc_partial"/>
+                    </group>
+                    <group string="Controles Notas de Crédito (Compras) - Imp. Retenciones">
+                        <field name="nc_paym"/>
+                        <field name="nc_acc_control"/>
+                    </group>
+                </xpath>
+        </field>
+    </record>
+
+    <data noupdate="1">
+        <record id="default_nl_setting" model="nl.setting.block">
+            <field name="citi_pl_box" eval="True"/>
+            <field name="citi_sl_box" eval="True"/>
+        </record>
+    </data>
+</odoo>

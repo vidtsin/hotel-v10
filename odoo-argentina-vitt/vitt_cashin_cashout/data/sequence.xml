@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  © 2012-2016 Akretion (http://www.akretion.com/)
+  @author: Benoît GUILLOT <benoit.guillot@akretion.com>
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<odoo noupdate="1">
+
+    <record id="seq_cashout" model="ir.sequence">
+        <field name="name">Cash Out</field>
+        <field name="code">account.cash.out</field>
+        <field name="prefix">COUT</field>
+        <field name="padding">6</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_cashin" model="ir.sequence">
+        <field name="name">Cash In</field>
+        <field name="code">account.cash.in</field>
+        <field name="prefix">CIN</field>
+        <field name="padding">6</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+</odoo>

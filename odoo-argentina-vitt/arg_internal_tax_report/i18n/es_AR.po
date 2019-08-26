@@ -1,0 +1,278 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_arg_internal_tax_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-08 20:36+0000\n"
+"PO-Revision-Date: 2019-05-08 17:44-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+msgid "<strong>Date from :</strong>"
+msgstr "<strong>Fecha desde:</strong>"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+msgid "<strong>Date to :</strong>"
+msgstr "<strong>Fecha hasta:</strong>"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+msgid "<strong>Difference</strong>"
+msgstr "<strong>Diferencia</strong>"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+msgid "<strong>Purchase Tax:</strong>"
+msgstr "<strong>Imp. Interno Compras:</strong>"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+msgid "<strong>Sale Tax:</strong>"
+msgstr "<strong>Imp. Interno Ventas:</strong>"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.arg_invoice_report_wizard_wizard_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:143
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+#, python-format
+msgid "Custom Dispatch No."
+msgstr "Nro. Despacho Importación"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_stock_pack_operation_lot_custom_dispatch_number
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_stock_picking_custom_dispatch_number
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_stock_picking_custom_dispatch_number_fnc
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_stock_production_lot_custom_dispatch_number
+msgid "Custom Dispatch Number"
+msgstr "Número Despacho Importación"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:146
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+#, python-format
+msgid "Customer Invoice No."
+msgstr "Nro. Factura Cliente"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:113
+#, python-format
+msgid "Date from:"
+msgstr "Fecha Desde:"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:114
+#, python-format
+msgid "Date to:"
+msgstr "Fecha Hasta:"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_display_name
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_report_arg_internal_tax_report_internal_taxes_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_date_to
+msgid "End date"
+msgstr "Fecha de fin"
+
+#. module: vitt_arg_internal_tax_report
+#: selection:arg.internal.taxes.report.wizard,format:0
+msgid "Excel"
+msgstr "Excel"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_format
+msgid "Format"
+msgstr "Formato"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_id
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_report_arg_internal_tax_report_internal_taxes_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.actions.act_window,name:vitt_arg_internal_tax_report.arg_internal_taxes_report_wizard_act
+#: model:ir.ui.menu,name:vitt_arg_internal_tax_report.menu_arg_internal_taxes_report_wizard
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.arg_invoice_report_wizard_wizard_view
+msgid "Internal Taxes"
+msgstr "Impuestos Internos"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:78
+#: model:ir.actions.report.xml,name:vitt_arg_internal_tax_report.action_arg_internal_taxes_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+#, python-format
+msgid "Internal Taxes Report"
+msgstr "Informe de Impuestos Internos"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.actions.report.xml,name:vitt_arg_internal_tax_report.action_arg_internal_taxes_report_xls
+msgid "Internal Taxes Report XLS"
+msgstr "Informe de Impuestos Internos XLS"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model,name:vitt_arg_internal_tax_report.model_arg_internal_taxes_report_wizard
+msgid "Internal taxes report"
+msgstr "Informe de Impuestos Internos"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.menu,name:vitt_arg_internal_tax_report.menu_inv_report
+msgid "Invoicing Reports"
+msgstr "Informes de Facturas"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard___last_update
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_report_arg_internal_tax_report_internal_taxes___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Modificación por"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model,name:vitt_arg_internal_tax_report.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lote/Nº de serie"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model,name:vitt_arg_internal_tax_report.model_stock_pack_operation_lot
+msgid "Lot/Serial number for pack ops"
+msgstr "Lote/Nro. Serie para pack ops"
+
+#. module: vitt_arg_internal_tax_report
+#: selection:arg.internal.taxes.report.wizard,format:0
+msgid "PDF"
+msgstr "PDF"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.arg_invoice_report_wizard_wizard_view
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:139
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+#, python-format
+msgid "Product Code"
+msgstr "Cód. Producto"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:140
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+#, python-format
+msgid "Product Description"
+msgstr "Descripción de Producto"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+msgid "Purchase Internal Tax"
+msgstr "Imp. Internos Compras"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_purchase_tax_id
+msgid "Purchase Tax Code"
+msgstr "Cód. Imp. Compras"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:111
+#, python-format
+msgid "Purchase Tax:"
+msgstr "Impuesto de Compras:"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:112
+#, python-format
+msgid "Sale Tax:"
+msgstr "Impuesto de Ventas:"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+msgid "Sales Internal Tax"
+msgstr "Imp. Internos Ventas"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_account_tax_id
+msgid "Sales Tax Code"
+msgstr "Cód. Imp. Ventas"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:141
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+#, python-format
+msgid "Serial/Lot No."
+msgstr "Nro. Lote/Serie"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_stock_picking_show_dispatch_number
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_stock_picking_show_dispatch_number_fnc
+msgid "Show custom dispatch number field?"
+msgstr "Mostrar campo de Número de Despacho Aduanas?"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model.fields,field_description:vitt_arg_internal_tax_report.field_arg_internal_taxes_report_wizard_date_from
+msgid "Start date"
+msgstr "Fecha inicial"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:142
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+#, python-format
+msgid "Stock In Date"
+msgstr "Fecha Ingreso Stock"
+
+#. module: vitt_arg_internal_tax_report
+#: code:addons/vitt_arg_internal_tax_report/report/arg_internal_taxes_report_xls.py:145
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.report_internal_taxes
+#, python-format
+msgid "Stock Out Date"
+msgstr "Fecha Salida Stock"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model,name:vitt_arg_internal_tax_report.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.ui.view,arch_db:vitt_arg_internal_tax_report.arg_invoice_report_wizard_wizard_view
+msgid "or"
+msgstr "o"
+
+#. module: vitt_arg_internal_tax_report
+#: model:ir.model,name:vitt_arg_internal_tax_report.model_report_arg_internal_tax_report_internal_taxes
+msgid "report.arg_internal_tax_report.internal_taxes"
+msgstr "report.arg_internal_tax_report.internal_taxes"

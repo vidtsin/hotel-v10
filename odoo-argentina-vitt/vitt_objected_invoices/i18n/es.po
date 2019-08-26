@@ -1,0 +1,166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_objected_invoices
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-15 18:03+0000\n"
+"PO-Revision-Date: 2019-03-15 15:07-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_amount_currency
+msgid "Amount Currencyt"
+msgstr "Monto en Moneda (o)"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_apg_id
+msgid "Apg id"
+msgstr "Apg id"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_currency_id
+msgid "Currency id"
+msgstr "Id. Moneda"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_duedate
+msgid "Due Date"
+msgstr "Fecha Venc."
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_report_pl_ledger_objected
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_report_sl_ledger_objected
+msgid "Excluir Facturas Cuestionadas"
+msgstr "Excluir Facturas Cuestionadas"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_report_pl_ledger_extendedf
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_report_sl_ledger_extendedf
+msgid "Extendedf"
+msgstr "Extendedf"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_inv_id
+msgid "Inv id"
+msgstr "Id. Factura"
+
+#. module: vitt_objected_invoices
+#: model:ir.model,name:vitt_objected_invoices.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_invoice_number
+msgid "Invoice Number"
+msgstr "Número de Factura"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_obj_bool
+msgid "Objected"
+msgstr "Objetada"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_objected_amount
+msgid "Objected Amount"
+msgstr "Monto Objetado"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_obj_value
+msgid "Objected Value"
+msgstr "Valor Objetado"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_payment_group_objected_invoices_ids
+msgid "Objected invoices ids"
+msgstr "Ids Facturas Objetadas"
+
+#. module: vitt_objected_invoices
+#: model:ir.ui.view,arch_db:vitt_objected_invoices.view_account_invoice_objected_tree
+#: model:ir.ui.view,arch_db:vitt_objected_invoices.view_account_payment_group_form2
+msgid "Objetadas"
+msgstr "Objetadas"
+
+#. module: vitt_objected_invoices
+#: model:ir.model,name:vitt_objected_invoices.model_account_payment_group
+msgid "Payment Group"
+msgstr "Grupo de Pago"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_residual_amount
+msgid "Residual Amount"
+msgstr "Monto Residual"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_residual_amount_currency
+msgid "Residual Amount Currencyt"
+msgstr "Monto Residual en Moneda (o)"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_total_amount
+msgid "Total Amount"
+msgstr "Monto Total"
+
+#. module: vitt_objected_invoices
+#: model:ir.model,name:vitt_objected_invoices.model_account_invoice_objected
+msgid "account.invoice.objected"
+msgstr "account.invoice.objected"
+
+#. module: vitt_objected_invoices
+#: model:ir.model.fields,field_description:vitt_objected_invoices.field_account_invoice_objected_partner_id
+msgid "partner"
+msgstr "Empresa"
+
+#. module: vitt_objected_invoices
+#: model:ir.model,name:vitt_objected_invoices.model_report_pl_ledger
+msgid "report.pl.ledger"
+msgstr "report.pl.ledger"
+
+#. module: vitt_objected_invoices
+#: model:ir.model,name:vitt_objected_invoices.model_report_sl_ledger
+msgid "report.sl.ledger"
+msgstr "report.sl.ledger"

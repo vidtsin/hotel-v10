@@ -1,0 +1,292 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* partner_transaction_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20190218\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-02 21:35+0000\n"
+"PO-Revision-Date: 2019-05-02 21:35+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_transaction_report
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+msgid "<span>Multi Currencies Customer Ledger</span>"
+msgstr "<span>Libro mayor de cliente multi moneda</span>"
+
+#. module: partner_transaction_report
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+msgid "<span>Multi Currencies Vendor Ledger</span>"
+msgstr "<span>Libro mayor de proveedor multi moneda</span>"
+
+#. module: partner_transaction_report
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+msgid "<strong>From :</strong>"
+msgstr "<strong>Desde :</strong>"
+
+#. module: partner_transaction_report
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+msgid "<strong>to :</strong>"
+msgstr "<strong>Hasta :</strong>"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report.py:216
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:216
+#, python-format
+msgid "Advance"
+msgstr "Anticipo"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:372
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+#, python-format
+msgid "Amount in Currency"
+msgstr "Monto en moneda"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:429
+#, python-format
+msgid "An error has occurred generating XLS file..."
+msgstr "Ha ocurrido un error al generar el archivo XLS..."
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:375
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+#, python-format
+msgid "Balance"
+msgstr "Saldo pendiente"
+
+#. module: partner_transaction_report
+#: model:ir.ui.view,arch_db:partner_transaction_report.view_partner_transaction_report_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:374
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+#, python-format
+msgid "Credit"
+msgstr "Haber"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:201
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report.py:201
+#, python-format
+msgid "Currency: "
+msgstr "Moneda: "
+
+#. module: partner_transaction_report
+#: selection:partner.transaction.report.wizard,type:0
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: partner_transaction_report
+#: model:ir.ui.menu,name:partner_transaction_report.menu_action_customer_transaction_report_wizard
+msgid "Customer Ledger"
+msgstr "Libro mayor de cliente"
+
+#. module: partner_transaction_report
+#: model:ir.actions.act_window,name:partner_transaction_report.action_customer_transaction_report_wizard
+msgid "Customer Transaction Report Wizard"
+msgstr "Reporte para transacciones de clientes"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:367
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_initial_date
+msgid "Date From"
+msgstr "Fecha Desde"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_end_date
+msgid "Date To"
+msgstr "Fecha Hasta"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:373
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+#, python-format
+msgid "Debit"
+msgstr "Debe"
+
+#. module: partner_transaction_report
+#: selection:partner.transaction.report.wizard,level:0
+msgid "Detailed"
+msgstr "Detallado"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_display_name
+#: model:ir.model.fields,field_description:partner_transaction_report.field_report_partner_transaction_report_report_partner_transaction_display_name
+#: model:ir.model.fields,field_description:partner_transaction_report.field_report_partner_transaction_report_report_xlsx_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:368
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+#, python-format
+msgid "Doc Type"
+msgstr "Tipo"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report.py:87
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:88
+#, python-format
+msgid "Initial Balance"
+msgstr "Saldo inicial"
+
+#. module: partner_transaction_report
+#: model:ir.model,name:partner_transaction_report.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte Contable"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard___last_update
+#: model:ir.model.fields,field_description:partner_transaction_report.field_report_partner_transaction_report_report_partner_transaction___last_update
+#: model:ir.model.fields,field_description:partner_transaction_report.field_report_partner_transaction_report_report_xlsx___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_level
+msgid "Level"
+msgstr "Nivel"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:371
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+#, python-format
+msgid "Manual Rate"
+msgstr "Tasa Manual"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:369
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+#, python-format
+msgid "Number"
+msgstr "Número"
+
+#. module: partner_transaction_report
+#: selection:partner.transaction.report.wizard,level:0
+msgid "Overview"
+msgstr "Resumido"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/wizard/partner_transaction_report_wizard.py:92
+#, python-format
+msgid "Partner Transaction"
+msgstr "Partner Transaction"
+
+#. module: partner_transaction_report
+#: model:ir.actions.report.xml,name:partner_transaction_report.action_bi_partner_transaction_report
+msgid "Partner Transaction Report"
+msgstr "Reporte para transacciones de clientes"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_partner_ids
+msgid "Partners"
+msgstr "Empresas"
+
+#. module: partner_transaction_report
+#: model:ir.model,name:partner_transaction_report.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: partner_transaction_report
+#: model:ir.ui.view,arch_db:partner_transaction_report.view_partner_transaction_report_wizard
+msgid "Print"
+msgstr "Imprimir"
+
+#. module: partner_transaction_report
+#: model:ir.ui.view,arch_db:partner_transaction_report.view_partner_transaction_report_wizard
+msgid "Print (xlsx)"
+msgstr "Imprimir (xlsx)"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:370
+#: model:ir.ui.view,arch_db:partner_transaction_report.report_partner_transaction
+#, python-format
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: partner_transaction_report
+#: model:ir.ui.menu,name:partner_transaction_report.menu_purchase_reports
+#: model:ir.ui.menu,name:partner_transaction_report.menu_sale_reports
+msgid "Reports"
+msgstr "Informes"
+
+#. module: partner_transaction_report
+#: selection:partner.transaction.report.wizard,type:0
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: partner_transaction_report
+#: model:ir.actions.act_window,name:partner_transaction_report.action_supplier_transaction_report_wizard
+msgid "Supplier Transaction Report Wizard"
+msgstr "Reporte para transacciones de proveedores"
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report.py:349
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:345
+#, python-format
+msgid "There is no information for the selected filters."
+msgstr "No existe información para los filtros seleccionados."
+
+#. module: partner_transaction_report
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report.py:193
+#: code:addons/partner_transaction_report/report/bi_partner_transaction_report_xlsx.py:194
+#, python-format
+msgid "Total Currency: "
+msgstr "Total Moneda: "
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_partner_transaction_report_wizard_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: partner_transaction_report
+#: model:ir.model.fields,field_description:partner_transaction_report.field_account_payment_unmatched_amount
+msgid "Unmatched amount"
+msgstr "Pago no publicado"
+
+#. module: partner_transaction_report
+#: model:ir.ui.menu,name:partner_transaction_report.menu_action_supplier_transaction_report_wizard
+msgid "Vendor Ledger"
+msgstr "Libro mayor de proveedor"
+
+#. module: partner_transaction_report
+#: model:ir.model,name:partner_transaction_report.model_partner_transaction_report_wizard
+msgid "Wizard that show the partners transactions report"
+msgstr "Ventana que muestra un reporte de las transacciones de las empresas"
+

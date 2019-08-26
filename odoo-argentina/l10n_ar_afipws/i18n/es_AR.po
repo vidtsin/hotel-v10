@@ -1,0 +1,535 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_ar_afipws
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-24 17:08+0000\n"
+"PO-Revision-Date: 2017-07-24 14:52-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,help:l10n_ar_afipws.field_afipws_certificate_alias_state
+msgid ""
+"* The 'Draft' state is used when a user is creating a new pair key. Warning: everybody can see the key.\n"
+"* The 'Confirmed' state is used when the key is completed with public or private key.\n"
+"* The 'Canceled' state is used when the key is not more used. You cant use this key again."
+msgstr ""
+"* El estado 'Borrador' es usado cuando un usuario está creando una nueva clave. Precaución: todos pueden ver la clave.\n"
+"* El estado 'Confirmado' es usado cuando la clave está completa con un clave pública o privada.\n"
+"* El estado 'Cancelado' es usado cuando la clave ya no será usada. Ud. no podrá volver a usar esta clave."
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,help:l10n_ar_afipws.field_afipws_certificate_state
+msgid ""
+"* The 'Draft' state is used when a user is creating a new pair key. Warning: everybody can see the key.\n"
+"* The 'Waiting' state is used when a request has send to Certificate Authority and is waiting for response.\n"
+"* The 'Confirmed' state is used when a certificate is valid.\n"
+"* The 'Canceled' state is used when the key is not more used. You cant use this key again."
+msgstr ""
+"* El estado 'Borrador' es usado cuando un usuario está creando una nueva clave. Precaución: todos pueden ver la clave.\n"
+"* El estado 'En Espera' es usado cuando un requerimiento ha sido enviado a AFIP y se está esperando la respuesta.\n"
+"* El estado 'Confirmado' es usado cuando el certificado ha sido validado.\n"
+"* El estado 'Cancelado' es usado cuando la clave ya no será usada. Ud. no podrá volver a usar esta clave."
+
+#. module: l10n_ar_afipws
+#: model:ir.actions.act_window,name:l10n_ar_afipws.act_afipws_certificate_alias
+msgid "AFIP Certificate"
+msgstr "Certificado AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_filter
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_form
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_tree
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_form
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_tree
+msgid "AFIP Certificates"
+msgstr "Certificados AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.actions.act_window,name:l10n_ar_afipws.act_afipws_auth
+msgid "AFIP Connections"
+msgstr "Conexiones AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_auth_form
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_auth_tree
+msgid "AFIP Connector"
+msgstr "Conector AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.model,name:l10n_ar_afipws.model_afipws_certificate_alias
+msgid "AFIP Distingish Name / Alias"
+msgstr "Nombre / Alias AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_afip_login_url
+msgid "AFIP Login URL"
+msgstr "Login URL AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_auth_form
+msgid "AFIP Servers"
+msgstr "Servidores AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_afip_ws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_company_inherit_form
+msgid "AFIP WS"
+msgstr "WS AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.actions.act_window,name:l10n_ar_afipws.action_upload_certificate
+msgid "AFIP WS - Upload Certificate"
+msgstr "WS AFIP - Subir Certificado"
+
+#. module: l10n_ar_afipws
+#: model:ir.model,name:l10n_ar_afipws.model_afipws_connection
+msgid "AFIP WS Connection"
+msgstr "Conexión WS AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_afip_ws_url
+msgid "AFIP WS URL"
+msgstr "URL WS AFIP"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.menu,name:l10n_ar_afipws.menu_afipws
+msgid "AFIP Web Services"
+msgstr "Web Services AFIP"
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/afipws_connection.py:119
+#, python-format
+msgid "AFIP Webservice %s not implemented yet"
+msgstr "El Webservice de AFIP %s aún no ha sido implementado"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_res_company_alias_ids
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_company_inherit_form
+msgid "Aliases"
+msgstr "Aliases"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_batch_sequence_id
+msgid "Batch Sequence"
+msgstr "Secuencia de Lote"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.connection,afip_ws:0
+msgid "Bono Fiscal -con detalle- RG2557 (WSBFE)"
+msgstr "Bono Fiscal -con detalle- RG2557 (WSBFE)"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_cuit
+msgid "CUIT"
+msgstr "CUIT"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_form
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_form
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_upload_certificate_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.certificate,state:0
+#: selection:afipws.certificate_alias,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_form
+msgid "Ceritificates"
+msgstr "Certificados"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_crt
+msgid "Certificate"
+msgstr "Certificado"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_id_6705
+msgid "Certificate Alias"
+msgstr "Alias Certificado"
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/afipws_certificate.py:91
+#, python-format
+msgid "Certificate Alias must be confirmed first!"
+msgstr "El Alias Certificado debe ser primero confirmado!"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,help:l10n_ar_afipws.field_afipws_certificate_csr
+msgid "Certificate Request in PEM format."
+msgstr "Requerimiento de Certificado en formato PEM."
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_upload_certificate_wizard_certificate_id
+msgid "Certificate id"
+msgstr "ID Certificado"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,help:l10n_ar_afipws.field_afipws_certificate_crt
+msgid "Certificate in PEM format."
+msgstr "Certificado en formato PEM."
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_certificate_ids
+#: model:ir.ui.menu,name:l10n_ar_afipws.menu_action_afipws_certificate_alias
+msgid "Certificates"
+msgstr "Certificados"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_city
+msgid "City"
+msgstr "Ciudad"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_common_name
+msgid "Common Name"
+msgstr "Nombre Común"
+
+#. module: l10n_ar_afipws
+#: model:ir.model,name:l10n_ar_afipws.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_company_id
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_company_cuit
+msgid "Company CUIT"
+msgstr "CUIT Compañía"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_form
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_form
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_upload_certificate_form
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_form
+msgid "Confirm and generate Key"
+msgstr "Confirmar y generar Clave"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.certificate,state:0
+#: selection:afipws.certificate_alias,state:0
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_res_company_connection_ids
+#: model:ir.ui.menu,name:l10n_ar_afipws.menu_action_afipws_auth
+msgid "Connections"
+msgstr "Conexiones"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.connection,afip_ws:0
+msgid "Constatación de Comprobantes (WSCDC)"
+msgstr "Constatación de Comprobantes (WSCDC)"
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/res_company.py:221
+#, python-format
+msgid "Could not connect. This is the what we received: %s"
+msgstr "No fue posible conectarse. Esto es lo que recibimos: %s"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_country_id
+msgid "Country"
+msgstr "País"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_form
+msgid "Create Certificate Request"
+msgstr "Crear Requerimiento de Certificado"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_create_uid
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_create_uid
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_create_uid
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_upload_certificate_wizard_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_create_date
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_create_date
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_create_date
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_upload_certificate_wizard_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_department
+msgid "Department"
+msgstr "Departamento"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_display_name
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_display_name
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_upload_certificate_wizard_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_request_file
+msgid "Download Signed Certificate Request"
+msgstr "Descargar Requerimiento Firmado de Certificado"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.certificate,state:0
+#: selection:afipws.certificate_alias,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_expirationtime
+msgid "Expiration Time"
+msgstr "Hora Expiración"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.connection,afip_ws:0
+msgid "Exportación -con detalle- RG2758 (WSFEXv1)"
+msgstr "Exportación -con detalle- RG2758 (WSFEXv1)"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_request_filename
+msgid "Filename"
+msgstr "Nombre de archivo"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_generationtime
+msgid "Generation Time"
+msgstr "Hora Generación"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.certificate_alias,type:0 selection:afipws.connection,type:0
+msgid "Homologation"
+msgstr "Homologación"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_id
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_id
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_id
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_upload_certificate_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.certificate_alias,service_type:0
+msgid "In House"
+msgstr "Interno"
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/afipws_certificate.py:120
+#, python-format
+msgid "Invalid action! Please, set the certification string to continue."
+msgstr "Acción inválida! Por favor, configure el string de certificación para continuar."
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/afipws_certificate.py:125
+#, python-format
+msgid "Invalid action! Your certificate string is invalid. Check if you forgot the header CERTIFICATE or forgot/append end of lines."
+msgstr "Acción Inválida! El string de su certificado es inválido. Revise si no olvidó el encabezado del CERTIFICADO o las líneas finales."
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,help:l10n_ar_afipws.field_afipws_certificate_alias_common_name
+msgid "Just a name, you can leave it this way"
+msgstr "Solo es un nombre, Ud. puede dejar este campo tal como está"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_form
+msgid "Key"
+msgstr "Clave"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate___last_update
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias___last_update
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection___last_update
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_upload_certificate_wizard___last_update
+msgid "Last Modified on"
+msgstr "Ultima Modificación en"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_write_uid
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_write_uid
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_write_uid
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_upload_certificate_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Ultima Actualización por"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_write_date
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_write_date
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_write_date
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_upload_certificate_wizard_write_date
+msgid "Last Updated on"
+msgstr "Ultima Actualización en"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.connection,afip_ws:0
+msgid "Mercado interno -con detalle- RG2904 (WSMTXCA)"
+msgstr "Mercado interno -con detalle- RG2904 (WSMTXCA)"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.connection,afip_ws:0
+msgid "Mercado interno -sin detalle- RG2485 (WSFEv1)"
+msgstr "Mercado interno -sin detalle- RG2485 (WSFEv1)"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_display_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/res_company.py:86
+#, python-format
+msgid "Not confirmed certificate for %s on company %s"
+msgstr "Certificado no confirmado por %s en compañía %s"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.certificate_alias,service_type:0
+msgid "Outsourced"
+msgstr "Externo"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_key
+msgid "Private Key"
+msgstr "Clave Privada"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.certificate_alias,type:0 selection:afipws.connection,type:0
+msgid "Production"
+msgstr "Producción"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_form
+msgid "Request"
+msgstr "Requerimiento"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_csr
+msgid "Request Certificate"
+msgstr "Requerimiento de Certificado"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_service_provider_cuit
+msgid "Service Provider CUIT"
+msgstr "CUIT Proveedor del Servicio"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_service_type
+msgid "Service Type"
+msgstr "Tipo Servicio"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_sign
+msgid "Sign"
+msgstr "Firmar"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_state
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_state_id
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_state
+msgid "State"
+msgstr "Provincia"
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/afipws_connection.py:103
+#, python-format
+msgid "This method is for %s connections and you call it from an %s connection"
+msgstr "Este método es para %s conexiones y se llama desde una %s conexión"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_alias_form
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_form
+msgid "To Draft"
+msgstr "A Borrador"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_token
+msgid "Token"
+msgstr "Token"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_certificate_alias_type
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_connection_uniqueid
+msgid "Unique ID"
+msgstr "ID Unico"
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/afipws_certificate.py:149
+#, python-format
+msgid ""
+"Unknown error.\n"
+"X509 return this message:\n"
+" %s"
+msgstr ""
+"Error desconocido.\n"
+"X509 devuelve este mensaje:\n"
+" %s"
+
+#. module: l10n_ar_afipws
+#: model:ir.model.fields,field_description:l10n_ar_afipws.field_afipws_upload_certificate_wizard_certificate_file
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_afipws_certificate_form
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_upload_certificate_form
+msgid "Upload Certificate"
+msgstr "Subir Certificado"
+
+#. module: l10n_ar_afipws
+#: selection:afipws.certificate,state:0
+msgid "Waiting"
+msgstr "En Espera"
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/afipws_connection.py:76
+#, python-format
+msgid "Webservice %s not supported"
+msgstr "Webservice %s no es soportado"
+
+#. module: l10n_ar_afipws
+#: code:addons/l10n_ar_afipws/models/afipws_certificate.py:145
+#, python-format
+msgid ""
+"Wrong Certificate file format.\n"
+"Be sure you have BEGIN CERTIFICATE string in your first line."
+msgstr ""
+"Formato incorrecto del archivo Certificado.\n"
+"Asegúrese que tiene el BEGIN CERTIFICATE como su primer fila."
+
+#. module: l10n_ar_afipws
+#: model:ir.model,name:l10n_ar_afipws.model_afipws_certificate
+msgid "afipws.certificate"
+msgstr "afipws.certificate"
+
+#. module: l10n_ar_afipws
+#: model:ir.model,name:l10n_ar_afipws.model_afipws_upload_certificate_wizard
+msgid "afipws.upload_certificate.wizard"
+msgstr "afipws.upload_certificate.wizard"
+
+#. module: l10n_ar_afipws
+#: model:ir.ui.view,arch_db:l10n_ar_afipws.view_upload_certificate_form
+msgid "or"
+msgstr "o"

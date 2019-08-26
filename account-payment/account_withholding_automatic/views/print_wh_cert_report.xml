@@ -1,0 +1,224 @@
+  <data>
+      <template id="wh_cert">
+            <t t-foreach="docs" t-as="o">
+              <t t-foreach="o.whcod_ids" t-as="wh">
+              <t t-call="report.external_layout">
+                  <div class="page">
+                      <tbody>
+                        <div>
+                          <span class="text-right"><h3>Certificado de Retencion</h3></span>
+                        </div>
+                          <hr/>
+                        <div>
+                            <table>
+                              <tr>
+                                <td style='width: 100mm; background-color:#EAEAEA; line-height:2'><h4>Datos del Certificado</h4></td>
+                                  <td style='width: 100mm; background-color:#EAEAEA; line-height:2'></td>
+                                <td style='width: 100mm; background-color:#EAEAEA; line-height:2'><h4>Datos del Pago</h4></td>
+                                  <td style='width: 100mm; background-color:#EAEAEA; line-height:2'></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 80mm; line-height:1.6'><strong>Fecha del Certificado:</strong></td>
+                                  <td style='width: 100mm; line-height:1.6'><span t-field="wh.payment_date"/></td>
+                                <td style='width: 80mm; line-height:1.6'><strong>Fecha del Pago:</strong></td>
+                                  <td style='width: 100mm; line-height:1.6'><span t-field="wh.payment_date"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 80mm; line-height:1.6'><strong>Nro de Certificado:</strong></td>
+                                  <td style='width: 100mm; line-height:1.6'><span t-field="wh.withholding_number" /></td>
+                                <td style='width: 80mm; line-height:1.6'><strong>Numero de Pago:</strong></td>
+                                  <td style='width: 100mm; line-height:1.6'><span t-field="wh.display_name"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 80mm; line-height:1.6'><strong>Fecha Fact. de Proveedor:</strong></td>
+                                  <td style='width: 100mm; line-height:1.6'><span t-field="wh.vendorbill.date_invoice" /></td>
+                                <td style='width: 80mm; line-height:1.6'></td>
+                                  <td style='width: 100mm; line-height:1.6'></td>
+                              </tr>
+                              <tr>
+                               <td style='width: 80mm; line-height:1.6'><strong>Nro. Oficial Factura:</strong></td>
+                                  <td style='width: 100mm; line-height:1.6'><span t-field="wh.vendorbill" /></td>
+                                <td style='width: 70mm; line-height:1.6'></td>
+                                  <td style='width: 100mm; line-height:1.6'></td>
+                              </tr>
+                            </table>
+                        </div>
+                          <hr/>
+                        <div>
+                            <table>
+                              <tr>
+	                            <td style='width: 100mm; background-color:#EAEAEA; line-height:2'><h4>Datos del Proveedor</h4></td>
+                                  <td style='width: 140mm; background-color:#EAEAEA; line-height:2'></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Nombre del Proveedor:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.partner_id.name"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Direccion del Proveedor:</strong></td>
+                                  <td style='width: 100mm'>
+                                    <span t-field="wh.partner_id.street"/>
+                                    <span t-field="wh.partner_id.street2"/>
+                                    <span t-field="wh.partner_id.city"/>
+                                    <span t-field="wh.partner_id.state_id.name"/>
+                                    <span t-field="wh.partner_id.zip"/>
+                                  </td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Tipo de Documento:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.partner_id.main_id_category_id"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Nro de Documento:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.partner_id.main_id_number"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Condicion de IVA:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.partner_id.afip_responsability_type_id"/></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                            </table>
+                        </div>
+                          <hr/>
+                        <div>
+                            <table>
+                              <tr>
+                                <td style='width: 100mm; background-color:#EAEAEA; line-height:2'><h4>Datos del Calculo:</h4></td>
+                                  <td style='width: 140mm; background-color:#EAEAEA; line-height:2'></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Codigo de Impuesto:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.tax_withholding_id" /></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Codigo de AFIP:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.sicore_tax_code" /></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Numero de Regimen:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.regcode"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Cod. Jurisdiccion:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.tax_withholding_id.jurisdiction_code"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Porcentaje de la Retencion:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.wh_perc"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Monto Neto del Pago:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.withholding_base_amount"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 100mm; line-height:1.6'><strong>Monto de la Retencion Calculada:</strong></td>
+                                  <td style='width: 100mm'><span t-field="wh.amount"/></td>
+                              </tr>
+                            </table>
+                        </div>
+                                
+
+<!--                              <td style='width: 70mm'><strong>Datos del Proveedor</strong></td>
+                                  <td style='width: 100mm'></td>
+                                <td style='width: 70mm'><strong>Datos del Certificado</strong></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Nombre del Proveedor</td>
+                                <td style='width: 100mm'><span t-field="wh.partner_id.name"/></td>
+                                  <td style='width: 70mm'>Fecha del Pago</td>
+                                  <td style='width: 100mm'><span t-field="wh.payment_date"/></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Direccion del Proveedor</td>
+                                <td style='width: 100mm'>
+                                    <span t-field="wh.partner_id.street"/>
+                                    <span t-field="wh.partner_id.street2"/>
+                                    <span t-field="wh.partner_id.city"/>
+                                    <span t-field="wh.partner_id.state_id.name"/>
+                                    <span t-field="wh.partner_id.zip"/>
+                                </td>
+                              
+                                <td style='width: 70mm'>Nro de Certificado</td>
+                                  <td style='width: 100mm'><span t-field="wh.withholding_number" /></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Tipo de Documento</td>
+                                <td style='width: 100mm'><span t-field="wh.partner_id.main_id_category_id"/></td>
+                                <td style='width: 70mm'>Fecha Factura de Proveedor</td>
+                                  <td style='width: 100mm'><span t-field="wh.vendorbill.date_invoice" /></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Nro de Documento</td>
+                                <td style='width: 100mm'><span t-field="wh.partner_id.main_id_number"/></td>
+                               <td style='width: 70mm'>Nro. Oficial Factura</td>
+                                  <td style='width: 100mm'><span t-field="wh.vendorbill" /></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Condicion de IVA</td>
+                                <td style='width: 100mm'><span t-field="wh.partner_id.afip_responsability_type_id"/></td>
+                                  <td></td>
+                                  <td></td>
+                              </tr>
+                            </table>
+                        </div>
+                          <hr/>
+                        <div>
+                            <table>
+                              <tr>
+                                <td style='width: 70mm'><strong>Datos del Pago</strong></td>
+                                  <td style='width: 100mm'></td>
+                                <td style='width: 70mm'><strong>Datos del Calculo</strong></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Fecha de Pago</td>
+                                  <td style='width: 100mm'><span t-field="wh.payment_date"/></td>
+                                <td style='width: 70mm'>Codigo de Impuesto</td>
+                                  <td style='width: 100mm'><span t-field="wh.tax_withholding_id" /></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Numero de Pago</td>
+                                  <td style='width: 100mm'><span t-field="wh.display_name"/></td>
+                                <td style='width: 70mm'>Codigo de AFIP</td>
+                                  <td style='width: 100mm'><span t-field="wh.sicore_tax_code" /></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Numero de Regimen</td>
+                                  <td style='width: 100mm'><span t-field="wh.regcode"/></td>
+                                <td style='width: 70mm'></td>
+                                  <td style='width: 100mm'></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Cod. Jurisdiccion</td>
+                                  <td style='width: 100mm'><span t-field="wh.tax_withholding_id.jurisdiction_code"/></td>
+                                <td style='width: 70mm'></td>
+                                  <td style='width: 100mm'></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Porcentaje de la Retencion</td>
+                                  <td style='width: 100mm'><span t-field="wh.wh_perc"/></td>
+                                <td style='width: 70mm'></td>
+                                  <td style='width: 100mm'></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Monto Neto del Pago</td>
+                                  <td style='width: 100mm'><span t-field="wh.withholding_base_amount"/></td>
+                                <td style='width: 70mm'></td>
+                                  <td style='width: 100mm'></td>
+                              </tr>
+                              <tr>
+                                <td style='width: 70mm'>Monto de la Retencion Calculada</td>
+                                  <td style='width: 100mm'><span t-field="wh.amount"/></td>
+                                <td style='width: 70mm'></td>
+                                  <td style='width: 100mm'></td>
+                              </tr>
+                            </table>
+                        </div>    --> 
+                          <hr/>
+                      </tbody>
+                  </div>
+              </t>
+            </t>
+          </t>
+      </template>
+  </data>

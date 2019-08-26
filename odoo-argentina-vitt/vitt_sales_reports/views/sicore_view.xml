@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="view_account_payment_form2" model="ir.ui.view">
+        <field name="name">account.payment.form2.inherited</field>
+        <field name="model">account.payment</field>
+        <field name="priority" eval="800"/>
+        <field name="inherit_id" ref="account_withholding.view_account_payment_form" />
+        <field name="arch" type="xml">
+            <field name='tax_withholding_id' position="after" >
+                <field name="regcode" domain="[('type_tax_use', '=', partner_type), ('company_id', '=', company_id), ('type_tax_use', '!=', 'customer')]"/>
+                <field name="vendorbill"
+                       domain="[('partner_id','=', partner_id),('state', '=', 'open')]"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_payment2_from_group_tree_inherit" model="ir.ui.view">
+        <field name="name">account.payment2.tree.inherit</field>
+        <field name="model">account.payment</field>
+        <field name="priority" eval="800"/>
+        <field name="inherit_id" ref="account_payment_group.view_account_payment_from_group_tree"/>
+        <field name="arch" type="xml">
+
+            <field name="payment_method_id" position="after">
+                <field name="sicore_tax_code" string="Codigo Sicore" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+     <record id="view_tax2_form" model="ir.ui.view">
+        <field name="name">account.tax2.form</field>
+        <field name="model">account.tax</field>
+        <field name="inherit_id" ref="account.view_tax_form"/>
+        <field name="arch" type="xml">
+            <group name="advanced_booleans" position="attributes">
+                <attribute name="attrs">{'invisible': [('type_tax_use', 'in', ['supplier', 'customer'])]}</attribute>
+            </group>
+            <xpath expr="//page/group/group" position="attributes">
+                <attribute name="attrs">{'invisible': [('type_tax_use', 'in', ['supplier', 'customer'])]}</attribute>
+            </xpath>
+            <xpath expr="//page/group" position="after">
+                <group>
+                    <field name="sicore_tax_code"/>
+                    <field name="regcode"/>
+                    <field name="jurisdiction_code"/>
+                    <field name="reg_gan_id" />
+                    <field name="sicore_norm" domain="[('tax_scope', '=', type_tax_use)]"/>
+                    <field name="tax_control" attrs="{'invisible':[('jurisdiction_code', '=', False)]}"
+                    />
+                    <field name="type"
+                           widget="radio"
+                           attrs="{'invisible':[('type_tax_use', 'not in', ['supplier', 'customer'])]}"/>
+                </group>
+            </xpath>
+        </field>
+     </record>
+
+    <record id="sicore_codes_action" model="ir.actions.act_window">
+        <field name="name">Codigos Sicore</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">sicore.codes</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,kanban,form</field>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            Click here to define a new code.
+          </p>
+        </field>
+    </record>
+
+    <record id="sicore_codes_form_view" model="ir.ui.view">
+        <field name="model">sicore.codes</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name" />
+                    <field name="comment" />
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="sicore_codes_tree_view" model="ir.ui.view">
+        <field name="model">sicore.codes</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="comment" />
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_sicore_codes_action"
+        action="sicore_codes_action" parent="l10n_ar_account.menu_afip_config"
+        sequence="20"/>
+
+  </data>
+</odoo>

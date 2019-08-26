@@ -1,0 +1,221 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_tax_exceptions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-06-21 17:23+0000\n"
+"PO-Revision-Date: 2018-06-21 14:32-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.8\n"
+
+#. module: vitt_tax_exceptions
+#: selection:account.tax,service_id:0
+msgid "AGIP WS"
+msgstr "WS AGIP"
+
+#. module: vitt_tax_exceptions
+#: selection:account.tax,service_id:0
+msgid "ARBA WS"
+msgstr "WS ARBA"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_sequence_id
+msgid "Code"
+msgstr "Código"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model,name:vitt_tax_exceptions.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: vitt_tax_exceptions
+#: code:addons/vitt_tax_exceptions/models/account_tax.py:16
+#, python-format
+msgid "Complete user y password del servdor AGIP en seteo compania"
+msgstr "Complete el 'Usuario' y 'Contraseña' del servidor AGIP en la configuración de su compañía"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_edate
+msgid "End Date"
+msgstr "Fecha Fin"
+
+#. module: vitt_tax_exceptions
+#: code:addons/vitt_tax_exceptions/models/account_tax.py:33
+#, python-format
+msgid "Error conectandose con el servicio de AGIP, comuniquese con el soporte de Moogah"
+msgstr "Error conectándose con el servicio de AGIP, comuníquese con el servicio de soporte de Moogah"
+
+#. module: vitt_tax_exceptions
+#: code:addons/vitt_tax_exceptions/models/account_tax.py:37
+#, python-format
+msgid "Error user/pass erroneo para servidor AGIP, comuniquese con el soporte de Moogah"
+msgstr "Error de usuario/contraseña erróneo para servidor AGIP, comuníquese con el servicio de soporte de Moogah"
+
+#. module: vitt_tax_exceptions
+#: code:addons/vitt_tax_exceptions/models/account_tax.py:44
+#, python-format
+msgid "Error, usuario sin acceso a los padrones, comuniquese con el soporte de Moogah"
+msgstr "Error, usuario sin acceso a los padrones, comuníquese con el servicio de soporte de Moogah"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_income_reg_code
+msgid "Income Regime Code"
+msgstr "Código Reg. Ingresos"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model,name:vitt_tax_exceptions.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea de factura"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Modificación por"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_main_id_number
+msgid "Main Identification Number"
+msgstr "Nro. Id. Tributario"
+
+#. module: vitt_tax_exceptions
+#: selection:account.tax.exceptions,ex_type:0
+msgid "Parcial"
+msgstr "Parcial"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model,name:vitt_tax_exceptions.model_res_partner
+msgid "Partner"
+msgstr "Cliente/Proveedor"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_partner_id
+msgid "Partner/Empresa"
+msgstr "Partner/Empresa"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_service_id
+msgid "Services"
+msgstr "Servicios"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_sdate
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model,name:vitt_tax_exceptions.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_per_tax_code
+msgid "Tax Code"
+msgstr "Cód. Impuesto"
+
+#. module: vitt_tax_exceptions
+#: model:ir.ui.view,arch_db:vitt_tax_exceptions.view_tax_exceptions_form
+msgid "Tax Exception"
+msgstr "Exención de Impuesto"
+
+#. module: vitt_tax_exceptions
+#: model:ir.ui.view,arch_db:vitt_tax_exceptions.view_tax_exceptions_form
+msgid "Tax Exception Period"
+msgstr "Exención de Impuesto - Período"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_ex_rate
+msgid "Tax Exception Rate"
+msgstr "Exención de Impuesto - Alicuota"
+
+#. module: vitt_tax_exceptions
+#: model:ir.ui.view,arch_db:vitt_tax_exceptions.view_tax_exceptions_tree
+msgid "Tax Exceptions"
+msgstr "Exenciones de Impuesto"
+
+#. module: vitt_tax_exceptions
+#: model:ir.actions.act_window,name:vitt_tax_exceptions.action_exceptions_tax_form
+#: model:ir.ui.menu,name:vitt_tax_exceptions.menu_tax_exceptions_form
+msgid "Tax Exceptions "
+msgstr "Exenciones de Impuesto "
+
+#. module: vitt_tax_exceptions
+#: selection:account.tax.exceptions,ex_type:0
+msgid "Total"
+msgstr "Total"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_ex_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_wh_tax_code
+msgid "Withholding Tax Code"
+msgstr "Cód. Imp. Retención"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model.fields,field_description:vitt_tax_exceptions.field_account_tax_exceptions_wh_ex_rate
+msgid "Withholding Tax Exception Rate"
+msgstr "Exención Imp. Retención - Alicuota"
+
+#. module: vitt_tax_exceptions
+#: model:ir.model,name:vitt_tax_exceptions.model_account_tax_exceptions
+msgid "account.tax.exceptions"
+msgstr "account.tax.exceptions"
+
+#. module: vitt_tax_exceptions
+#: code:addons/vitt_tax_exceptions/models/account_tax.py:128
+#: code:addons/vitt_tax_exceptions/models/account_tax.py:181
+#, python-format
+msgid "el impuesto %s esta seteado como web service, control y no obligatorio, no es valido, comuniquese con soporte de Moogah"
+msgstr "el impuesto %s esta configurado como web service, con control por jurisdicción y tipo no obligatorio, la combinación no es válida. Comuníquese con el servicio de soporte de Moogah"
+
+#. module: vitt_tax_exceptions
+#: code:addons/vitt_tax_exceptions/models/account_tax.py:343
+#, python-format
+msgid "el impuesto %s no tiene ningun webservice seleccionado"
+msgstr "el impuesto %s no tiene ningún webservice seleccionado"

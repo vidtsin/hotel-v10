@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--record id="invoice_supplier_form2" model="ir.ui.view">
+        <field name="name">invoice.supplier.form2</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <field name="journal_id" position="after">
+                <field name="payment_term_id"/>
+            </field>
+        </field>
+    </record-->
+
+   #WIZARD
+    <record id="wizard_customer_invoice_journal_form" model="ir.ui.view">
+        <field name="model">wizard.customer.invoice.journal</field>
+        <field name="name">wizard.customer.invoice.journal.form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group name="main">
+                    <group name="left">
+                        <field name="type" invisible="1"/>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="partner_ids" widget="many2many_tags" attrs="{'invisible': [('type', '!=', 'customer')]}"/>
+                        <field name="partner2_ids" widget="many2many_tags" attrs="{'invisible': [('type', '!=', 'supplier')]}"/>
+                        <field name="categ_ids" widget="many2many_tags"/>
+                        <field name="user_id" attrs="{'invisible': [('type', '!=', 'customer')]}"/>
+                        <field name="salesteam_id" attrs="{'invisible': [('type', '!=', 'customer')]}"/>
+                        <field name="journal_ids" widget="many2many_tags" attrs="{'invisible': [('type', '!=', 'customer')]}"/>
+                        <field name="journal2_ids" widget="many2many_tags" attrs="{'invisible': [('type', '!=', 'supplier')]}"/>
+                        <field name="paym_term_id"/>
+                        <field name="hanal_tag_ids" widget="many2many_tags"/>
+                        <field name="ranal_tag_ids" widget="many2many_tags"/>
+                        <field name="anal_account_id"/>
+                        <field name="company_id"/>
+                    </group>
+                    <group name="right">
+                        <field name="sort_by"/>
+                        <field name="show_comp_currency"/>
+                        <field name="show_inv_taxes"/>
+                        <field name="show_exch_rates"/>
+                        <field name="artmode"/>
+                        <field name="print_by"/>
+                    </group>
+                </group>
+                <group name="filter1">
+                    <group string="Invoice Type" name="left">
+                        <field name="invoice_type"/>
+                        <field name="refund_type"/>
+                    </group>
+                    <group string="States" name="right">
+                        <field name="draft"/>
+                        <field name="open"/>
+                        <field name="paid"/>
+                    </group>
+
+                </group>
+                <footer>
+                    <button string="Execute" name="execute" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_wizard_customer_invoice_journal" model="ir.actions.act_window">
+        <field name="name">Customer Invoice Journal</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="res_model">wizard.customer.invoice.journal</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type': 'customer'}</field>
+    </record>
+    <record id="action_wizard_supplier_invoice_journal" model="ir.actions.act_window">
+        <field name="name">Supplier Invoice Journal</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="res_model">wizard.customer.invoice.journal</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type': 'supplier'}</field>
+    </record>
+
+    <menuitem id="menu_wizard_customer_invoice_journal"
+        name="Customer Invoice Journal"
+        parent="bi_partner_transaction_report.menu_sale_reports"
+        action="action_wizard_customer_invoice_journal"
+        sequence="120"
+    />
+    <menuitem id="menu_wizard_supplier_invoice_journal"
+        name="Supplier Invoice Journal"
+        parent="bi_partner_transaction_report.menu_purchase_reports"
+        action="action_wizard_supplier_invoice_journal"
+        sequence="120"
+    />
+
+    #REPORT
+    <data noupdate="1">
+        <record id="cust_inv_journal" model="report.paperformat">
+            <field name="name">Partners Invoice Journals</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">45</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">40</field>
+            <field name="dpi">90</field>
+        </record>
+
+    </data>
+
+    <report
+        id="menu_rep2_temp_html"
+        model="account.invoice"
+        string="Invoice Journal"
+        report_type="qweb-html"
+        name="partners_invoices_journals.repoort_html"
+        file="partners_invoices_journals.repoort_html"
+        paperformat="partners_invoices_journals.cust_inv_journal"
+        menu="False"/>
+    <report
+        id="menu_rep2_temp_pdf"
+        model="account.invoice"
+        string="Invoice Journal"
+        report_type="qweb-pdf"
+        name="partners_invoices_journals.repoort_pdf"
+        file="partners_invoices_journals.repoort_pdf"
+        paperformat="partners_invoices_journals.cust_inv_journal"
+        menu="False"/>
+
+
+
+    <report
+        id="menu_rep_temp_html"
+        model="account.invoice"
+        string="Invoice Journal"
+        report_type="qweb-html"
+        name="partners_invoices_journals.repoort_html"
+        file="partners_invoices_journals.repoort_html"
+        paperformat="partners_invoices_journals.cust_inv_journal"
+        menu="False"/>
+    <report
+        id="menu_rep_temp_pdf"
+        model="account.invoice"
+        string="Invoice Journal"
+        report_type="qweb-pdf"
+        name="partners_invoices_journals.repoort_pdf"
+        file="partners_invoices_journals.repoort_pdf"
+        paperformat="partners_invoices_journals.cust_inv_journal"
+        menu="False"/>
+
+</odoo>

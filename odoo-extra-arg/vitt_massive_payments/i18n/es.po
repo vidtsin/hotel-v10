@@ -1,0 +1,358 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_massive_payments
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-18 14:23+0000\n"
+"PO-Revision-Date: 2019-01-18 12:23-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_approved_id
+msgid "Approved By"
+msgstr "Aprobado Por"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_approved_date
+msgid "Approved Date"
+msgstr "Fecha Aprobación"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_form
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: vitt_massive_payments
+#: selection:massive.payment,state:0
+msgid "Canceled"
+msgstr "Cancelado"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_canceled_id
+msgid "Canceled By"
+msgstr "Cancelado Por"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_canceled_date
+msgid "Canceled Date"
+msgstr "Cancelado En"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_form
+msgid "Cash Ledger"
+msgstr "Registro de Caja"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_partner_id
+msgid "Client"
+msgstr "Cliente"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_company_id
+msgid "Company id"
+msgstr "ID Compañía"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_form
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: vitt_massive_payments
+#: selection:massive.payment,state:0
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_confirmed_id
+msgid "Confirmed By"
+msgstr "Confirmado Por"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_confirmed_date
+msgid "Confirmed Date"
+msgstr "Fecha Confirmación"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_type_create_uid
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_wizard_create_uid
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_create_uid
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_type_create_date
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_wizard_create_date
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_create_date
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: vitt_massive_payments
+#: code:addons/vitt_massive_payments/models/models.py:184
+#, python-format
+msgid "Credit Notes not allowed %s"
+msgstr "Las Notas de Crédito no están permitidas %s"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_currency_id
+msgid "Currency id"
+msgstr "ID Moneda"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_wizard_payment_date
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_date
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_payment_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_type_display_name
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_wizard_display_name
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_display_name
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_wizard_form
+msgid "Doit"
+msgstr "Realizar"
+
+#. module: vitt_massive_payments
+#: selection:massive.payment,state:0
+msgid "Done"
+msgstr "Hecho"
+
+#. module: vitt_massive_payments
+#: selection:massive.payment,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_date_due
+msgid "Due Date"
+msgstr "Fecha Vencimiento"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_type_id
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_wizard_id
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_id
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,help:vitt_massive_payments.field_massive_payment_invoices_date_due
+msgid "If you use payment terms, the due date will be computed automatically at the generation of accounting entries. The payment term may compute several due dates, for example 50% now and 50% in one month, but if you want to force a due date, make sure that the payment term is not set on the invoice. If you keep the payment term and the due date empty, it means direct payment."
+msgstr "Si utiliza términos de pago, la fecha de vencimiento será computada automáticamente al generar los asientos contables. Los Términos de Pago pueden computar varias fechas de vencimientos, por ejemplo 50% ahora y 50% en un mes, pero si desea forzar la fecha de vencimiento, asegúrese de que el Térm. Pago no esté configurado en la factura. Si deja el Térm. de Pago y la Fecha de Venc. vacios, se considera un pago directo."
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoice_ids
+msgid "Invoice ids"
+msgstr "IDs Factura"
+
+#. module: vitt_massive_payments
+#: model:ir.model,name:vitt_massive_payments.model_account_journal
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_wizard_journal_id
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,help:vitt_massive_payments.field_massive_payment_invoices_date
+msgid "Keep empty to use the current date"
+msgstr "Dejar el campo vacío para utilizar la fecha actual."
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_type___last_update
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_wizard___last_update
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment___last_update
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_type_write_uid
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_wizard_write_uid
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_write_uid
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Modificación por"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_type_write_date
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_wizard_write_date
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_write_date
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: vitt_massive_payments
+#: model:ir.actions.act_window,name:vitt_massive_payments.action_massive_payment
+#: model:ir.actions.act_window,name:vitt_massive_payments.massive_payment_action
+#: model:ir.ui.menu,name:vitt_massive_payments.menu_action_massive_payment
+msgid "Massive Payment"
+msgstr "Pagos Masivos"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_partner_name
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_name
+msgid "Name"
+msgstr "Número"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_form
+msgid "Number"
+msgstr "Número"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_form
+msgid "Operations"
+msgstr "Operaciones"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_payment_amount
+msgid "Payment Amount"
+msgstr "Monto a Pagar"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_payment_id
+msgid "Payment Nr"
+msgstr "Nro. Pago"
+
+#. module: vitt_massive_payments
+#: model:ir.actions.act_window,name:vitt_massive_payments.action_payment_type
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_payment_type
+msgid "Payment Type"
+msgstr "Tipo de Pago"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_payment_header_id
+msgid "Payment header id"
+msgstr "Id Cabecera Pago"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.menu,name:vitt_massive_payments.menu_action_payment_type
+msgid "Payment type"
+msgstr "Tipo de Pago"
+
+#. module: vitt_massive_payments
+#: model:ir.model,name:vitt_massive_payments.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: vitt_massive_payments
+#: code:addons/vitt_massive_payments/models/models.py:174
+#, python-format
+msgid "Please fill mandatory Fields"
+msgstr "Por favor, complete los campos obligatorios"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_reference
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_invoices_residual
+msgid "Residual"
+msgstr "Valor Abierto"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_reversed
+msgid "Reversed"
+msgstr "Cancelado"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_state
+msgid "State"
+msgstr "Estado"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_total_amount
+msgid "Total Amount"
+msgstr "Monto Total"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_form
+msgid "Unconfirm"
+msgstr "Sin Confirmar"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_massive_payment_use_invoice_date
+msgid "Use Invoice Date"
+msgstr "Usar Fecha Factura"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_form
+msgid "Validate"
+msgstr "Validar"
+
+#. module: vitt_massive_payments
+#: model:ir.model,name:vitt_massive_payments.model_account_payment_type
+msgid "account.payment.type"
+msgstr "account.payment.type"
+
+#. module: vitt_massive_payments
+#: model:ir.model,name:vitt_massive_payments.model_account_payment_wizard
+msgid "account.payment.wizard"
+msgstr "account.payment.wizard"
+
+#. module: vitt_massive_payments
+#: code:addons/vitt_massive_payments/models/models.py:182
+#, python-format
+msgid "for Purchase Invoices ONLY"
+msgstr "Solo se pemiten para Facturas de Proveedores"
+
+#. module: vitt_massive_payments
+#: code:addons/vitt_massive_payments/models/models.py:180
+#, python-format
+msgid "invoices in the company currency ONLY"
+msgstr "Solo se permiten facturas en la moneda de la compañía"
+
+#. module: vitt_massive_payments
+#: model:ir.model,name:vitt_massive_payments.model_massive_payment
+msgid "massive.payment"
+msgstr "massive.payment"
+
+#. module: vitt_massive_payments
+#: model:ir.model,name:vitt_massive_payments.model_massive_payment_invoices
+msgid "massive.payment.invoices"
+msgstr "massive.payment.invoices"
+
+#. module: vitt_massive_payments
+#: model:ir.ui.view,arch_db:vitt_massive_payments.massive_payment_wizard_form
+msgid "or"
+msgstr "o"
+
+#. module: vitt_massive_payments
+#: model:ir.model.fields,field_description:vitt_massive_payments.field_account_payment_type_name
+msgid "payment Type"
+msgstr "Tipo de Pago"
+
+#. module: vitt_massive_payments
+#: code:addons/vitt_massive_payments/models/models.py:97
+#, python-format
+msgid "you Can't enter the same Invoice twice %s"
+msgstr "Ud. no puede ingresar la misma factura dos veces %s"

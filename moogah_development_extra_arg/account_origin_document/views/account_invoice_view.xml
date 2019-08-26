@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<odoo>
+    <data>
+        <record id="invoice_supplier_form_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <field name="origin" position="replace">
+                    <label for="origin" attrs="{'invisible': [('origin', '=', False)]}"/>
+                    <div>
+                        <button class="oe_inline oe_link" name="action_open_invoice" type="object" groups="base.group_user"
+                                attrs="{'invisible': ['|',('origin', '=', False), ('type', 'not in', ('out_refund', 'in_refund'))]}">
+                            <field name="copy_origin" class="oe_inline"/>
+                        </button>
+                        <field name="origin" class="oe_inline" attrs="{'invisible': [('type', 'in', ('out_refund', 'in_refund'))]}"/>
+                    </div>
+                </field>
+            </field>
+        </record>
+
+        <record id="invoice_form_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='other_info']/group/group/field[@name='origin']" position="replace">
+                    <label for="origin" attrs="{'invisible': [('origin', '=', False)]}"/>
+                    <div>
+                        <button class="oe_inline oe_link" name="action_open_invoice" type="object" groups="base.group_user"
+                                attrs="{'invisible': ['|',('origin', '=', False), ('type', 'not in', ('out_refund', 'in_refund'))]}">
+                            <field name="copy_origin" class="oe_inline"/>
+                        </button>
+                        <field name="origin" class="oe_inline" attrs="{'invisible': [('type', 'in', ('out_refund', 'in_refund'))]}"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

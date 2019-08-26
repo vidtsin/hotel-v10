@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="qweb_report_pl_ledger">
+        <t t-call="report.html_container">
+          <div class="page" >
+            <h2>Purchase Ledger Report</h2>
+            <div class="row">
+              <div class="col-xs-6" >
+                <t t-if="data['state']=='open'">
+                  <span class="text-left" style="display:inline-block;">Inlcuding: Open Invoices</span>
+                  <br></br>
+                </t>
+                <t t-if="data['state']=='overdue'">
+                  <span class="text-left" style="display:inline-block;">Inlcuding: Overdue Invoices</span>
+                  <br></br>
+                </t>
+                <t t-if="data['ptags']">
+                  <span class="text-left" style="display:inline-block;">Analitic Tags: <span t-esc="data['ptags']"/></span>
+                  <br></br>
+                </t>
+                <t t-if="data['on_acc']=='include'">
+                  <span class="text-left" style="display:inline-block;">On Account: Include ON Account</span>
+                  <br></br>
+                </t>
+                <t t-if="data['on_acc']=='only'">
+                  <span class="text-left" style="display:inline-block;">On Account: Only ON Account</span>
+                  <br></br>
+                </t>
+                <t t-if="data['function']=='overview'">
+                  <span class="text-left" style="display:inline-block;">Function: Overview</span>
+                  <br></br>
+                </t>
+                <t t-if="data['function']!='overview'">
+                  <span class="text-left" style="display:inline-block;">Function: Open Balance</span>
+                  <br></br>
+                </t>
+                <t t-if="data['tot_comp_cur']==True">
+                  <span class="text-left" style="display:inline-block;">Totals in <span t-esc="data['curname']"/></span>
+                  <br></br>
+                </t>
+              </div>
+              <div class="col-xs-6" >
+                <span class="text-right" style="display:inline-block;" t-esc="data['today']" t-options='{"widget": "date"}'/>
+                <br></br>
+                <t t-if="data['partner_id']!=[]">
+                  <span class="text-left" style="display:inline-block;">Suppliers: <span t-esc="data['pnames']"/></span>
+                  <br></br>
+                </t>
+                <t t-if="data['partner_id']==[]">
+                  <span class="text-left" style="display:inline-block;">Suppliers: All</span>
+                  <br></br>
+                </t>
+                <t t-if="data['Amounts']=='comp_cur'">
+                  <span class="text-left" style="display:inline-block;">Amounts in <span t-esc="data['curname']"/></span>
+                  <br></br>
+                </t>
+                <t t-if="data['Amounts']!='comp_cur' and data['filter_curname']!=False">
+                  <span class="text-left" style="display:inline-block;">Amounts in <span t-esc="data['filter_curname']"/></span>
+                  <br></br>
+                </t>
+                <span class="text-left" style="display:inline-block;">Until: <span t-esc="data['date']" t-options='{"widget": "date"}'/></span>
+                <br></br>
+                <t t-if="data['pptags']">
+                  <span class="text-left" style="display:inline-block;">Partner Tags: <span t-esc="data['pptags']"/></span>
+                  <br></br>
+                </t>
+              </div>
+            </div>
+            <table class="table table-condensed">
+              <t t-if="data['function']=='overview'">
+                <thead>
+                  <tr>
+                    <th class="text-center">Doc Type</th>
+                    <th class="text-center">invoice Official No</th>
+                    <th class="text-center">invoice Date</th>
+                    <th class="text-center">invoice Due Date</th>
+                    <th class="text-center">Days</th>
+                    <th class="text-center">invoice Total</th>
+                    <th class="text-center">Open Balance</th>
+                    <t t-if="data['Amounts']!='cur_comp'">
+                      <th class="text-center">Amounts in <span t-esc="data['curname']"/></th>
+                    </t>
+                  </tr>
+                </thead>
+                <tbody>
+                  <t t-set="last" t-value="X123"/>
+                  <t t-set="lastp" t-value="X123"/>
+                  <t t-set="lasta" t-value="X123"/>
+
+                  <t t-foreach="partners" t-as="pts">
+                    <t t-set="pfound" t-value="False"/>
+                    <t t-foreach="docs" t-as="o">
+                      <t t-if="o.partner_id.name == pts">
+                        <t t-set="pfound" t-value="True"/>
+                        <t t-if="last!=o.partner_id.name">
+                          <t t-if="last!=X123">
+
+                          </t>
+                          <tr>
+                            <td colspan="4" class="mt32">
+                              <h4><span t-esc="o.partner_id.name"/></h4>
+                            </td>
+                          </tr>
+                        </t>
+                        <t t-if="data['on_acc']!='only'">
+                          <tr>
+                            <td class="text-center">
+                              <span t-field="o.journal_document_type_id.document_type_id.report_name"/>
+                            </td>
+                            <td class="text-center">
+                              <span t-esc="o.journal_document_type_id.document_type_id.document_letter_id.name"/>-<span t-field="o.document_number"/>
+                            </td>
+                            <td class="text-center">
+                              <span t-field="o.date_invoice"/>
+                            </td>
+                            <td class="text-center">
+                              <span t-field="o.date_due"/>
+                            </td>
+                            <td class="text-center">
+                              <span t-esc="o.getdatedif(data['date'],o.date_due,o.date_invoice)"/>
+                            </td>
+                            <td class="text-center">
+                              <span t-esc="o.amount_total_cur(o,data['Amounts'])"/>
+                              <t t-if="data['Amounts']!='comp_cur'">
+                                <span t-field="o.currency_id.name"/>
+                              </t>
+                            </td>
+                            <td class="text-center">
+                              <span t-esc="o.amount_total_cur(o,data['Amounts']) - payments[o.id]"/>
+                              <t t-if="data['Amounts']!='comp_cur'">
+                                <span t-field="o.currency_id.name"/>
+                              </t>
+                            </td>
+                          </tr>
+                        </t>
+                        <t t-if="last!=o.partner_id.name">
+                          <t t-set="last" t-value="o.partner_id.name"/>
+                          <t t-set="lasta" t-value="o.account_id"/>
+                          <t t-set="lastp" t-value="o.partner_id"/>
+                        </t>
+                      </t>
+                    </t>
+
+                    <t t-if="pfound==True">
+                      <t t-if="data['on_acc']=='include' or data['on_acc']=='only'">
+                        <tr>
+                          <td></td>
+                          <td class="text-center">En Cta</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="text-center">
+                            <span t-esc="docs[0].get_outstanding_report(lastp,lasta,data['date'])"/>
+                          </td>
+                          <t t-if="data['Amounts']!='cur_comp'">
+                            <td class="text-center">
+                              <span t-esc="docs[0].get_outstanding_report(lastp,lasta,data['date'])"/>
+                            </td>
+                          </t>
+                        </tr>
+                        <tr t-foreach="docs[0].get_outstanding_report_apg(lastp,lasta,data['date'])" t-as="ao">
+                          <td></td>
+                          <td class="text-left" colspan="2">
+                              <t t-if="ao.payment_id.id!=False">
+                                <span t-esc="ao.payment_id.payment_group_id.name"/>
+                              </t>
+                              <t t-if="ao.invoice_id.id!=False">
+                                <span t-esc="ao.invoice_id.display_name"/>
+                              </t>
+                          </td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="text-center">
+                            <span t-esc="ao.amount_residual"/>
+                            <t t-if="data['Amounts']!='comp_cur'">
+                              <span t-field="ao.payment_id.currency_id.name"/>
+                            </t>
+                          </td>
+                        </tr>
+                        <t t-if="data['on_acc']!='only'">
+                          <tr>
+                            <td></td>
+                            <td class="text-center">Open Balance</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">
+                              <span t-esc="docs[0].getopenbalancet(lastp,docs,payments,data['Amounts']) + docs[0].get_outstanding_report(lastp,lasta,data['date'])"/>
+                            </td>
+                            <t t-if="data['Amounts']!='cur_comp'">
+                              <td class="text-center">
+                                <span t-esc="docs[0].getopenbalancet(lastp,docs,payments,'comp_cur') + docs[0].get_outstanding_report(lastp,lasta,data['date'])"/>
+                              </td>
+                            </t>
+                          </tr>
+                        </t>
+                      </t>
+                      <t t-if="data['on_acc']=='skip'">
+                        <tr>
+                          <td></td>
+                          <td class="text-center">Open Balance</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="text-center">
+                            <span t-esc="docs[0].getopenbalancet(lastp,docs,payments,data['Amounts']) + docs[0].get_outstanding_report(lastp,lasta,data['date'])"/>
+                          </td>
+                          <t t-if="data['Amounts']!='cur_comp'">
+                            <td class="text-center">
+                              <span t-esc="docs[0].getopenbalancet(lastp,docs,payments,'comp_cur') + docs[0].get_outstanding_report(lastp,lasta,data['date'])"/>
+                            </td>
+                          </t>
+                        </tr>
+                      </t>
+                      <t t-if="data['on_acc']!='only'">
+                        <tr>
+                          <td></td>
+                          <td class="text-center">Open Due</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="text-center">
+                            <span t-esc="docs[0].getopenduet(lastp,docs,payments,data['date'],data['Amounts'])"/>
+                          </td>
+                          <t t-if="data['Amounts']!='cur_comp'">
+                            <td class="text-center">
+                              <span t-esc="docs[0].getopenduet(lastp,docs,payments,data['date'],'comp_cur')"/>
+                            </td>
+                          </t>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td class="text-center">Not Due</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td class="text-center">
+                            <span t-esc="docs[0].getnotopenduet(lastp,docs,payments,data['date'],data['Amounts'])"/>
+                          </td>
+                          <t t-if="data['Amounts']!='cur_comp'">
+                            <td class="text-center">
+                              <span t-esc="docs[0].getnotopenduet(lastp,docs,payments,data['date'],'comp_cur')"/>
+                            </td>
+                          </t>
+                        </tr>
+                      </t>
+                    </t>
+
+                    <t t-if="pfound==False and docs[0].get_filter(partnersid[pts],data['partner_id'])">
+                      <t t-set="lasta" t-value="partnersacc[pts]"/>
+                      <t t-set="lastp" t-value="partnersid[pts]"/>
+                      <t t-if="docs[0].get_outstanding_report(lastp,lasta,data['date'])&lt;=0">
+                        <tr>
+                          <td colspan="4" class="mt32">
+                            <h4><span t-esc="pts"/></h4>
+                          </td>
+                        </tr>
+                        <t t-if="data['on_acc']=='include' or data['on_acc']=='only'">
+                          <tr>
+                            <td></td>
+                            <td class="text-center">En Cta</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">
+                              <span t-esc="docs[0].get_outstanding_report(lastp,lasta,data['date'])"/>
+                            </td>
+                            <t t-if="data['Amounts']!='cur_comp'">
+                              <td class="text-center">
+                                <span t-esc="docs[0].get_outstanding_report(lastp,lasta,data['date'])"/>
+                              </td>
+                            </t>
+                          </tr>
+                          <tr t-foreach="docs[0].get_outstanding_report_apg(lastp,lasta,data['date'])" t-as="ao">
+                            <td></td>
+                            <td class="text-left" colspan="2">
+                              <t t-if="ao.payment_id.id!=False">
+                                <span t-esc="ao.payment_id.payment_group_id.name"/>
+                              </t>
+                              <t t-if="ao.invoice_id.id!=False">
+                                <span t-esc="ao.invoice_id.display_name"/>
+                              </t>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">
+                              <span t-esc="ao.amount_residual"/>
+                              <t t-if="data['Amounts']!='comp_cur'">
+                                <span t-field="ao.payment_id.currency_id.name"/>
+                              </t>
+                            </td>
+                          </tr>
+                        </t>
+                      </t>
+                    </t>
+
+                  </t>
+
+                  <t t-set="totalsb2" t-value="['','','','']"/>
+                  <t t-set="totals" t-value="docs[0].get_ps_sl_totals(docs,data['date'],payments,data['Amounts'],data['currency_id'],data['tot_comp_cur'],partners,partnersid,partnersacc,data['partner_id'])"/>
+                  <t t-if="data['currency_id']!=False">
+                    <t t-set="totalsb2" t-value="docs[0].get_ps_sl_totals(docs,data['date'],payments,'inv_cur',data['currency_id'],False,partners,partnersid,partnersacc,data['partner_id'])"/>
+                  </t>
+                  <tr>
+                    <td></td>
+                    <td class="text-center"><h4>Totales</h4></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <t t-if="data['on_acc']!='skip'">
+                    <tr>
+                      <td></td>
+                      <td class="text-center">En Cta </td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><span t-esc="totalsb2[0]"/></td>
+                      <td><span t-esc="totals[0]"/></td>
+                    </tr>
+                  </t>
+                  <t t-if="data['on_acc']!='only'">
+                    <tr>
+                      <td></td>
+                      <t t-if="data['tot_comp_cur']==False">
+                        <td class="text-center">Open Balance <span t-esc="data['filter_curname']"/></td>
+                      </t>
+                      <t t-if="data['tot_comp_cur']==True">
+                        <td class="text-center">Open Balanace</td>
+                      </t>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><span t-esc="totalsb2[1]"/></td>
+                      <td><span t-esc="totals[1]"/></td>
+                    </tr>
+                  </t>
+                  <tr>
+                    <td></td>
+                    <td class="text-center">Open Due</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span t-esc="totalsb2[2]"/></td>
+                    <t t-if="data['tot_comp_cur']==True">
+                      <td><span t-esc="totals[2]"/></td>
+                    </t>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td class="text-center">Not Due</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><span t-esc="totalsb2[3]"/></td>
+                    <t t-if="data['tot_comp_cur']==True">
+                      <td><span t-esc="totals[3]"/></td>
+                    </t>
+                  </tr>
+
+                </tbody>
+              </t>
+              <t t-if="data['function']!='overview'">
+                <thead>
+                  <tr>
+                    <th class="text-center" colspan="4">Supplier</th>
+                    <th class="text-center">Currency</th>
+                    <th class="text-center">Open Balance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <t t-foreach="partners" t-as="pts">
+                    <t t-if="docs[0].has_invs(partnersid[pts],docs)">
+                      <t t-set="lasta" t-value="partnersacc[pts]"/>
+                      <t t-set="lastp" t-value="partnersid[pts]"/>
+                      <tr>
+                        <td ><span t-esc="pts"/></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <t t-set="totcur" t-value="docs[0].getopenvals_ob(lastp,docs,payments)"/>
+                      <tr t-foreach="totcur" t-as="acurtot">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><span t-esc="acurtot"/></td>
+                        <td><span t-esc="totcur[acurtot]"/></td>
+                      </tr>
+                      <tr>
+                        <td colspan="4"></td>
+                        <td>Total In Company Currency</td>
+                        <td><span t-esc="docs[0].getopenbalancet(lastp,docs,payments,'comp_cur')"/></td>
+                      </tr>
+                      <t t-if="docs[0].get_outstanding_report(lastp,lasta,data['date'])&lt;0">
+                        <tr>
+                          <td colspan="4"></td>
+                          <td>On Account In Company Currency</td>
+                          <td><span t-esc="docs[0].get_outstanding_report(lastp,lasta,data['date'])"/></td>
+                        </tr>
+                      </t>
+                    </t>
+                  </t>
+                </tbody>
+              </t>
+            </table>
+          </div>
+        </t>
+    </template>
+  </data>
+</odoo>

@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_stock_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-15 14:06+0000\n"
+"PO-Revision-Date: 2019-05-15 11:12-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+msgid "<span class=\"pull-left\">Lot/Serial Number</span>"
+msgstr "<span class=\"pull-left\">Número Lote/Serie</span>"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document3
+msgid "<span><strong>Customer Address:</strong></span>"
+msgstr "<span><strong>Dirección del Cliente:</strong></span>"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document3
+msgid "<span><strong>Vendor Address:</strong></span>"
+msgstr "<span><strong>Dirección de Proveedor:</strong></span>"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document3
+msgid "<strong style=\"border-top: 1px dashed;line-height:20px;padding-left:40px;padding-right:40px;\">Firma y Aclaración</strong>"
+msgstr "<strong style=\"border-top: 1px dashed;line-height:20px;padding-left:40px;padding-right:40px;\">Firma y Aclaración</strong>"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document3
+msgid "<strong>Date</strong>"
+msgstr "<strong>Fecha</strong>"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document3
+msgid "<strong>Delivered Quantity</strong>"
+msgstr "<strong>Cantidad entregada</strong>"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document3
+msgid "<strong>Order (Origin)</strong>"
+msgstr "<strong>Orden (Origen)</strong>"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document3
+msgid "<strong>Ordered Quantity</strong>"
+msgstr "<strong>Cantidad pedida</strong>"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document3
+msgid "<strong>Product</strong>"
+msgstr "<strong>Producto</strong>"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+msgid "All items couldn't be shipped, the remaining ones will be shipped as soon as they become available."
+msgstr "Todos los artículos no pudieron ser enviados, los restantes serán enviados tan pronto como estén disponibles."
+
+#. module: vitt_stock_report
+#: model:ir.actions.report.xml,name:vitt_stock_report.action_report_delivery2
+msgid "Delivery Slip 2"
+msgstr "Remito de Entrega 2"
+
+#. module: vitt_stock_report
+#: model:ir.actions.report.xml,name:vitt_stock_report.action_report_delivery3
+msgid "Delivery Slip overview"
+msgstr "Remito de Entrega Resumido"
+
+#. module: vitt_stock_report
+#: model:ir.ui.view,arch_db:vitt_stock_report.report_delivery_document2
+msgid "This shipment is a backorder of"
+msgstr "Este envío es un pedido parcial de"
+
+#. module: vitt_stock_report
+#: model:ir.model,name:vitt_stock_report.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"

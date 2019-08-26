@@ -1,0 +1,12 @@
+<odoo>
+    <record id="view_pos_pos_form2" model="ir.ui.view">
+        <field name="name">view.pos.pos.form2</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+            <button name="refund" position="after">
+                <button name="refund2" string="Return Products/payment" type="object" attrs="{'invisible':[('state','=','draft')]}"/>
+            </button>
+        </field>
+    </record>
+</odoo>

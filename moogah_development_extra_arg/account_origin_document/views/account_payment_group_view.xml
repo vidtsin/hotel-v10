@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<odoo>
+    <data>
+        <record id="action_account_payments_group_1" model="ir.actions.act_window">
+            <field name="name">Customer Receipts</field>
+            <field name="res_model">account.payment.group</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                  Click to register a payment
+                </p><p>
+                  Payments are used to register liquidity movements (send or collect).
+                  You can then process those payments by your own means or by using installed facilities.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,323 @@
+<odoo>
+    <data>
+        <record id="paperformat_paym" model="report.paperformat">
+            <field name="name">paperformat_paym</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">23</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">30</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report
+          id="apg_report"
+          model="account.payment.group"
+          string="Payments/Receips"
+          report_type="qweb-pdf"
+          name="vitt_acc_paym_print.payment_report"
+          file="vitt_acc_paym_print.payment_report"
+          paperformat="vitt_acc_paym_print.paperformat_paym"
+        />
+
+        <template id="external_layout_header" inherit_id="report.external_layout_header">
+            <xpath expr="//img[@t-if='company.logo']" position="replace">
+                <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" style="max-height: 75px;"/>
+            </xpath>
+            <xpath expr="//span[@t-field='company.partner_id']" position="replace">
+                <span t-field="company.partner_id"
+                      t-field-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;address&quot;, &quot;name&quot;], &quot;no_marker&quot;: true}"
+                      style="font-size:11px;display:inline-block;"
+                />
+            </xpath>
+        </template>
+
+        <template id="external_layout_footer" inherit_id="report.external_layout_footer">
+            <xpath expr="//div[@class='text-center']" position="replace">
+                <div class="text-center" style="font-size:11px;border-top: 1px solid black;">
+                    <ul t-if="not company.custom_footer" class="list-inline">
+                		<t t-set="company" t-value="company.sudo()"/>
+                		<li t-if="company.phone">Phone: <span t-field="company.phone"/></li>
+
+		                <li t-if="company.fax and company.phone">&amp;bull;</li>
+        		        <li t-if="company.fax">Fax: <span t-field="company.fax"/></li>
+
+		                <li t-if="company.email and company.fax or company.email and company.phone">&amp;bull;</li>
+		                <li t-if="company.email">Email: <span t-field="company.email"/></li>
+
+        		        <li t-if="company.website and company.email or company.website and company.fax or company.website and company.phone">&amp;bull;</li>
+                		<li t-if="company.website">Website: <span t-field="company.website"/></li>
+            		</ul>
+
+		            <ul t-if="not company.custom_footer" class="list-inline" name="financial_infos">
+        		        <li t-if="company.vat">TIN: <span t-field="company.vat"/></li>
+            		</ul>
+
+		            <t t-if="company.custom_footer">
+        		        <span t-raw="company.rml_footer"/>
+            		</t>
+
+		            <ul class="list-inline">
+        		        <li>Page:</li>
+                		<li><span class="page"/></li>
+                		<li>/</li>
+                		<li><span class="topage"/></li>
+            		</ul>
+        		</div>
+            </xpath>
+        </template>
+
+
+        <template id="payment_report">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="report.external_layout">
+                        <div class="page" style="font-size:11px;">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <span style="display:inline-block;line-height:10px;margin-top:5px;">CUIT: </span> <span t-field="o.company_id.main_id_number"/>
+                                    <br></br>
+                                    <span style="line-height:10px;" t-field="o.company_id.afip_responsability_type_id"/>
+                                    <br></br>
+                                    <br></br>
+                                    <t t-if="o.partner_type=='customer'">
+                                        <strong style="display:inline-block;line-height:20px;">Cliente: </strong> <span t-field="o.partner_id.name"/>
+                                    </t>
+                                    <t t-if="o.partner_type=='supplier'">
+                                        <strong style="display:inline-block;line-height:20px;">Proveedor: </strong> <span t-field="o.partner_id.name"/>
+                                    </t>
+                                    <br></br>
+                                    <strong style="display:inline-block;line-height:20px;">CUIT: </strong> <span t-field="o.partner_id.main_id_number"/>
+                                    <br></br>
+
+
+                                </div>
+                                <div class="col-xs-6" style="text-align:right;">
+                                    <t t-if="o.partner_type=='customer'">
+                                        <strong style="display:inline-block;line-height:10px;margin-top:5px;">Nro de Recibo: </strong> <span t-field="o.display_name"/>
+                                    </t>
+                                    <t t-if="o.partner_type=='supplier'">
+                                        <strong style="display:inline-block;line-height:10px;margin-top:5px;">Nro de Pago: </strong> <span t-field="o.display_name"/>
+                                    </t>
+                                    <br></br>
+                                    <strong style="display:inline-block;line-height:10px;">Fecha: </strong> <span t-field="o.payment_date"/>
+                                </div>
+                            </div>
+
+                                            <!-- table for data --> 
+                            <div class="row" style="margin-top:10px;">
+                                <div class="col-xs-12">
+                                    <div class="col-xs-6">
+                                        <h5 style="margin-top:5%;">Detalle de Comprobantes</h5>
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left">
+                                                        <strong>Factura Nro </strong>
+                                                    </th>
+                                                    <th class="text-left">
+                                                        <strong>Fecha</strong>
+                                                    </th>
+                                                    <th class="text-left">
+                                                        <strong>Importe</strong>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <t t-if="o.state=='posted'">
+                                                    <tr t-foreach="o.matched_move_line_ids" t-as="paym">
+                                                        <td class="text-left">
+                                                            <span t-field="paym.move_id"/>
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="paym.date"/>
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-esc="o.compute_payment_group_matched_amount_qweb(o,paym)"/>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left">
+                                                            <strong>Importe</strong>
+                                                        </td>
+                                                        <td></td>
+                                                        <td class="text-left">
+                                                            <span t-esc="o.payment_ids_tot3(o)"/>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                                <t t-if="o.state!='posted'">
+                                                    <tr t-foreach="o.debt_move_line_ids" t-as="paym">
+                                                        <td class="text-left">
+                                                            <span t-field="paym.move_id"/>
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <span t-field="paym.date"/>
+                                                        </td>
+                                                        <td class="text-left">
+                                                            <t t-if="o.partner_type=='supplier'">
+                                                                <span t-esc="paym.amount_residual*-1"/>
+                                                            </t>
+                                                            <t t-if="o.partner_type=='customer'">
+                                                                <span t-esc="paym.amount_residual"/>
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left">
+                                                            <strong>Importe</strong>
+                                                        </td>
+                                                        <td></td>
+                                                        <td class="text-left">
+                                                            <t t-if="o.partner_type=='supplier'">
+                                                                <span t-esc="o.payment_ids_tot4(o)*-1"/>
+                                                            </t>
+                                                            <t t-if="o.partner_type=='customer'">
+                                                                <span t-esc="o.payment_ids_tot4(o)"/>
+                                                            </t>
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                    <div class="col-xs-6">
+                                        <h5 style="margin-top:5%;">Detalle de Pagos</h5>
+
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left">
+                                                        <strong>Forma de Pago</strong>
+                                                    </th>
+                                                    <td class="text-left">
+                                                        <strong>Importe</strong>
+                                                    </td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr t-foreach="o.payment_ids_grouped(o)" t-as="payml">
+                                                    <td class="text-left">
+                                                        <span t-esc="payml"/>
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <span t-esc="o.payment_ids_grouped(o)[payml]"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-left">
+                                                        <strong>Total</strong>
+                                                    </td>
+                                                    <td class="text-left">
+                                                        <span t-esc="o.payment_ids_tot1(o)"/>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>    
+                                        
+                                        
+
+                            <div class="col-xs-12">
+                                <h5 style="margin-top:5%;">Detalle de Cheques</h5>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-left">
+                                                <strong>Cheque Nro</strong>
+                                            </th>
+                                            <th class="text-left">
+                                                <strong>Banco</strong>
+                                            </th>
+                                            <th class="text-left">
+                                                <strong>CUIT Firmante</strong>
+                                            </th>
+                                            <th class="text-left">
+                                                <strong>Fecha Comp</strong>
+                                            </th>
+                                            <th class="text-left">
+                                                <strong>Importe</strong>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr t-foreach="o.payment_ids_t(o)" t-as="payml">
+                                            <td class="text-left">
+                                                <span t-esc="payml"/>
+                                            </td>
+                                            <td class="text-left">
+                                                <span t-esc="o.getbank_qweb(payml,o)"/>
+                                            </td>
+                                            <td class="text-left">
+                                                <span t-esc="o.getCUIT_qweb(payml,o)"/>
+                                            </td>
+                                            <td class="text-left">
+                                                <span t-esc="o.getpaymdate_qweb(payml,o)"/>
+                                            </td>
+                                            <td class="text-left">
+                                                <span t-esc="o.payment_ids_t(o)[payml]"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-left">
+                                                <strong>Total</strong>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="text-left">
+                                                <span t-esc="o.payment_ids_tot2(o)"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <t t-if="o.unmatched_amount &gt; 0">
+                                <div class="col-xs-12">
+                                    <h5 style="margin-top:5%;">Anticipos</h5>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-left">
+                                                    <strong>Anticipo a Cuenta</strong>
+                                                </th>
+                                                <th class="text-left">
+                                                    <span t-field="o.unmatched_amount"/>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </t>
+                            <div class="row" style="margin-top:10px;">
+                                <div class="col-xs-12" style="font:12px lucida-console,sans-serif;background-color:#f0f0f0;margin:10px;">
+                                    <strong style="display:inline-block;line-height:20px;">Total: </strong> <span t-esc="o.payment_ids_tot1(o)"/>
+                                    <br></br>
+                                    <strong style="display:inline-block;line-height:20px;margin-left:35px;"></strong> <span t-esc="o.payment_ids_totlet(o)"/>
+                                </div>     
+                            </div>    
+
+                            <div class="row" style="margin-top:20px;margin-bottom:20px;">
+                                <div class="col-xs-12" style="font:12px lucida-console,sans-serif;margin-top:40px;text-align:right;">
+                                    <strong style="border-top: 1px dashed;line-height:20px;padding-left:40px;padding-right:40px;">Firma y Aclaracion</strong>
+                                </div>     
+                            </div>    
+
+                            <p style="page-break-before:always;"> </p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

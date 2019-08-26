@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<odoo>
+    <data>
+        <record id='view_stock_self_form' model='ir.ui.view'>
+            <field name='name'>stock.picking.form</field>
+            <field name='model'>stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="partner_id" position="after">
+                        <field name="transport_company_id" />
+                        <field name="freight_id" />
+                    </field>
+                    <field name="move_type" position="after">
+                        <field name="transport_note" />
+                    </field>
+                    <field name="number_of_packages" position="after">
+                        <field name="weight_done" />
+                        <field name="volume_done" />
+                    </field>
+                    <field name="priority" position="after">
+                        <field name="del_sequence" />
+                    </field>
+                </data>
+            </field>
+        </record>
+
+        <record id='view_vpick_self_tree' model='ir.ui.view'>
+            <field name='name'>stock.picking.tree</field>
+            <field name='model'>stock.picking</field>
+            <field name="inherit_id" ref="stock.vpicktree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="state" position="after">
+                        <field name="volume_done" sum="Total Volume"/>
+                        <field name="weight_done" sum="Total Weight"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+
+        <record id="view_stock_picking_search_inherit_freight" model="ir.ui.view">
+            <field name="name">stock.picking.search.inherit.freight</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/filter[@name='picking_type']" position="after">
+                    <filter string="Freight" domain="[]" context="{'group_by':'freight_id'}"/>
+                    <filter string="Transport company" domain="[]" context="{'group_by':'transport_company_id'}"/>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="zafran_delivery_form" model="ir.ui.view">
+            <field name="name">zafran.delivery.form</field>
+            <field name="model">stock.picking.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="z_ids" invisible="1"/>
+                            <field name="freight_id"/>
+                            <field name="date"/>
+                        </group>
+                    </group>
+                    <group string="Entregas">
+                        <field name="sp_ids" >
+                            <tree editable="bottom" create="false" delete="false">
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                                <field name="transport_company_id"/>
+                                <field name="delivery_sequence"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <footer>
+                        <button name="fill_window" string="Completar los Datos" type="object"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window name="Asignar Flete"
+                multi="True"
+                res_model="stock.picking.wizard"
+                src_model="stock.picking"
+                view_mode="form"
+                target="new"
+                key2="client_action_multi"
+                id="zafran_delivery_action"
+                context="{'default_z_ids': active_ids}"/>
+    </data>
+</odoo>

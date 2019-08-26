@@ -1,0 +1,261 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_analytic_tags_account
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-08-10 23:07+0000\n"
+"PO-Revision-Date: 2017-08-28 14:25-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_property_account_payable_id
+msgid "Account Payable"
+msgstr "Cuenta a pagar"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Cuenta a cobrar"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_account_invoice_analytic_tag_ids
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_partner_analytic_tag_ids
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_analytic_tag_ids
+msgid "Analytic Tags"
+msgstr "Etiquetas Analíticas"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_bank_account_count
+msgid "Bank"
+msgstr "Banco"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Compañías que se refieren a la empresa"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_contract_ids
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_contracts_count
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_payment_token_count
+msgid "Count Payment Token"
+msgstr "Cuenta Metodo de Pago"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "Plazo de pago de cliente"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_trust
+msgid "Degree of trust you have in this debtor"
+msgstr "Grado de confianza para este deudor"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_device_identity_ids
+msgid "Device identities"
+msgstr "Identidades del dispositivo"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_property_account_position_id
+msgid "Fiscal Position"
+msgstr "Posición fiscal"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_has_unreconciled_entries
+msgid "Has unreconciled entries"
+msgstr "Contiene entradas irreconciliadas"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model,name:vitt_analytic_tags_account.model_account_invoice
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_invoice_warn
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model,name:vitt_analytic_tags_account.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Linea de Factura"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model,name:vitt_analytic_tags_account.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte contable"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_issued_total
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_journal_item_count
+msgid "Journal Items"
+msgstr "Apuntes contables"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_last_time_entries_checked
+msgid "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
+msgstr "Última vez que se conciliaros facturas y pagos de este asociado. Se configura incluso si no hay ningún débito o crédito por conciliar, o si pulsa el botón \"Hecho\"."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr "Fecha de la última conciliación de facturas y pagos"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_invoice_warn_msg
+msgid "Message for Invoice"
+msgstr "Mensaje para factura"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_payment_next_action
+msgid "Next Action"
+msgstr "Próxima acción"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_payment_next_action_date
+msgid "Next Action Date"
+msgstr "Fecha próxima acción"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_payment_next_action
+msgid "Note regarding the next action."
+msgstr "Nota sobre la siguiente acción."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model,name:vitt_analytic_tags_account.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_debit_limit
+msgid "Payable Limit"
+msgstr "Límite a pagar"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_payment_token_ids
+msgid "Payment Tokens"
+msgstr "Tokens de Pago"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model,name:vitt_analytic_tags_account.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_property_product_pricelist
+msgid "Sale Pricelist"
+msgstr "Tarifa de venta"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_invoice_warn
+msgid "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+msgstr "Si selecciona la opción \"Aviso\" se notificará a los usuarios con el mensaje, si selecciona \"Mensaje de bloqueo\" se lanzará una excepción con el mensaje y se bloqueará el flujo. El mensaje debe escribirse en el siguiente campo."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_payment_next_action_date
+msgid "The date before which no action should be taken."
+msgstr "La fecha antes de la cual no se debe tomar ninguna acción."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_property_account_position_id
+msgid "The fiscal position will determine taxes and accounts used for the partner."
+msgstr "La posición fiscal determinará los impuestos y cuentas utilizados por el asociado."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_has_unreconciled_entries
+msgid "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed."
+msgstr "El asociado tiene al menos un débito o crédito no conciliado desde la última vez que se realizó la conciliación de facturas y pagos."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_property_account_payable_id
+msgid "This account will be used instead of the default one as the payable account for the current partner"
+msgstr "Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta pendiente de pago del asociado actual."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_property_account_receivable_id
+msgid "This account will be used instead of the default one as the receivable account for the current partner"
+msgstr "Esta cuenta se utilizará en lugar de la cuenta por defecto como la cuenta pendiente de cobro del asociado actual."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_property_supplier_payment_term_id
+msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
+msgstr "Se utilizará esta condición de pago, en lugar de la predeterminada, para los pedidos de compra y las facturas de proveedor."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_property_payment_term_id
+msgid "This payment term will be used instead of the default one for sale orders and customer invoices"
+msgstr "Se utilizará esta condición de pago, en lugar de la predeterminada, para los pedidos de venta y facturas de clientes"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr "Esta tarifa se utilizará, en lugar de la por defecto, para las ventas de la empresa actual."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_total_invoiced
+msgid "Total Invoiced"
+msgstr "Total facturado"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_debit
+msgid "Total Payable"
+msgstr "Total a pagar"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_credit
+msgid "Total Receivable"
+msgstr "Total a cobrar"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_credit
+msgid "Total amount this customer owes you."
+msgstr "Importe total que le debe el cliente."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "Importe total a pagar a este proveedor."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_unreconciled_aml_ids
+msgid "Unreconciled aml ids"
+msgstr "Ids AML irreconciliables"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,help:vitt_analytic_tags_account.field_res_users_currency_id
+msgid "Utility field to express amount currency"
+msgstr "Campo útil para expresar importe en divisa."
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_product_product_supplier_analytic_tag_ids
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_product_template_supplier_analytic_tag_ids
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_partner_supplier_analytic_tag_ids
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_supplier_analytic_tag_ids
+msgid "Vendor Analytic Tags"
+msgstr "Etiquetas Analíticas de Proveedor"
+
+#. module: vitt_analytic_tags_account
+#: model:ir.model.fields,field_description:vitt_analytic_tags_account.field_res_users_property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr "Términos de Pago"

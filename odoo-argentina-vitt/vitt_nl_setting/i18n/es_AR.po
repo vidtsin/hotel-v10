@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_nl_setting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-10 14:25+0000\n"
+"PO-Revision-Date: 2019-05-10 11:27-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_nl_setting
+#: model:ir.ui.view,arch_db:vitt_nl_setting.view_nl_setting
+msgid "Apply"
+msgstr "Aplicar"
+
+#. module: vitt_nl_setting
+#: model:ir.ui.view,arch_db:vitt_nl_setting.view_nl_setting
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: vitt_nl_setting
+#: model:ir.actions.act_window,name:vitt_nl_setting.action_nl_setting
+msgid "Configure Accounting"
+msgstr "Configurar Contabilidad"
+
+#. module: vitt_nl_setting
+#: model:ir.model.fields,field_description:vitt_nl_setting.field_nl_setting_block_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_nl_setting
+#: model:ir.model.fields,field_description:vitt_nl_setting.field_nl_setting_block_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: vitt_nl_setting
+#: model:ir.model.fields,field_description:vitt_nl_setting.field_nl_setting_block_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: vitt_nl_setting
+#: model:ir.model.fields,field_description:vitt_nl_setting.field_nl_setting_block_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_nl_setting
+#: model:ir.model.fields,field_description:vitt_nl_setting.field_nl_setting_block___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: vitt_nl_setting
+#: model:ir.model.fields,field_description:vitt_nl_setting.field_nl_setting_block_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Modificación por"
+
+#. module: vitt_nl_setting
+#: model:ir.model.fields,field_description:vitt_nl_setting.field_nl_setting_block_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: vitt_nl_setting
+#: model:ir.ui.menu,name:vitt_nl_setting.menu_nl_setting
+#: model:ir.ui.view,arch_db:vitt_nl_setting.view_nl_setting
+msgid "NL Settings"
+msgstr "Controles Adicionales ARG"
+
+#. module: vitt_nl_setting
+#: model:ir.model,name:vitt_nl_setting.model_nl_setting_block
+msgid "nl.setting.block"
+msgstr "nl.setting.block"

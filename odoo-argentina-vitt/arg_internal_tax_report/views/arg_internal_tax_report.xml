@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report 
+            id="action_arg_internal_taxes_report"
+            model="arg.internal.taxes.report.wizard"
+            string="Internal Taxes Report"
+            report_type="qweb-pdf"
+            paperformat="paperformat_internal_taxes_report"
+            name="arg_internal_tax_report.internal_taxes"
+            file="arg_internal_tax_report.report_internal_taxes"
+            />
+    </data>
+    <data>
+
+            <record id="action_arg_internal_taxes_report_xls" model="ir.actions.report.xml">
+              <field name="name">Internal Taxes Report XLS</field>
+              <field name="model">aaccount.invoice</field>
+              <field name="type">ir.actions.report.xml</field>
+              <field name="report_name">arg_internal_tax_report.report_internal_taxes.xls</field>
+              <field name="report_type">xls</field>
+              <field name="auto" eval="False"/>
+            </record>
+
+            <record model="ir.values" id="action_arg_internal_taxes_report_xls_values">
+              <field name="name">Internal Taxes Report XLS</field>
+              <field name="key2">client_action_multi</field>
+              <field name="value" eval="'ir.actions.report.xml,' +str(ref('action_arg_internal_taxes_report_xls'))" />
+              <field name="model">account.invoice</field>
+            </record>
+
+    </data>
+
+</odoo>

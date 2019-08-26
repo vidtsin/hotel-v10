@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<odoo>
+    <data>
+        <record id='view_sale_order_form_inherit_freight' model='ir.ui.view'>
+            <field name='name'>sale.order.form.inherit.freight</field>
+            <field name='model'>sale.order</field>
+            <field name="inherit_id" ref="sale_order_dates.view_order_form_inherit_sale_stock_inherit_sale_order_dates"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="partner_shipping_id" position="after">
+                        <field name="transport_company_id" context="{'default_type':'other'}"/>
+                        <field name="freight_id" domain="[('active','=',True)]"/>
+                    </field>
+                    <field name="effective_date" position="after">
+                        <field name="transport_note" />
+                    </field>
+                </data>
+            </field>
+        </record>
+        <record id="view_sale_order_search_inherit_freight" model="ir.ui.view">
+            <field name="name">sale.order.search.inherit.freight</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/filter[@name='customer']" position="after">
+                    <filter string="Freight" domain="[]" context="{'group_by':'freight_id'}"/>
+                    <filter string="Transport company" domain="[]" context="{'group_by':'transport_company_id'}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

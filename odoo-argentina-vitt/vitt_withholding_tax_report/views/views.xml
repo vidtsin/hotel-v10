@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    #WIZARD
+    <record id="account_payment_whwizard_form" model="ir.ui.view">
+        <field name="model">account.payment.whwizard</field>
+        <field name="name">account.payment.whwizard.form</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="partner_id" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'customer')]}"/>
+                    <field name="partner2_id" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'supplier')]}"/>
+                    <field name="wh_tax_code" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'customer')]}"/>
+                    <field name="wh_tax_code2" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'supplier')]}"/>
+                    <field name="journal_id" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'customer')]}"/>
+                    <field name="journal2_id" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'supplier')]}"/>
+                    <field name="company_id"/>
+                    <field name="wh_group_by"/>
+                    <field name="include_link"/>
+                    <field name="print_by"/>
+                    <field name="type" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="doit" string="Ejecutar" type="object"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+   <record id="action_wh_tax_report" model="ir.actions.act_window">
+        <field name="name">Withholding Tax Report - Payments</field>
+        <field name="res_model">account.payment.whwizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type': 'supplier'}</field>
+    </record>
+   <record id="action_per_tax_report" model="ir.actions.act_window">
+        <field name="name">Perceptions Tax Report - Receipts</field>
+        <field name="res_model">account.payment.whwizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type': 'customer'}</field>
+    </record>
+
+    <menuitem name="Withholding Tax Report - Payments"
+        id="menu_wh_tax_report"
+        parent="vitt_sales_reports.menu_tax_reports"
+        action="action_wh_tax_report"
+        sequence="6"
+    />
+    <menuitem name="Withholding Tax Report - Receipts"
+        id="menu_per_tax_report"
+        parent="vitt_sales_reports.menu_tax_reports"
+        action="action_per_tax_report"
+        sequence="6"
+    />
+
+
+    #REPORT
+    <data noupdate="1">
+        <record id="tax_reports" model="report.paperformat">
+            <field name="name">Partners Invoice Journals</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">45</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">40</field>
+            <field name="dpi">90</field>
+        </record>
+    </data>
+
+    <report
+        id="menu_per_temp_html"
+        model="account.payment"
+        string="Tax Report"
+        report_type="qweb-html"
+        name="vitt_withholding_tax_report.repoort_html"
+        file="vitt_withholding_tax_report.repoort_html"
+        paperformat="vitt_withholding_tax_report.tax_reports"
+        menu="False"/>
+    <report
+        id="menu_per_temp_pdf"
+        model="account.payment"
+        string="Tax Report"
+        report_type="qweb-pdf"
+        name="partners_invoices_journals.repoort_pdf"
+        file="partners_invoices_journals.repoort_pdf"
+        paperformat="vitt_withholding_tax_report.tax_reports"
+        menu="False"/>
+
+
+
+    <report
+        id="menu_wh_temp_html"
+        model="account.payment"
+        string="Tax Report"
+        report_type="qweb-html"
+        name="vitt_withholding_tax_report.repoort_html"
+        file="vitt_withholding_tax_report.repoort_html"
+        paperformat="vitt_withholding_tax_report.tax_reports"
+        menu="False"/>
+    <report
+        id="menu_wh_temp_pdf"
+        model="account.payment"
+        string="Tax Report"
+        report_type="qweb-pdf"
+        name="vitt_withholding_tax_report.repoort_pdf"
+        file="vitt_withholding_tax_report.repoort_pdf"
+        paperformat="vitt_withholding_tax_report.tax_reports"
+        menu="False"/>
+
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data> 
+
+        <!-- Supplier Receipt Form  -->
+        <record id="view_account_payment_group_form" model="ir.ui.view">
+            <field name="name">account.payment.group.form</field>
+            <field name="model">account.payment.group</field>
+            <field name="inherit_id" ref="account_payment_group.view_account_payment_group_form"/>
+            <field name="arch" type="xml">
+                <header position="inside">
+                    <button name="compute_withholdings" string="Compute Withholdings" type="object" states="confirmed"/>
+                    <button name="account_withholding_automatic.print_whcert_action" string="Imprimir Cert Ret" type="action"/>
+                </header>
+            </field>
+        </record>
+
+        <record id="view_account_payment_from_group_tree" model="ir.ui.view">
+            <field name="name">account.payment.tree</field>
+            <field name="model">account.payment</field>
+            <field name="arch" type="xml">
+                <tree default_order="date_maturity">
+                    <field name="name"/>
+                    <field name="withholding_number"/>
+                    <field name="tax_withholding_id"/>
+                    <field name="vendorbill"/>
+                    <field name="amount"/>
+                    <field name="state" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="print_whcert_form" model="ir.ui.view">
+            <field name="name">account.payment.group.wizard</field>
+            <field name="model">account.payment.group.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="whcod_ids"
+                               context="{'tree_view_ref': 'account_withholding_automatic.view_account_payment_from_group_tree'}"
+                        />
+                    </group>
+                    <footer>
+                        <button name="Print_whcert" string="Imprimr" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="print_whcert_action" model="ir.actions.act_window">
+            <field name="name">impresion Certificados Retencion</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.payment.group.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <report
+            id="print_wh_cert_report"
+            model="account.payment.group.wizard"
+            string="Impresion Cert Ret"
+            report_type="qweb-pdf"
+            name="account_withholding_automatic.wh_cert"
+            file="account_withholding_automatic.wh_cert"
+            menu="False"
+        />
+
+    </data>
+</openerp>

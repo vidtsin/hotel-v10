@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="account_reports_backend" inherit_id="web.assets_backend" active="True">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/detailed_general_ledger_report/static/src/js/account_reports_backend.js"></script>
+                <script type="text/javascript" src="/detailed_general_ledger_report/static/src/js/account_reports_widgets.js"></script>
+            </xpath>
+        </template>
+
+        <record id="account_report_type_detail_general_ledger" model="account.report.type">
+            <field name="comparison" eval="False" />
+            <field name="analytic" eval="True" />
+            <field name="account" eval="True" />
+            <field name="balance" eval="True" />
+            <field name="dimension" eval="True" />
+        </record>
+    </data>
+</odoo>

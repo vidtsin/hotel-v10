@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_cash_invoice_setting
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-16 20:26+0000\n"
+"PO-Revision-Date: 2019-01-16 17:27-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.8\n"
+
+#. module: vitt_cash_invoice_setting
+#: model:ir.model.fields,field_description:vitt_cash_invoice_setting.field_account_payment_term_cash
+msgid "Cash"
+msgstr "Tipo Contado"
+
+#. module: vitt_cash_invoice_setting
+#: model:ir.model.fields,field_description:vitt_cash_invoice_setting.field_account_payment_term_cash_account_id
+msgid "Cash Account"
+msgstr "Cuenta Contado"
+
+#. module: vitt_cash_invoice_setting
+#: model:ir.model,name:vitt_cash_invoice_setting.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: vitt_cash_invoice_setting
+#: model:ir.model,name:vitt_cash_invoice_setting.model_account_payment_term
+msgid "Payment Term"
+msgstr "Término de Pago"

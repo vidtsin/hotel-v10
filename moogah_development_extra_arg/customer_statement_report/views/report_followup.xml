@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <template id="report_followup_body_customer_statement" inherit_id="account_reports.report_followup_body">
+        <xpath expr="//p[@class='o_account_reports_contact_info']" position="replace">
+            <p class='o_account_reports_contact_info'>
+                <t t-if='context.invoice_address_id.phone'><i class='fa fa-phone fa-fw' /><t t-esc="context.invoice_address_id.phone" /><br /></t>
+                <t t-if='context.invoice_address_id.mobile'><i class='fa fa-mobile fa-fw' /><t t-esc="context.invoice_address_id.mobile" /><br /></t>
+                <t t-if='context.invoice_address_id.fax'><i class='fa fa-fax fa-fw' /><t t-esc="context.invoice_address_id.fax" /><br /></t>
+                <t t-if='context.invoice_address_id.email and not context.invoice_address_id.email_collections'>
+                    <a t-att-href="'mailto:' + context.invoice_address_id.email">
+                        <i class='fa fa-envelope' /><t t-esc="' ' + context.invoice_address_id.email" />
+                    </a>
+                </t>
+                <t t-if='context.invoice_address_id.email_collections'>
+                    <a t-att-href="'mailto:' + context.invoice_address_id.email_collections">
+                        <i class='fa fa-envelope' /><t t-esc="' ' + context.invoice_address_id.email_collections" />
+                    </a>
+                </t>
+            </p>
+        </xpath>
+    </template>
+
+    </data>
+</odoo>

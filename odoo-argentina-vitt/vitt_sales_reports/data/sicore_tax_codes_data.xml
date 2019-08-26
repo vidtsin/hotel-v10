@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- SICORE Codes -->
+    <data noupdate="True">
+
+        <record id="sicore_tax_code_01" model="sicore.codes">
+            <field name="name">064</field>
+            <field name="comment">Fondo Nacional de Incentivo Docente</field>
+        </record>
+
+        <record id="sicore_tax_code_02" model="sicore.codes">
+            <field name="name">172</field>
+            <field name="comment">Impuesto a la Transferencia de Inmuebles</field>
+        </record>
+
+        <record id="sicore_tax_code_03" model="sicore.codes">
+            <field name="name">210</field>
+            <field name="comment">Ganancias Régimen Especial de Ingreso RG 830</field>
+        </record>
+
+        <record id="sicore_tax_code_04" model="sicore.codes">
+            <field name="name">217</field>
+            <field name="comment">Impuesto a las Ganancias</field>
+        </record>
+
+        <record id="sicore_tax_code_05" model="sicore.codes">
+            <field name="name">218</field>
+            <field name="comment">Impuesto a las Ganancias - Beneficiarios del Exterior</field>
+        </record>
+
+        <record id="sicore_tax_code_06" model="sicore.codes">
+            <field name="name">219</field>
+            <field name="comment">Impuesto sobre los Bienes Personales</field>
+        </record>
+
+        <record id="sicore_tax_code_07" model="sicore.codes">
+            <field name="name">466</field>
+            <field name="comment">Gravamen de Emergencia a Premios de juegos y concursos deportivos</field>
+        </record>
+
+        <record id="sicore_tax_code_08" model="sicore.codes">
+            <field name="name">767</field>
+            <field name="comment">Impuesto al Valor Agregado</field>
+        </record>
+	</data>
+</odoo>

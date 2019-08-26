@@ -1,0 +1,303 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* journal_entry_list_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-15 18:06+0000\n"
+"PO-Revision-Date: 2019-02-15 15:12-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: journal_entry_list_report
+#: model:ir.model,name:journal_entry_list_report.model_account_report_context_common
+msgid "A particular context for a financial report"
+msgstr "Contexto particular de reporte financiero"
+
+#. module: journal_entry_list_report
+#: model:ir.model,name:journal_entry_list_report.model_journal_entry_list_context_report
+msgid "A particular context for the journal entry list"
+msgstr "A particular context for the journal entry list"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:295
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:299
+#, python-format
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_account_ids
+msgid "Account ids"
+msgstr "Ids Cuenta"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_account_type_ids
+msgid "Account type ids"
+msgstr "Ids Tipo Cuenta"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_analytic
+msgid "Allow analytic accounting"
+msgstr "Permitir Contabilidad Analítica"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_multi_company
+msgid "Allow multi-company"
+msgstr "Permitir multi-compañía"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:295
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:299
+#, python-format
+msgid "Amount Curr."
+msgstr "Monto Moneda"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_analytic_account_ids
+msgid "Analytic account ids"
+msgstr "Ids cuenta analítica"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_analytic_tag_ids
+msgid "Analytic tag ids"
+msgstr "Ids etiquetas analíticas"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_available_company_ids
+msgid "Available company ids"
+msgstr "Ids dcompañía disponible"
+
+#. module: journal_entry_list_report
+#: model:ir.ui.view,arch_db:journal_entry_list_report.view_journal_entry_list_report_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_company_ids
+msgid "Company ids"
+msgstr "Ids de Compañía"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_create_uid
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_create_date
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:295
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:299
+#, python-format
+msgid "Credit"
+msgstr "Crédito"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:295
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:299
+#, python-format
+msgid "Debit"
+msgstr "Débito"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_analytic_account_dimension_id
+msgid "Dimension"
+msgstr "Dimensión"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_display_name
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_display_name
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard_display_name
+msgid "Display Name"
+msgstr "Nombre"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard_end_date
+msgid "End Date"
+msgstr "Fecha Fin"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_footnotes
+msgid "Footnotes"
+msgstr "Píes de Pagina"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_id
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_id
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:252
+#: model:ir.ui.menu,name:journal_entry_list_report.menu_action_journal_entry_list_report_wizard
+#, python-format
+msgid "Journal Entries List"
+msgstr "Diario de Asientos"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:100
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:204
+#, python-format
+msgid "Journal Entry"
+msgstr "Asiento"
+
+#. module: journal_entry_list_report
+#: model:ir.actions.client,name:journal_entry_list_report.action_journal_entry_list_report
+#: model:ir.model,name:journal_entry_list_report.model_journal_entry_list_report
+msgid "Journal Entry List Report"
+msgstr "Diario de Asientos"
+
+#. module: journal_entry_list_report
+#: model:ir.actions.act_window,name:journal_entry_list_report.action_journal_entry_list_report_wizard
+msgid "Journal Entry List Wizard"
+msgstr "Wizard Diario de Asientos"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_wizard_id
+msgid "Journal Entry Wizard"
+msgstr "Wizard Diario de Asientos"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:295
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:299
+#, python-format
+msgid "Label"
+msgstr "Etiqueta"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report___last_update
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report___last_update
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_write_uid
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Actualización por"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_write_date
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización el"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:294
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:298
+#: selection:journal.entry_list.context.report,sort_by:0
+#: selection:journal.entry_list.report.wizard,sort_by:0
+#, python-format
+msgid "Number"
+msgstr "Número"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:140
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:244
+#, python-format
+msgid "Number of Transactions"
+msgstr "Número de Transacciones"
+
+#. module: journal_entry_list_report
+#: model:ir.ui.view,arch_db:journal_entry_list_report.view_journal_entry_list_report_wizard
+msgid "Open"
+msgstr "Abrir"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:294
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:298
+#, python-format
+msgid "Origin Document"
+msgstr "Documento de Origen"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_account_range
+msgid "Range"
+msgstr "Rango"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:294
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:298
+#, python-format
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:294
+#, python-format
+msgid "Reg. Date"
+msgstr "Fecha Reg. "
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_context_report_sort_by
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard_sort_by
+msgid "Sort by"
+msgstr "Ordenar por"
+
+#. module: journal_entry_list_report
+#: model:ir.model.fields,field_description:journal_entry_list_report.field_journal_entry_list_report_wizard_start_date
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:113
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:127
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:137
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:217
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:231
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:241
+#, python-format
+msgid "Total "
+msgstr "Total "
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:130
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:234
+#, python-format
+msgid "Total: Entries List"
+msgstr "Total: Diario de Asientos"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:294
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:298
+#, python-format
+msgid "Trans. Date"
+msgstr "Fecha Trans."
+
+#. module: journal_entry_list_report
+#: selection:journal.entry_list.context.report,sort_by:0
+#: selection:journal.entry_list.report.wizard,sort_by:0
+msgid "Transaction Date"
+msgstr "Fecha Transacción"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:294
+#, python-format
+msgid "User"
+msgstr "Usuario"
+
+#. module: journal_entry_list_report
+#: model:ir.model,name:journal_entry_list_report.model_journal_entry_list_report_wizard
+msgid "Wizard that show the journal entry report"
+msgstr "Wizard que muestra el diario de asientos"
+
+#. module: journal_entry_list_report
+#: code:addons/journal_entry_list_report/models/journal_entry_list_report.py:169
+#, python-format
+msgid "name"
+msgstr "nombre"

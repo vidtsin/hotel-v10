@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <template id="internal_layout">
+        <!-- Multicompany -->
+        <t t-if="o and 'company_id' in o">
+            <t t-set="company" t-value="o.company_id"></t>
+        </t>
+        <t t-if="not o or not 'company_id' in o">
+            <t t-set="company" t-value="res_company"></t>
+        </t>
+
+        <div class="header">
+            <div class="row" style="font:11px">
+                <div class="col-xs-4">
+                    <!--span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/-->
+                   <t>Daily Journal: </t><span t-esc="date_from"/> / <span t-esc="date_to"/>
+                </div>
+                <div class="col-xs-5 text-center">
+                    <span t-esc="company.name"/>
+                </div>
+                <div class="col-xs-3 text-right">
+                    <ul class="list-inline">
+                        <li><span class="page"/></li>
+                        <li>/</li>
+                        <li><span class="topage"/></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <t t-raw="0" />
+    </template>
+
+    <template id="report_financial_line_journal_summary" inherit_id="account_reports.report_financial_line" primary="True">
+        <xpath expr="//td[@t-att-class='tdclass']" position="replace"/>
+
+        <t t-if="a['type'] != 'total'" position="replace">
+            <t t-if="a['type'] != 'total'">
+                <t t-if="context.get_report_obj().get_name() == 'journal_summary'">
+                    <t t-if="len(columns_types) != column and len(columns_types)-1 != column">
+                        <td t-att-class="columns_types[column - 1] == 'number' and 'text-right' or columns_types[column - 1] == 'text' and 'text-left' or 'text-center'"
+                            style="white-space: nowrap;" t-att-summary="context._get_summary(column)">
+                            <span class="annotable" t-att-style="style">
+                                <t t-raw="c"/>
+                                <t t-call="account_reports.report_financial_footnote_sup"/>
+                            </span>
+                        </td>
+                    </t>
+                    <t t-if="len(columns_types)-1 == column">
+                        <td t-att-class="columns_types[column - 1] == 'number' and 'text-right' or columns_types[column - 1] == 'text' and 'text-right' or 'text-center'"
+                            style="white-space: nowrap;" t-att-summary="context._get_summary(column)">
+                            <span class="annotable" t-att-style="style">
+                                <t t-raw="c"/>
+                                <t t-call="account_reports.report_financial_footnote_sup"/>
+                            </span>
+                        </td>
+                    </t>
+                    <t t-if="len(columns_types) == column">
+                        <td t-att-class="columns_types[column - 1] == 'number' and 'text-right' or columns_types[column - 1] == 'text' and 'text-right' or 'text-center'"
+                            style="white-space: nowrap;" t-att-summary="context._get_summary(column)">
+                            <span class="annotable" t-att-style="style">
+                                <t t-raw="c"/>
+                                <t t-call="account_reports.report_financial_footnote_sup"/>
+                            </span>
+                        </td>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_financial_body_journal_summary" inherit_id="account_reports.report_financial_body" primary="True">
+        <xpath expr="//h2" position="replace">
+        </xpath>
+        <xpath expr="//div[@class='row']" position="replace">
+        </xpath>
+        <xpath expr="//h4" position="replace">
+        </xpath>
+        <table width='100%' t-att-class="' '.join(['o_account_reports_table', report.get_name() in ['aged_receivable', 'aged_payable'] and 'table-striped' or ''])" position="attributes">
+            <attribute name="style">font-family: 'Arial'; font-size:0.9em;line-height: normal;</attribute>
+        </table>
+        <xpath expr="//table/thead" position="replace">
+            <thead>
+                <tr>
+                    <t t-set="column" t-value="0" />
+                    <t t-foreach="context.get_column_row_1()" t-as="column_name">
+                        <t t-set="column" t-value="column + 1" />
+                        <th t-att-class="context.get_columns_types()[column - 1] == 'number' and 'text-right' or context.get_columns_types()[column - 1] == 'text' and  'text-left' or 'text-center'" t-raw="column_name" t-att-width="context.get_columns_types()[column - 1] == 'number' and '1%' or ''" style='padding-left: 15px;border-bottom: thin none;' t-att-summary="context._get_summary(column)"/>
+                    </t>
+                </tr>
+                <tr>
+                    <t t-set="column" t-value="0" />
+                    <t t-foreach="context.get_column_row_2()" t-as="column_name">
+                        <t t-set="column" t-value="column + 1" />
+                        <!--<th t-att-class="context.get_columns_types()[column - 1] == 'number' and 'text-right' or context.get_columns_types()[column - 1] == 'text' and  'text-left' or 'text-center'" t-raw="column_name" t-att-width="context.get_columns_types()[column - 1] == 'number' and '1%' or ''" style='padding-left: 15px;border-bottom: thin none;' t-att-summary="context._get_summary(column)"/>-->
+                        <t t-if="len(context.get_column_row_2()) == column">
+                            <th t-att-class="context.get_columns_types()[column - 1] == 'number' and 'text-right' or context.get_columns_types()[column - 1] == 'text' and  'text-right' or 'text-center'"
+                                t-raw="column_name"
+                                t-att-width="context.get_columns_types()[column - 1] == 'number' and '1%' or ''"
+                                style='padding-left: 15px;' t-att-summary="context._get_summary(column)"/>
+                        </t>
+                        <t t-if="len(context.get_column_row_2())-1 == column">
+                            <th t-att-class="context.get_columns_types()[column - 1] == 'number' and 'text-right' or context.get_columns_types()[column - 1] == 'text' and  'text-right' or 'text-center'"
+                                t-raw="column_name"
+                                t-att-width="context.get_columns_types()[column - 1] == 'number' and '1%' or ''"
+                                style='padding-left: 15px;' t-att-summary="context._get_summary(column)"/>
+                        </t>
+                        <t t-if="len(context.get_column_row_2()) != column and len(context.get_column_row_2())-1 != column">
+                            <th t-att-class="context.get_columns_types()[column - 1] == 'number' and 'text-right' or context.get_columns_types()[column - 1] == 'text' and  'text-left' or 'text-center'"
+                                t-raw="column_name"
+                                t-att-width="context.get_columns_types()[column - 1] == 'number' and '1%' or ''"
+                                style='padding-left: 15px;' t-att-summary="context._get_summary(column)"/>
+                        </t>
+                    </t>
+                </tr>
+            </thead>
+        </xpath>
+        <xpath expr="//t[@t-call='account_reports.report_financial_line']" position="replace">
+            <t t-call='journal_summary_report.report_financial_line_journal_summary' />
+        </xpath>
+    </template>
+
+    <template id="report_financial_journal_summary" inherit_id="account_reports.report_financial" primary="True">
+        <xpath expr="//t[@t-call='account_reports.report_financial_body']" position="replace">
+            <div class="page">
+                <t t-call='journal_summary_report.report_financial_body_journal_summary' />
+            </div>
+        </xpath>
+    </template>
+
+    <template id="report_financial_letter_journal_summary" inherit_id="account_reports.report_financial_letter" primary="True">
+        <xpath expr="//t[@t-call='account_reports.report_financial']" position="replace">
+            <t t-call='journal_summary_report.report_financial_journal_summary' />
+        </xpath>
+    </template>
+
+</data>
+</odoo>

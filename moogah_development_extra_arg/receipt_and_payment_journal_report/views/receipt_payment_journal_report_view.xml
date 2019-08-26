@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="action_payment_journal_report" model="ir.actions.client">
+			<field name="name">Payment Journal Report</field>
+			<field name="tag">account_report_generic</field>
+			<field name="context"
+				eval="{'url': '/account_reports/output_format/payment_journal/1', 'addActiveId': True, 'model': 'payment.journal.report'}" />
+		</record>
+
+		<record id="action_receipt_journal_report" model="ir.actions.client">
+			<field name="name">Receipt Journal Report</field>
+			<field name="tag">account_report_generic</field>
+			<field name="context"
+				eval="{'url': '/account_reports/output_format/receipt_journal/1', 'addActiveId': True, 'model': 'receipt.journal.report'}" />
+		</record>
+
+		<record id="receipt_payment_journal_report_type" model="account.report.type">
+			<field name="date_range" eval="True" />
+			<field name="extra_options" eval="False" />
+			<field name="comparison" eval="False" />
+		</record>
+
+	</data>
+</odoo>

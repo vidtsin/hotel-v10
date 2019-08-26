@@ -1,0 +1,78 @@
+<odoo>
+    <record id="view_account_journal_form2" model="ir.ui.view">
+        <field name="name">view.account.journal.form2</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <page name="advanced_settings" position="after" >
+                <page name="export_settings" string="Export" attrs="{'invisible': [('type', 'not in', ('bank','cash'))]}">
+                    <group>
+                        <group>
+                            <field name="company_bank_id"/>
+                            <field name="account_bank_export"/>
+                        </group>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+    <record id="action_account_exports" model="ir.actions.act_window">
+        <field name="name">Account Exports</field>
+        <field name="res_model">account.exports</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain" eval="False"/>
+        <field name="view_id" ref=""/>
+    </record>
+
+    <menuitem action="action_account_exports" id="menu_account_exports" parent="account.account_account_menu" sequence="10"/>
+
+    <record id="view_users_form2" model="ir.ui.view">
+        <field name="name">view.users.form2</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="allow_mod_export"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_payment_group_form2" model="ir.ui.view">
+        <field name="name">view.account.payment.group.form</field>
+        <field name="model">account.payment.group</field>
+        <field name="inherit_id" ref="account_payment_group.view_account_payment_group_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="txt_export_date" attrs="{'invisible':[('partner_type', '=', 'customer')]}"/>
+                <field name="export_reference" attrs="{'invisible':[('partner_type', '=', 'customer')]}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="account_export_wizard" model="ir.ui.view">
+        <field name="model">account.export.wizard</field>
+        <field name="name">account.export.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="export_type_id" />
+                    <field name="export_reference" />
+                </group>
+                <footer>
+                    <button name="doit" string="Generate TXT" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="launch_the_wizard"
+        name="Exportar a Banco"
+        src_model="account.payment.group"
+        res_model="account.export.wizard"
+        view_mode="form"
+        target="new"
+        key2="client_action_multi"/>
+
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template id="assets_backend2" name="web_calendar assets2" inherit_id="web.assets_backend">
+       <xpath expr="." position="inside">
+           <script type="text/javascript" src="/calendar_working_hours/static/src/js/fullcalendar.js"></script>
+       </xpath>
+    </template>
+</odoo>

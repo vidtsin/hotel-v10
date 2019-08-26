@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_excel_citi_extended" model="ir.ui.view">
+            <field name="name">excel.citi.extended.form</field>
+            <field name="model">excel.citi.extended</field>
+            <field name="arch" type="xml">
+                <form string="Excel Report file">
+                    <group>
+                        <field name="excel_file_p_cbte" readonly="1" filename="file_name_p_cbte"/>
+                        <field name="file_name_p_cbte" invisible="1"/>
+                        <field name="excel_file_p_alic" readonly="1" filename="file_name_p_alic"/>
+                        <field name="file_name_p_alic" invisible="1"/>
+                        <field name="excel_file_p_imp" readonly="1" filename="file_name_p_imp"/>
+                        <field name="file_name_p_imp" invisible="1"/>
+                        <field name="excel_file_v_cbte" readonly="1" filename="file_name_v_cbte"/>
+                        <field name="file_name_v_cbte" invisible="1"/>
+                        <field name="excel_file_v_alic" readonly="1" filename="file_name_v_alic"/>
+                        <field name="file_name_v_alic" invisible="1"/>
+                        <field name="errors" readonly="1" filename="file_errors"/>
+                        <field name="file_errors" invisible="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_excel_form" model="ir.actions.act_window">
+            <field name="name">Exportacion CITI</field>
+            <field name="view_id" ref="view_excel_citi_extended"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="res_model">excel.citi.extended</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="citi_report_form" model="ir.ui.view">
+            <field name="model">vitt_sales_reports.reportciti</field>
+            <field name="name">citi.report.wizzard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                    </group>
+                    <footer>
+                        <button name="Print_citi" string="Exportar CITI" type="object"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- xml excel -->
+        <record id="view_excel_form_extended" model="ir.ui.view">
+            <field name="name">excel.extended.form</field>
+            <field name="model">excel.extended</field>
+            <field name="arch" type="xml">
+                <form string="Excel Report file">
+                    <group>
+                        <!--<p>-->
+                        <field name="excel_file" readonly="1" filename="file_name"/>
+                        <field name="file_name" invisible="1"/>
+                        <!--</p>
+                        <p>
+                        <field name="excel_file2" readonly="1" filename="file_name2"/>
+                        <field name="file_name2" invisible="1"/>
+                        </p>-->
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_sire_form_extended" model="ir.ui.view">
+            <field name="name">sire.extended.form</field>
+            <field name="model">sire.extended</field>
+            <field name="arch" type="xml">
+                <form string="Excel Report file">
+                    <group>
+                        <field name="excel_file" readonly="1" filename="file_name"/>
+                        <field name="file_name" invisible="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_sicore_form_extended" model="ir.ui.view">
+            <field name="name">sicore.extended.form</field>
+            <field name="model">sicore.extended</field>
+            <field name="arch" type="xml">
+                <form string="TXT Report file">
+                    <group>
+                        <field name="excel_file" readonly="1" filename="file_name"/>
+                        <field name="file_name" invisible="1"/>
+                        <field name="excel_file2" readonly="1" filename="file_name2"/>
+                        <field name="file_name2" invisible="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_excel_form" model="ir.actions.act_window">
+            <field name="name">Reportes Excel</field>
+            <field name="view_id" ref="view_excel_form_extended"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="res_model">excel.extended</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="action_sire_form" model="ir.actions.act_window">
+            <field name="name">Reportes SIRE</field>
+            <field name="view_id" ref="view_sire_form_extended"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="res_model">excel.extended</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="action_sicore_form" model="ir.actions.act_window">
+            <field name="name">Reportes SICORE</field>
+            <field name="view_id" ref="view_sicore_form_extended"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="res_model">sicore.extended</field>
+            <field name="target">new</field>
+        </record>
+
+        <report
+            id="slvat_account_invoices"
+            model="account.invoice"
+            string="Reporte de IVA VENTAS"
+            report_type="qweb-pdf"
+            name="vitt_sales_reports.reportvat"
+            file="vitt_sales_reports.reportvat"
+            menu="False"
+        />
+
+        <report
+            id="plvat_account_invoices"
+            model="account.invoice"
+            string="Reporte de IVA Compras"
+            report_type="qweb-pdf"
+            name="vitt_sales_reports.reportvatpl"
+            file="vitt_sales_reports.reportvatpl"
+            menu="False"
+        />
+
+        <record id="sl_vat_report_form" model="ir.ui.view">
+            <field name="model">vitt_sales_reports.reportvat</field>
+            <field name="name">sales.report.wizzard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="vatcode_id" />
+                        <field name="journal_ids" widget="many2many_tags" />
+                        <field name="det_level" widget="radio"/>
+                    </group>
+                    <footer>
+                        <!--button string="Ejecutar" name="ex_salesvatreport" type="object" class="oe_highlight"/>
+                        or-->
+                        <button name="Print_to_excel" string="Print Excel" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="pl_vat_report_form" model="ir.ui.view">
+            <field name="model">vitt_sales_reports.reportvatpl</field>
+            <field name="name">sales.report.wizzard2</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="vatcode_id" />
+                        <field name="journal_ids" widget="many2many_tags"/>
+                        <field name="det_level" widget="radio"/>
+                    </group>
+                    <footer>
+                        <!--button string="Ejecutar" name="ex_salesvatreport" type="object" class="oe_highlight"/>
+                        or-->
+                        <button name="Print_to_excel" string="Print Excel" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="SIRE_report_form" model="ir.ui.view">
+            <field name="model">vitt_sales_reports.reportsire</field>
+            <field name="name">sire.report.wizzard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="wh_id" />
+                        <field name="vepaym" modifiers="{}"/>
+                        <field name="cupaym" modifiers="{}"/>
+                    </group>
+                    <footer>
+                        <button name="sire_to_txt" string="Exportar TXT" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="sicore_report_form" model="ir.ui.view">
+            <field name="model">vitt_sales_reports.reportsicore</field>
+            <field name="name">sicore.report.wizzard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="wh_code" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                    </group>
+                    <footer>
+                        <button name="sicore_to_txt" string="Exportar TXT" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="SIRE_report_form" model="ir.ui.view">
+            <field name="model">vitt_sales_reports.reportsire</field>
+            <field name="name">sire.report.wizzard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="wh_id" />
+                        <field name="vepaym" modifiers="{}"/>
+                        <field name="cupaym" modifiers="{}"/>
+                    </group>
+                    <footer>
+                        <button name="sire_to_txt" string="Exportar TXT" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="SIRE_report_form" model="ir.ui.view">
+            <field name="model">vitt_sales_reports.reportsifere</field>
+            <field name="name">sifere.report.wizzard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="wh_id" widget="many2many_tags"/>
+                        <field name="jurisd_id" />
+                    </group>
+                    <footer>
+                        <button name="sifere_to_txt" string="Exportar TXT" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="SIFERE_report_form" model="ir.ui.view">
+            <field name="model">vitt_sales_reports.reportsifere.vtas</field>
+            <field name="name">sifere.report.wizzard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="wh_id" widget="many2many_tags"/>
+                        <field name="jurisd_id" />
+                    </group>
+                    <footer>
+                        <button name="sifere_vtas_to_txt" string="Exportar TXT" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="CITI_SL_Report_action" model="ir.actions.act_window">
+            <field name="name">Exportacion del CITI</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vitt_sales_reports.reportciti</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="SIFERE_Report_action" model="ir.actions.act_window">
+            <field name="name">SIFERE Percepciones - Proveedores</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vitt_sales_reports.reportsifere</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="SIFERE_Report_action_vtas" model="ir.actions.act_window">
+            <field name="name">SIFERE Percepciones - Retenciones en Recibos</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vitt_sales_reports.reportsifere.vtas</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="VAT_SL_Report_action" model="ir.actions.act_window">
+            <field name="name">Reporte IVA Ventas</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vitt_sales_reports.reportvat</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="VAT_PL_Report_action" model="ir.actions.act_window">
+            <field name="name">Reporte IVA Compras</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vitt_sales_reports.reportvatpl</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="SIRE_Report_action" model="ir.actions.act_window">
+            <field name="name">SIRE - Form 2004</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vitt_sales_reports.reportsire</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="Sicore_Report_action" model="ir.actions.act_window">
+            <field name="name">Sicore Compras</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vitt_sales_reports.reportsicore</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- QWeb Reports -->
+        <menuitem name="Reportes ARG"
+            id="menu_finance_vatreports"
+            parent="account.menu_finance"
+            sequence="6"
+        />
+        <menuitem name="TAX Exports"
+            id="menu_tax_exports"
+            parent="vitt_sales_reports.menu_finance_vatreports"
+            sequence="7"
+        />
+        <menuitem name="Tax Reports"
+            id="menu_tax_reports"
+            parent="vitt_sales_reports.menu_finance_vatreports"
+            sequence="7"
+        />
+        <menuitem name="SICORE - Compras"
+            id="sicore_Compras"
+            parent="menu_tax_exports"
+            action="Sicore_Report_action"
+            sequence="7"
+        />
+
+        <menuitem name="Libro IVA Ventas"
+            id="VAT_Reports_SL"
+            parent="menu_tax_reports"
+            action="VAT_SL_Report_action"
+            sequence="7"
+        />
+
+        <menuitem name="Exportaciones CITI"
+            id="CITI_Reports_SL"
+            parent="menu_tax_exports"
+            action="CITI_SL_Report_action"
+            sequence="8"
+        />
+
+        <menuitem name="SIRE - Form 2004"
+            id="SIRE_form_2004"
+            parent="menu_tax_exports"
+            action="SIRE_Report_action"
+            sequence="9"
+        />
+
+        <menuitem name="SIFERE Percepciones - Proveedores"
+            id="SIFERE_PL"
+            parent="menu_tax_exports"
+            action="SIFERE_Report_action"
+            sequence="11"
+        />
+
+        <menuitem name="SIFERE Percepciones - Retenciones en Recibos"
+            id="SIFERE_SL"
+            parent="menu_tax_exports"
+            action="SIFERE_Report_action_vtas"
+            sequence="12"
+        />
+
+        <menuitem name="Libro IVA Compras"
+            id="VAT_Reports_PL"
+            parent="menu_tax_reports"
+            action="VAT_PL_Report_action"
+            sequence="10"
+        />
+
+        <record id="view_country_state_form" model="ir.ui.view">
+            <field name="name">res.country.state.form</field>
+            <field name="model">res.country.state</field>
+            <field name="inherit_id" ref="base.view_country_state_form"/>
+            <field name="arch" type="xml">
+                <group>
+                    <field name="afip_code"/>
+                </group>
+            </field>
+        </record>
+
+
+        <!-- ARCIBA NORM CODES-->
+        <record id="sicore_norm_code_tree" model="ir.ui.view">
+            <field name="name">sicore.norm.code.tree</field>
+            <field name="model">sicore.norm.codes</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="operation_type"/>
+                    <field name="name"/>
+                    <field name="comment"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="act_arciba_norm_codes" model="ir.actions.act_window">
+            <field name="name">ARCIBA - Norm Codes</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="res_model">sicore.norm.codes</field>
+        </record>
+
+        <menuitem name="ARCIBA - Norm Codes"
+            action="act_arciba_norm_codes"
+            id="menu_action_arciba_norm_codes"
+            sequence="12"
+            parent="l10n_ar_account.menu_afip_config"
+        />
+
+
+
+        <!-- ARCIBA -->
+        <record id="arciba_report_wizard" model="ir.ui.view">
+            <field name="model">arciba.report.wizard</field>
+            <field name="name">arciba.report.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="wh_code" />
+                        <field name="percep_code" widget="many2many_tags"/>
+                        <field name="do_percep" />
+                        <field name="do_wh" />
+                    </group>
+                    <footer>
+                        <button name="arciba_to_txt" string="Exportar a TXT" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="act_arciba_report" model="ir.actions.act_window">
+            <field name="name">Arciba Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">arciba.report.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="ARCIBA - Withholdings/Perceptions"
+            action="act_arciba_report"
+            id="menu_action_arciba_report"
+            sequence="12"
+            parent="menu_tax_exports"
+        />
+
+        <record id="arciba_customs_report_wizard" model="ir.ui.view">
+            <field name="model">arciba2.report.wizard</field>
+            <field name="name">arciba2.report.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="tax_ids" widget="many2many_tags"/>
+                        <field name="jurisdiction_code_ids" widget="many2many_tags"/>
+                    </group>
+                    <footer>
+                        <button name="arciba2_to_txt" string="Exportar a TXT" type="object"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="act_arciba_customs_report" model="ir.actions.act_window">
+            <field name="name">SIFERE Customs Perceptions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">arciba2.report.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="SIFERE - Custom Perceptions"
+            action="act_arciba_customs_report"
+            id="menu_action_arciba_customs_report"
+            sequence="12"
+            parent="menu_tax_exports"
+        />
+
+
+
+
+        <!-- ARBA -->
+        <record id="arba_report_wizard" model="ir.ui.view">
+            <field name="model">arba.report.wizard</field>
+            <field name="name">arba.report.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="wh" invisible="1"/>
+                        <field name="percep" invisible="1"/>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="wh_code" attrs="{'invisible': [('wh', '=', False)]}"/>
+                        <field name="percep_code" attrs="{'invisible': [('percep', '=', False)]}" widget="many2many_tags"/>
+                        <field name="oper_type" />
+                    </group>
+                    <footer>
+                        <button name="arba_percep_to_txt" string="Exportar ARBA Percepciones" type="object" attrs="{'invisible': [('percep', '=', False)]}"/>
+                        <button name="arba_wh_to_txt" string="Exportar ARBA Retenciones" type="object" attrs="{'invisible': [('wh', '=', False)]}"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="act_arba_perc_report" model="ir.actions.act_window">
+            <field name="name">Arba Perceptions Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">arba.report.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'default_percep': True}</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="ARBA Percepciones"
+            action="act_arba_perc_report"
+            id="menu_action_arba_perc_report"
+            sequence="12"
+            parent="menu_tax_exports"
+        />
+
+        <record id="act_arba_wh_report" model="ir.actions.act_window">
+            <field name="name">Arba Withholdings Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">arba.report.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'default_wh': True}</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="ARBA Withholdings"
+            action="act_arba_wh_report"
+            id="menu_action_arba_wh_report"
+            sequence="12"
+            parent="menu_tax_exports"
+        />
+
+
+
+
+        <record id="action_invoice_refund_out_tree_nc" model="ir.actions.act_window">
+            <field name="name">Invoices</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban,calendar,graph,pivot</field>
+            <field name="view_id" ref="account.invoice_tree"/>
+            <field name="domain">[('type','in', ['out_refund']), ('state', 'not in', ['draft', 'cancel'])]</field>
+            <field name="context">{'default_type':'out_refund', 'type':'out_refund', 'journal_type': 'sale'}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+        </record>
+
+        <record id="action_invoice_refund_out_tree_tree_nc" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account.invoice_tree"/>
+            <field name="act_window_id" ref="action_invoice_refund_out_tree_nc"/>
+        </record>
+
+        <record id="action_invoice_refund_out_tree_form_nc" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account.invoice_form"/>
+            <field name="act_window_id" ref="action_invoice_refund_out_tree_nc"/>
+        </record>
+
+
+
+
+
+        <record id="action_invoice_refund_in_tree_nc" model="ir.actions.act_window">
+            <field name="name">Invoices</field>
+            <field name="res_model">account.invoice</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,kanban,calendar,graph,pivot</field>
+            <field name="view_id" ref="account.invoice_supplier_tree"/>
+            <field name="domain">[('type','in', ['in_refund']), ('state', 'not in', ['draft', 'cancel'])]</field>
+            <field name="context">{'default_type':'in_refund', 'type':'in_refund', 'journal_type': 'purchase'}</field>
+            <field name="search_view_id" ref="account.view_account_invoice_filter"/>
+        </record>
+
+        <record id="action_invoice_refund_in_tree_tree_nc" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="account.invoice_supplier_tree"/>
+            <field name="act_window_id" ref="action_invoice_refund_in_tree_nc"/>
+        </record>
+
+        <record id="action_invoice_refundin_tree_form_nc" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account.invoice_supplier_form"/>
+            <field name="act_window_id" ref="action_invoice_refund_in_tree_nc"/>
+        </record>
+
+
+
+
+
+        <menuitem name="Credit Notes"
+            id="nc_menu_sl_ledger"
+            parent="account.menu_finance_receivables"
+            action="action_invoice_refund_out_tree_nc"
+            sequence="2"
+        />
+        <menuitem name="Credit Notes"
+            id="nc_menu_pl_ledger"
+            parent="account.menu_finance_payables"
+            action="action_invoice_refund_in_tree_nc"
+            sequence="2"/>
+
+
+  </data>
+</odoo>

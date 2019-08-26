@@ -1,0 +1,51 @@
+<odoo>
+
+    <record id="ret_padron_form" model="ir.ui.view">
+        <field name="name">ret.padron.form</field>
+        <field name="model">ret.padron</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="main_id_number"/>
+                        <field name="issue_date"/>
+                        <field name="sdate"/>
+                        <field name="edate"/>
+                        <field name="type"/>
+                        <field name="percep_rate"/>
+                        <field name="whold_rate"/>
+                        <field name="percep_group"/>
+                        <field name="whold_group"/>
+                     </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="ret_padron_tree" model="ir.ui.view">
+        <field name="name">ret.padron.tree</field>
+        <field name="model">ret.padron</field>
+        <field name="priority">2</field>
+        <field name="arch" type="xml">
+            <tree string="Padron AGIP">
+                <field name="main_id_number"/>
+                <field name="issue_date"/>
+                <field name="sdate"/>
+                <field name="edate"/>
+                <field name="percep_rate"/>
+                <field name="whold_rate"/>
+                <!--button name="ex_import_padron" string="Import Padron" type="object"/-->
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_padron_menu" model="ir.actions.act_window">
+        <field name="name">Padron Agip</field>
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">ret.padron</field>
+    </record>
+
+    <menuitem name="Padrones" id="padron_menu" parent="account.menu_finance" sequence="71"/>
+    <menuitem action="action_padron_menu" name="Padrones AGIP" id="padron_submenu" parent="vitt_agip_service.padron_menu" sequence="1"/>
+</odoo>

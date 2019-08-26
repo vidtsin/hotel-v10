@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="bi_partner_transaction_report_extended_backend" inherit_id="web.assets_backend" active="True">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/bi_partner_transaction_report/static/src/js/report_extended.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

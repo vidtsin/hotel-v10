@@ -1,0 +1,2 @@
+"id","iso_code","date_format","time_format","grouping","code","name","decimal_point","thousands_sep"
+"base.lang_es_AR","es_AR","%d/%m/%Y","%H:%M:%S","[3,0]","es_AR","Spanish (AR) / Español (AR)",".",""

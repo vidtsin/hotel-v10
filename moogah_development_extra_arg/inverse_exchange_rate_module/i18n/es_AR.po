@@ -1,0 +1,421 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* inverse_exchange_rate_module
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-16 16:11+0000\n"
+"PO-Revision-Date: 2019-01-16 13:22-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.8\n"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_purchase_config_settings_group_use_manual_exchange_rate
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_sale_config_settings_group_use_manual_exchange_rate
+#: model:ir.model.fields,help:inverse_exchange_rate_module.field_purchase_config_settings_group_use_manual_exchange_rate
+#: model:ir.model.fields,help:inverse_exchange_rate_module.field_sale_config_settings_group_use_manual_exchange_rate
+msgid "Allow the use of Manual Exchange Rates"
+msgstr "Permitir el uso de Tipos de Cambio Manuales"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_anticipate
+msgid "Anticipate?"
+msgstr "Anticipos?"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_invoice_manual_currency_rate_active
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_manual_currency_rate_active
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_manual_currency_rate_active
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_purchase_order_manual_currency_rate_active
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_sale_order_manual_currency_rate_active
+msgid "Apply Manual Exchange"
+msgstr "Aplicar Tipos de Cambio Manuales"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_company_currency_id
+msgid "Company Currency"
+msgstr "Moneda de Compañía"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_account_abstract_payment
+msgid "Contains the logic shared between models which allows to register payments"
+msgstr "Contiene la lógica compartida entre los modelos que permiten el registro de pagos"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment.py:188
+#, python-format
+msgid "Counterpart"
+msgstr "Counterpart"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_res_currency
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_account_payment_group_search2
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_res_currency_rate
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_currency_rate
+msgid "Currency Rate"
+msgstr "T.C. Moneda"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:315
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:325
+#, python-format
+msgid "Currency exchange rate difference"
+msgstr "Diferencias x T.C. de Moneda"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_account_payment_group_anticipate_tree
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.actions.act_window,name:inverse_exchange_rate_module.action_account_payment_group_anticipate
+#: model:ir.ui.menu,name:inverse_exchange_rate_module.menu_action_account_payments_group_anticipate
+msgid "Customer Anticipate List"
+msgstr "Lista de Anticipos Clientes"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_edit_reference
+msgid "Edit Prepayment  Reference?"
+msgstr "Editar la Referencia del Anticipo?"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_edit_rate
+msgid "Edit Rates?"
+msgstr "Editar los T.C.?"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_edit_billing_users
+msgid "Edit billing user?"
+msgstr "Editar al usuario?"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:97
+#, python-format
+msgid "El soporte para un 3er moneda en Pagos no está implementado. Por favor, realice transacciones considerando solo 2 monedas"
+msgstr "El soporte para un 3er moneda en Pagos no está implementado. Por favor, realice transacciones considerando solo 2 monedas"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,help:inverse_exchange_rate_module.field_account_payment_group_tot_in_currency
+msgid "Este campo muestra el total a pagar según la moneda y TC especificados en el encabezado del Pago/Recibo"
+msgstr "Este campo muestra el total a pagar según la moneda y TC especificados en el encabezado del Pago/Recibo"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_exchange_difference
+msgid "Exchange  Differences"
+msgstr "Diferencias por T.C."
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_exchange_difference_aml_id
+msgid "Exchange Difference line"
+msgstr "Línea de Diferencias por T.C."
+
+#. module: inverse_exchange_rate_module
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_purchase_configuration
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_sales_config_inherit_exchange_rate
+msgid "Exchange Rate Options"
+msgstr "Opciones para Tipos de Cambio"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_invoice_manual_currency_rate
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_manual_currency_rate
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_res_currency_inverse_rate
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_res_currency_rate_inverse_rate
+msgid "Inverse Rate"
+msgstr "Tipo de Cambio "
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_inv_currency_id
+msgid "Invoice Currency"
+msgstr "Moneda de Factura"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea de factura"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_account_invoice_refund
+msgid "Invoice Refund"
+msgstr "Nota de Crédito"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:290
+#, python-format
+msgid "Invoices currency is not among the payments currency"
+msgstr "La moneda de la factura no está incluida en la moneda de los pagos"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_account_move_line
+msgid "Journal Item"
+msgstr "Apunte Contable"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_purchase_config_settings_keep_exchange_rate
+msgid "Keep the Exchange Rate from Quotations and Purchase Order into Vendor Bills"
+msgstr "Utilizar T.C. desde Cotizaciones y Ordenes de Compra para Facturas de Proveedor"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_sale_config_settings_keep_exchange_rate
+msgid "Keep the Exchange Rate from Quotations and Sales Order into Invoices"
+msgstr "Utilizar T.C. desde Cotizaciones y Ordenes de Ventas para Facturas de Clientes"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_manual_currency_rate
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_purchase_order_manual_currency_rate
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_sale_order_manual_currency_rate
+msgid "Manual Rate"
+msgstr "T.C. Manual"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:276
+#, python-format
+msgid "More than two currencies are not allowed on payments lines"
+msgstr "No están permitidas más de dos monedas en líneas de pagos"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_paid_company_currency
+msgid "Paid in Company Currency "
+msgstr "Pagado en Moneda de Compañía"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_paid_payment_currency
+msgid "Paid in Payment Currency "
+msgstr "Pagado en Moneda del Pago"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_account_partial_reconcile
+msgid "Partial Reconcile"
+msgstr "Conciliación parcial"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_account_payment_group_anticipate_search
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_pay_amount_currency2_id
+msgid "Payment Amount in Payment Currency"
+msgstr "Monto de Pago en Moneda de Pago"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_currency2_id
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_currency2_id
+msgid "Payment Currency"
+msgstr "Moneda de Pago"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_account_payment_group
+msgid "Payment Group"
+msgstr "Grupo de Pago"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:281
+#, python-format
+msgid "Payment lines must use the same currency rate defined on payment group"
+msgstr "Las líneas del pago deben usar el mismo T.C. del Pago en Grupo"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_account_payment
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_account_payment_group_anticipate_search
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:268
+#, python-format
+msgid "Payments/Receipts with invoices in more than one currency are not allowed"
+msgstr "No está permitido ingresar Pagos/Recibos con facturas en más de una moneda"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_invoice.py:21
+#, python-format
+msgid "Please enter currency rate grater than 0 or positive number"
+msgstr "Por favor, ingrese un T.C. mayor a 0 o con valor positivo"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_prepayment_reference
+msgid "Prepayment  Reference"
+msgstr "Referencia Anticipo"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_account_payment_group_search2
+msgid "Prepayments"
+msgstr "Anticipos"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_purchase_order
+msgid "Purchase Order"
+msgstr "Orden de Compra"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Línea de orden de compra"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de Ventas"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de Pedido de Ventas"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_savedf
+msgid "Savedf"
+msgstr "Savedf"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_show_message
+msgid "Show message?"
+msgstr "Mostrar mensaje?"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_account_payment_group_anticipate_search
+msgid "Show reference"
+msgstr "Mostrar referencia"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_account_payment_group_anticipate_search
+msgid "State"
+msgstr "Estado"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.actions.act_window,name:inverse_exchange_rate_module.action_account_payment_group_anticipate_supplier
+#: model:ir.ui.menu,name:inverse_exchange_rate_module.menu_action_account_payments_group_anticipate_supplier
+msgid "Supplier Anticipate List"
+msgstr "Lista de Anticipos Proveedores"
+
+#. module: inverse_exchange_rate_module
+#: sql_constraint:account.payment.group:0
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:412
+#, python-format
+msgid "The Manual Rate can not be negative"
+msgstr "El valor del T.C. Manual no puede ser negativo"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_invoice.py:90
+#: code:addons/inverse_exchange_rate_module/models/account_invoice.py:98
+#, python-format
+msgid "The currency must be the same from Quotations to Invoices"
+msgstr "La moneda debe ser la misma de Cotizaciones a Facturas"
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_invoice.py:88
+#: code:addons/inverse_exchange_rate_module/models/account_invoice.py:96
+#, python-format
+msgid "The manual currency rate must be the same from Quotations to Invoices"
+msgstr "El T.C. Manual debe ser el mismo de Cotizaciones a Facturas"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_tot_in_currency
+msgid "To Pay - Payment Currency"
+msgstr "A Pagar - Moneda de Pago"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_to_pay_company_currency
+msgid "To Pay in Company Currency"
+msgstr "A Pagar en Moneda de Compañía"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_to_pay_company_currency
+msgid "To Pay in Company Currency "
+msgstr "A Pagar en Moneda de Compañía "
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_to_pay_payment_currency
+msgid "To Pay in Payment Currency"
+msgstr "A Pagar en Moneda de Pago"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_to_pay_payment_currency
+msgid "To Pay in Payment Currency "
+msgstr "A Pagar en Moneda de Pago"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_tot_in_company_currency
+msgid "To Pay – Company Currency"
+msgstr "A Pagar - Moneda de Compañía"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_currency_rate
+msgid "Today Exch. Rate"
+msgstr "T.C. del Día"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_account_payment_group_anticipate_tree
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_move_line_tree
+msgid "Total"
+msgstr "Total"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_total_inv_currency2
+msgid "Total in Invoice Currency"
+msgstr "Total en la Moneda de Factura"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model.fields,field_description:inverse_exchange_rate_module.field_account_payment_group_unmatched_amount_payment_currency2
+msgid "Unmatched Amount Payment Currency"
+msgstr "Monto sin Aplicar en Moneda de Pago"
+
+#. module: inverse_exchange_rate_module
+#: model:res.groups,name:inverse_exchange_rate_module.group_use_manual_exchange_rate_purchase
+msgid "Use Manual Exchange Rate in Purchases"
+msgstr "Usar T.C. Manual en Compras"
+
+#. module: inverse_exchange_rate_module
+#: model:res.groups,name:inverse_exchange_rate_module.group_use_manual_exchange_rate
+msgid "Use Manual Exchange Rate in Sales"
+msgstr "Usar T.C. Manual en Ventas"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.ui.view,arch_db:inverse_exchange_rate_module.view_account_payment_group_form
+msgid "We recommend to add a payment reference to identity the unmatched values."
+msgstr "Se recomienda ingresar una referencia al pago para poder identificar los valores sin aplicar."
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:297
+#, python-format
+msgid "You should configure the 'Exchange Rate Journal' in the accounting settings, to manage automatically the booking of accounting entries related to differences between exchange rates."
+msgstr "Ud. debería configurar el \"Diario x Diferencias\" en la configuración de contabilidad, para poder registrar de forma automática los asientos relacionados a las diferencias generadas por tipos de cambio."
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:300
+#, python-format
+msgid "You should configure the 'Gain Exchange Rate Account' in the accounting settings, to manage automatically the booking of accounting entries related to differences between exchange rates."
+msgstr "You should configure the 'Gain Exchange Rate Account' in the accounting settings, to manage automatically the booking of accounting entries related to differences between exchange rates."
+
+#. module: inverse_exchange_rate_module
+#: code:addons/inverse_exchange_rate_module/models/account_payment_group.py:303
+#, python-format
+msgid "You should configure the 'Loss Exchange Rate Account' in the accounting settings, to manage automatically the booking of accounting entries related to differences between exchange rates."
+msgstr "You should configure the 'Loss Exchange Rate Account' in the accounting settings, to manage automatically the booking of accounting entries related to differences between exchange rates."
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_purchase_config_settings
+msgid "purchase.config.settings"
+msgstr "purchase.config.settings"
+
+#. module: inverse_exchange_rate_module
+#: model:ir.model,name:inverse_exchange_rate_module.model_sale_config_settings
+msgid "sale.config.settings"
+msgstr "sale.config.settings"

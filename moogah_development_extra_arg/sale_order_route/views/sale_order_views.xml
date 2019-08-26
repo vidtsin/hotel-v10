@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="view_order_form_inherit_sale_order_route"
+                model="ir.ui.view">
+            <field name="name">sale.order.form.sale.order.route.inherit</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="model">sale.order</field>
+            <field name="arch" type="xml">
+                <field name="payment_term_id" position="after">
+                    <label for="route_id" string="Delivery Process"/>
+                    <div>
+                        <field name="route_id"
+                               domain="[('sale_selectable', '=', True), ('warehouse_ids', 'in', warehouse_id)]"
+                               groups="sale_stock.group_route_so_lines"/>
+                        <button name="action_update" string="Update"
+                                type="object" class="oe_link oe_edit_only"/>
+                    </div>
+                </field>
+                <field name="order_line" position="attributes">
+                    <attribute name="context">{'default_route_id': route_id }
+                    </attribute>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

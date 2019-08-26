@@ -1,0 +1,230 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_official_stock_sequence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-10 16:38+0000\n"
+"PO-Revision-Date: 2019-05-10 13:45-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_qweb_pos
+msgid "Choose POS"
+msgstr "Seleccionar POS"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_qweb_name
+msgid "Code"
+msgstr "Código"
+
+#. module: vitt_official_stock_sequence
+#: code:addons/vitt_official_stock_sequence/models/stock_picking.py:97
+#, python-format
+msgid "Create Backorder?"
+msgstr "Crear Entrega Parcial?"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_create_uid
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_qweb_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_create_date
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_qweb_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: vitt_official_stock_sequence
+#: selection:stock.book,partner_type:0
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_display_name
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_qweb_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_sequence_id
+msgid "Entry Sequence"
+msgstr "Secuencia de Entrada"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_id
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_qweb_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_official_stock_sequence
+#: code:addons/vitt_official_stock_sequence/models/stock_picking.py:79
+#, python-format
+msgid "Immediate Transfer?"
+msgstr "Transferencia Inmediata?"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book___last_update
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_qweb___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_qweb_write_uid
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Modificación por"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_qweb_write_date
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: vitt_official_stock_sequence
+#: code:addons/vitt_official_stock_sequence/models/stock_picking.py:113
+#, python-format
+msgid "No negative quantities allowed"
+msgstr "Cantidades negativas no está permitidas"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_name
+msgid "Nombre"
+msgstr "Nombre"
+
+#. module: vitt_official_stock_sequence
+#: model:res.groups,name:vitt_official_stock_sequence.stock_seq_management
+msgid "Nro Oficial Remitos"
+msgstr "Nro. Oficial Remitos"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_lines_nr
+msgid "Number of Lines"
+msgstr "Número de Líneas"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_partner_type
+msgid "Partner type"
+msgstr "Tipo de Empresa"
+
+#. module: vitt_official_stock_sequence
+#: code:addons/vitt_official_stock_sequence/models/stock_picking.py:65
+#, python-format
+msgid "Please create some Initial Demand or Mark as Todo and create some Operations. "
+msgstr "Por favor, genere una Demanda Inicial o Marcar Por Hacer y genere algunas Operaciones. "
+
+#. module: vitt_official_stock_sequence
+#: code:addons/vitt_official_stock_sequence/models/stock_picking.py:58
+#, python-format
+msgid "Please fill number of lines in stockbook"
+msgstr "Por favor, complete el número de líneas en Talonario Stock"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.actions.act_window,name:vitt_official_stock_sequence.action_menu_sequence_config2
+msgid "Print Template"
+msgstr "Plantilla de Impresión"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.ui.menu,name:vitt_official_stock_sequence.menu_sequence_config_qweb
+msgid "Print templates"
+msgstr "Plantillas de Impresión"
+
+#. module: vitt_official_stock_sequence
+#: selection:stock.book.qweb,pos:0
+msgid "QWEB 1"
+msgstr "QWEB 1"
+
+#. module: vitt_official_stock_sequence
+#: selection:stock.book.qweb,pos:0
+msgid "QWEB 2"
+msgstr "QWEB 2"
+
+#. module: vitt_official_stock_sequence
+#: selection:stock.book.qweb,pos:0
+msgid "QWEB 3"
+msgstr "QWEB 3"
+
+#. module: vitt_official_stock_sequence
+#: selection:stock.book.qweb,pos:0
+msgid "QWEB 4"
+msgstr "QWEB 4"
+
+#. module: vitt_official_stock_sequence
+#: selection:stock.book.qweb,pos:0
+msgid "QWEB 5"
+msgstr "QWEB 5"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.ui.menu,name:vitt_official_stock_sequence.menu_sequence_config
+msgid "STOCKBOOK"
+msgstr "Talonario Stock"
+
+#. module: vitt_official_stock_sequence
+#: code:addons/vitt_official_stock_sequence/models/stock_picking.py:73
+#, python-format
+msgid "Some products require lots/serial numbers, so you need to specify those first!"
+msgstr "Algunos productos requieren lotes/números de serie, Ud. necesita especificar estos para poder continuar!"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_picking_OfficialSerNr
+msgid "Stock Official No."
+msgstr "Nro. Oficial Stock"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.actions.act_window,name:vitt_official_stock_sequence.action_menu_sequence_config
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_picking_stockbook_id
+#: model:ir.ui.menu,name:vitt_official_stock_sequence.menu_sequence_config_stockbook
+msgid "StockBook"
+msgstr "Talonario Stock"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,field_description:vitt_official_stock_sequence.field_stock_book_pos_id
+msgid "Template"
+msgstr "Plantilla"
+
+#. module: vitt_official_stock_sequence
+#: code:addons/vitt_official_stock_sequence/models/stock_picking.py:61
+#, python-format
+msgid "The pick is already validated"
+msgstr "El movimiento ya está validada"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model.fields,help:vitt_official_stock_sequence.field_stock_book_sequence_id
+msgid "This field contains the information related to the numbering of the stock entries of this stockbook."
+msgstr "Este campo contiene la información relacionada a la numeración de movimientos de stock para este talonario de stock."
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model,name:vitt_official_stock_sequence.model_stock_picking
+msgid "Transfer"
+msgstr "Transferir"
+
+#. module: vitt_official_stock_sequence
+#: selection:stock.book,partner_type:0
+msgid "Vendor"
+msgstr "Proveedor"
+
+#. module: vitt_official_stock_sequence
+#: code:addons/vitt_official_stock_sequence/models/stock_picking.py:48
+#, python-format
+msgid "error, nro oficial repetido"
+msgstr "Error, este Nro. Oficial está repetido"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model,name:vitt_official_stock_sequence.model_stock_book
+msgid "stock.book"
+msgstr "stock.book"
+
+#. module: vitt_official_stock_sequence
+#: model:ir.model,name:vitt_official_stock_sequence.model_stock_book_qweb
+msgid "stock.book.qweb"
+msgstr "stock.book.qweb"

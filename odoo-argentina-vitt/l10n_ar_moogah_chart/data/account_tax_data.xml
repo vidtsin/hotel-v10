@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Account Tags -->
+    <data noupdate="True">
+
+        <record id="tag_ar_01" model="account.account.tag">
+            <field name="name">Base Imponible</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_02" model="account.account.tag">
+            <field name="name">Base Imponible - Ventas</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_03" model="account.account.tag">
+            <field name="name">Ventas Gravadas con IVA</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_04" model="account.account.tag">
+            <field name="name">Ventas NO Gravadas (Exoneradas)</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_05" model="account.account.tag">
+            <field name="name">Ventas Gravadas Fuera de Ámbito</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_06" model="account.account.tag">
+            <field name="name">Base Imponible - Compras</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_07" model="account.account.tag">
+            <field name="name">Compras Gravadas con IVA</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_08" model="account.account.tag">
+            <field name="name">Compras NO Gravadas (Exoneradas)</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_09" model="account.account.tag">
+            <field name="name">Compras Gravadas Fuera de Ámbito</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_10" model="account.account.tag">
+            <field name="name">Impuesto General a las Ventas (IVA) Total a Pagar</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_11" model="account.account.tag">
+            <field name="name">Impuesto Pagado</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_12" model="account.account.tag">
+            <field name="name">Impuesto Pagado IVA</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_13" model="account.account.tag">
+            <field name="name">Impuesto Pagado de Exonerados al IVA</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_14" model="account.account.tag">
+            <field name="name">Impuesto Pagado Fuera de Ámbito</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_15" model="account.account.tag">
+            <field name="name">Impuesto Cobrado</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_16" model="account.account.tag">
+            <field name="name">Impuesto Cobrado IVA</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_17" model="account.account.tag">
+            <field name="name">Impuesto Cobrado de Exonerados al IVA</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_18" model="account.account.tag">
+            <field name="name">Impuesto Cobrado Fuera de Ámbito</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_19" model="account.account.tag">
+            <field name="name">Impuesto Nacionales a Pagar</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_20" model="account.account.tag">
+            <field name="name">Impuesto a las Ganancias a Pagar</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_21" model="account.account.tag">
+            <field name="name">Impuesto a los Bienes Personales a Pagar</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_22" model="account.account.tag">
+            <field name="name">Impuesto a la Ganancia Mínima Presunta a Pagar</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_ar_23" model="account.account.tag">
+            <field name="name">Monotributo a Pagar</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="V_27" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 27% Venta</field>
+          <field name="description">27%</field>
+          <field name="amount">27</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">sale</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_27"/>
+          <field name="refund_account_id" ref="2150010"/>
+          <field name="account_id" ref="2150010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_16'), ref('tag_ar_03')])]"/>
+        </record>
+
+        <record id="C_27" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 27% Compra</field>
+          <field name="description">27%</field>
+          <field name="amount">27</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_27"/>
+          <field name="refund_account_id" ref="1130010"/>
+          <field name="account_id" ref="1130010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_12'), ref('tag_ar_07')])]"/>
+        </record>
+
+        <record id="V_105" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 10.5% Venta</field>
+          <field name="description">10.5%</field>
+          <field name="amount">10.5</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">sale</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_10"/>
+          <field name="refund_account_id" ref="2150010"/>
+          <field name="account_id" ref="2150010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_16'), ref('tag_ar_03')])]"/>
+        </record>
+
+        <record id="C_105" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 10.5% Compra</field>
+          <field name="description">10.5%</field>
+          <field name="amount">10.5</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_10"/>
+          <field name="refund_account_id" ref="1130010"/>
+          <field name="account_id" ref="1130010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_07'), ref('tag_ar_12')])]"/>
+        </record>
+
+        <record id="V_5" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 5% Venta</field>
+          <field name="description">5%</field>
+          <field name="amount">5.00</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">sale</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_5"/>
+          <field name="refund_account_id" ref="2150010"/>
+          <field name="account_id" ref="2150010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_16'), ref('tag_ar_03')])]"/>
+        </record>
+
+        <record id="C_5" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 5% Compra</field>
+          <field name="description">5%</field>
+          <field name="amount">5.00</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_5"/>
+          <field name="refund_account_id" ref="1130010"/>
+          <field name="account_id" ref="1130010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_07'), ref('tag_ar_12')])]"/>
+        </record>
+
+        <record id="V_25" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 2.5% Venta</field>
+          <field name="description">2.5%</field>
+          <field name="amount">2.50</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">sale</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_25"/>
+          <field name="refund_account_id" ref="2150010"/>
+          <field name="account_id" ref="2150010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_16'), ref('tag_ar_03')])]"/>
+        </record>
+
+        <record id="C_25" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 2.5% Compra</field>
+          <field name="description">2.5%</field>
+          <field name="amount">2.50</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_25"/>
+          <field name="refund_account_id" ref="1130010"/>
+          <field name="account_id" ref="1130010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_07'), ref('tag_ar_12')])]"/>
+        </record>
+
+        <record id="V_0" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 0% Venta</field>
+          <field name="description">0%</field>
+          <field name="amount">0.00</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">sale</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_0"/>
+          <field name="refund_account_id" ref="2150010"/>
+          <field name="account_id" ref="2150010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_16'), ref('tag_ar_03')])]"/>
+        </record>
+
+        <record id="C_0" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 0% Compra</field>
+          <field name="description">0%</field>
+          <field name="amount">0.00</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_0"/>
+          <field name="refund_account_id" ref="1130010"/>
+          <field name="account_id" ref="1130010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_07'), ref('tag_ar_12')])]"/>
+        </record>
+
+        <record id="V_E" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA Exento Ventas</field>
+          <field name="description">E</field>
+          <field name="amount">0.00</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">sale</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_exento"/>
+          <field name="refund_account_id" ref="2150010"/>
+          <field name="account_id" ref="2150010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_16'), ref('tag_ar_03')])]"/>
+        </record>
+
+        <record id="C_E" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA Exento Compras</field>
+          <field name="description">E</field>
+          <field name="amount">0.00</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_exento"/>
+          <field name="refund_account_id" ref="1130010"/>
+          <field name="account_id" ref="1130010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_07'), ref('tag_ar_12')])]"/>
+        </record>
+
+        <record id="V_NG" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA No Gravado</field>
+          <field name="description">NG</field>
+          <field name="amount">0.00</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">sale</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_no_gravado"/>
+          <field name="refund_account_id" ref="2150010"/>
+          <field name="account_id" ref="2150010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_16'), ref('tag_ar_03')])]"/>
+        </record>
+
+        <record id="C_NG" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA No Gravado</field>
+          <field name="description">NG</field>
+          <field name="amount">0.00</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_no_gravado"/>
+          <field name="refund_account_id" ref="1130010"/>
+          <field name="account_id" ref="1130010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_07'), ref('tag_ar_12')])]"/>
+        </record>
+
+        <record id="P_IIBB" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">Percepción IIBB</field>
+          <field name="description">P.IIBB</field>
+          <field name="amount">3.0</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">sale</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_percepcion_iibb_aplicada"/>
+          <field name="refund_account_id" ref="2151010"/>
+          <field name="account_id" ref="2151010"/>
+        </record>
+
+        <record id="P_IVA" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">Percepción IVA 2%</field>
+          <field name="description">P.IVA</field>
+          <field name="amount">2.0</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_percepcion_iva_sufrida"/>
+          <field name="refund_account_id" ref="1130030"/>
+          <field name="account_id" ref="1130030"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_12')])]"/>
+        </record>
+
+        <record id="c_mt" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">Monotributo Compra</field>
+          <field name="description">MT</field>
+          <field name="amount">0.0</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_c_mt"/>
+        </record>
+
+        <record id="c_cf" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">Consumidor Final</field>
+          <field name="description">CF</field>
+          <field name="amount">0.0</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_c_cf"/>
+        </record>
+
+        <record id="V_21" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 21% Venta</field>
+          <field name="description">21%</field>
+          <field name="amount">21</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">sale</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_21"/>
+          <field name="refund_account_id" ref="2150010"/>
+          <field name="account_id" ref="2150010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_03'), ref('tag_ar_16')])]"/>
+        </record>
+
+        <record id="C_21" model="account.tax.template">
+          <field name="chart_template_id" ref="ar_chart_template"/>
+          <field name="name">IVA 21% Compra</field>
+          <field name="description">21%</field>
+          <field name="amount">21</field>
+          <field name="amount_type">percent</field>
+          <field name="type_tax_use">purchase</field>
+          <field name="tax_group_id" ref="l10n_ar_account.tax_group_iva_21"/>
+          <field name="refund_account_id" ref="1130010"/>
+          <field name="account_id" ref="1130010"/>
+          <field name="tag_ids" eval="[(6,0,[ref('tag_ar_07'), ref('tag_ar_12')])]"/>
+        </record>
+	</data>
+</odoo>

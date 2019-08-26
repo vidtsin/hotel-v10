@@ -1,0 +1,490 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_ar_padron_afip
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-24 17:58+0000\n"
+"PO-Revision-Date: 2017-07-24 15:05-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.3\n"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.actions.act_window,name:l10n_ar_padron_afip.act_afip_activity
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_afip_activity_form
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_afip_activity_tree
+msgid "AFIP activity"
+msgstr "Actividad AFIP"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.actions.act_window,name:l10n_ar_padron_afip.act_afip_concept
+msgid "AFIP concept"
+msgstr "Concepto AFIP"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_afip_concept_form
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_afip_concept_tree
+msgid "AFIP concepts"
+msgstr "Conceptos AFIP"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.actions.act_window,name:l10n_ar_padron_afip.act_afip_tax
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_afip_tax_form
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_afip_tax_tree
+msgid "AFIP tax"
+msgstr "Impuesto AFIP"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity_active
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept_active
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_actividad_monotributo_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_actividad_monotributo_padron
+msgid "Actividad monotributo padron"
+msgstr "Actividad monotributo padron"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_actividades_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_actividades_padron
+msgid "Actividades"
+msgstr "Actividades"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.menu,name:l10n_ar_padron_afip.menu_action_afip_activity
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_account_config_settings
+msgid "Activities"
+msgstr "Actividades"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner,imp_ganancias_padron:0
+#: selection:res.partner,imp_iva_padron:0
+msgid "Activo"
+msgstr "Activo"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner,imp_iva_padron:0
+msgid "Activo no alcanzado"
+msgstr "Activo no alcanzado"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "Are you sure to execute the automatic update of your partners ?"
+msgstr "Esta seguro que desea ejecutar la actualización manual de sus contactos?"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_account_config_settings
+msgid "Argentina Data"
+msgstr "Datos Argentina"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.actions.act_window,name:l10n_ar_padron_afip.action_partner_update
+msgid "Automatic Update from Padron"
+msgstr "Actualización Automática desde Padrón"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_company_arba_cit
+msgid "CIT ARBA"
+msgstr "CIT ARBA"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,help:l10n_ar_padron_afip.field_res_company_arba_cit
+msgid "Clave de Identificación Tributaria de ARBA"
+msgstr "Clave de Identificación Tributaria de ARBA"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity_code
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept_code
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax_code
+msgid "Code"
+msgstr "Código"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model,name:l10n_ar_padron_afip.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.menu,name:l10n_ar_padron_afip.menu_action_afip_concept
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_account_config_settings
+msgid "Concepts"
+msgstr "Conceptos"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,help:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_title_case
+msgid "Converts retreived text fields to Title Case."
+msgstr "Convierte el texto solicitado a formato de Título con Mayúscula"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity_create_uid
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept_create_uid
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax_create_uid
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_create_uid
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity_create_date
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept_create_date
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax_create_date
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_create_date
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity_display_name
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept_display_name
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax_display_name
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_display_name
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_empleador_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_empleador_padron
+msgid "Empleador padron"
+msgstr "Empleador padron"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_estado_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_estado_padron
+msgid "Estado AFIP"
+msgstr "Estado AFIP"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner,imp_ganancias_padron:0
+#: selection:res.partner,imp_iva_padron:0
+msgid "Exento"
+msgstr "Exento"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner,imp_iva_padron:0
+msgid "Exento no alcanzado"
+msgstr "Exento no alcanzado"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_field
+msgid "Field"
+msgstr "Campo"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_field_ids
+msgid "Fields"
+msgstr "Campos"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_field_to_update_ids
+msgid "Fields To Update"
+msgstr "Campos a Actualizar"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner.update.from.padron.wizard,state:0
+msgid "Finished"
+msgstr "Finalizado"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_imp_ganancias_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_imp_ganancias_padron
+msgid "Ganancias"
+msgstr "Ganancias"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity_id
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept_id
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax_id
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_id
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_id
+msgid "ID"
+msgstr "ID"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_imp_iva_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_imp_iva_padron
+msgid "IVA"
+msgstr "IVA"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_impuestos_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_impuestos_padron
+msgid "Impuestos"
+msgstr "Impuestos"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_integrante_soc_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_integrante_soc_padron
+msgid "Integrante Sociedad"
+msgstr "Integrante Sociedad"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity___last_update
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept___last_update
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax___last_update
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field___last_update
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard___last_update
+msgid "Last Modified on"
+msgstr "Ultima Modificación en"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_last_update_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_last_update_padron
+msgid "Last Update Padron"
+msgstr "Ultima Actualización de Padrón"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity_write_uid
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept_write_uid
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax_write_uid
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_write_uid
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_write_uid
+msgid "Last Updated by"
+msgstr "Ultima Actualización por"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity_write_date
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept_write_date
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax_write_date
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_write_date
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_write_date
+msgid "Last Updated on"
+msgstr "Ultima Actualización en"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_monotributo_padron
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_users_monotributo_padron
+msgid "Monotributo"
+msgstr "Monotributo"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_activity_name
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_concept_name
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_afip_tax_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_new_value
+msgid "New value"
+msgstr "Nuevo valor"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner,integrante_soc_padron:0
+#: selection:res.partner,monotributo_padron:0
+msgid "No"
+msgstr "No"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner,imp_ganancias_padron:0
+#: selection:res.partner,imp_iva_padron:0
+msgid "No Inscripto"
+msgstr "No Inscripto"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner,imp_iva_padron:0
+msgid "No alcanzado"
+msgstr "No alcanzado"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner,imp_ganancias_padron:0
+msgid "No corresponde"
+msgstr "No corresponde"
+
+#. module: l10n_ar_padron_afip
+#: code:addons/l10n_ar_padron_afip/wizard/res_partner_update_from_padron_wizard.py:52
+#, python-format
+msgid "No se encontró ningún partner con CUIT para actualizar"
+msgstr "No se encontró ningún cliente/proveedor con CUIT para actualizar"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_old_value
+msgid "Old value"
+msgstr "Valor Antigüo"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid ""
+"Only Partners with cuit are going to be updated.<br/>\n"
+"                            Select the list of fields you want to update."
+msgstr ""
+"Sólo los clientes/proveedor con CUIT serán actualizados.\n"
+"Seleccione la lista de campos que quiere actualizar."
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,help:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_field_to_update_ids
+msgid "Only this fields are going to be retrived and updated"
+msgstr "Solo estos campos van a ser requeridos y actualizados"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner.update.from.padron.wizard,state:0
+msgid "Option"
+msgstr "Opción"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model,name:l10n_ar_padron_afip.model_res_partner
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_partner_id
+msgid "Partner"
+msgstr "Cliente/Proveedor"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_partner_ids
+msgid "Partners"
+msgstr "Clientes/Proveedores"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_account_config_settings
+msgid "Refresh from Padron AFIP"
+msgstr "Actualizar desde Padrón AFIP"
+
+#. module: l10n_ar_padron_afip
+#: code:addons/l10n_ar_padron_afip/res_config.py:41
+#, python-format
+msgid "Resource Type %s not implemented!"
+msgstr "El Tipo de Recurso %s no esta implementado!"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner.update.from.padron.wizard,state:0
+msgid "Selection"
+msgstr "Selección"
+
+#. module: l10n_ar_padron_afip
+#: selection:res.partner,integrante_soc_padron:0
+#: selection:res.partner,monotributo_padron:0
+msgid "Si"
+msgstr "Si"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "Skip these partner"
+msgstr "Omitir Cliente/Proveedor"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_state
+msgid "State"
+msgstr "Provincia"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.menu,name:l10n_ar_padron_afip.menu_action_afip_tax
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_account_config_settings
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "There are no more partners to update for this request..."
+msgstr "No hay mas empresas que actualizar en esta solicitud..."
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_title_case
+msgid "Title Case"
+msgstr "Título con Mayúscula"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "Update Automatically"
+msgstr "Actualizar Automáticamente"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_partner_update_form
+msgid "Update From AFIP"
+msgstr "Actualizar Desde AFIP"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "Update From Padron AFIP"
+msgstr "Actualizar Desde Padrón AFIP"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.actions.act_window,name:l10n_ar_padron_afip.action_base_partner_update_from_padron
+#: model:ir.ui.menu,name:l10n_ar_padron_afip.menu_base_partner_update_from_padron
+msgid "Update Partners From Padron AFP"
+msgstr "Actualizar Empresas desde Padron AFIP"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "Update Selection"
+msgstr "Actualizar Selección"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_wizard_update_constancia
+msgid "Update constancia"
+msgstr "Actualizar Constancia"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "Update with Manual Check"
+msgstr "Actualizar con Revisión Manual"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model.fields,field_description:l10n_ar_padron_afip.field_res_partner_update_from_padron_field_wizard_id
+msgid "Wizard"
+msgstr "Asistente"
+
+#. module: l10n_ar_padron_afip
+#: code:addons/l10n_ar_padron_afip/models/res_company.py:75
+#, python-format
+msgid "You must configure ARBA CIT on company %s"
+msgstr "Ud. debe configurar el CIT de ARBA en la compañía %s"
+
+#. module: l10n_ar_padron_afip
+#: code:addons/l10n_ar_padron_afip/models/res_company.py:71
+#, python-format
+msgid "You must configure CUIT con company %s related partner"
+msgstr "Ud. debe configurar el CUIT en la empresa relacionado a la compañía %s"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model,name:l10n_ar_padron_afip.model_account_config_settings
+msgid "account.config.settings"
+msgstr "account.config.settings"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model,name:l10n_ar_padron_afip.model_afip_activity
+msgid "afip.activity"
+msgstr "afip.activity"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model,name:l10n_ar_padron_afip.model_afip_concept
+msgid "afip.concept"
+msgstr "afip.concept"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model,name:l10n_ar_padron_afip.model_afip_tax
+msgid "afip.tax"
+msgstr "afip.tax"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.ui.view,arch_db:l10n_ar_padron_afip.view_base_partner_update_from_padron_form
+msgid "or"
+msgstr "o"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model,name:l10n_ar_padron_afip.model_res_partner_update_from_padron_field
+msgid "res.partner.update.from.padron.field"
+msgstr "res.partner.update.from.padron.field"
+
+#. module: l10n_ar_padron_afip
+#: model:ir.model,name:l10n_ar_padron_afip.model_res_partner_update_from_padron_wizard
+msgid "res.partner.update.from.padron.wizard"
+msgstr "res.partner.update.from.padron.wizard"

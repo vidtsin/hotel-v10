@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_cron_main_id_number" model="ir.cron">
+        <field name="name">Update Main ID NUmber</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="model" eval="'res.partner'"/>
+        <field name="function" eval="'run_update_main_id_number'"/>
+        <field name="args">()</field>
+    </record>
+
+</odoo>

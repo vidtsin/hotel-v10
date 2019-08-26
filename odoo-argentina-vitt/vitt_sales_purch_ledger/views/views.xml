@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="paperformat_report_pl_ledger" model="report.paperformat">
+            <field name="name">paperformat_report_pl_ledger</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">23</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="paperformat_report_sl_ledger" model="report.paperformat">
+            <field name="name">paperformat_report_sl_ledger</field>
+            <field name="default" eval="True" />
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">23</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report
+            id="html_report_pl_ledger"
+            model="report.pl.ledger"
+            string="Reporte Cuentas por Pagar"
+            report_type="qweb-html"
+            paperformat="paperformat_report_pl_ledger"
+            name="vitt_sales_purch_ledger.html_report_pl_ledger"
+            file="vitt_sales_purch_ledger.html_report_pl_ledger"
+            menu="False"
+        />
+
+        <report
+            id="pdf_report_pl_ledger"
+            model="report.pl.ledger"
+            string="Reporte Cuentas por Pagar"
+            report_type="qweb-pdf"
+            paperformat="paperformat_report_pl_ledger"
+            name="vitt_sales_purch_ledger.pdf_report_pl_ledger"
+            file="vitt_sales_purch_ledger.pdf_report_pl_ledger"
+            menu="False"
+        />
+
+        <report
+            id="html_report_sl_ledger"
+            model="report.sl.ledger"
+            string="Reporte Cuentas por Cobrar"
+            report_type="qweb-html"
+            paperformat="paperformat_report_sl_ledger"
+            name="vitt_sales_purch_ledger.html_report_sl_ledger"
+            file="vitt_sales_purch_ledger.html_report_sl_ledger"
+            menu="False"
+        />
+
+        <report
+            id="pdf_report_sl_ledger"
+            model="report.sl.ledger"
+            string="Reporte Cuentas por Cobrar"
+            report_type="qweb-pdf"
+            paperformat="paperformat_report_sl_ledger"
+            name="vitt_sales_purch_ledger.pdf_report_sl_ledger"
+            file="vitt_sales_purch_ledger.pdf_report_sl_ledger"
+            menu="False"
+        />
+
+       <record id="ledger_pl_report_form" model="ir.ui.view">
+            <field name="model">report.pl.ledger</field>
+            <field name="name">ledger_pl_report_form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="partner_id" widget="many2many_tags"/>
+                    </group>
+                    <group name="main">
+                        <group name="left">
+                            <field name="category_id" widget="many2many_tags"/>
+                            <field name="user_id" />
+                            <field name="analytic_tag_ids" widget="many2many_tags"/>
+                            <field name="currency_id" />
+                            <field name="date" />
+                            <field name="ex_rate_option" />
+                            <field name="sort" />
+                        </group>
+                        <group name="right">
+                            <field name="sl_cred_acc_ids" widget="many2many_tags"/>
+                            <field name="Amounts" />
+                            <field name="on_acc" />
+                            <field name="state" />
+                            <field name="function" />
+                            <field name="ex_rate" attrs="{'invisible': [('ex_rate_option', '!=', 'ex_rate_other')]}"/>
+                        </group>
+                    </group>
+                    <!--group>
+                        <field name="tot_comp_cur" />
+                        <field name="excl_dispute" />
+                        <field name="date_time_print" />
+                    </group-->
+                    <footer>
+                        <button name="ledger_pl_report_html" string="Print to HTML" type="object" class="oe_highlight"/>
+                        <button name="ledger_pl_report_pdf" string="Print to pdf" type="object" class="oe_highlight"/>
+                        <button name="ledger_pl_report_xls" string="Print to Excel" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="ledger_sl_report_form" model="ir.ui.view">
+            <field name="model">report.sl.ledger</field>
+            <field name="name">ledger_sl_report_form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="partner_id" widget="many2many_tags"/>
+                    </group>
+                    <group name="main">
+                        <group name="left">
+                            <field name="category_id" widget="many2many_tags"/>
+                            <field name="user_id" />
+                            <field name="analytic_tag_ids" widget="many2many_tags"/>
+                            <field name="currency_id" />
+                            <field name="date" />
+                        </group>
+                        <group name="right">
+                            <field name="sl_cred_acc_ids" widget="many2many_tags"/>
+                            <field name="Amounts" />
+                            <field name="on_acc" />
+                            <field name="state" />
+                            <field name="function" />
+                            <field name="team_id" />
+                        </group>
+                    </group>
+                    <group>
+                        <field name="tot_comp_cur" />
+                        <field name="excl_dispute" />
+                        <field name="date_time_print" />
+                    </group>
+                    <footer>
+                        <button name="ledger_sl_report_html" string="Print to HTML" type="object" class="oe_highlight"/>
+                        <button name="ledger_sl_report_pdf" string="Print to pdf" type="object" class="oe_highlight"/>
+                        <button name="ledger_sl_report_xls" string="Print to Excel" type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_pl_ledger" model="ir.actions.act_window">
+            <field name="name">Cuentas por Pagar</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.pl.ledger</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="action_report_sl_ledger" model="ir.actions.act_window">
+            <field name="name">Cuentas por Cobrar</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.sl.ledger</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="Reportes" id="r_menu_sl_ledger" parent="account.menu_finance_receivables" sequence="130"/>
+        <menuitem name="Cuentas por Cobrar" id="menu_sl_ledger" parent="vitt_sales_purch_ledger.r_menu_sl_ledger" action="action_report_sl_ledger" sequence="1"/>
+
+        <menuitem name="Reportes" id="r_menu_pl_ledger" parent="account.menu_finance_payables" sequence="130"/>
+        <menuitem name="Cuentas por Pagar" id="menu_pl_ledger" parent="vitt_sales_purch_ledger.r_menu_pl_ledger" action="action_report_pl_ledger" sequence="1"/>
+
+    </data>
+</odoo>

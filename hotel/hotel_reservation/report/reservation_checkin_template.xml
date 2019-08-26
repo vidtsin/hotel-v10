@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml>
+<odoo>
+
+    <!--Template for Hotel Reservation -->
+    <template id="reservation_checkin_report_template">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <div class="row">
+                            <h2>
+                                <span>
+                                    <center>Check-In Guest List</center>
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="row mt32 mb32">
+                            <div class="text-center">
+                                <strong>From:</strong>
+                                <span t-esc="data['date_start']" />
+                                <strong>To:</strong>
+                                <span t-esc="data['date_end']" />
+                            </div>
+                        </div>
+                        <table class="table table-condensed">
+                            <tr>
+                                <td>
+                                    <strong>#No</strong>
+                                </td>
+                                <td>
+                                    <strong>Guest Name</strong>
+                                </td>
+                                <td>
+                                    <strong>Check-In Date</strong>
+                                </td>
+                                <td>
+                                    <strong>Room Type</strong>
+                                </td>
+                                <td>
+                                    <strong>Room No</strong>
+                                </td>
+                            </tr>
+                            <tr t-as="info" t-foreach="get_checkin">
+                                <td>
+                                    <span t-field="info.reservation_no"/>
+                                </td>
+                                <td>
+                                    <span t-field="info.partner_id.name"/>
+                                </td>
+                                <td>
+                                    <span t-field="info.checkin"/>
+                                </td>
+                                <td>
+                                    <table class="table-borderless" t-as="line" t-foreach="info.reservation_line">
+                                        <tr>
+                                            <td>
+                                                <span t-field="line.name"/>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                                <td>
+                                    <table class="table-borderless" t-as="line" t-foreach="info.reservation_line">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="', '.join(map(lambda x: (x.name), line.room_number_id))"/> 
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

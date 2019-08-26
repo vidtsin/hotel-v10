@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="payment_acquirer_payulatam" model="payment.acquirer">
+			<field name="name">PayuLatam</field>
+			<field name="provider">payulatam</field>
+			<field name="image" type="base64"
+				file="payment_payulatam_bi/static/description/icon.png" />
+			<field name="company_id" ref="base.main_company" />
+			<field name="view_template_id" ref="payu_acquirer_button" />
+			<field name="environment">test</field>
+			<field name="pre_msg"><![CDATA[
+	            <p>You will be redirected to the PayuLatam website after clicking on the payment button.</p>]]>
+			</field>
+			<field name="payulatam_merchantId">508029</field>
+			<field name="payulatam_accountId">512326</field>
+			<field name="payulatam_apiKey">4Vj8eK4rloUd272L48hsrarnUA</field>
+		</record>
+
+	</data>
+</odoo>

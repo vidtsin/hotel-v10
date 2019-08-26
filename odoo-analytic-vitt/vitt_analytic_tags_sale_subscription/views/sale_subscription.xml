@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vitt_analytic_tags_sale_subscription_view_form" model="ir.ui.view">
+        <field name="name">vitt.analytic.tags.sale.subscription.form.view</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_contract.sale_subscription_view_form"/>
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="analytic_tag_ids" widget="many2many_tags"/>
+            </field>
+            <xpath expr='//field[@name="recurring_invoice_line_ids"]/tree/field[@name="name"]' position='after'>
+                <field name="account_id" />
+                <field name="analytic_tag_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

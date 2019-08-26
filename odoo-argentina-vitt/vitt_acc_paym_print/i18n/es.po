@@ -1,0 +1,186 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_acc_paym_print
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-02-14 17:55+0000\n"
+"PO-Revision-Date: 2018-02-14 14:56-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.external_layout_footer
+msgid "&amp;bull;"
+msgstr "&amp;bull;"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid ""
+"<br/>\n"
+"                                    <strong style=\"display:inline-block;line-height:10px;\">Fecha: </strong>"
+msgstr ""
+"<br/>\n"
+"                                    <strong style=\"display:inline-block;line-height:10px;\">Fecha: </strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid ""
+"<br/>\n"
+"                                    <strong style=\"display:inline-block;line-height:20px;\">CUIT: </strong>"
+msgstr ""
+"<br/>\n"
+"                                    <strong style=\"display:inline-block;line-height:20px;\">CUIT: </strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<span style=\"display:inline-block;line-height:10px;margin-top:5px;\">CUIT: </span>"
+msgstr "<span style=\"display:inline-block;line-height:10px;margin-top:5px;\">CUIT: </span>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong style=\"border-top: 1px dashed;line-height:20px;padding-left:40px;padding-right:40px;\">Firma y Aclaración</strong>"
+msgstr "<strong style=\"border-top: 1px dashed;line-height:20px;padding-left:40px;padding-right:40px;\">Firma y Aclaración</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong style=\"display:inline-block;line-height:10px;margin-top:5px;\">Nro de Pago: </strong>"
+msgstr "<strong style=\"display:inline-block;line-height:10px;margin-top:5px;\">Nro de Pago: </strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong style=\"display:inline-block;line-height:10px;margin-top:5px;\">Nro de Recibo: </strong>"
+msgstr "<strong style=\"display:inline-block;line-height:10px;margin-top:5px;\">Nro de Recibo: </strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong style=\"display:inline-block;line-height:20px;\">Cliente: </strong>"
+msgstr "<strong style=\"display:inline-block;line-height:20px;\">Cliente: </strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong style=\"display:inline-block;line-height:20px;\">Proveedor: </strong>"
+msgstr "<strong style=\"display:inline-block;line-height:20px;\">Proveedor: </strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong style=\"display:inline-block;line-height:20px;\">Total: </strong>"
+msgstr "<strong style=\"display:inline-block;line-height:20px;\">Total: </strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>Anticipo a Cuenta</strong>"
+msgstr "<strong>Anticipo a Cuenta</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>Banco</strong>"
+msgstr "<strong>Banco</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>CUIT Firmante</strong>"
+msgstr "<strong>CUIT Firmante</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>Cheque Nro</strong>"
+msgstr "<strong>Cheque Nro</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>Factura Nro </strong>"
+msgstr "<strong>Factura Nro </strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>Fecha Comp</strong>"
+msgstr "<strong>Fecha Comp</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>Fecha</strong>"
+msgstr "<strong>Fecha</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>Forma de Pago</strong>"
+msgstr "<strong>Forma de Pago</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>Importe</strong>"
+msgstr "<strong>Importe</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "Anticipos"
+msgstr "Anticipos"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "Detalle de Cheques"
+msgstr "Detalle de Cheques"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "Detalle de Comprobantes"
+msgstr "Detalle de Comprobantes"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.payment_report
+msgid "Detalle de Pagos"
+msgstr "Detalle de Pagos"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.external_layout_footer
+msgid "Email:"
+msgstr "Email:"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.external_layout_footer
+msgid "Fax:"
+msgstr "Fax:"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.external_layout_footer
+msgid "Page:"
+msgstr "Página:"
+
+#. module: vitt_acc_paym_print
+#: model:ir.model,name:vitt_acc_paym_print.model_account_payment_group
+msgid "Payment Group"
+msgstr "Grupo de Pago"
+
+#. module: vitt_acc_paym_print
+#: model:ir.actions.report.xml,name:vitt_acc_paym_print.apg_report
+msgid "Payments/Receips"
+msgstr "Pagos/Recibos"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.external_layout_footer
+msgid "Phone:"
+msgstr "Teléfono:"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.external_layout_footer
+msgid "TIN:"
+msgstr "NIF:"
+
+#. module: vitt_acc_paym_print
+#: model:ir.ui.view,arch_db:vitt_acc_paym_print.external_layout_footer
+msgid "Website:"
+msgstr "Sitio web:"

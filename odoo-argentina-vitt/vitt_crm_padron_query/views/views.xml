@@ -1,0 +1,17 @@
+<odoo>
+    <record id="view_crm_lead2opportunity_partner3" model="ir.ui.view">
+        <field name="name">view.crm.lead2opportunity.partner3</field>
+        <field name="model">crm.lead2opportunity.partner</field>
+        <field name="inherit_id" ref="crm.view_crm_lead2opportunity_partner"/>
+        <field name="arch" type="xml">
+            <group name="action" position="after">
+                <group attrs="{'invisible':[('action', '!=', 'create')]}">
+                    <field name="email"/>
+                    <field name="fantasy_name"/>
+                    <field name="main_id_number" attrs="{'required':[('action', '=', 'create')]}"/>
+                    <field name="main_id_category_id" attrs="{'required':[('action', '=', 'create')]}"/>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

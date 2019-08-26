@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_move_form_analityc_dimension_account_inherit" model="ir.ui.view">
+        <field name="name">account.move.form.analytic.dimension.account.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='analytic_account_id']" position="after">
+                <field name="company_id" invisible='1'/>
+                <field name="analytic_tag_ids" widget="many2many_tags" domain="[('company_id', '=', company_id)]"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="vitt_analytic_tags_account_invoice_form" model="ir.ui.view">
+        <field name="name">vitt.analytic.tags.account.invoice.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <field name="payment_term_id" position="after">
+                <field name="company_id" invisible='1'/>
+                <field name="analytic_tag_ids" widget="many2many_tags" domain="[('company_id', '=', company_id)]"/>
+            </field>
+            <xpath expr="//tree/field[@name='analytic_tag_ids']" position="attributes">
+                <attribute name="domain">[('company_id', '=', parent.company_id)]</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="vitt_analytic_tags_account_vendor_invoice_form" model="ir.ui.view">
+        <field name="name">vitt.analytic.tags.account.vendor.invoice.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <field name="reference" position="after">
+                <field name="company_id" invisible='1'/>
+                <field name="analytic_tag_ids" widget="many2many_tags" domain="[('company_id', '=', company_id)]"/>
+            </field>
+            <xpath expr="//tree/field[@name='analytic_tag_ids']" position="attributes">
+                <attribute name="domain">[('company_id', '=', parent.company_id)]</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

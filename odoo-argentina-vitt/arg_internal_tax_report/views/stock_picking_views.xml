@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_picking_form" model="ir.ui.view">
+        <field name="name">arg.stock.picking.form.inherit</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <field name="origin" position="after">
+                <field name="custom_dispatch_number" attrs="{'invisible':[('show_dispatch_number','=', False)]}"/>
+                <field name="custom_dispatch_number_fnc" attrs="{'invisible':[('show_dispatch_number_fnc','=', False)]}"/>
+                <field name="show_dispatch_number" invisible="1"/>
+                <field name="show_dispatch_number_fnc" invisible="1"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="new_stock_production_lot_view">
+        <field name="name">new.stock.production.lot.view</field>
+        <field name="model">stock.production.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form" />
+        <field name="arch" type="xml">
+            <field name="ref" position="after">
+                <field name="custom_dispatch_number" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

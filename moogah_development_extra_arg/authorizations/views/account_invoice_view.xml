@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="invoice_supplier_form_inherit_authorizations" model="ir.ui.view">
+        <field name="name">account.invoice.supplier.form.inherit.authorizations</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='action_invoice_open']" position="before">
+                <button name="action_approve" string="Approve"
+                        class="btn-primary" type="object"
+                        attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('can_approve', '=', False)]}"/>
+            </xpath>
+            <xpath expr="//header/button[@name='action_invoice_open']" position="attributes">
+                <attribute name="states"/>
+                <attribute name="attrs">{'invisible': ['|', ('state', 'not in', ['proforma2','draft']), ('to_approve', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='journal_id']/../../.." position="after">
+                <page string="Authorizations" groups='account.group_account_manager'>
+                    <group>
+                        <group>
+                            <field name="approved_uid"/>
+                            <field name="approved" invisible="1"/>
+                            <field name="to_approve" invisible="1"/>
+                            <field name="can_approve" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="approved_datetime" widget="date"/>
+                            <field name="approved_time" widget="time"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="invoice_form_inherit_authorizations" model="ir.ui.view">
+        <field name="name">account.invoice.form.inherit.authorizations</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="l10n_ar_afipws_fe.view_invoice_form"/>
+        <field name="priority">21</field>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='action_invoice_open']" position="before">
+                <button name="action_approve" string="Approve"
+                        class="btn-primary" type="object"
+                        attrs="{'invisible': ['|', ('state', '!=', 'draft'), ('can_approve', '=', False)]}"/>
+            </xpath>
+
+            <xpath expr="//header/button[@name='action_invoice_open'][1]" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', '|', ('state', '!=', 'draft'), ('validation_type', '!=', False), ('to_approve', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//header/button[@name='action_invoice_open'][2]" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', '|', ('state', '!=', 'draft'), ('validation_type', '!=', 'production'), ('to_approve', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//header/button[@name='action_invoice_open'][2]" position="attributes">
+                <attribute name="attrs">{'invisible': ['|', '|', ('state', '!=', 'draft'), ('validation_type', '!=', 'homologation'), ('to_approve', '=', True)]}</attribute>
+            </xpath>
+
+            <page name="other_info" position="after">
+                <page string="Authorizations" groups='account.group_account_manager'>
+                    <group>
+                        <group>
+                            <field name="approved_uid"/>
+                            <field name="approved" invisible="1"/>
+                            <field name="to_approve" invisible="1"/>
+                            <field name="can_approve" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="approved_datetime" widget="date"/>
+                            <field name="approved_time" widget="time"/>
+                        </group>
+                    </group>
+                </page>
+            </page>
+        </field>
+    </record>
+
+    <record id="view_account_invoice_filter_inherit_authorizations" model="ir.ui.view">
+        <field name="name">account.invoice.select.inherit.authorizations</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='late']" position="after">
+                <filter string="Pending	Approval"
+                        name="pending_approval"
+                        domain="[('state', '=', 'draft'), ('to_approve', '=', True)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

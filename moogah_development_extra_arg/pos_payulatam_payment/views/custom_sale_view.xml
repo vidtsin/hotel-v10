@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+		<!-- ACCOUNT JOURNAL -->
+		<record id="inherit_view_account_journal_pos_payulatam_form1" model="ir.ui.view">
+			<field name="name">inherit_bi_account_payulatam_journal_form</field>
+			<field name="model">account.journal</field>
+			<field name="inherit_id" ref="point_of_sale.view_account_journal_pos_user_form"/>
+			<field name="arch" type="xml">
+				<field name="journal_user" position="after">
+				    <field name="payulatam"/>
+				    <field name="payulatam_config_id"/>
+				</field>
+			</field>
+		</record>
+        <!-- POS menus -->
+			<menuitem name="POS Payments" id="menu_pos_payments" parent="point_of_sale.menu_point_config_product" sequence="30"/>
+			<menuitem name="Payment Acquirers" id="menu_pos_payment_acquirers" parent="menu_pos_payments" action="payment.action_payment_acquirer" sequence="40"/>
+			<menuitem name="Payment Transactions" id="menu_pos_payment_transactions" parent="menu_pos_payments" action="payment.action_payment_transaction" sequence="50"/>
+
+
+
+	    <record id="payment_transaction_form_pos_order" model="ir.ui.view">
+	        <field name="name">payment.transaction.pos.order</field>
+	        <field name="model">pos.order</field>
+	        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+	        <field name="arch" type="xml">
+	        	<xpath expr='//field[@name="pos_reference"]' position='after'>
+	             	<field name="order_transcation_id"/>
+	            </xpath>
+	        </field>
+	    </record>
+	    
+	    
+    </data>
+</openerp>

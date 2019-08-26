@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- SICORE Codes -->
+    <data noupdate="True">
+        <record id="tax_jurisdiction_codes_01" model="jurisdiction.codes">
+            <field name="name">901</field>
+            <field name="desc">Ciudad de Buenos Aires</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_02" model="jurisdiction.codes">
+            <field name="name">902</field>
+            <field name="desc">Provincia de Buenos Aires</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_03" model="jurisdiction.codes">
+            <field name="name">903</field>
+            <field name="desc">Catamarca</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_04" model="jurisdiction.codes">
+            <field name="name">904</field>
+            <field name="desc">Cordoba</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_05" model="jurisdiction.codes">
+            <field name="name">905</field>
+            <field name="desc">Corrientes</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_06" model="jurisdiction.codes">
+            <field name="name">906</field>
+            <field name="desc">Chaco</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_07" model="jurisdiction.codes">
+            <field name="name">907</field>
+            <field name="desc">Chubut</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_08" model="jurisdiction.codes">
+            <field name="name">908</field>
+            <field name="desc">Entre Rios</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_09" model="jurisdiction.codes">
+            <field name="name">909</field>
+            <field name="desc">Formosa</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_10" model="jurisdiction.codes">
+            <field name="name">910</field>
+            <field name="desc">Jujuy</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_11" model="jurisdiction.codes">
+            <field name="name">911</field>
+            <field name="desc">La Pampa</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_12" model="jurisdiction.codes">
+            <field name="name">912</field>
+            <field name="desc">La Rioja</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_13" model="jurisdiction.codes">
+            <field name="name">913</field>
+            <field name="desc">Mendoza</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_14" model="jurisdiction.codes">
+            <field name="name">914</field>
+            <field name="desc">Misiones</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_15" model="jurisdiction.codes">
+            <field name="name">915</field>
+            <field name="desc">Neuquen</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_16" model="jurisdiction.codes">
+            <field name="name">916</field>
+            <field name="desc">Rio Negro</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_17" model="jurisdiction.codes">
+            <field name="name">917</field>
+            <field name="desc">Salta</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_18" model="jurisdiction.codes">
+            <field name="name">918</field>
+            <field name="desc">San Juan</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_19" model="jurisdiction.codes">
+            <field name="name">919</field>
+            <field name="desc">San Luis</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_20" model="jurisdiction.codes">
+            <field name="name">920</field>
+            <field name="desc">Santa Cruz</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_21" model="jurisdiction.codes">
+            <field name="name">921</field>
+            <field name="desc">Santa Fe</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_22" model="jurisdiction.codes">
+            <field name="name">922</field>
+            <field name="desc">Santiago del Estero</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_23" model="jurisdiction.codes">
+            <field name="name">923</field>
+            <field name="desc">Tierra del Fuego</field>
+        </record>
+
+        <record id="tax_jurisdiction_codes_24" model="jurisdiction.codes">
+            <field name="name">924</field>
+            <field name="desc">Tucuman</field>
+        </record>
+	</data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_report_vitt_sales_reports_reportvat,access_report_vitt_sales_reports_reportvat,model_report_vitt_sales_reports_reportvat,,1,0,0,0
+access_sicore_codes,access_sicore_codes,model_sicore_codes,,1,0,0,0
+access_report_vitt_sales_reports_reportvatpl,access_report_vitt_sales_reports_reportvatpl,model_report_vitt_sales_reports_reportvatpl,,1,0,0,0
+access_jurisdiction_codes,access_jurisdiction_codes,model_jurisdiction_codes,,1,0,0,0
+access_sicore_norm_codes,access_sicore_norm_codes,model_sicore_norm_codes,,1,0,0,0

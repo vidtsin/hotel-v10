@@ -1,0 +1,333 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_arg_check_history_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-20 16:11+0000\n"
+"PO-Revision-Date: 2019-02-20 13:16-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Banco"
+msgstr "Banco"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_bank_id
+msgid "Bank"
+msgstr "Banco"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.checks_history_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: vitt_arg_check_history_reports
+#: model:issue.checks.states,name:vitt_arg_check_history_reports.changed_1
+#: model:third.checks.states,name:vitt_arg_check_history_reports.changed_2
+msgid "Changed"
+msgstr "Reemplazado"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.actions.act_window,name:vitt_arg_check_history_reports.checks_history_action
+#: model:ir.actions.report.xml,name:vitt_arg_check_history_reports.checks_history_report
+#: model:ir.ui.menu,name:vitt_arg_check_history_reports.checks_history
+msgid "Checks History"
+msgstr "Historia de Cheques"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_create_uid
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_issue_checks_states_create_uid
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_report_vitt_arg_check_history_reports_check_rep_create_uid
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_third_checks_states_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_create_date
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_issue_checks_states_create_date
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_report_vitt_arg_check_history_reports_check_rep_create_date
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_third_checks_states_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_date_from
+msgid "Date From"
+msgstr "Fecha Desde"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_date_to
+msgid "Date To"
+msgstr "Fecha Hasta"
+
+#. module: vitt_arg_check_history_reports
+#: model:issue.checks.states,name:vitt_arg_check_history_reports.debited_1
+msgid "Debited"
+msgstr "Acreditado"
+
+#. module: vitt_arg_check_history_reports
+#: model:third.checks.states,name:vitt_arg_check_history_reports.delivered_2
+msgid "Delivered"
+msgstr "Endosado"
+
+#. module: vitt_arg_check_history_reports
+#: model:third.checks.states,name:vitt_arg_check_history_reports.deposited_2
+msgid "Deposited"
+msgstr "Depositado"
+
+#. module: vitt_arg_check_history_reports
+#: selection:account.check.history,mode:0
+#: code:addons/vitt_arg_check_history_reports/wizard/check_history_wizard.py:56
+#, python-format
+msgid "Detailed"
+msgstr "Detallado"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_display_name
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_issue_checks_states_display_name
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_report_vitt_arg_check_history_reports_check_rep_display_name
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_third_checks_states_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: vitt_arg_check_history_reports
+#: model:issue.checks.states,name:vitt_arg_check_history_reports.draft_1
+#: model:third.checks.states,name:vitt_arg_check_history_reports.draft_2
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.checks_history_wizard
+msgid "Ejecutar"
+msgstr "Ejecutar"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Empresa"
+msgstr "Empresa"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Estado"
+msgstr "Estado"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Fecha Emision"
+msgstr "Fecha Emision"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Fecha Estado"
+msgstr "Fecha Estado"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Fecha Pago"
+msgstr "Fecha Pago"
+
+#. module: vitt_arg_check_history_reports
+#: model:issue.checks.states,name:vitt_arg_check_history_reports.handed_1
+msgid "Handed"
+msgstr "Emitido"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Historia de Cheques"
+msgstr "Historia de Cheques"
+
+#. module: vitt_arg_check_history_reports
+#: model:third.checks.states,name:vitt_arg_check_history_reports.holding_2
+msgid "Holding"
+msgstr "En Cartera"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_id
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_issue_checks_states_id
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_report_vitt_arg_check_history_reports_check_rep_id
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_third_checks_states_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_arg_check_history_reports
+#: selection:account.check.history,type:0
+#: code:addons/vitt_arg_check_history_reports/wizard/check_history_wizard.py:39
+#, python-format
+msgid "Issue Check"
+msgstr "Cheque Propio"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.actions.act_window,name:vitt_arg_check_history_reports.issue_checks_history_action
+#: model:ir.actions.report.xml,name:vitt_arg_check_history_reports.issue_checks_history_report
+#: model:ir.ui.menu,name:vitt_arg_check_history_reports.issue_checks_history
+msgid "Issue Checks History"
+msgstr "Historia de Cheques Propios"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history___last_update
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_issue_checks_states___last_update
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_report_vitt_arg_check_history_reports_check_rep___last_update
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_third_checks_states___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_write_uid
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_issue_checks_states_write_uid
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_report_vitt_arg_check_history_reports_check_rep_write_uid
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_third_checks_states_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Actualización por"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_write_date
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_issue_checks_states_write_date
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_report_vitt_arg_check_history_reports_check_rep_write_date
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_third_checks_states_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_mode
+msgid "Mode"
+msgstr "Modo"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Monto"
+msgstr "Monto"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_issue_checks_states_name
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_third_checks_states_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Notas"
+msgstr "Notas"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.view,arch_db:vitt_arg_check_history_reports.check_rep
+msgid "Numero"
+msgstr "Número"
+
+#. module: vitt_arg_check_history_reports
+#: selection:account.check.history,mode:0
+#: code:addons/vitt_arg_check_history_reports/wizard/check_history_wizard.py:57
+#, python-format
+msgid "Overview"
+msgstr "Resumido"
+
+#. module: vitt_arg_check_history_reports
+#: selection:account.check.history,sort_order:0
+#: code:addons/vitt_arg_check_history_reports/wizard/check_history_wizard.py:52
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_partner_id
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_partner_id2
+#, python-format
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: vitt_arg_check_history_reports
+#: selection:account.check.history,sort_order:0
+#: code:addons/vitt_arg_check_history_reports/wizard/check_history_wizard.py:53
+#, python-format
+msgid "Payment Date"
+msgstr "Fecha de Pago"
+
+#. module: vitt_arg_check_history_reports
+#: model:issue.checks.states,name:vitt_arg_check_history_reports.reclaimed_1
+#: model:third.checks.states,name:vitt_arg_check_history_reports.reclaimed_2
+msgid "Reclaimed"
+msgstr "Reclamado"
+
+#. module: vitt_arg_check_history_reports
+#: model:issue.checks.states,name:vitt_arg_check_history_reports.rejected_1
+#: model:third.checks.states,name:vitt_arg_check_history_reports.rejected_2
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.ui.menu,name:vitt_arg_check_history_reports.checks_history_Menu
+msgid "Reports"
+msgstr "Informes"
+
+#. module: vitt_arg_check_history_reports
+#: model:issue.checks.states,name:vitt_arg_check_history_reports.returned_1
+#: model:third.checks.states,name:vitt_arg_check_history_reports.returned_2
+msgid "Returned"
+msgstr "Cancelado"
+
+#. module: vitt_arg_check_history_reports
+#: selection:account.check.history,sort_order:0
+#: code:addons/vitt_arg_check_history_reports/wizard/check_history_wizard.py:51
+#, python-format
+msgid "Serial Nr"
+msgstr "Nro. Serie"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_sort_order
+msgid "Sort order"
+msgstr "Ordenar por"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_issue_state
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_third_state
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_issue_checks_states_states
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_third_checks_states_states
+msgid "States"
+msgstr "Estados"
+
+#. module: vitt_arg_check_history_reports
+#: selection:account.check.history,type:0
+#: code:addons/vitt_arg_check_history_reports/wizard/check_history_wizard.py:40
+#, python-format
+msgid "Third Check"
+msgstr "Cheque Terceros"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model.fields,field_description:vitt_arg_check_history_reports.field_account_check_history_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model,name:vitt_arg_check_history_reports.model_account_check_history
+msgid "account.check.history"
+msgstr "account.check.history"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model,name:vitt_arg_check_history_reports.model_account_check_operation
+msgid "account.check.operation"
+msgstr "account.check.operation"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model,name:vitt_arg_check_history_reports.model_excel_extended
+msgid "excel.extended"
+msgstr "excel.extended"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model,name:vitt_arg_check_history_reports.model_issue_checks_states
+msgid "issue.checks.states"
+msgstr "issue.checks.states"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model,name:vitt_arg_check_history_reports.model_report_vitt_arg_check_history_reports_check_rep
+msgid "report.vitt_arg_check_history_reports.check_rep"
+msgstr "report.vitt_arg_check_history_reports.check_rep"
+
+#. module: vitt_arg_check_history_reports
+#: model:ir.model,name:vitt_arg_check_history_reports.model_third_checks_states
+msgid "third.checks.states"
+msgstr "third.checks.states"

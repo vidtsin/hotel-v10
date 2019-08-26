@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+##############################################################################
+#
+# Copyright (C) 2012 OpenERP - Team de Localizacion Argentina.
+# https://launchpad.net/~openerp-l10n-ar-localization
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+##############################################################################
+#
+# En este archivo encontrara la lista de contribuyentes al codigo del
+# presente modulo de la localizacion argentina.
+#
+# Si usted ha contribuido debe indicar su nombre, la URL a su empresa o pagina
+# persona, su correo electronico tal como se presenta a continuacion.
+#
+# El orden de contribucion sera determinado en forma alfabatica. Si quiere
+# saber como ha contribuido cada autor en el modulo le recomendamos ver la
+# pagina de launchpad
+#
+# http://bazaar.launchpad.net/~openerp-l10n-ar-localization/openerp-l10n-ar-localization/6.0/changes
+#
+##############################################################################
+
+Ignacio E. Parszyk (www.thymbra.com)
+Silvina Faner (openpyme.com.ar) <sfaner@gmail.com>
+Juan Jose Scarafia (www.ingadhoc.com) <jjscarafia@ingadhoc.com>
+Damian Soriano (www.ingadhoc.com) <dsoriano@ingadhoc.com>
+Javier Diez (www.ingadhoc.com) <jdiez@ingadhoc.com>
+Maximiliano Krause (www.moogah.com <maximiliano@moogah.com>
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

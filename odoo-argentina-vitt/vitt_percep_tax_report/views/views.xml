@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    #WIZARD
+    <record id="percep_tax_report_form" model="ir.ui.view">
+        <field name="model">percep.tax.report.wizard</field>
+        <field name="name">menu.percep.tax.report</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="journal_ids" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'purchase')]}"/>
+                    <field name="tax_percep_ids" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'purchase')]}"/>
+                    <field name="p_journal_ids" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'sale')]}"/>
+                    <field name="p_tax_percep_ids" widget="many2many_tags" attrs="{'invisible': [('type', '=', 'sale')]}"/>
+                    <field name="company_id"/>
+                    <field name="group_by_tax"/>
+                    <field name="show_comp_cur"/>
+                    <field name="show_link"/>
+                    <field name="tax_no_zero"/>
+                    <field name="print_by"/>
+                    <field name="type" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="doit" string="Ejecutar" type="object"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_percep_tax_report" model="ir.actions.act_window">
+        <field name="name">Perceptions Tax Report - Customer Invoices</field>
+        <field name="res_model">percep.tax.report.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type': 'sale'}</field>
+    </record>
+    <record id="action_p_percep_tax_report" model="ir.actions.act_window">
+        <field name="name">Perceptions Tax Report - Supplier Invoices</field>
+        <field name="res_model">percep.tax.report.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="target">new</field>
+        <field name="context">{'default_type': 'purchase'}</field>
+    </record>
+
+    <menuitem name="Perceptions Tax Report - Customer Invoices"
+        id="menu_percep_tax_report"
+        parent="vitt_sales_reports.menu_tax_reports"
+        action="action_percep_tax_report"
+        sequence="6"
+    />
+    <menuitem name="Perceptions Tax Report - Supplier Invoices"
+        id="menu_p_percep_tax_report"
+        parent="vitt_sales_reports.menu_tax_reports"
+        action="action_p_percep_tax_report"
+        sequence="6"
+    />
+
+
+    #REPORT
+    <data noupdate="1">
+        <record id="percep_tax_reports_pf" model="report.paperformat">
+            <field name="name">Perception Tax reports</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">45</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">40</field>
+            <field name="dpi">90</field>
+        </record>
+    </data>
+
+    <report
+        id="menu_per_tax_report_html"
+        model="account.payment"
+        string="Perception Tax Report - Customer Invoices"
+        report_type="qweb-html"
+        name="vitt_percep_tax_report.repoort_html"
+        file="vitt_percep_tax_report.repoort_html"
+        paperformat="vitt_percep_tax_report.percep_tax_reports_pf"
+        menu="False"/>
+    <report
+        id="menu_per_tax_report_pdf"
+        model="account.payment"
+        string="Perception Tax Report - Customer Invoices"
+        report_type="qweb-pdf"
+        name="vitt_percep_tax_report.repoort_pdf"
+        file="vitt_percep_tax_report.repoort_pdf"
+        paperformat="vitt_percep_tax_report.percep_tax_reports_pf"
+        menu="False"/>
+</odoo>

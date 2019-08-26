@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_invoice_form" model="ir.ui.view">
+            <field name="name">l10n_ar_account invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="replace">
+                    <!--attribute name="invisible">1</attribute-->
+                </xpath>
+                <xpath expr="//field[@name='team_id']" position="replace">
+                    <!--attribute name="invisible">1</attribute-->
+                </xpath>
+                <xpath expr="//field[@name='journal_id']" position="replace">
+                    <!--attribute name="invisible">1</attribute-->
+                </xpath>
+                <xpath expr="//field[@name='date_due']" position="replace">
+                    <!--attribute name="invisible">1</attribute-->
+                </xpath>
+                <field name="journal_document_type_id" position="before">
+                    <field name="journal_id" groups="account.group_account_user" options="{'no_create': True}" attrs="{'readonly':[('move_name','!=',False)]}"/>
+                </field>
+                <field name="date_invoice" position="after">
+                    <field name="date_due" groups="base.group_no_one"/>
+                </field>
+                <field name="date_invoice" position="after">
+                    <field name="date"/>
+                </field>
+                <form>
+                    <field name="point_of_sale_type" invisible="1"/>
+                </form>
+                <div groups="base.group_multi_currency" position="after">
+                    <field name="currency_rate" attrs="{'invisible': [('currency_rate', '=', False)]}"/>
+                </div>
+
+                <field name="fiscal_position_id" position="after">
+                    <field name="afip_responsability_type_id" states="open,paid"/>
+                </field>
+
+                <field name="payment_term_id" position="after">
+                    <!-- if poitn of sale = false then not argentina journal -->
+                    <field name="afip_incoterm_id" attrs="{'invisible': [('point_of_sale_type', '=', False)]}"/>
+                    <field name='afip_concept' attrs="{'invisible': [('point_of_sale_type', 'not in', ['online', 'electronic'])]}"/>
+                    <field name='afip_service_start' attrs="{'invisible':[('afip_concept','not in',['2', '3', '4'])],'required':[('afip_concept','in',['2', '3', '4'])]}"/>
+                    <field name='afip_service_end' attrs="{'invisible':[('afip_concept','not in',['2', '3', '4'])],'required':[('afip_concept','in',['2', '3', '4'])]}"/>
+                    <field name="user_id" groups="base.group_user"/>
+                    <field name="team_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_supplier_invoice_form" model="ir.ui.view">
+            <field name="name">l10n_ar_account supplier.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+                <field name="journal_id" position="after">
+                    <field name="afip_responsability_type_id" states="open,paid"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

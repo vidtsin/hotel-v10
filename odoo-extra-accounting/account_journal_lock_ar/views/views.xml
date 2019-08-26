@@ -1,0 +1,40 @@
+<odoo>
+    <record id="view_users_form_ext" model="ir.ui.view">
+        <field name="name">view.users.form.ext</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="lock_date_bypass"/>
+            </field>
+        </field>
+    </record>
+
+
+     <record id="lock_date_wizard" model="ir.ui.view">
+        <field name="model">account.journal.lock</field>
+        <field name="name">lock.date.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="lock_date" />
+                </group>
+                <footer>
+                    <button name="change_lock_date" string="Cambiar" type="object"/>
+                    or
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window name="Cambiar Fecha de Bloqueo"
+                res_model="account.journal.lock"
+                src_model="account.journal"
+                view_mode="form"
+                target="new"
+                id="lock_date_act_window"
+                key2="client_action_multi"
+                multi="True"/>
+
+</odoo>

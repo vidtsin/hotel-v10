@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!--data-->
+
+        <record id="checks_history_wizard" model="ir.ui.view">
+            <field name="model">account.check.history</field>
+            <field name="name">account_check_history</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="type" invisible="1"/>
+                        <field name="date_from" />
+                        <field name="date_to" />
+                        <field name="partner_id"
+                               widget="many2many_tags"
+                               options="{'no_create_edit': True}"
+                               domain="[('supplier', '=', True)]"
+                               attrs="{'invisible': [('type', '!=', 'issue_check')]}"
+                        />
+                        <field name="partner_id2"
+                               widget="many2many_tags"
+                               options="{'no_create_edit': True}"
+                               domain="[('customer', '=', True)]"
+                               attrs="{'invisible': [('type', '=', 'issue_check')]}"
+                        />
+                        <field name="bank_id" options="{'no_create_edit': True}"/>
+                        <field name="issue_state"
+                               attrs="{'invisible': [('type', '=', 'third_check')]}"
+                               widget="many2many_tags"
+                               options="{'no_create_edit': True}"
+                        />
+                        <field name="third_state"
+                               attrs="{'invisible': [('type', '=', 'issue_check')]}"
+                               options="{'no_create_edit': True}"
+                               widget="many2many_tags"
+                        />
+                    </group>
+                    <group>
+                        <group name="left">
+                            <field name="sort_order" widget="radio"/>
+                        </group>
+                        <group name="right">
+                            <field name="mode" widget="radio"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Ejecutar" name="ex_checkhist_report" type="object" class="oe_highlight"/>
+                        <!--button name="Print_to_excel" string="Print Excel" type="object" class="oe_highlight"/-->
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <report
+            id="checks_history_report"
+            model="account.check.history"
+            string="Checks History"
+            report_type="qweb-html"
+            name="vitt_arg_check_history_reports.check_rep"
+            file="vitt_arg_check_history_reports.check_rep"
+            menu="False"
+        />
+
+        <report
+            id="issue_checks_history_report"
+            model="account.check.history"
+            string="Issue Checks History"
+            report_type="qweb-html"
+            name="vitt_arg_check_history_reports.check_rep"
+            file="vitt_arg_check_history_reports.check_rep"
+            menu="False"
+        />
+
+        <record id="checks_history_action" model="ir.actions.act_window">
+            <field name="name">Checks History</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.check.history</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{ 'default_type':'third_check'}</field>
+        </record>
+
+        <record id="issue_checks_history_action" model="ir.actions.act_window">
+            <field name="name">Issue Checks History</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.check.history</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="context">{ 'default_type':'issue_check'}</field>
+        </record>
+
+        <menuitem
+            name="Reports"
+            id="checks_history_Menu"
+            parent="account.menu_finance_bank_and_cash"
+            sequence="50"
+        />
+
+        <menuitem
+            name="Checks History"
+            id="checks_history"
+            parent="vitt_arg_check_history_reports.checks_history_Menu"
+            action="checks_history_action"
+            sequence="1"
+        />
+
+        <menuitem
+            name="Issue Checks History"
+            id="issue_checks_history"
+            parent="vitt_arg_check_history_reports.checks_history_Menu"
+            action="issue_checks_history_action"
+            sequence="2"
+        />
+    
+	<!--/data-->
+</odoo>

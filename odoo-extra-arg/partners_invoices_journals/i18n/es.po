@@ -1,0 +1,541 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partners_invoices_journals
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-22 18:15+0000\n"
+"PO-Revision-Date: 2019-02-22 15:22-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_anal_account_id
+msgid "Analytic Account"
+msgstr "Cuenta Analítica"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_hanal_tag_ids
+msgid "Analytic Tags (header)"
+msgstr "Etiquetas Analíticas (Encabezado)"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_ranal_tag_ids
+msgid "Analytic Tags (rows)"
+msgstr "Etiquetas Analíticas (filas)"
+
+#. module: partners_invoices_journals
+#: selection:wizard.customer.invoice.journal,sort_by:0
+msgid "By Invoice Acc. Date"
+msgstr "Por Fecha Cont. Factura"
+
+#. module: partners_invoices_journals
+#: selection:wizard.customer.invoice.journal,sort_by:0
+msgid "By Invoice Date"
+msgstr "Por Fecha Factura"
+
+#. module: partners_invoices_journals
+#: selection:wizard.customer.invoice.journal,sort_by:0
+msgid "By Invoice Number"
+msgstr "Por Número Factura"
+
+#. module: partners_invoices_journals
+#: model:ir.ui.view,arch_db:partners_invoices_journals.wizard_customer_invoice_journal_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:85
+#, python-format
+msgid "Categories: "
+msgstr "Categorías: "
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_categ_ids
+msgid "Category"
+msgstr "Categoría"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:106
+#, python-format
+msgid "Company: "
+msgstr "Compañía: "
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_html_create_uid
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_pdf_create_uid
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_html_create_date
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_pdf_create_date
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:208
+#: code:addons/partners_invoices_journals/wizard/wizard.py:323
+#, python-format
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:177
+#: code:addons/partners_invoices_journals/wizard/wizard.py:280
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_partner_ids
+#, python-format
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: partners_invoices_journals
+#: model:ir.actions.act_window,name:partners_invoices_journals.action_wizard_customer_invoice_journal
+#: model:ir.ui.menu,name:partners_invoices_journals.menu_wizard_customer_invoice_journal
+msgid "Customer Invoice Journal"
+msgstr "Diario Facturas de Clientes"
+
+#. module: partners_invoices_journals
+#: model:ir.ui.view,arch_db:partners_invoices_journals.qweb_customer_invoice_journal
+msgid "Customer Invoices Journals"
+msgstr "Diarios de Facturas de Clientes"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_date_from
+msgid "Date From"
+msgstr "Fecha Desde"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_date_to
+msgid "Date To"
+msgstr "Fecha Hasta"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:368
+#, python-format
+msgid "Detail"
+msgstr "Detalle"
+
+#. module: partners_invoices_journals
+#: selection:wizard.customer.invoice.journal,artmode:0
+msgid "Detailed"
+msgstr "Detallado"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_html_display_name
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_pdf_display_name
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:371
+#, python-format
+msgid "Empresa: "
+msgstr "Empresa: "
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:204
+#: code:addons/partners_invoices_journals/wizard/wizard.py:319
+#, python-format
+msgid "Exchange Rate"
+msgstr "Tipo Cambio"
+
+#. module: partners_invoices_journals
+#: model:ir.ui.view,arch_db:partners_invoices_journals.wizard_customer_invoice_journal_form
+msgid "Execute"
+msgstr "Ejecutar"
+
+#. module: partners_invoices_journals
+#: selection:wizard.customer.invoice.journal,print_by:0
+msgid "Export xlsx"
+msgstr "Exportar xlsx"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:181
+#: code:addons/partners_invoices_journals/wizard/wizard.py:284
+#, python-format
+msgid "FC"
+msgstr "FC"
+
+#. module: partners_invoices_journals
+#: selection:wizard.customer.invoice.journal,print_by:0
+msgid "HTML"
+msgstr "HTML"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_html_id
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_pdf_id
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_id
+msgid "ID"
+msgstr "ID"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:173
+#: code:addons/partners_invoices_journals/wizard/wizard.py:276
+#, python-format
+msgid "Invoice Date"
+msgstr "Fecha Factura"
+
+#. module: partners_invoices_journals
+#: model:ir.actions.report.xml,name:partners_invoices_journals.menu_rep2_temp_html
+#: model:ir.actions.report.xml,name:partners_invoices_journals.menu_rep2_temp_pdf
+#: model:ir.actions.report.xml,name:partners_invoices_journals.menu_rep_temp_html
+#: model:ir.actions.report.xml,name:partners_invoices_journals.menu_rep_temp_pdf
+msgid "Invoice Journal"
+msgstr "Diario de Facturas"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:169
+#: code:addons/partners_invoices_journals/wizard/wizard.py:272
+#, python-format
+msgid "Invoice Nr"
+msgstr "Nro. Factura"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:236
+#: code:addons/partners_invoices_journals/wizard/wizard.py:237
+#: code:addons/partners_invoices_journals/wizard/wizard.py:239
+#: code:addons/partners_invoices_journals/wizard/wizard.py:253
+#: code:addons/partners_invoices_journals/wizard/wizard.py:254
+#: code:addons/partners_invoices_journals/wizard/wizard.py:256
+#, python-format
+msgid "Invoice Qty"
+msgstr "Cant. Fact."
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:182
+#: code:addons/partners_invoices_journals/wizard/wizard.py:186
+#: code:addons/partners_invoices_journals/wizard/wizard.py:285
+#: code:addons/partners_invoices_journals/wizard/wizard.py:289
+#: model:ir.ui.view,arch_db:partners_invoices_journals.wizard_customer_invoice_journal_form
+#, python-format
+msgid "Invoice Type"
+msgstr "Tipo Fact."
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_invoice_type
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_journal2_ids
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_journal_ids
+msgid "Journal"
+msgstr "Diario"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:97
+#, python-format
+msgid "Journals: "
+msgstr "Diarios: "
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_html___last_update
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_pdf___last_update
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_html_write_uid
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_pdf_write_uid
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Actualización por"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_html_write_date
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_report_partners_invoices_journals_repoort_pdf_write_date
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_artmode
+msgid "Level of Detail"
+msgstr "Nivel de Detalle"
+
+#. module: partners_invoices_journals
+#: model:ir.ui.view,arch_db:partners_invoices_journals.qweb_customer_invoice_journal
+msgid "Monto"
+msgstr "Monto"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:370
+#, python-format
+msgid "Nombre del Informe: Partners Invoices Journals"
+msgstr "Nombre del Informe: Diario de Facturas de Empresas"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_open
+msgid "Open"
+msgstr "Abiertas"
+
+#. module: partners_invoices_journals
+#: selection:wizard.customer.invoice.journal,artmode:0
+msgid "Overview"
+msgstr "Resumido"
+
+#. module: partners_invoices_journals
+#: selection:wizard.customer.invoice.journal,print_by:0
+msgid "PDF"
+msgstr "PDF"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_paid
+msgid "Paid"
+msgstr "Pagado"
+
+#. module: partners_invoices_journals
+#: model:ir.ui.view,arch_db:partners_invoices_journals.qweb_customer_invoice_journal
+msgid "Partners Invoices Journals"
+msgstr "Diarios de Facturas de Empresas"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:73
+#: code:addons/partners_invoices_journals/wizard/wizard.py:79
+#, python-format
+msgid "Partners: "
+msgstr "Empresas: "
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_paym_term_id
+msgid "Payment Term"
+msgstr "Térm. Pago"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:103
+#, python-format
+msgid "Payment Term: "
+msgstr "Térm. Pago: "
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:137
+#, python-format
+msgid "Period: "
+msgstr "Período: "
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_print_by
+msgid "Printing Options"
+msgstr "Opciones de Impresión"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:293
+#, python-format
+msgid "Product"
+msgstr "Producto"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:133
+#, python-format
+msgid "Purchase Credit Notes"
+msgstr "Notas de Crédito Compras"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:130
+#, python-format
+msgid "Purchase Invoices"
+msgstr "Facturas de Compras"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:297
+#, python-format
+msgid "Qty"
+msgstr "Cant."
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_refund_type
+msgid "Refund Invoices"
+msgstr "Notas de Crédito"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:126
+#, python-format
+msgid "Sales Credit Notes"
+msgstr "Notas de Crédito Ventas"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:123
+#, python-format
+msgid "Sales Invoices"
+msgstr "Facturas de Ventas"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_user_id
+msgid "Sales Person"
+msgstr "Vendedor"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_salesteam_id
+msgid "Sales Team"
+msgstr "Equipo de Ventas"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:94
+#, python-format
+msgid "SalesTeam: "
+msgstr "Eq. Ventas: "
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_show_exch_rates
+msgid "Show Invoice Exchange Rate"
+msgstr "Mostrar T.C. de Facturas"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_show_inv_taxes
+msgid "Show Invoice Taxes"
+msgstr "Mostrar Impuestos de Facturas"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_show_comp_currency
+msgid "Show Totals In Company Currency"
+msgstr "Mostrar Totales en Moneda de Compañía"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_sort_by
+msgid "Sort by"
+msgstr "Ordenar por"
+
+#. module: partners_invoices_journals
+#: model:ir.ui.view,arch_db:partners_invoices_journals.wizard_customer_invoice_journal_form
+msgid "States"
+msgstr "Estados"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:116
+#, python-format
+msgid "States: "
+msgstr "Estados: "
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_partner2_ids
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: partners_invoices_journals
+#: model:ir.actions.act_window,name:partners_invoices_journals.action_wizard_supplier_invoice_journal
+#: model:ir.ui.menu,name:partners_invoices_journals.menu_wizard_supplier_invoice_journal
+msgid "Supplier Invoice Journal"
+msgstr "Diario de Facturas de Proveedor"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:195
+#: code:addons/partners_invoices_journals/wizard/wizard.py:310
+#, python-format
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:64
+#, python-format
+msgid "To run this report in the Detailed version you cannot choose 'HTML' as the printing Option. Please choose PDF or xlsx and try again"
+msgstr "Ud. no puede usar la Opción de Impresión 'HTML' para ejecutar este informe en la versión Detallada. Por favor, escoja la opción PDF o xlsx e intente de nuevo."
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:199
+#: code:addons/partners_invoices_journals/wizard/wizard.py:314
+#, python-format
+msgid "Total Amount (incl Tax)"
+msgstr "Monto Total (incl Imp.)"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:213
+#: code:addons/partners_invoices_journals/wizard/wizard.py:328
+#, python-format
+msgid "Total In Company Currency"
+msgstr "Total En Moneda de Compañía"
+
+#. module: partners_invoices_journals
+#: model:ir.ui.view,arch_db:partners_invoices_journals.qweb_customer_invoice_journal
+msgid "Totales por Moneda"
+msgstr "Totales por Moneda"
+
+#. module: partners_invoices_journals
+#: model:ir.model.fields,field_description:partners_invoices_journals.field_wizard_customer_invoice_journal_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:136
+#, python-format
+msgid "Types: "
+msgstr "Tipos: "
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:301
+#, python-format
+msgid "Unit Price"
+msgstr "Precio Unit."
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:190
+#: code:addons/partners_invoices_journals/wizard/wizard.py:305
+#, python-format
+msgid "Untaxed Amount"
+msgstr "Monto Sin Impuestos"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:91
+#, python-format
+msgid "User: "
+msgstr "Usuario: "
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:366
+#, python-format
+msgid "partners_invoices_journals.xls"
+msgstr "partners_invoices_journals.xls"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:341
+#, python-format
+msgid "report has more than 5000 lines, please use Excel instead"
+msgstr "El informe tiene más de 5000 líneas, por favor utilice el formato Excel"
+
+#. module: partners_invoices_journals
+#: model:ir.model,name:partners_invoices_journals.model_report_partners_invoices_journals_repoort_html
+msgid "report.partners_invoices_journals.repoort_html"
+msgstr "report.partners_invoices_journals.repoort_html"
+
+#. module: partners_invoices_journals
+#: model:ir.model,name:partners_invoices_journals.model_report_partners_invoices_journals_repoort_pdf
+msgid "report.partners_invoices_journals.repoort_pdf"
+msgstr "report.partners_invoices_journals.repoort_pdf"
+
+#. module: partners_invoices_journals
+#: model:ir.model,name:partners_invoices_journals.model_wizard_customer_invoice_journal
+msgid "wizard.customer.invoice.journal"
+msgstr "wizard.customer.invoice.journal"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:62
+#, python-format
+msgid "you should select at least 1 Invoice Type"
+msgstr "Ud. debe seleccionar al menos 1 Tipo de Factura"
+
+#. module: partners_invoices_journals
+#: code:addons/partners_invoices_journals/wizard/wizard.py:60
+#, python-format
+msgid "you should select at least 1 State"
+msgstr "Ud. debe seleccionar al menos 1 Estado"

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="pf_cashout_printout_sub" model="report.paperformat">
+        <field name="name">Entradas/Salidas de Caja</field>
+        <field name="default" eval="True"/>
+        <field name="format">A4</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">5</field>
+        <field name="margin_right">5</field>
+        <field name="header_line" eval="False"/>
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <report id="report_cashout_printout"
+        model="account.cash.inout"
+        string="Caja"
+        report_type="qweb-pdf"
+        name="vitt_cashin_cashout.cashout_printout"
+        file="vitt_cashin_cashout.cashout_printout"
+        paperformat="vitt_cashin_cashout.pf_cashout_printout_sub"
+    />
+
+
+    <template id="cashout_printout_sub">
+        <t t-call="report.external_layout">
+            <div class="page">
+                <div class="row">
+                    <div class="col-xs-12 text-right">
+                        <t t-if="doc.type=='cash_out'">
+                            <h4><strong><span>Salida de Caja: </span><t t-esc="doc.name"/></strong></h4>
+                        </t>
+                        <t t-if="doc.type=='cash_in'">
+                            <h4><strong><span>Entrada de Caja: </span><t t-esc="doc.name"/></strong></h4>
+                        </t>
+                        <h4><strong><span>Fecha: </span><t t-esc="doc.deposit_date"/></strong></h4>
+                    </div>
+                    <div class="col-xs-12 text-left">
+                        <h4><strong><span>Beneficiario: </span><t t-esc="doc.benefitiary_id.name"/><t t-esc="doc.employee_id.name"/></strong></h4>
+                    </div>
+                    <div class="col-xs-6 text-left" style="background-color:#E5E5E5;">
+                        <span><strong>Forma de pago:</strong><t t-esc="doc.journal_id.name"/></span>
+                        <br/>
+                        <span><strong>Monto Total:</strong> <t t-esc="doc.total_amount"/></span>
+                    </div>
+                    <div class="col-xs-6 text-left" style="background-color:#E5E5E5;">
+                        <span><strong>Cuenta:</strong> <t t-esc="doc.cash_account_id.name"/></span>
+                        <br/>
+                        <span><strong>Moneda:</strong> <t t-esc="doc.currency_id.name"/></span>
+                    </div>
+
+                    <t t-if="doc.journal_has_checks!=False">
+                        <div class="col-xs-12 text-left">
+                            <br/>
+                            <strong><span>Detalle de Cheques</span></strong>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Banco</th>
+                                    <th class="text-center">Numero</th>
+                                    <th class="text-center">Fecha</th>
+                                    <th class="text-center">Monto</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc.check_line_ids" t-as="o">
+                                    <tr>
+                                        <td class="text-center"><span t-field="o.bank_id.name"/></td>
+                                        <td class="text-center"><span t-field="o.number"/></td>
+                                        <td class="text-center"><span t-field="o.issue_date"/></td>
+                                        <td class="text-center"><span t-field="o.amount_cash"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </t>
+                    <div class="col-xs-12 text-left">
+                        <h4><strong><span>Referencia: </span></strong><t t-esc="doc.cash_reference"/></h4>
+                    </div>
+                    <div class="col-xs-12 text-right" style="margin-top:40px;">
+                        <br/>
+                        <span>Recibido _________________________________   </span>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="cashout_printout">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="vitt_cashin_cashout.cashout_printout_sub"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>

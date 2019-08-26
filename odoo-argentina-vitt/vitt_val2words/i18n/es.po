@@ -1,0 +1,455 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_val2words
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-12-20 17:32+0000\n"
+"PO-Revision-Date: 2017-07-27 11:08-0600\n"
+"Last-Translator: Dewin J. Garcia <garcia@bacgroup.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.2\n"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_bill1
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_bill1
+msgid "1 Billions"
+msgstr "1 Billones"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn1
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn1
+msgid "1 Hundreds"
+msgstr "1 Cientos"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_mill1
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_mill1
+msgid "1 Millions"
+msgstr "1 Millones"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_thou1
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_thou1
+msgid "1 Thousands"
+msgstr "1 Miles"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn2
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn2
+msgid "2 Hundreds"
+msgstr "2 Cientos"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_bill4
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_bill4
+msgid "2-4 Billions"
+msgstr "2-4 Billones"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_mill4
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_mill4
+msgid "2-4 Millions"
+msgstr "2-4 Millones"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_thou4
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_thou4
+msgid "2-4 Thousands"
+msgstr "2-4 Miles"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn3
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn3
+msgid "3 Hundreds"
+msgstr "3 Cientos"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn4
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn4
+msgid "4 Hundreds"
+msgstr "4 Cientos"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn5
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn5
+msgid "5 Hundreds"
+msgstr "5 Cientos"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_bill9
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_bill9
+msgid "5-9 Billions"
+msgstr "5-9 Billones"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_mill9
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_mill9
+msgid "5-9 Millions"
+msgstr "5-9 Millones"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_thou9
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_thou9
+msgid "5-9 Thousands"
+msgstr "5-9 Miles"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn6
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn6
+msgid "6 Hundreds"
+msgstr "6 Cientos"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn7
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn7
+msgid "7 Hundreds"
+msgstr "7 Cientos"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn8
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn8
+msgid "8 Hundreds"
+msgstr "8 Cientos"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn9
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn9
+msgid "9 Hundreds"
+msgstr "9 Cientos"
+
+#. module: vitt_val2words
+#: model:ir.model,name:vitt_val2words.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_company_id
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_config_numbers_id
+msgid "Config numbers id"
+msgstr "Config numbers id"
+
+#. module: vitt_val2words
+#: model:ir.ui.view,arch_db:vitt_val2words.vitt_val2words_settings_form_view
+msgid "Conjunction"
+msgstr "Conjunción"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_create_uid
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_create_uid
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names_create_uid
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_language_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_create_date
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_create_date
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names_create_date
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_language_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: vitt_val2words
+#: model:ir.model,name:vitt_val2words.model_res_currency
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names_currency_name
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_currency_names_currency_name
+#: model:ir.ui.view,arch_db:vitt_val2words.vitt_val2words_settings_form_view
+msgid "Currency Name"
+msgstr "Nombre de Moneda"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names_config_id
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_currency_names_ids
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_currency_names_config_id
+#: model:ir.ui.view,arch_db:vitt_val2words.vitt_val2words_settings_form_view
+msgid "Currency Names"
+msgstr "Nombres de Moneda"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_currency_names_ids
+msgid "Currency names ids"
+msgstr "Nombres de Moneda"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_cutdecimals
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_cutdecimals
+msgid "Cut Decimals"
+msgstr "Cortar Decimales"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_decipart
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_decipart
+msgid "Decimal Conjunction"
+msgstr "Conjunción Decimal"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_dec_words
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_dec_words
+msgid "Decimal Words"
+msgstr "Decimales En:"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_res_company_val2words_default
+msgid "Default Language Val to Words"
+msgstr "Idioma por Defecto Valores a Palabras"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_language_description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_display_name
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_display_name
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names_display_name
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_language_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: vitt_val2words
+#: model:ir.ui.view,arch_db:vitt_val2words.vitt_val2words_settings_form_view
+msgid "Down hundred"
+msgstr "Abajo de Cien"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_endtext
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_endtext
+msgid "Drag Text"
+msgstr "Texto de Arrastre"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_mainpart
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_mainpart
+msgid "Hundreds and Tens Conjunction"
+msgstr "Conjunción Cientos y Decenas"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_id
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_id
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names_id
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_language_id
+msgid "ID"
+msgstr "ID"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_valtext
+msgid "In word"
+msgstr "En Palabra"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_numbers_valtext
+msgid "In words"
+msgstr "En Palabras"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_name
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_name
+msgid "Languaje"
+msgstr "Idioma"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_language_description
+msgid "Languaje description"
+msgstr "Idioma descripción"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers___last_update
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text___last_update
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names___last_update
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_language___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_write_uid
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_write_uid
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names_write_uid
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_language_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_write_date
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_write_date
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_currency_names_write_date
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_language_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_language_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_negative
+msgid "Negative Text"
+msgstr "Texto Negativo"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_numtext
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_numbers_numtext
+msgid "Number"
+msgstr "Número"
+
+#. module: vitt_val2words
+#: selection:vitt_val2words.config_text,dec_words:0
+msgid "Numbers"
+msgstr "Números"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_config_numbers_id
+msgid "Numbers Config"
+msgstr "Config. Números"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_houn1single
+msgid "One Hundred"
+msgstr "Cien Solo"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_houn1single
+msgid "One hundred only Conjunction"
+msgstr "Conjunción Cien Solo"
+
+#. module: vitt_val2words
+#: sql_constraint:vitt_val2words.currency_names:0
+msgid "Only one Currency per Config is permitted!"
+msgstr "Solo una Moneda es permitido por Configuración!"
+
+#. module: vitt_val2words
+#: sql_constraint:vitt_val2words.config_text:0
+msgid "Only one Languaje is permitted per Company!"
+msgstr "Solo un idioma es permitido por Compañía!"
+
+#. module: vitt_val2words
+#: sql_constraint:vitt_val2words.language:0
+msgid "Only one Languaje is permitted!"
+msgstr "Solo un idioma es permitido!"
+
+#. module: vitt_val2words
+#: sql_constraint:vitt_val2words.config_numbers:0
+msgid "Only one Number per Company is permitted!"
+msgstr "Solo un Número por Compañía es Permitido"
+
+#. module: vitt_val2words
+#: model:ir.ui.view,arch_db:vitt_val2words.vitt_val2words_settings_form_view
+msgid "Over hundred"
+msgstr "Arriba de Cien"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_print_currency
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_print_currency
+msgid "Print Currency"
+msgstr "Imprimir Moneda"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,help:vitt_val2words.field_res_company_val2words_default
+msgid "Set default language to convert Val to Text"
+msgstr "Configurar idioma por defecto para convertir valores a palabras"
+
+#. module: vitt_val2words
+#: model:ir.ui.view,arch_db:vitt_val2words.vitt_val2words_settings_form_view
+msgid "Tax Mapping"
+msgstr "Mapeo de impuestos"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_bill10
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_bill10
+msgid "Tens Billions"
+msgstr "10 Billones"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_mill10
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_mill10
+msgid "Tens Millions"
+msgstr "10 Millones"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_thou10
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_thou10
+msgid "Tens Thousands"
+msgstr "10 Miles"
+
+#. module: vitt_val2words
+#: selection:vitt_val2words.config_text,dec_words:0
+msgid "Text"
+msgstr "Texto"
+
+#. module: vitt_val2words
+#: model:ir.actions.act_window,name:vitt_val2words.vitt_val2words_settings_action
+#: model:ir.ui.menu,name:vitt_val2words.vitt_val2words_settings_menu
+#: model:ir.ui.view,arch_db:vitt_val2words.vitt_val2words_settings_form_view
+msgid "Values in words"
+msgstr "Valores en palabras"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_numbers_config_id
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_numbers_config_id
+msgid "Words Configuration"
+msgstr "Config. Palabras"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,field_description:vitt_val2words.field_vitt_val2words_config_text_zero
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_zero
+msgid "Zero Text"
+msgstr "Cero"
+
+#. module: vitt_val2words
+#: selection:vitt_val2words.config_text,print_currency:0
+msgid "after Value"
+msgstr "Valor Despues"
+
+#. module: vitt_val2words
+#: selection:vitt_val2words.config_text,print_currency:0
+msgid "before value"
+msgstr "Valor Antes"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_numbers_company_id
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_config_text_company_id
+msgid "code of company"
+msgstr "código de la compañía"
+
+#. module: vitt_val2words
+#: model:ir.model.fields,help:vitt_val2words.field_vitt_val2words_language_name
+msgid "languaje"
+msgstr "languaje"
+
+#. module: vitt_val2words
+#: model:ir.model,name:vitt_val2words.model_vitt_val2words_config_numbers
+msgid "vitt_val2words.config_numbers"
+msgstr "vitt_val2words.config_numbers"
+
+#. module: vitt_val2words
+#: model:ir.model,name:vitt_val2words.model_vitt_val2words_config_text
+msgid "vitt_val2words.config_text"
+msgstr "vitt_val2words.config_text"
+
+#. module: vitt_val2words
+#: model:ir.model,name:vitt_val2words.model_vitt_val2words_currency_names
+msgid "vitt_val2words.currency_names"
+msgstr "vitt_val2words.currency_names"
+
+#. module: vitt_val2words
+#: model:ir.model,name:vitt_val2words.model_vitt_val2words_language
+msgid "vitt_val2words.language"
+msgstr "vitt_val2words.language"

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="action_multi_currency_customer_ledger_report" model="ir.actions.client">
+			<field name="name">Multi Currencies Customer Ledger</field>
+			<field name="tag">account_report_generic</field>
+			<field name="context"
+				eval="{'url': '/account_reports/output_format/currencies_customer_ledger_report/1', 'addActiveId': True, 'model': 'currencies.customer.ledger.report','date_filter':'custom'}" />
+		</record>
+
+		<record id="action_multi_currency_supplier_ledger_report" model="ir.actions.client">
+			<field name="name">Multi Currencies Vendor Ledger</field>
+			<field name="tag">account_report_generic</field>
+			<field name="context"
+				eval="{'url': '/account_reports/output_format/currencies_vendor_ledger_report/1', 'addActiveId': True, 'model': 'currencies.vendor.ledger.report','date_filter':'custom'}" />
+		</record>
+
+		<record id="currencies_partner_ledger_report_type" model="account.report.type">
+			<field name="date_range" eval="True" />
+			<field name="extra_options" eval="False" />
+			<field name="comparison" eval="False" />
+		</record>
+
+
+
+
+	</data>
+</odoo>

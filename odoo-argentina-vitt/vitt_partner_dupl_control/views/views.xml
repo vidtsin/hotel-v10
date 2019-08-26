@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_account_config_settings2" model="ir.ui.view">
+            <field name="name">account.config.settings2.form.inherit</field>
+            <field name="model">account.config.settings</field>
+            <field name="inherit_id" ref="l10n_ar_account_withholding.view_account_config_settings2"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='taxincomeregimes']" position="after">
+                    <group name="categorypartner" string="Partner Category">
+                        <label for="id" string="Category"/>
+                            <div>
+                                <field name="main_id_category_ids" widget="many2many_tags"/>
+                            </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

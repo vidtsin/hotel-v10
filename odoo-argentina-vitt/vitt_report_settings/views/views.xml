@@ -1,0 +1,23 @@
+<odoo>
+
+    <record id="new_view_nl_setting" model="ir.ui.view">
+        <field name="name">account.config.settings.new</field>
+        <field name="model">nl.setting.block</field>
+        <field name="inherit_id" ref="vitt_nl_setting.view_nl_setting" />
+        <field name="arch" type="xml">
+                <xpath expr="//group[@name='main']" position="inside">
+                    <group string="Report Settings for Sales/Purchase Ledger">
+                            <field name="add_anal_tags"/>
+                            <field name="add_obj_inv"/>
+                    </group>
+                </xpath>
+        </field>
+    </record>
+
+    <data noupdate="1">
+        <record id="default_nl_setting" model="nl.setting.block">
+            <field name="add_anal_tags" eval="True"/>
+            <field name="add_obj_inv" eval="True"/>
+        </record>
+    </data>
+</odoo>

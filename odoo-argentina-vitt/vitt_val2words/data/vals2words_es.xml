@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="True">
+        <record id="vals2words_es" model="vitt_val2words.config_text" >
+            <field name="name" ref="base.lang_es"/>
+            <field name="bill1">Billon</field>
+            <field name="bill4">Billones</field>
+            <field name="bill9">Billones</field>
+            <field name="bill10">Billones</field>
+            <field name="mill1">Millon</field>
+            <field name="mill4">Millones</field>
+            <field name="mill9">Millones</field>
+            <field name="mill10">Millones</field>
+            <field name="thou1">Mil</field>
+            <field name="thou4">Mil</field>
+            <field name="thou9">Mil</field>
+            <field name="thou10">Mil</field>
+            <field name="houn1">Ciento</field>
+            <field name="houn2">Doscientos</field>
+            <field name="houn3">Trescientos</field>
+            <field name="houn4">Cuatrocientos</field>
+            <field name="houn5">Quinientos</field>
+            <field name="houn6">Seiscientos</field>
+            <field name="houn7">Setescientos</field>
+            <field name="houn8">Ochoscientos</field>
+            <field name="houn9">Novescientos</field>
+            <field name="houn1single">Cien</field>
+            <field name="mainpart"> </field>
+            <field name="decipart">Con</field>
+            <field name="endtext">/100</field>
+            <field name="zero">Cero</field>
+            <field name="dec_words">text</field>
+        </record>
+
+        <record id="config_numbers_es_1" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">1</field>
+            <field name="valtext">Un</field>
+        </record>
+        <record id="config_numbers_es_2" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">2</field>
+            <field name="valtext">Dos</field>
+        </record>
+        <record id="config_numbers_es_3" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">3</field>
+            <field name="valtext">Tres</field>
+        </record>
+        <record id="config_numbers_es_4" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">4</field>
+            <field name="valtext">Cuatro</field>
+        </record>
+        <record id="config_numbers_es_5" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">5</field>
+            <field name="valtext">Cinco</field>
+        </record>
+        <record id="config_numbers_es_6" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">6</field>
+            <field name="valtext">Seis</field>
+        </record>
+        <record id="config_numbers_es_7" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">7</field>
+            <field name="valtext">Siete</field>
+        </record>
+        <record id="config_numbers_es_8" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">8</field>
+            <field name="valtext">Ocho</field>
+        </record>
+        <record id="config_numbers_es_9" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">9</field>
+            <field name="valtext">Nueve</field>
+        </record>
+        <record id="config_numbers_es_10" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">10</field>
+            <field name="valtext">Diez</field>
+        </record>
+        <record id="config_numbers_es_11" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">11</field>
+            <field name="valtext">Once</field>
+        </record>
+        <record id="config_numbers_es_12" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">12</field>
+            <field name="valtext">Doce</field>
+        </record>
+        <record id="config_numbers_es_13" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">13</field>
+            <field name="valtext">Trece</field>
+        </record>
+        <record id="config_numbers_es_14" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">14</field>
+            <field name="valtext">Catorce</field>
+        </record>
+        <record id="config_numbers_es_15" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">15</field>
+            <field name="valtext">Quince</field>
+        </record>
+        <record id="config_numbers_es_16" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">16</field>
+            <field name="valtext">Dieciseis</field>
+        </record>
+        <record id="config_numbers_es_17" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">17</field>
+            <field name="valtext">Diecisiete</field>
+        </record>
+        <record id="config_numbers_es_18" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">18</field>
+            <field name="valtext">Dieciocho</field>
+        </record>
+        <record id="config_numbers_es_19" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">19</field>
+            <field name="valtext">Diecinueve</field>
+        </record>
+        <record id="config_numbers_es_20" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">20</field>
+            <field name="valtext">Veinte</field>
+        </record>
+        <record id="config_numbers_es_21" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">21</field>
+            <field name="valtext">Veintiuno</field>
+        </record>
+        <record id="config_numbers_es_22" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">22</field>
+            <field name="valtext">Veintidos</field>
+        </record>
+        <record id="config_numbers_es_23" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">23</field>
+            <field name="valtext">Veintitres</field>
+        </record>
+        <record id="config_numbers_es_24" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">24</field>
+            <field name="valtext">Veinticuatro</field>
+        </record>
+        <record id="config_numbers_es_25" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">25</field>
+            <field name="valtext">Veinticinco</field>
+        </record>
+        <record id="config_numbers_es_26" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">26</field>
+            <field name="valtext">Veintiseis</field>
+        </record>
+        <record id="config_numbers_es_27" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">27</field>
+            <field name="valtext">Veintisiete</field>
+        </record>
+        <record id="config_numbers_es_28" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">28</field>
+            <field name="valtext">Veintiocho</field>
+        </record>
+        <record id="config_numbers_es_29" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">29</field>
+            <field name="valtext">Veintinueve</field>
+        </record>
+        <record id="config_numbers_es_30" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">30</field>
+            <field name="valtext">Treinta</field>
+        </record>
+        <record id="config_numbers_es_31" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">31</field>
+            <field name="valtext">Treinta y Uno</field>
+        </record>
+        <record id="config_numbers_es_32" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">32</field>
+            <field name="valtext">Treinta y Dos</field>
+        </record>
+        <record id="config_numbers_es_33" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">33</field>
+            <field name="valtext">Treinta y Tres</field>
+        </record>
+        <record id="config_numbers_es_34" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">34</field>
+            <field name="valtext">Treinta y Cuatro</field>
+        </record>
+        <record id="config_numbers_es_35" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">35</field>
+            <field name="valtext">Treinta y Cinco</field>
+        </record>
+        <record id="config_numbers_es_36" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">36</field>
+            <field name="valtext">Treinta y Seis</field>
+        </record>
+        <record id="config_numbers_es_37" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">37</field>
+            <field name="valtext">Treinta y Siete</field>
+        </record>
+        <record id="config_numbers_es_38" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">38</field>
+            <field name="valtext">Treinta y Ocho</field>
+        </record>
+        <record id="config_numbers_es_39" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">39</field>
+            <field name="valtext">Treinta y Nueve</field>
+        </record>
+        <record id="config_numbers_es_40" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">40</field>
+            <field name="valtext">Cuarenta</field>
+        </record>
+        <record id="config_numbers_es_41" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">41</field>
+            <field name="valtext">Cuarenta y Uno</field>
+        </record>
+        <record id="config_numbers_es_42" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">42</field>
+            <field name="valtext">Cuarenta y Dos</field>
+        </record>
+        <record id="config_numbers_es_43" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">43</field>
+            <field name="valtext">Cuarenta y Tres</field>
+        </record>
+        <record id="config_numbers_es_44" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">44</field>
+            <field name="valtext">Cuarenta y Cuatro</field>
+        </record>
+        <record id="config_numbers_es_45" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">45</field>
+            <field name="valtext">Cuarenta y Cinco</field>
+        </record>
+        <record id="config_numbers_es_46" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">46</field>
+            <field name="valtext">Cuarenta y Seis</field>
+        </record>
+        <record id="config_numbers_es_47" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">47</field>
+            <field name="valtext">Cuarenta y Siete</field>
+        </record>
+        <record id="config_numbers_es_48" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">48</field>
+            <field name="valtext">Cuarenta y Ocho</field>
+        </record>
+        <record id="config_numbers_es_49" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">49</field>
+            <field name="valtext">Cuarenta y Nueve</field>
+        </record>
+        <record id="config_numbers_es_50" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">50</field>
+            <field name="valtext">Cincuenta</field>
+        </record>
+        <record id="config_numbers_es_51" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">51</field>
+            <field name="valtext">Cincuenta y Uno</field>
+        </record>
+        <record id="config_numbers_es_52" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">52</field>
+            <field name="valtext">Cincuenta y Dos</field>
+        </record>
+        <record id="config_numbers_es_53" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">53</field>
+            <field name="valtext">Cincuenta y Tres</field>
+        </record>
+        <record id="config_numbers_es_54" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">54</field>
+            <field name="valtext">Cincuenta y Cuatro</field>
+        </record>
+        <record id="config_numbers_es_55" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">55</field>
+            <field name="valtext">Cincuenta y Cinco</field>
+        </record>
+        <record id="config_numbers_es_56" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">56</field>
+            <field name="valtext">Cincuenta y Seis</field>
+        </record>
+        <record id="config_numbers_es_57" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">57</field>
+            <field name="valtext">Cincuenta y Siete</field>
+        </record>
+        <record id="config_numbers_es_58" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">58</field>
+            <field name="valtext">Cincuenta y Ocho</field>
+        </record>
+        <record id="config_numbers_es_59" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">59</field>
+            <field name="valtext">Cincuenta y Nueve</field>
+        </record>
+        <record id="config_numbers_es_60" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">60</field>
+            <field name="valtext">Sesenta</field>
+        </record>
+        <record id="config_numbers_es_61" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">61</field>
+            <field name="valtext">Sesenta y Uno</field>
+        </record>
+        <record id="config_numbers_es_62" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">62</field>
+            <field name="valtext">Sesenta y Dos</field>
+        </record>
+        <record id="config_numbers_es_63" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">63</field>
+            <field name="valtext">Sesenta y Tres</field>
+        </record>
+        <record id="config_numbers_es_64" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">64</field>
+            <field name="valtext">Sesenta y Cuatro</field>
+        </record>
+        <record id="config_numbers_es_65" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">65</field>
+            <field name="valtext">Sesenta y Cinco</field>
+        </record>
+        <record id="config_numbers_es_66" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">66</field>
+            <field name="valtext">Sesenta y Seis</field>
+        </record>
+        <record id="config_numbers_es_67" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">67</field>
+            <field name="valtext">Sesenta y Siete</field>
+        </record>
+        <record id="config_numbers_es_68" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">68</field>
+            <field name="valtext">Sesenta y Ocho</field>
+        </record>
+        <record id="config_numbers_es_69" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">69</field>
+            <field name="valtext">Sesenta y Nueve</field>
+        </record>
+        <record id="config_numbers_es_70" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">70</field>
+            <field name="valtext">Setenta</field>
+        </record>
+        <record id="config_numbers_es_71" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">71</field>
+            <field name="valtext">Setenta y Uno</field>
+        </record>
+        <record id="config_numbers_es_72" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">72</field>
+            <field name="valtext">Setenta y Dos</field>
+        </record>
+        <record id="config_numbers_es_73" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">73</field>
+            <field name="valtext">Setenta y Tres</field>
+        </record>
+        <record id="config_numbers_es_74" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">74</field>
+            <field name="valtext">Setenta y Cuatro</field>
+        </record>
+        <record id="config_numbers_es_75" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">75</field>
+            <field name="valtext">Setenta y Cinco</field>
+        </record>
+        <record id="config_numbers_es_76" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">76</field>
+            <field name="valtext">Setenta y Seis</field>
+        </record>
+        <record id="config_numbers_es_77" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">77</field>
+            <field name="valtext">Setenta y Siete</field>
+        </record>
+        <record id="config_numbers_es_78" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">78</field>
+            <field name="valtext">Setenta y Ocho</field>
+        </record>
+        <record id="config_numbers_es_79" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">79</field>
+            <field name="valtext">Setenta y Nueve</field>
+        </record>
+        <record id="config_numbers_es_80" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">80</field>
+            <field name="valtext">Ochenta</field>
+        </record>
+        <record id="config_numbers_es_81" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">81</field>
+            <field name="valtext">Ochenta y Uno</field>
+        </record>
+        <record id="config_numbers_es_82" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">82</field>
+            <field name="valtext">Ochenta y Dos</field>
+        </record>
+        <record id="config_numbers_es_83" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">83</field>
+            <field name="valtext">Ochenta y Tres</field>
+        </record>
+        <record id="config_numbers_es_84" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">84</field>
+            <field name="valtext">Ochenta y Cuatro</field>
+        </record>
+        <record id="config_numbers_es_85" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">85</field>
+            <field name="valtext">Ochenta y Cinco</field>
+        </record>
+        <record id="config_numbers_es_86" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">86</field>
+            <field name="valtext">Ochenta y Seis</field>
+        </record>
+        <record id="config_numbers_es_87" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">87</field>
+            <field name="valtext">Ochenta y Siete</field>
+        </record>
+        <record id="config_numbers_es_88" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">88</field>
+            <field name="valtext">Ochenta y Ocho</field>
+        </record>
+        <record id="config_numbers_es_89" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">89</field>
+            <field name="valtext">Ochenta y Nueve</field>
+        </record>
+        <record id="config_numbers_es_90" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">90</field>
+            <field name="valtext">Noventa</field>
+        </record>
+        <record id="config_numbers_es_91" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">91</field>
+            <field name="valtext">Noventa y Uno</field>
+        </record>
+        <record id="config_numbers_es_92" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">92</field>
+            <field name="valtext">Noventa y Dos</field>
+        </record>
+        <record id="config_numbers_es_93" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">93</field>
+            <field name="valtext">Noventa y Tres</field>
+        </record>
+        <record id="config_numbers_es_94" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">94</field>
+            <field name="valtext">Noventa y Cuatro</field>
+        </record>
+        <record id="config_numbers_es_95" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">95</field>
+            <field name="valtext">Noventa y Cinco</field>
+        </record>
+        <record id="config_numbers_es_96" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">96</field>
+            <field name="valtext">Noventa y Seis</field>
+        </record>
+        <record id="config_numbers_es_97" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">97</field>
+            <field name="valtext">Noventa y Siete</field>
+        </record>
+        <record id="config_numbers_es_98" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">98</field>
+            <field name="valtext">Noventa y Ocho</field>
+        </record>
+        <record id="config_numbers_es_99" model="vitt_val2words.config_numbers">
+            <field name="config_id" ref="vals2words_es"/>
+            <field name="numtext">99</field>
+            <field name="valtext">Noventa y Nueve</field>
+        </record>
+        <!-- <record id="config_numbers_es_100" model="vitt_val2words.config_numbers">
+        <field name="config_id" ref="vals2words_es"/>
+        <field name="numtext">100</field>
+        <field name="valtext">Cien</field>
+        </record> -->
+    </data>
+</odoo>

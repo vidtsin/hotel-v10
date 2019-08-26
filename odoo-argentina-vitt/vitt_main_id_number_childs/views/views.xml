@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="cronjob_create_id_numbers" model="ir.cron">
+            <field name="name">Crear cuit para contactos hijos</field>
+            <field name="interval_type">minutes</field>
+            <field name="interval_number">1</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+            <field name="active">False</field>
+            <field name="model">res.partner</field>
+            <field name="function">cron_create_id_numbers</field>
+        </record>
+    </data>
+</odoo>

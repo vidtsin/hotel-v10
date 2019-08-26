@@ -1,0 +1,5 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_issue_checks_states,access_issue_checks_states,model_issue_checks_states,,1,0,0,0
+access_third_checks_states,access_third_checks_states,model_third_checks_states,,1,0,0,0
+access_account_check_history,access_account_check_history,model_account_check_history,,1,0,0,0
+access_report_vitt_arg_check_history_reports_check_rep,access_report_vitt_arg_check_history_reports_check_rep,model_report_vitt_arg_check_history_reports_check_rep,,1,0,0,0

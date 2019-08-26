@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="form_upload_images" model="ir.ui.view">
+        <field name="model">products.images</field>
+        <field name="name">form.upload.images</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="uplodad_images" string="Upload Images" type="object"/>
+                </header>
+                <group>
+                    <field name="name" />
+                    <field name="extid" />
+                    <field name="url" />
+                    <field name="done" />
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_upload_images" model="ir.actions.act_window">
+        <field name="name">Upload Images</field>
+        <field name="res_model">products.images</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        name="Upload Images"
+        id="item_upload_images"
+        parent="stock.menu_stock_inventory_control"
+        action="action_upload_images"
+        sequence="160"
+    />
+
+</odoo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_journal_entry_list_report_wizard" model="ir.ui.view">
+        <field name="name">Journal Entry List Wizard</field>
+        <field name="model">journal.entry_list.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="start_date" />
+                        <field name="end_date" />
+                    </group>
+                    <group>
+                        <field name="sort_by" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="%(action_journal_entry_list_report)d"
+                            type="action" class="btn-primary" string="Open"/>
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_journal_entry_list_report_wizard" model="ir.actions.act_window">
+        <field name="name">Journal Entry List Wizard</field>
+        <field name="res_model">journal.entry_list.report.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_journal_entry_list_report_wizard"/>
+        <field name="target">new</field>
+    </record>
+
+    <record id="detailed_general_ledger_report.menu_action_detailed_general_ledger" model="ir.ui.menu">
+        <field name="sequence" eval="1"/>
+    </record>
+
+    <menuitem id="menu_action_journal_entry_list_report_wizard" name="Journal Entries List"
+              action="action_journal_entry_list_report_wizard" sequence="2"
+              parent="detailed_general_ledger_report.account_reports_argentinean_legal_menu"/>
+</odoo>

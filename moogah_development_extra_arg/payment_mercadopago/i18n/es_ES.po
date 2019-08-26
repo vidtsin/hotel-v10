@@ -1,0 +1,453 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_mercadopago
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-01 18:18+0000\n"
+"PO-Revision-Date: 2019-02-01 15:50-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_AR\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.payment_confirmation_modification
+msgid ""
+", but it is\n"
+"                        still pending.<br/>To complete it below you can find receipt and further instructions to\n"
+"                        complete payment."
+msgstr ""
+", pero aún esta\n"
+"                        en estado pendiente.<br/>Para terminar la operación, Ud. puede encontrar las instrucciones para \n"
+"                        completar el pago."
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.reject_payment_template
+msgid "<span>If problem still persist please contact for technical support.</span>"
+msgstr "<span>Si el problema persiste, por favor contacte a soporte técnico.</span>"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.reject_payment_template
+msgid "<span>Your payment has been rejected by MercadoPago due to :</span>"
+msgstr "<span>Su pago ha sido rechazado por MercadoPago debido a :</span>"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.reject_payment_template
+msgid ""
+"<strong>\n"
+"                                            <span>There seems to be some problem processing your transaction. It might\n"
+"                                                be due to details provided are incorrect or some technical issues.\n"
+"                                                Please try again in some time.\n"
+"                                            </span>\n"
+"                                        </strong>"
+msgstr ""
+"<strong>\n"
+"                                            <span>Parece haber algún problema al procesar su transacción. Esto podría\n"
+"                                                ocurrir por datos incorrectos o algún problema técnico.\n"
+"                                                Por favor, intente de nuevo.\n"
+"                                            </span>\n"
+"                                        </strong>"
+
+#. module: payment_mercadopago
+#: selection:mercadopago.payment.methods,payment_type:0
+msgid "ATM"
+msgstr "ATM"
+
+#. module: payment_mercadopago
+#: selection:payment.acquirer,available_payment_method:0
+msgid "All Available Payment Methods Available"
+msgstr "Todos los Métodos de Pago Disponibles"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/payment.py:378
+#: code:addons/payment_mercadopago/models/payment.py:411
+#, python-format
+msgid "Amount Mismatch (%s)"
+msgstr "Diferencias en Montos (%s)"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_available_payment_method
+msgid "Available Payment Methods"
+msgstr "Métodos de Pago Disponibles"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "CVC"
+msgstr "CVC"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/mercadopago_request.py:25
+#, python-format
+msgid "Card Details seems to be missing. Please check it."
+msgstr "Los detalles de la Tarjeta no se encontraron. Por favor, revise los datos."
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "Card number"
+msgstr "Número de Tarjeta"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "Cardholder name"
+msgstr "Nombre en Tarjeta"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_other_payment_methods_ids
+#: model:ir.ui.view,arch_db:payment_mercadopago.acquirer_form_mercadopago
+msgid "Cash/Bank Transfer"
+msgstr "Efectivo/Transferencia Bancaria"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.payment_confirmation_modification
+msgid "Click Here To Print Receipt"
+msgstr "Clic Aquí para Imprimir el Recibo"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_mercadopago_client_id
+msgid "Client Id"
+msgstr "ID Cliente"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_mercadopago_client_secret
+msgid "Client Secret"
+msgstr "Secret Cliente"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: payment_mercadopago
+#: selection:mercadopago.payment.methods,payment_type:0
+#: selection:mercadopago.payment.methods,type:0
+msgid "Credit Card"
+msgstr "Credit Card"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_credit_card_payment_methods_ids
+#: model:ir.ui.view,arch_db:payment_mercadopago.acquirer_form_mercadopago
+msgid "Credit Cards"
+msgstr "Credit Cards"
+
+#. module: payment_mercadopago
+#: selection:payment.acquirer,available_payment_method:0
+msgid "Customized Available Payment Methods"
+msgstr "Métodos de Pago Disponibles Customizados"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "Cédula"
+msgstr "Cédula"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "DNI"
+msgstr "DNI"
+
+#. module: payment_mercadopago
+#: selection:mercadopago.payment.methods,payment_type:0
+#: selection:mercadopago.payment.methods,type:0
+msgid "Debit Card"
+msgstr "Tarjeta de Débito"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_debit_card_payment_methods_ids
+#: model:ir.ui.view,arch_db:payment_mercadopago.acquirer_form_mercadopago
+msgid "Debit Cards"
+msgstr "Tarjetas de Débito"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,help:payment_mercadopago.field_payment_token_save_token
+msgid "Determine if card data is saved as a token automatically or not. Payment tokens allow your customer to reuse their cards in the e-commerce or allow you to charge an invoice directly on a credit card. If set to 'let the customer decide', ecommerce customers will have a checkbox displayed on the payment page."
+msgstr "Determina si los datos de la tarjeta son guardados como un token de forma automática. Los tokens de pagos permiten que sus clientes reutilicen sus tarjetas en el e-commerce o le permiten facturar directamente un servicio. Si la opción es 'Dejar que el cliente decida', los clientes de e-commerce verán un checkbox en la página de pago."
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "Document Number"
+msgstr "Número de Documento"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_mercadopago_enable_MercadoEnvio
+msgid "Enable MercadoEnvio"
+msgstr "Habilitar MercadoEnvio"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "Expires (MM / YY)"
+msgstr "Validez Hasta (MM / AA)"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.acquirer_form_mercadopago
+msgid "How to get paid with MercadoPago"
+msgstr "Cómo obtener pagos por medio de MercadoPago"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_id
+msgid "ID"
+msgstr "ID"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_mercadopago_ipn_url
+msgid "IPN URL"
+msgstr "IPN URL"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_uni_id
+msgid "Id"
+msgstr "Id"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "L.C."
+msgstr "L.C."
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "L.E."
+msgstr "L.E."
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Modificación por"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.acquirer_form_mercadopago
+msgid "MercadoPago Client Id"
+msgstr "MercadoPago Client Id"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.acquirer_form_mercadopago
+msgid "MercadoPago Client Secret"
+msgstr "MercadoPago Client Secret"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_res_partner_mercadopago_customer
+#: model:ir.model.fields,field_description:payment_mercadopago.field_res_users_mercadopago_customer
+msgid "MercadoPago Customer Id"
+msgstr "MercadoPago Customer Id"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.acquirer_form_mercadopago
+msgid "MercadoPago IPN Url"
+msgstr "MercadoPago IPN Url"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_token_mercadopago_profile
+msgid "MercadoPago Profile ID"
+msgstr "MercadoPago Profile ID"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_transaction_mercadopago_response
+msgid "MercadoPago Response"
+msgstr "MercadoPago Response"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.transaction_form_mercadopago_inherit
+msgid "MercadoPago TX Details"
+msgstr "MercadoPago TX Details"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/payment.py:581
+#, python-format
+msgid "MercadoPago: %s orders found for reference %s"
+msgstr "MercadoPago: %s órdenes encontradas para referencia %s"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/payment.py:572
+#, python-format
+msgid "MercadoPago: invalid reply received from provider, missing reference. Additional message: %s"
+msgstr "MercadoPago: respuesta inválida recibida desde proveedor, falta referencia. Mensaje adicional: %s"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/payment.py:577
+#, python-format
+msgid "MercadoPago: no order found for reference %s"
+msgstr "MercadoPago: no se encontró orden para referencia %s"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_name
+msgid "Name"
+msgstr "Número"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/payment.py:306
+#, python-format
+msgid "No appropriate payment method enabled on journal %s"
+msgstr "No hay un método de pago apropiado en el diario %s"
+
+#. module: payment_mercadopago
+#: selection:mercadopago.payment.methods,type:0
+msgid "Others"
+msgstr "Otros"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "Otro"
+msgstr "Otro"
+
+#. module: payment_mercadopago
+#: model:ir.model,name:payment_mercadopago.model_res_partner
+msgid "Partner"
+msgstr "Cliente/Proveedor"
+
+#. module: payment_mercadopago
+#: model:ir.model,name:payment_mercadopago.model_payment_acquirer
+msgid "Payment Acquirer"
+msgstr "Método de pago"
+
+#. module: payment_mercadopago
+#: model:ir.model,name:payment_mercadopago.model_payment_transaction
+msgid "Payment Transaction"
+msgstr "Transacción de Pago"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_payment_type
+msgid "Payment Type Ids"
+msgstr "IDs Tipo de Pago"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.reject_payment_template
+msgid "Payment has been rejected"
+msgstr "El Pago ha sido rechazado"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/mercadopago_request.py:32
+#, python-format
+msgid "Please provide Public Key in MercardoPago payment acquirer provided by MercadoPago."
+msgstr "Por favor, ingrese un Public Key en la configuración de MercardoPago generada por MercadoPago."
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/mercadopago_request.py:28
+#, python-format
+msgid "Please provide Test Public Key in MercardoPago payment acquirer provided by MercadoPago."
+msgstr "Por favor, ingrese un Test Public Key en la configuración de MercardoPago generada por MercadoPago."
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_token_provider
+msgid "Provider"
+msgstr "Proveedor"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_mercadopago_prod_public_key
+msgid "Public Key"
+msgstr "Public Key"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_token_save_token
+msgid "Save Cards"
+msgstr "Guardar Tarjetas"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_mercadopago_test_access_token
+msgid "Test Access Token"
+msgstr "Test Access Token"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_mercadopago_test_public_key
+msgid "Test Public Key"
+msgstr "Test Public Key"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/payment.py:800
+#, python-format
+msgid "The Customer Profile creation in MercadoPago failed."
+msgstr "La creación del Perfil de Cliente en MercadoPago falló."
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/payment.py:378
+#: code:addons/payment_mercadopago/models/payment.py:412
+#, python-format
+msgid "The sale order was not confirmed despite response from the acquirer (%s): SO amount is %r but acquirer replied with %r."
+msgstr "La orden de ventas no fue confirmada a pesar de obtener la respuesta del proveedor (%s): Monto de OV es %r pero el proveedor respondió con %r."
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/payment.py:152
+#, python-format
+msgid "There seems to be some problem while creating MercadoPago Preference"
+msgstr "Parecen haber problemas con la creación de las Preferencias de MercadoPago"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,help:payment_mercadopago.field_payment_token_mercadopago_profile
+msgid "This contains the unique reference for this partner/payment token combination in the Authorize.net backend"
+msgstr "Contiene la referencia única para esta combinación de cliente/token de pago en Authorize.net backend"
+
+#. module: payment_mercadopago
+#: selection:mercadopago.payment.methods,payment_type:0
+msgid "Ticket"
+msgstr "Ticket"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/mercadopago_request.py:140
+#: code:addons/payment_mercadopago/models/mercadopago_request.py:181
+#, python-format
+msgid "Transaction is missing. Cannot proceed to pay on blank transaction."
+msgstr "La transacción no fue encontrada. No es posible proceder con el pago con una transacción vacía"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.reject_payment_template
+msgid "Try Again"
+msgstr "Intente de Nuevo"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_mercadopago_payment_methods_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: payment_mercadopago
+#: code:addons/payment_mercadopago/models/mercadopago_request.py:59
+#, python-format
+msgid "Unable to generate Card Token from MercadoPago API. Please contact administration"
+msgstr "No fue posible generar el Card Token desde MercadoPago API. Por favor, contacte a la administración"
+
+#. module: payment_mercadopago
+#: model:ir.model.fields,field_description:payment_mercadopago.field_payment_acquirer_mercadopago_use_ipn
+msgid "Use IPN"
+msgstr "Usar IPN"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.payment_confirmation_modification
+msgid "Your transaction has been registered to"
+msgstr "Su transacción ha sido registrada en"
+
+#. module: payment_mercadopago
+#: model:ir.ui.view,arch_db:payment_mercadopago.mercado_s2s_form
+msgid "example@domain.com"
+msgstr "example@domain.com"
+
+#. module: payment_mercadopago
+#: model:ir.model,name:payment_mercadopago.model_mercadopago_payment_methods
+msgid "mercadopago.payment.methods"
+msgstr "mercadopago.payment.methods"
+
+#. module: payment_mercadopago
+#: model:ir.model,name:payment_mercadopago.model_payment_token
+msgid "payment.token"
+msgstr "payment.token"

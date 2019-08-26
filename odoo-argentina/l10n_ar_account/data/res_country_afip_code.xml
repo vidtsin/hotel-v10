@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="True">
+        <record model='res.country' forcecreate="False" id='base.ad'>
+            <field name='afip_code'>404</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ae'>
+            <field name='afip_code'>331</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.af'>
+            <field name='afip_code'>301</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ag'>
+            <field name='afip_code'>237</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ai'>
+            <field name='afip_code'>652</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.al'>
+            <field name='afip_code'>401</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.am'>
+            <field name='afip_code'>349</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.an'>
+            <field name='afip_code'>659</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ao'>
+            <field name='afip_code'>149</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.aq'>
+            <field name='afip_code'>265</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ar'>
+            <field name='afip_code'>200</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.as'>
+            <field name='afip_code'>506</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.at'>
+            <field name='afip_code'>405</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.au'>
+            <field name='afip_code'>501</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.aw'>
+            <field name='afip_code'>242</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ax'>
+            <field name='afip_code'>429</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.az'>
+            <field name='afip_code'>350</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ba'>
+            <field name='afip_code'>446</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bb'>
+            <field name='afip_code'>201</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bd'>
+            <field name='afip_code'>345</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.be'>
+            <field name='afip_code'>406</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bf'>
+            <field name='afip_code'>101</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bg'>
+            <field name='afip_code'>407</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bh'>
+            <field name='afip_code'>303</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bi'>
+            <field name='afip_code'>104</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bj'>
+            <field name='afip_code'>112</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bm'>
+            <field name='afip_code'>663</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bn'>
+            <field name='afip_code'>346</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bo'>
+            <field name='afip_code'>202</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.br'>
+            <field name='afip_code'>203</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bs'>
+            <field name='afip_code'>239</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bt'>
+            <field name='afip_code'>305</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bw'>
+            <field name='afip_code'>103</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.by'>
+            <field name='afip_code'>439</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.bz'>
+            <field name='afip_code'>236</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ca'>
+            <field name='afip_code'>204</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cc'>
+            <field name='afip_code'>673</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cd'>
+            <field name='afip_code'>109</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cf'>
+            <field name='afip_code'>107</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cg'>
+            <field name='afip_code'>108</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ch'>
+            <field name='afip_code'>430</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ci'>
+            <field name='afip_code'>110</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ck'>
+            <field name='afip_code'>654</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cl'>
+            <field name='afip_code'>208</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cm'>
+            <field name='afip_code'>105</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cn'>
+            <field name='afip_code'>310</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.co'>
+            <field name='afip_code'>205</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cr'>
+            <field name='afip_code'>206</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cu'>
+            <field name='afip_code'>207</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cv'>
+            <field name='afip_code'>150</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cx'>
+            <field name='afip_code'>672</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cy'>
+            <field name='afip_code'>435</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.cz'>
+            <field name='afip_code'>450</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.de'>
+            <field name='afip_code'>438</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.dj'>
+            <field name='afip_code'>153</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.dk'>
+            <field name='afip_code'>409</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.dm'>
+            <field name='afip_code'>233</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.do'>
+            <field name='afip_code'>209</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.dz'>
+            <field name='afip_code'>102</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ec'>
+            <field name='afip_code'>210</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ee'>
+            <field name='afip_code'>440</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.eg'>
+            <field name='afip_code'>113</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.er'>
+            <field name='afip_code'>160</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.es'>
+            <field name='afip_code'>410</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.et'>
+            <field name='afip_code'>161</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.fi'>
+            <field name='afip_code'>411</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.fj'>
+            <field name='afip_code'>512</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.fk'>
+            <field name='afip_code'>254</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.fm'>
+            <field name='afip_code'>515</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.fr'>
+            <field name='afip_code'>412</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ga'>
+            <field name='afip_code'>115</field>
+        </record>
+<!--        <record model='res.country' forcecreate="False" id='base.gb'>
+            <field name='afip_code'>426</field>
+        </record>  -->
+        <record model='res.country' forcecreate="False" id='base.gd'>
+            <field name='afip_code'>240</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ge'>
+            <field name='afip_code'>351</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.gg'>
+            <field name='afip_code'>670</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.gh'>
+            <field name='afip_code'>117</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.gn'>
+            <field name='afip_code'>118</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.gq'>
+            <field name='afip_code'>119</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.gr'>
+            <field name='afip_code'>413</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.gt'>
+            <field name='afip_code'>213</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.gu'>
+            <field name='afip_code'>667</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.gw'>
+            <field name='afip_code'>156</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.gy'>
+            <field name='afip_code'>214</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.hk'>
+            <field name='afip_code'>341</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.hn'>
+            <field name='afip_code'>216</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.hr'>
+            <field name='afip_code'>447</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ht'>
+            <field name='afip_code'>215</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.hu'>
+            <field name='afip_code'>414</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.id'>
+            <field name='afip_code'>316</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ie'>
+            <field name='afip_code'>415</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.il'>
+            <field name='afip_code'>319</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.im'>
+            <field name='afip_code'>676</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.in'>
+            <field name='afip_code'>315</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.iq'>
+            <field name='afip_code'>317</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ir'>
+            <field name='afip_code'>318</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.is'>
+            <field name='afip_code'>416</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.it'>
+            <field name='afip_code'>417</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.je'>
+            <field name='afip_code'>670</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.jm'>
+            <field name='afip_code'>217</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.jo'>
+            <field name='afip_code'>321</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.jp'>
+            <field name='afip_code'>320</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ke'>
+            <field name='afip_code'>120</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.kg'>
+            <field name='afip_code'>353</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.kh'>
+            <field name='afip_code'>306</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.kw'>
+            <field name='afip_code'>323</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ki'>
+            <field name='afip_code'>514</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.km'>
+            <field name='afip_code'>155</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.kp'>
+            <field name='afip_code'>308</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.kr'>
+            <field name='afip_code'>309</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.kw'>
+            <field name='afip_code'>323</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ky'>
+            <field name='afip_code'>671</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.kz'>
+            <field name='afip_code'>352</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.la'>
+            <field name='afip_code'>324</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.lb'>
+            <field name='afip_code'>325</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.lc'>
+            <field name='afip_code'>234</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.li'>
+            <field name='afip_code'>418</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.lk'>
+            <field name='afip_code'>307</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.lr'>
+            <field name='afip_code'>122</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ls'>
+            <field name='afip_code'>121</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.lt'>
+            <field name='afip_code'>442</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.lu'>
+            <field name='afip_code'>419</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.lv'>
+            <field name='afip_code'>441</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ly'>
+            <field name='afip_code'>123</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ma'>
+            <field name='afip_code'>127</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mc'>
+            <field name='afip_code'>421</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.md'>
+            <field name='afip_code'>443</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.me'>
+            <field name='afip_code'>453</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mg'>
+            <field name='afip_code'>124</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mh'>
+            <field name='afip_code'>520</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mk'>
+            <field name='afip_code'>450</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ml'>
+            <field name='afip_code'>126</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mm'>
+            <field name='afip_code'>304</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mn'>
+            <field name='afip_code'>329</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mo'>
+            <field name='afip_code'>344</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mp'>
+            <field name='afip_code'>521</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mq'>
+            <field name='afip_code'>509</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mr'>
+            <field name='afip_code'>129</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ms'>
+            <field name='afip_code'>686</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mt'>
+            <field name='afip_code'>420</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mu'>
+            <field name='afip_code'>128</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mv'>
+            <field name='afip_code'>327</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mw'>
+            <field name='afip_code'>125</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mx'>
+            <field name='afip_code'>218</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.my'>
+            <field name='afip_code'>326</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.mz'>
+            <field name='afip_code'>151</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.na'>
+            <field name='afip_code'>158</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.nc'>
+            <field name='afip_code'>147</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ne'>
+            <field name='afip_code'>130</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.nf'>
+            <field name='afip_code'>677</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ng'>
+            <field name='afip_code'>131</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ni'>
+            <field name='afip_code'>219</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.nl'>
+            <field name='afip_code'>434</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.no'>
+            <field name='afip_code'>422</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.np'>
+            <field name='afip_code'>330</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.nr'>
+            <field name='afip_code'>503</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.nu'>
+            <field name='afip_code'>687</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.nz'>
+            <field name='afip_code'>504</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.om'>
+            <field name='afip_code'>328</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pa'>
+            <field name='afip_code'>220</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pe'>
+            <field name='afip_code'>222</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pf'>
+            <field name='afip_code'>656</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pg'>
+            <field name='afip_code'>513</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ph'>
+            <field name='afip_code'>312</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pk'>
+            <field name='afip_code'>332</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pl'>
+            <field name='afip_code'>424</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pm'>
+            <field name='afip_code'>509</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pn'>
+            <field name='afip_code'>690</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pr'>
+            <field name='afip_code'>223</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ps'>
+            <field name='afip_code'>357</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pt'>
+            <field name='afip_code'>425</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.pw'>
+            <field name='afip_code'>516</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.py'>
+            <field name='afip_code'>221</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.qa'>
+            <field name='afip_code'>322</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.re'>
+            <field name='afip_code'>509</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ro'>
+            <field name='afip_code'>427</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.rs'>
+            <field name='afip_code'>454</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ru'>
+            <field name='afip_code'>444</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.rw'>
+            <field name='afip_code'>133</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.sa'>
+            <field name='afip_code'>302</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.sb'>
+            <field name='afip_code'>518</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.sc'>
+            <field name='afip_code'>152</field>
+        </record>
+         <record model='res.country' forcecreate="False" id='base.sd'>
+            <field name='afip_code'>138</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.se'>
+            <field name='afip_code'>429</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.sg'>
+            <field name='afip_code'>333</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.sh'>
+            <field name='afip_code'>508</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.si'>
+            <field name='afip_code'>449</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.sk'>
+            <field name='afip_code'>448</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.sl'>
+            <field name='afip_code'>135</field>
+        </record>
+       <record model='res.country' forcecreate="False" id='base.sm'>
+            <field name='afip_code'>428</field>
+        </record>
+       <record model='res.country' forcecreate="False" id='base.sn'>
+            <field name='afip_code'>134</field>
+        </record>
+       <record model='res.country' forcecreate="False" id='base.so'>
+            <field name='afip_code'>136</field>
+        </record>
+       <record model='res.country' forcecreate="False" id='base.sr'>
+            <field name='afip_code'>232</field>
+        </record>
+       <record model='res.country' forcecreate="False" id='base.ss'>
+            <field name='afip_code'>138</field>
+        </record>
+       <record model='res.country' forcecreate="False" id='base.st'>
+            <field name='afip_code'>157</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.sv'>
+            <field name='afip_code'>211</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.sx'>
+            <field name='afip_code'>659</field>
+        </record>
+       <record model='res.country' forcecreate="False" id='base.sy'>
+            <field name='afip_code'>334</field>
+        </record>
+       <record model='res.country' forcecreate="False" id='base.sz'>
+            <field name='afip_code'>137</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tc'>
+            <field name='afip_code'>678</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.td'>
+            <field name='afip_code'>111</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tf'>
+            <field name='afip_code'>147</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tg'>
+            <field name='afip_code'>140</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.th'>
+            <field name='afip_code'>335</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tk'>
+            <field name='afip_code'>699</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tm'>
+            <field name='afip_code'>355</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.to'>
+            <field name='afip_code'>519</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tp'>
+            <field name='afip_code'>358</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tr'>
+            <field name='afip_code'>436</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tt'>
+            <field name='afip_code'>224</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tv'>
+            <field name='afip_code'>517</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tw'>
+            <field name='afip_code'>313</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.tz'>
+            <field name='afip_code'>139</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ua'>
+            <field name='afip_code'>445</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ug'>
+            <field name='afip_code'>142</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.um'>
+            <field name='afip_code'>683</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.us'>
+            <field name='afip_code'>212</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.uy'>
+            <field name='afip_code'>225</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.uz'>
+            <field name='afip_code'>356</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.va'>
+            <field name='afip_code'>431</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.vc'>
+            <field name='afip_code'>235</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ve'>
+            <field name='afip_code'>226</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.vg'>
+            <field name='afip_code'>682</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.vi'>
+            <field name='afip_code'>683</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.vn'>
+            <field name='afip_code'>337</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.vu'>
+            <field name='afip_code'>505</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ws'>
+            <field name='afip_code'>506</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.ye'>
+            <field name='afip_code'>348</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.yu'>
+            <field name='afip_code'>432</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.za'>
+            <field name='afip_code'>143</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.zm'>
+            <field name='afip_code'>144</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.zr'>
+            <field name='afip_code'>109</field>
+        </record>
+        <record model='res.country' forcecreate="False" id='base.zw'>
+            <field name='afip_code'>132</field>
+        </record>
+    </data>
+</odoo>

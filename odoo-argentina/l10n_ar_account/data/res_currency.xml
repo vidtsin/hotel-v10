@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="True">
+
+<!-- currency afip codes -->
+<record model='res.currency' forcecreate="0" id='base.ANG'>
+    <field name="afip_code">028</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.ARS'>
+    <field name="afip_code">PES</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.AUD'>
+    <field name="afip_code">026</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.BRL'>
+    <field name="afip_code">012</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.BOB'>
+    <field name="afip_code">031</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.CAD'>
+    <field name="afip_code">018</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.CHF'>
+    <field name="afip_code">009</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.CLP'>
+    <field name="afip_code">033</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.COP'>
+    <field name="afip_code">032</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.CZK'>
+    <field name="afip_code">023</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.DKK'>
+    <field name="afip_code">014</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.DOP'>
+    <field name="afip_code">042</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.EGP'>
+    <field name="afip_code">046</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.EUR'>
+    <field name="afip_code">060</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.GBP'>
+    <field name="afip_code">021</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.GTQ'>
+    <field name="afip_code">055</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.HKD'>
+    <field name="afip_code">051</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.HNL'>
+    <field name="afip_code">063</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.HUF'>
+    <field name="afip_code">056</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.ILS'>
+    <field name="afip_code">030</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.INR'>
+    <field name="afip_code">062</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.JMD'>
+    <field name="afip_code">053</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.JPY'>
+    <field name="afip_code">019</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.KWD'>
+    <field name="afip_code">059</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.MAD'>
+    <field name="afip_code">045</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.MXN'>
+    <field name="afip_code">010</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.NIO'>
+    <field name="afip_code">044</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.NOK'>
+    <field name="afip_code">015</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.PAB'>
+    <field name="afip_code">043</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.PEN'>
+    <field name="afip_code">035</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.PLN'>
+    <field name="afip_code">061</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.PYG'>
+    <field name="afip_code">029</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.RON'>
+    <field name="afip_code">040</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.SAR'>
+    <field name="afip_code">047</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.SEK'>
+    <field name="afip_code">016</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.SGD'>
+    <field name="afip_code">052</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.THB'>
+    <field name="afip_code">057</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.TWD'>
+    <field name="afip_code">054</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.USD'>
+    <field name="afip_code">DOL</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.UYU'>
+    <field name="afip_code">011</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.VEF'>
+    <field name="afip_code">023</field>
+</record>
+<record model='res.currency' forcecreate="0" id='base.ZAR'>
+    <field name="afip_code">034</field>
+</record>
+
+    </data>
+</odoo>
+ 

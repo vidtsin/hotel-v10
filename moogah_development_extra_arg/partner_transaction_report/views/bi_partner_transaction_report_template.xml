@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_partner_transaction">
+            <t t-call="report.html_container">
+                <t t-set="data_report_margin_top" t-value="12"/>
+                <t t-set="data_report_header_spacing" t-value="9"/>
+                <!--<t t-set="data_report_dpi" t-value="110"/>-->
+                <t t-call="report.internal_layout">
+                    <div class="page">
+                        <t t-if="data['type'] == 'customer'">
+                            <h2>
+                                <span>Multi Currencies Customer Ledger</span>
+                            </h2>
+                        </t>
+                        <t t-if="data['type'] == 'supplier'">
+                            <h2>
+                                <span>Multi Currencies Vendor Ledger</span>
+                            </h2>
+                        </t>
+                        <div class="row mb32">
+                            <div class="col-xs-4">
+                                <t t-if="data['initial_date']">
+                                    <strong>From :</strong>
+                                    <span t-esc="data['initial_date']"/>
+                                    <br/>
+                                </t>
+                                <t t-if="data['end_date']">
+                                    <strong>to :</strong>
+                                    <span t-esc="data['end_date']"/>
+                                </t>
+                            </div>
+                        </div>
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">Date</th>
+                                    <th class="text-center">Doc Type</th>
+                                    <th class="text-center">Number</th>
+                                    <th class="text-center">Reference</th>
+                                    <th class="text-right">Manual Rate</th>
+                                    <th class="text-right">Amount in Currency</th>
+                                    <th class="text-right">Debit</th>
+                                    <th class="text-right">Credit</th>
+                                    <th class="text-right">Balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="data['partner_ids']" t-as="partner">
+                                    <t t-if="partner in lines">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="lines[partner]['title']"/>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <t t-foreach="lines[partner]['currency']" t-as="currency">
+                                            <tr>
+                                                <td style="border-bottom: 1px solid black;">
+                                                    <strong><span t-esc="currency['currency']['title']"/></strong>
+                                                </td>
+                                                <td style="border-bottom: 1px solid black;"></td>
+                                                <td style="border-bottom: 1px solid black;"></td>
+                                                <td style="border-bottom: 1px solid black;"></td>
+                                                <td style="border-bottom: 1px solid black;"></td>
+                                                <td style="border-bottom: 1px solid black;"></td>
+                                                <td style="border-bottom: 1px solid black;"></td>
+                                                <td style="border-bottom: 1px solid black;"></td>
+                                                <td style="border-bottom: 1px solid black;"></td>
+                                                <td style="border-bottom: 1px solid black;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>
+                                                        <span t-esc="currency['currency']['initial_balance']['title']"/>
+                                                    </strong>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="text-right">
+                                                    <strong>
+                                                        <span t-esc="currency['currency']['initial_balance']['debit']"/>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-right">
+                                                    <strong>
+                                                        <span t-esc="currency['currency']['initial_balance']['credit']"/>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-right">
+                                                    <strong>
+                                                        <span t-esc="currency['currency']['initial_balance']['balance']"/>
+                                                    </strong>
+                                                </td>
+
+                                            </tr>
+                                            <tr t-foreach="currency['currency']['lines']" t-as="currency_line">
+                                                <t t-if="currency_line['line_type'] != 'total'">
+                                                    <t t-if="currency_line['line_type'] != 'payment_line'">
+                                                        <td class="text-left">
+                                                            <span t-esc="currency_line['title']"/>
+                                                        </td>
+                                                    </t>
+                                                    <t t-if="currency_line['line_type'] == 'payment_line'">
+                                                        <td class="text-center">
+                                                            <span t-esc="currency_line['title']"/>
+                                                        </td>
+                                                    </t>
+                                                    <td class="text-center">
+                                                        <span t-esc="currency_line['date']"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-esc="currency_line['doc_type']"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-esc="currency_line['number']"/>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <span t-esc="currency_line['reference']"/>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span t-esc="currency_line['currency_rate']"/>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span t-esc="currency_line['amount_in_currency']"/>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span t-esc="currency_line['debit']"/>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span t-esc="currency_line['credit']"/>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <span t-esc="currency_line['balance']"/>
+                                                    </td>
+                                                </t>
+                                                <t t-if="currency_line['line_type'] == 'total'">
+                                                    <td class="text-center">
+                                                        <strong>
+                                                            <span t-esc="currency_line['title']"/>
+                                                        </strong>
+                                                    </td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td class="text-right">
+                                                        <strong>
+                                                            <span t-esc="currency_line['debit']"/>
+                                                        </strong>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>
+                                                            <span t-esc="currency_line['credit']"/>
+                                                        </strong>
+                                                    </td>
+                                                    <td class="text-right">
+                                                        <strong>
+                                                            <span t-esc="currency_line['balance']"/>
+                                                        </strong>
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>
+                                                        <span t-esc="currency['currency']['total']['title']"/>
+                                                    </strong>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td class="text-right">
+                                                    <strong>
+                                                        <span t-esc="currency['currency']['total']['debit']"/>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-right">
+                                                    <strong>
+                                                        <span t-esc="currency['currency']['total']['credit']"/>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-right">
+                                                    <strong>
+                                                        <span t-esc="currency['currency']['total']['balance']"/>
+                                                    </strong>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td style="border: none;"></td>
+                                            </tr>
+                                        </t>
+                                        <tr>
+                                            <td style="border: none;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="border: none;"></td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

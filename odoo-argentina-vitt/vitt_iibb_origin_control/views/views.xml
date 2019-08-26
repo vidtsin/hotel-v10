@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Account Invoice Views-->
+    <record id="view_invoice_form" model="ir.ui.view">
+        <field name="name">account.invoice.form.bigbox.inherit</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page/group/group/field[@name='account_id']"
+                   position="after">
+                <field name="region_tax_control_id"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

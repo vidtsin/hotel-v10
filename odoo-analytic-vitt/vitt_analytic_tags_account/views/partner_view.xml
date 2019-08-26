@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vitt_analytic_tags_partner_form_view" model="ir.ui.view">
+        <field name="name">vitt.analytic.tags.partner.form.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="account.partner_view_buttons"/>
+        <field name="arch" type="xml">
+            <field name='property_account_receivable_id' position='after'>
+                <!-- <field name="company_id" invisible='1'/> -->
+                <field name='analytic_tag_ids' widget="many2many_tags" domain="[('company_id', '=', company_id)]"/>
+            </field>
+            <field name='property_account_payable_id' position='after'>
+                <field name='supplier_analytic_tag_ids' widget="many2many_tags" domain="[('company_id', '=', company_id)]"/>
+            </field>
+        </field>
+    </record>
+</odoo>

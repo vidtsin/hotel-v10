@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_./extra-addons_tmp/vittar/vitt_objected_invoices_./extra-addons_tmp/vittar/vitt_objected_invoices,./extra-addons_tmp/vittar/vitt_objected_invoices../extra-addons_tmp/vittar/vitt_objected_invoices,model_./extra-addons_tmp/vittar/vitt_objected_invoices_./extra-addons_tmp/vittar/vitt_objected_invoices,,1,0,0,0

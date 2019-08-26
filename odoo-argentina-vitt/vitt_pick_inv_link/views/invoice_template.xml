@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="del_format_invoice" inherit_id="vitt_arg_einvoice_format.report_invoice_document_inherit_vitt_afip_invoice_format_invoice">
+        <xpath expr="//div[@name='div_desc']" position="after">
+            <div class="col-xs-12" t-if="o.picking_ids">
+                <t t-set="dels" t-value="o.get_dels(o)"/>
+                <t t-if="dels!=''">
+                    <strong>Remitos</strong>
+                    <p t-esc="dels"/>
+                </t>
+            </div>
+
+        </xpath>
+    </template>
+</odoo>

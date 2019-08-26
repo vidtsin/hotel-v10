@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="pos_partner_customization_template" inherit_id="point_of_sale.template" xml:space="preserve">
+
+
+
+	<!-- ClientDetailsWidget -->
+  	 <t t-extend="ClientDetails">
+	    <t t-jquery=".client-details-right" t-operation="replace">
+	         	<div class='client-details-right'>
+                    
+                    <div class="client-detail">
+					    <span class='label-ayaz'>Main Identification</span>
+					    <t t-if='partner.main_id_category_id'>
+					    	<span> <t t-esc='partner.main_id_category_id[1]'/></span>
+					    </t>
+					    
+					    <span> <t t-esc='partner.main_id_number'/></span>
+					    
+					    <t t-if='!partner.main_id_category_id'>
+				        	<span class='detail vat empty'>N/A</span>
+				        </t>
+					</div>
+					
+					<div class="client-detail">
+					    <span class='label-ayaz'>AFIP Responsability Type</span>
+					    <t t-if='partner.afip_responsability_type_id'>
+					    	<span> <t t-esc='partner.afip_responsability_type_id[1]'/></span>
+					    </t>
+					    
+					    <t t-if='!partner.afip_responsability_type_id'>
+				        	<span class='detail vat empty'>N/A</span>
+				        </t>
+					</div>
+					
+                    
+                    <div class='client-detail'>
+                        <span class='label'>Barcode</span>
+                        <t t-if='partner.barcode'>
+                            <span class='detail client-id'><t t-esc='partner.barcode'/></span>
+                        </t>
+                        <t t-if='!partner.barcode'>
+                            <span class='detail client-id empty'>N/A</span>
+                        </t>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label'>Tax ID</span>
+                        <t t-if='partner.vat'>
+                            <span class='detail vat'><t t-esc='partner.vat'/></span>
+                        </t>
+                        <t t-if='!partner.vat'>
+                            <span class='detail vat empty'>N/A</span>
+                        </t>
+                    </div>
+                </div>
+	        
+	       
+	    </t>
+   	 </t>
+   	 
+   	 
+  
+	<!-- ClientDetailsWidget 
+  	 <t t-extend="ClientDetails">
+	    <t t-jquery=".client-details-right" t-operation="append">
+	        <div class="client-detail">
+	            <span class='label-ayaz'>Main Identification</span>
+	            <t t-if='partner.main_id_category_id'>
+	            	<span> <t t-esc='partner.main_id_category_id[1]'/></span>
+	            </t>
+	            
+	            <span> <t t-esc='partner.main_id_number'/></span>
+	            
+	            <t t-if='!partner.main_id_category_id'>
+                	<span class='detail vat empty'>N/A</span>
+                </t>
+	        </div>
+	        
+	        <div class="client-detail">
+	            <span class='label-ayaz'>AFIP Responsability Type</span>
+	            <t t-if='partner.afip_responsability_type_id'>
+	            	<span> <t t-esc='partner.afip_responsability_type_id[1]'/></span>
+	            </t>
+	            
+	            <t t-if='!partner.afip_responsability_type_id'>
+                	<span class='detail vat empty'>N/A</span>
+                </t>
+	        </div>
+	        
+	       
+	    </t>
+   	 </t>-->
+   	 
+   	 <!-- ClientDetailsEditWidget -->
+		<t t-extend="ClientDetailsEdit">
+			<t t-jquery=".client-details-right" t-operation="replace">
+		        
+		         <div class='client-details-right'>
+		         	
+				    <div class='client-detail'>
+				        <span class='label-ayaz'>Main Identification</span>
+				        <select class='detail client-identification' name='main_id_category_id' id ='entered_identification' style="width: 270px !important;">
+				            <option value=''>None</option>
+				            <t t-foreach='widget.pos.main_identification' t-as='identification'>
+				                <option t-att-value='identification.id' t-att-selected="partner.main_id_category_id ? ((identification.id === partner.main_id_category_id[0]) ? true : undefined) : undefined">
+				                    <t t-esc='identification.code'/>
+				                </option>
+				            </t>
+				        </select>
+				    </div>
+				    
+				    <div class='client-detail'>
+		                <span class='label-ayaz'> </span>
+		                 <input class='detail client-main_id_number' id ='entered_main_id_number' style="width: 270px !important;" name='main_id_number' t-att-value='partner.main_id_number || ""'></input>
+		            </div>
+		                
+		                
+				    
+				    <div class='client-detail'>
+				        <span class='label-ayaz'>AFIP Responsability Type</span>
+				        <select class='detail client-afip' name='afip_responsability_type_id' id ='entered_afip' style="width: 270px !important;">
+				            <option value=''>None</option>
+				            <t t-foreach='widget.pos.afip_responsability' t-as='afip'>
+				                <option t-att-value='afip.id' t-att-selected="partner.afip_responsability_type_id ? ((afip.id === partner.afip_responsability_type_id[0]) ? true : undefined) : undefined">
+				                    <t t-esc='afip.name'/>
+				                </option>
+				            </t>
+				        </select>
+				    </div>
+		        
+                    <div class='client-detail'>
+                        <span class='label'>Email</span>
+                        <input class='detail client-email'  name='email'    type='email'    t-att-value='partner.email || ""'></input>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label'>Phone</span>
+                        <input class='detail client-phone'  name='phone'    type='tel'      t-att-value='partner.phone || ""'></input>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label'>Barcode</span>
+                        <input class='detail barcode'       name='barcode'    t-att-value='partner.barcode || ""'></input>
+                    </div>
+                    <div class='client-detail'>
+                        <span class='label'>Tax ID</span>
+                        <input class='detail vat'           name='vat'     t-att-value='partner.vat || ""'></input>
+                    </div>
+                </div>
+                
+		        
+		    </t>
+		</t>
+		
+		
+	   	 
+	<!-- ClientDetailsEditWidget 
+		<t t-extend="ClientDetailsEdit">
+			<t t-jquery=".client-details-right" t-operation="append">
+		        <div class='client-detail'>
+		            <span class='label-ayaz'>Main Identification</span>
+		            <select class='detail client-identification' name='main_id_category_id' id ='entered_identification' style="width: 270px !important;">
+		                <option value=''>None</option>
+		                <t t-foreach='widget.pos.main_identification' t-as='identification'>
+		                    <option t-att-value='identification.id' t-att-selected="partner.main_id_category_id ? ((identification.id === partner.main_id_category_id[0]) ? true : undefined) : undefined">
+		                        <t t-esc='identification.code'/>
+		                    </option>
+		                </t>
+		            </select>
+		        </div>
+		        
+		        <div class='client-detail'>
+                    <span class='label-ayaz'> </span>
+                     <input class='detail client-main_id_number' id ='entered_main_id_number' style="width: 270px !important;" name='main_id_number' t-att-value='partner.main_id_number || ""'></input>
+                </div>
+                    
+                    
+		        
+		        <div class='client-detail'>
+		            <span class='label-ayaz'>AFIP Responsability Type</span>
+		            <select class='detail client-afip' name='afip_responsability_type_id' id ='entered_afip' style="width: 270px !important;">
+		                <option value=''>None</option>
+		                <t t-foreach='widget.pos.afip_responsability' t-as='afip'>
+		                    <option t-att-value='afip.id' t-att-selected="partner.afip_responsability_type_id ? ((afip.id === partner.afip_responsability_type_id[0]) ? true : undefined) : undefined">
+		                        <t t-esc='afip.name'/>
+		                    </option>
+		                </t>
+		            </select>
+		        </div>
+		        
+		        
+		    </t>
+		</t>-->
+		
+
+</templates>
+  	
+  	

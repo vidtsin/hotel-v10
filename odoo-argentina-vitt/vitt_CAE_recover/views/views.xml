@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="new_invoice_form2">
+        <field name="name">new.invoice.form2</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/header" position="inside">
+                <button
+                    name="%(l10n_ar_afipws_fe.action_afip_ws_consult_wizard)d"
+                    type="action"
+                    attrs="{'invisible': ['&amp;','|',('state', '!=', 'draft'),('state', '!=', 'afip'),'&amp;',('point_of_sale_type', '!=', 'electronic'),('validation_type', '!=', 'production')]}"
+                    string="Recuperar CAE"
+                    class="oe_highlight"
+                    groups="base.group_user"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="account_invoice_caerecover_form">
+        <field name="name">account.invoice.caerecover.form</field>
+        <field name="model">account.invoice.caerecover</field>
+        <field name="arch" type="xml">
+            <form string="Excel Report file">
+                <group>
+                    <field name="number"/>
+                    <field name="journal_id"/>
+                    <field name="doctype_id" domain="[('journal_id', '=', journal_id)]"/>
+                </group>
+                <footer>
+                    <button
+                        name="confirm"
+                        type="object"
+                        string="Recover CAEs"
+                        class="oe_highlight"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="group_cae_recover_act"
+        name="Recover CAE"
+        src_model="account.invoice"
+        res_model="account.invoice.caerecover"
+        view_mode="form"
+        target="new"
+        key2="client_action_multi"
+    />
+
+</odoo>

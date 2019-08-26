@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form2" model="ir.ui.view">
+        <field name="name">view.order.form2</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <field name="order_line" position="attributes">
+                <attribute name="domain">[('sale_ok', '!=', False)]</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="purchase_order_form2" model="ir.ui.view">
+        <field name="name">purchase.order.form2</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <field name="order_line" position="attributes">
+                <attribute name="domain">[('purchase_ok', '!=', False)]</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="invoice_supplier_form3" model="ir.ui.view">
+        <field name="name">invoice.supplier.form3</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_supplier_form"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="attributes">
+                <attribute name="domain">[('purchase_ok', '!=', False)]</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="invoice_form3" model="ir.ui.view">
+        <field name="name">invoice.form3</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <field name="product_id" position="attributes">
+                <attribute name="domain">[('sale_ok', '!=', False)]</attribute>
+            </field>
+        </field>
+    </record>
+
+</odoo>

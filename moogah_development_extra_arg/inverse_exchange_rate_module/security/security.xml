@@ -1,0 +1,15 @@
+<openerp>
+<data noupdate="0">
+
+    <record model="res.groups" id="group_use_manual_exchange_rate">
+        <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="name">Use Manual Exchange Rate in Sales</field>
+    </record>
+
+    <record model="res.groups" id="group_use_manual_exchange_rate_purchase">
+        <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="name">Use Manual Exchange Rate in Purchases</field>
+    </record>
+
+</data>
+</openerp>

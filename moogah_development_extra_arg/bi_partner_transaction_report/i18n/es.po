@@ -1,0 +1,277 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bi_partner_transaction_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e-20170707\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-04 18:44+0000\n"
+"PO-Revision-Date: 2018-04-04 18:44+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bi_partner_transaction_report
+#: model:ir.ui.menu,name:bi_partner_transaction_report.menu_sale_reports
+#: model:ir.ui.menu,name:bi_partner_transaction_report.menu_purchase_reports
+msgid "Reports"
+msgstr "Informes"
+
+#. module: bi_partner_transaction_report
+#: model:ir.ui.menu,name:bi_partner_transaction_report.menu_action_customer_transaction_report_wizard
+#: model:ir.actions.client,name:bi_partner_transaction_report.action_account_report_partner_transaction
+#: model:ir.ui.view,arch_db:bi_partner_transaction_report.res_partner_form_view_inherit_transection_report
+msgid "Customer Ledger"
+msgstr "Libro mayor de cliente"
+
+#. module: bi_partner_transaction_report
+#: model:ir.ui.menu,name:bi_partner_transaction_report.menu_action_supplier_transaction_report_wizard
+#: model:ir.actions.client,name:bi_partner_transaction_report.action_account_report_vendor_transaction
+#: model:ir.ui.view,arch_db:bi_partner_transaction_report.res_partner_form_view_inherit_transection_report
+msgid "Vendor Ledger"
+msgstr "Libro mayor de proveedor"
+
+#. module: bi_partner_transaction_report
+#: model:ir.actions.act_window,name:bi_partner_transaction_report.action_customer_transaction_report_wizard
+msgid "Customer Transaction Report Wizard"
+msgstr "Reporte para transacciones de clientes"
+
+#. module: bi_partner_transaction_report
+#: model:ir.actions.act_window,name:bi_partner_transaction_report.action_supplier_transaction_report_wizard
+msgid "Supplier Transaction Report Wizard"
+msgstr "Reporte para transacciones de proveedores"
+
+#. module: bi_partner_transaction_report
+#: model:ir.ui.view,arch_db:bi_partner_transaction_report.view_partner_transaction_report_wizard
+msgid "Open"
+msgstr "Abrir"
+
+#. module: bi_partner_transaction_report
+#: model:ir.ui.view,arch_db:bi_partner_transaction_report.view_partner_transaction_report_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: bi_partner_transaction_report
+#: model:ir.model.fields,field_description:bi_partner_transaction_report.field_partner_transaction_report_wizard_initial_date
+msgid "Date From"
+msgstr "Fecha Desde"
+
+#. module: bi_partner_transaction_report
+#: model:ir.model.fields,field_description:bi_partner_transaction_report.field_partner_transaction_report_wizard_end_date
+msgid "Date To"
+msgstr "Fecha Hasta"
+
+#. module: bi_partner_transaction_report
+#: model:ir.model.fields,field_description:bi_partner_transaction_report.field_partner_transaction_report_wizard_partner_ids
+msgid "Partners"
+msgstr "Empresas"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:451
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:431
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:512
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:481
+#, python-format
+msgid "Date"
+msgstr "Fecha"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:451
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:431
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:512
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:481
+#, python-format
+msgid "Doc Type"
+msgstr "Tipo"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:451
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:431
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:512
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:481
+#, python-format
+msgid "Number"
+msgstr "Número"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:451
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:431
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:512
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:481
+#, python-format
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:451
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:431
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:512
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:481
+#, python-format
+msgid "Exchange Rate"
+msgstr "Tipo de cambio"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:451
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:431
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:512
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:481
+#, python-format
+msgid "Amount in Currency"
+msgstr "Monto en moneda"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:451
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:431
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:512
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:481
+#, python-format
+msgid "Debit"
+msgstr "Debe"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:451
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:431
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:512
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:481
+#, python-format
+msgid "Credit"
+msgstr "Haber"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:451
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:431
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:512
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:481
+#, python-format
+msgid "Balance"
+msgstr "Saldo pendiente"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_backend.xml:38
+#, python-format
+msgid "PRINT PREVIEW"
+msgstr "VISTA PREVIA DE IMPRESIÓN"
+
+#. module: account_reports
+#. openerp-web
+#: code:addons/account_reports/static/src/xml/account_report_backend.xml:39
+#, python-format
+msgid "EXPORT (XLSX)"
+msgstr "EXPORTAR (XLSX)"
+
+#. module: bi_partner_transaction_report
+#. openerp-web
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:416
+#, python-format
+msgid "Partner Transaction Report"
+msgstr "Reporte para transacciones de clientes"
+
+#. module: bi_partner_transaction_report
+#. openerp-web
+#: code:addons/bi_partner_transaction_report/wizard/partner_transaction_report_wizard.py:51
+#, python-format
+msgid "Multi Currencies Customer Ledger"
+msgstr "Libro mayor de cliente multi moneda"
+
+#. module: bi_partner_transaction_report
+#. openerp-web
+#: code:addons/bi_partner_transaction_report/wizard/partner_transaction_report_wizard.py:63
+#: model:ir.actions.client,name:bi_partner_transaction_report.action_multi_currency_supplier_ledger_report
+#, python-format
+msgid "Multi Currencies Vendor Ledger"
+msgstr "Libro mayor de proveedor multi moneda"
+
+#. module: bi_partner_transaction_report
+#. openerp-web
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:473
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:14
+#, python-format
+msgid "Multi Currencies Customer Ledger Report"
+msgstr "Libro mayor de cliente multi moneda"
+
+#. module: bi_partner_transaction_report
+#. openerp-web
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:442
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:14
+#, python-format
+msgid "Multi Currencies Vendor Ledger Report"
+msgstr "Libro mayor de proveedor multi moneda"
+
+#. module: bi_partner_transaction_report
+#. openerp-web
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:265
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:267
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:309
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:299
+#, python-format
+msgid "Total Currency: "
+msgstr "Total Moneda: "
+
+#. module: bi_partner_transaction_report
+#. openerp-web
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:120
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:118
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:140
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:136
+#, python-format
+msgid "Initial Balance"
+msgstr "Saldo inicial"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:68
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:69
+#, python-format
+msgid "Partner Not Found"
+msgstr "Debe seleccionar al menos una empresa"
+
+#. module: bi_partner_transaction_report
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:65
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:66
+#, python-format
+msgid "Vendor Not Found"
+msgstr "Debe seleccionar al menos una empresa"
+
+#. module: bi_partner_transaction_report
+#: model:ir.ui.view,arch_db:bi_partner_transaction_report.report_financial_line_bi_partner
+msgid "Annotate"
+msgstr "Anotar"
+
+#. module: bi_partner_transaction_report
+#: model:ir.ui.view,arch_db:bi_partner_transaction_report.report_financial_line_bi_partner
+msgid "View Journal Entry"
+msgstr "Ver Asiento Contable"
+
+#. module: bi_partner_transaction_report
+#. openerp-web
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:596
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:562
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:638
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:621
+#, python-format
+msgid "Advance"
+msgstr "Anticipo"
+
+#. module: bi_partner_transaction_report
+#. openerp-web
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:94
+#: code:addons/bi_partner_transaction_report/models/partner_transaction_report.py:351
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:90
+#: code:addons/bi_partner_transaction_report/models/vendor_transaction_report.py:323
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:110
+#: code:addons/bi_partner_transaction_report/models/multicurrency_customer_ledger_report.py:387
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:108
+#: code:addons/bi_partner_transaction_report/models/multicurrency_supplier_ledger_report.py:377
+#, python-format
+msgid "Currency: "
+msgstr "Moneda: "
+
+
+
+
+

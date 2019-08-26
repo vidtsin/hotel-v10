@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="vitt_analytic_tags_view_account_asset_asset_form" model="ir.ui.view">
+        <field name="name">vitt.analytic.tags.account.asset.asset.form</field>
+        <field name="model">account.asset.asset</field>
+        <field name="inherit_id" ref="account_asset.view_account_asset_asset_form"/>
+        <field name="arch" type="xml">
+            <field name="date" position="after">
+                <field name="company_id" invisible='1'/>
+                <field name="analytic_tag_ids" widget="many2many_tags" domain="[('company_id', '=', company_id)]"/>
+            </field>
+        </field>
+    </record>
+    <record id="vitt_analytic_tags_view_account_asset_category_form" model="ir.ui.view">
+        <field name="name">vitt.analytic.tags.account.asset.category.form</field>
+        <field name="model">account.asset.category</field>
+        <field name="inherit_id" ref="account_asset.view_account_asset_category_form"/>
+        <field name="arch" type="xml">
+            <field name="account_analytic_id" position="after">
+                <field name="company_id" invisible='1'/>
+                <field name="analytic_tag_ids" widget="many2many_tags" domain="[('company_id', '=', company_id)]"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="vitt_account_asset_depreciation_wizard_message" model="ir.ui.view">
+        <field name="name">Asset</field>
+        <field name="model">account.asset.depreciation.wizard.message</field>
+        <field name="arch" type="xml">
+            <form string="Asset with Problems">
+                <p>Assets With Problems</p>
+                <field name="exception_msg" colspan="2" nolabel="1"/>
+                <!-- <group>
+                    <field name="partner_id"/>
+                </group> -->
+                <footer>
+                    <button string="Continue"
+                            class="oe_highlight"
+                            special="continue"
+                            type="object"
+                            />
+                    <button string="Cancel"
+                            class="oe_link"
+                            special="cancel"
+                            />
+                </footer>
+            </form>
+        </field>
+    </record>
+    
+</odoo>

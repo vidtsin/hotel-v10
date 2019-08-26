@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_menu_sequence_config" model="ir.actions.act_window">
+        <field name="name">StockBook</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">stock.book</field>
+    </record>
+
+    <record id="action_menu_sequence_config2" model="ir.actions.act_window">
+        <field name="name">Print Template</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">stock.book.qweb</field>
+    </record>
+
+    <menuitem id="menu_sequence_config"
+        name="STOCKBOOK"
+        parent="stock.menu_stock_config_settings"
+        sequence="10"/>
+
+    <menuitem id="menu_sequence_config_stockbook"
+        name="StockBook"
+        parent="menu_sequence_config"
+        sequence="1"
+        action="action_menu_sequence_config"/>
+
+    <menuitem id="menu_sequence_config_qweb"
+        name="Print templates"
+        parent="menu_sequence_config"
+        sequence="1"
+        action="action_menu_sequence_config2"/>
+
+    <record id="seq_view_picking_form" model="ir.ui.view">
+        <field name="name">seq.view.picking.form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <field position="after" name="origin">
+                <field name="stockbook_id" attrs="{'invisible': [('picking_type_code', '!=', 'outgoing')]}"/>
+                <field name="OfficialSerNr" groups="vitt_official_stock_sequence.stock_seq_management"/>
+            </field>
+        </field>
+    </record>
+
+
+</odoo>

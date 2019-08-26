@@ -1,0 +1,1415 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_check
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-20 17:13+0000\n"
+"PO-Revision-Date: 2019-02-20 16:17-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: account_check
+#: code:addons/account_check/models/account_checkbook.py:122
+#, python-format
+msgid " Currents Checks"
+msgstr " Cheques Corrientes"
+
+#. module: account_check
+#: code:addons/account_check/models/account_checkbook.py:120
+#, python-format
+msgid " Deferred Checks"
+msgstr " Cheques Diferidos"
+
+#. module: account_check
+#: code:addons/account_check/models/account_checkbook.py:124
+#, python-format
+msgid " up to %s"
+msgstr " hasta %s"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_account_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_exp_account_id
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_check
+msgid "Account Check"
+msgstr "Cuenta Cheque"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_checkbook
+msgid "Account Checkbook"
+msgstr "Cuenta Chequera"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:909
+#, python-format
+msgid "Action %s not implemented for checks!"
+msgstr "Acción %s no está implementada para cheques!"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_action_type
+msgid "Action type passed on the context"
+msgstr "Tipo de acción se pasó en el contexto"
+
+#. module: account_check
+#: code:addons/account_check/wizard/check_operation_wizard.py:17
+#, python-format
+msgid "All checks must be from the same company!"
+msgstr "Todos los cheques debe ser de la misma compañía!"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_amount
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_exp_amount
+msgid "Amount"
+msgstr "Monto"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_amount_currency
+msgid "Amount currency"
+msgstr "Monto en Moneda"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_bank_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_bank_id
+msgid "Bank"
+msgstr "Banco"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_check_bank_debit_wizard
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Bank Debit"
+msgstr "Débito Bancario"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_check_bank_reject_wizard
+#: model:ir.actions.act_window,name:account_check.action_account_check_supplier_reject_wizard
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Bank Rejection"
+msgstr "Rechazo Bancario"
+
+#. module: account_check
+#: selection:account.check,state:0
+#: selection:account.check.operation,operation:0
+#: model:ir.ui.view,arch_db:account_check.view_account_change_check_wizard
+#: model:ir.ui.view,arch_db:account_check.view_account_check_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_check_claim_wizard2
+msgid "Cancel Claim"
+msgstr "Cancelar Reclamo"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Cancel Claim to Customer"
+msgstr "Cancelar Reclamo a Cliente"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Cancel Claim to Supplier"
+msgstr "Cancelar Reclamo a Proveedor"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_check_claim_wizard3
+msgid "Cancel Claim to customer"
+msgstr "Cancelar Reclamo a cliente"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Cancel Debit"
+msgstr "Revertir Débito"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Cancel Deposit"
+msgstr "Revertir Depósito"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Cancel Rejection"
+msgstr "Revertir Rechazo"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Cancel Return"
+msgstr "Revertir Cancelado"
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Change"
+msgstr "Reemplazar"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_change_check_wizard
+msgid "Change Check"
+msgstr "Reemplazar Cheque"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_change_check_wizard
+msgid "Change Check Operation"
+msgstr "Modificar Operación Cheque"
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Changed"
+msgstr "Reemplazado"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_check_id
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_id
+msgid "Check"
+msgstr "Cheque"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:864
+#, python-format
+msgid "Check \"%s\" bank rejection reverted"
+msgstr "Cheque \"%s\" reversión rechazo bancario"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:902
+#, python-format
+msgid "Check \"%s\" changed"
+msgstr "Cheque \"%s\" reemplazado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:837
+#, python-format
+msgid "Check \"%s\" debited"
+msgstr "Cheque \"%s\" debitado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:884
+#, python-format
+msgid "Check \"%s\" deposit reverted"
+msgstr "Cheque \"%s\" reversión depósito"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:875
+#, python-format
+msgid "Check \"%s\" deposited"
+msgstr "Cheque \"%s\" depositado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:906
+#, python-format
+msgid "Check \"%s\" rejected"
+msgstr "Cheque \"%s\" rechazado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:853
+#: code:addons/account_check/models/account_check.py:858
+#, python-format
+msgid "Check \"%s\" rejected by bank"
+msgstr "Cheque \"%s\" rechazado por banco"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:862
+#, python-format
+msgid "Check \"%s\" rejected by supplier"
+msgstr "Cheque \"%s\" rechazado por proveedor"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:892
+#, python-format
+msgid "Check \"%s\" returned"
+msgstr "Cheque \"%s\" cancelado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:900
+#, python-format
+msgid "Check \"%s\" revert returned"
+msgstr "Cheque \"%s\" reversión cancelado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:753
+#, python-format
+msgid "Check %s rejection CN"
+msgstr "Cheque \"%s\" rechazo NC"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Check Accounts"
+msgstr "Cuentas de Cheques"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_wizard
+msgid "Check Action"
+msgstr "Acción Cheque"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_bank_id
+msgid "Check Bank"
+msgstr "Banco de Cheque"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_check_deposit_wizard
+msgid "Check Bank Deposit"
+msgstr "Depósito Bancario de Cheque"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_issue_date
+msgid "Check Issue Date"
+msgstr "Fecha Cheque Emitido"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_name
+msgid "Check Name"
+msgstr "Número Cheque"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_number
+msgid "Check Number"
+msgstr "Número Cheque"
+
+#. module: account_check
+#: code:addons/account_check/wizard/change_check_wizard.py:85
+#, python-format
+msgid "Check Number Can't be Zero !"
+msgstr "Número de Cheque No Puede ser Cero !"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:439
+#, python-format
+msgid ""
+"Check Number must be unique per Checkbook!\n"
+"* Checks: %s on Checkbook %s"
+msgstr ""
+"Número de Cheque debe ser único por Chequera!\n"
+"* Cheques: %s en Chequera %s"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:456
+#, python-format
+msgid ""
+"Check Number must be unique per Owner and Bank!\n"
+"* Check ids: %s"
+msgstr ""
+"Número de Cheque debe ser único por Emisor y Banco!\n"
+"* Check ids: %s"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_owner_name
+msgid "Check Owner Name"
+msgstr "Nombre Emisor de Cheque "
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_owner_vat
+msgid "Check Owner Vat"
+msgstr "ID. Trib. Emisor de Cheque"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_payment_date
+msgid "Check Payment Date"
+msgstr "Fecha Pago de Cheque"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:344
+#: code:addons/account_check/models/account_payment.py:214
+#, python-format
+msgid "Check Payment Date must be greater than Issue Date"
+msgstr "La Fecha Pago debe ser posterior a la Fecha Emisión"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:785
+#, python-format
+msgid "Check nbr (id): %s (%s)"
+msgstr "Nro. Cheque (id): %s (%s)"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:400
+#, python-format
+msgid "Check number (%s) can't be greater than %s on checkbook %s (%s)"
+msgstr "Número de Cheque (%s) no puede ser mayor que %s en chequera %s (%s)"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_type
+msgid "Check type"
+msgstr "Tipo Cheque"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_checkbook_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_checkbook_id
+#: model:ir.model.fields,field_description:account_check.field_account_payment_checkbook_id
+msgid "Checkbook"
+msgstr "Chequera"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_journal_checkbook_ids
+#: model:ir.ui.view,arch_db:account_check.view_account_checkbook_form
+#: model:ir.ui.view,arch_db:account_check.view_account_checkbook_tree
+msgid "Checkbooks"
+msgstr "Chequeras"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_ids
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_ids_copy
+#: model:ir.ui.menu,name:account_check.menu_check_menu
+#: model:ir.ui.view,arch_db:account_check.view_account_check_calendar
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+#: model:ir.ui.view,arch_db:account_check.view_account_check_tree
+#: model:ir.ui.view,arch_db:account_check.view_checks_search
+msgid "Checks"
+msgstr "Cheques"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_checkbook_sequence_id
+msgid "Checks numbering sequence."
+msgstr "Secuencia numérica de cheques"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_no_order
+#: model:ir.model.fields,field_description:account_check.field_account_payment_no_order
+msgid "Cheque no a la orden"
+msgstr "Cheque no a la orden"
+
+#. module: account_check
+#: selection:product.template,tc_state:0
+msgid "Cheques 3ros Cancelados"
+msgstr "Cheques 3ros Cancelados"
+
+#. module: account_check
+#: selection:product.template,tc_state:0
+msgid "Cheques 3ros Rechazados"
+msgstr "Cheques 3ros Rechazados"
+
+#. module: account_check
+#: selection:product.template,oc_state:0
+msgid "Cheques Propios Cancelados"
+msgstr "Cheques Propios Cancelados"
+
+#. module: account_check
+#: selection:product.template,oc_state:0
+msgid "Cheques Propios Rechazados"
+msgstr "Cheques Propios Rechazados"
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+msgid "Claim"
+msgstr "Reclamo"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Claim to Customer"
+msgstr "ND a Cliente"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Claim to Supplier"
+msgstr "ND a Proveedor"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_company_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_check_company_id
+msgid "Company related to this journal"
+msgstr "Compañía relacionada con este diario"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_change_check_wizard
+#: model:ir.ui.view,arch_db:account_check.view_account_check_wizard
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_create_uid
+#: model:ir.model.fields,field_description:account_check.field_account_check_create_uid
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_create_uid
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_create_uid
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_create_date
+#: model:ir.model.fields,field_description:account_check.field_account_check_create_date
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_create_date
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_create_date
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_company_currency_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_company_currency_id
+#: model:ir.model.fields,field_description:account_check.field_account_payment_readonly_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_currency_id
+msgid "Currency id"
+msgstr "Id. Moneda"
+
+#. module: account_check
+#: selection:account.checkbook,issue_check_subtype:0
+msgid "Currents"
+msgstr "Corrientes"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_date
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+msgid "Debit"
+msgstr "Débito"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_debit_journal_id
+msgid "Debit Journal"
+msgstr "Diario de Débito"
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Debited"
+msgstr "Debitado"
+
+#. module: account_check
+#: selection:account.checkbook,issue_check_subtype:0
+msgid "Deferred"
+msgstr "Diferido"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_chart_template_deferred_check_account_id
+#: model:ir.model.fields,field_description:account_check.field_account_config_settings_deferred_check_account_id
+#: model:ir.model.fields,field_description:account_check.field_nl_setting_block_deferred_check_account_id
+#: model:ir.model.fields,field_description:account_check.field_res_company_deferred_check_account_id
+msgid "Deferred Check Account"
+msgstr "Cuenta Cheques Diferidos"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_chart_template_deferred_check_account_id
+#: model:ir.model.fields,help:account_check.field_account_config_settings_deferred_check_account_id
+#: model:ir.model.fields,help:account_check.field_nl_setting_block_deferred_check_account_id
+#: model:ir.model.fields,help:account_check.field_res_company_deferred_check_account_id
+msgid "Deferred Checks account, for eg. \"Deferred Checks\""
+msgstr "Cuenta Cheques Diferidos, por ej. \"Cheques Diferidos\""
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+msgid "Deliver"
+msgstr "Endoso"
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Delivered"
+msgstr "Endosado"
+
+#. module: account_check
+#: model:account.payment.method,name:account_check.account_payment_method_delivered_third_check
+msgid "Delivered Third Check"
+msgstr "Cheque 3ros Endosado"
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+msgid "Deposit"
+msgstr "Deposito"
+
+#. module: account_check
+#: selection:account.check,state:0
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Deposited"
+msgstr "Depositado"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_display_name
+#: model:ir.model.fields,field_description:account_check.field_account_check_display_name
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_display_name
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_display_name
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: account_check
+#: selection:account.check,state:0
+#: selection:account.check.operation,operation:0
+#: selection:account.checkbook,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: account_check
+#: code:addons/account_check/wizard/change_check_wizard.py:152
+#, python-format
+msgid "Error in Number"
+msgstr "Error en Número"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_check_claim_wizard
+msgid "Expenses"
+msgstr "Gastos"
+
+#. module: account_check
+#: selection:account.check.wizard,exp_type:0
+msgid "Expenses invoiced"
+msgstr "Gastos facturados"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_checks_search
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+msgid "Hand"
+msgstr "Emitir"
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Handed"
+msgstr "Emitido"
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Holding"
+msgstr "En Cartera"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_chart_template_holding_check_account_id
+msgid "Holding Check Account"
+msgstr "Cuenta Cheque en Cartera"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_chart_template_holding_check_account_id
+msgid "Holding Checks account for third checks, for eg. \"Holding Checks\""
+msgstr "Cuenta Cheques en Cartera para cheques de 3ros, por ej. \"Cheques en Cartera\""
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_id
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_checkbook_range_to
+msgid "If you set a number here, this checkbook will be automatically set as used when this number is raised."
+msgstr "Si define un número aquí, esta chequera quedará en estado usado automáticamente cuando se llegue a este número"
+
+#. module: account_check
+#: selection:account.checkbook,state:0
+msgid "In Use"
+msgstr "En Uso"
+
+#. module: account_check
+#: selection:account.check.wizard,exp_type:0
+msgid "Internal Expenses"
+msgstr "Gastos Internos"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: account_check
+#: code:addons/account_check/wizard/check_operation_wizard.py:191
+#: code:addons/account_check/wizard/check_operation_wizard.py:220
+#, python-format
+msgid "Invoice must be fully open state in order to be canceled on cancel claim"
+msgstr "La factura debe estar totalmente abierta parar poder revertir un reclamo"
+
+#. module: account_check
+#: code:addons/account_check/wizard/check_operation_wizard.py:165
+#, python-format
+msgid "Invoice must be in paid state in order to be canceled on claim to supplier"
+msgstr "La factura debe estar en estado pagado para poder ser cancelada en un reclamo a proveedor"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_customer
+msgid "Is a Customer"
+msgstr "Es Cliente"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_supplier
+msgid "Is a Vendor"
+msgstr "Es un Proveedor"
+
+#. module: account_check
+#: selection:account.check,type:0
+#: model:account.payment.method,name:account_check.account_payment_method_issue_check
+msgid "Issue Check"
+msgstr "Cheque Emitido"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_issue_check_subtype
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_issue_check_subtype
+#: model:ir.model.fields,field_description:account_check.field_account_payment_check_subtype
+msgid "Issue Check Subtype"
+msgstr "Subtipo Cheque Emitido"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.account_journal_dashboard_kanban_view_inherited
+msgid "Issue Check(s) handed"
+msgstr "Cheque(s) Propios Emitidos"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_issue_check
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_issue_check_ids
+#: model:ir.ui.menu,name:account_check.menu_issue_check
+msgid "Issue Checks"
+msgstr "Cheques Emitidos"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_issue_date
+#: model:ir.model.fields,field_description:account_check.field_account_check_issue_date
+#: model:ir.ui.view,arch_db:account_check.view_checks_search
+msgid "Issue Date"
+msgstr "Fecha Emisión"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_check_wizard_account_id
+#: model:ir.model.fields,help:account_check.field_account_check_wizard_exp_account_id
+msgid "It acts as a default account for debit amount"
+msgstr "Actúa como una cuenta por defecto para importes en el debe."
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "It will cancel a draft debit note to supplier and change check state"
+msgstr "Cancelará una Nota de Débito al proveedor y cambiar el estado del cheque"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "It will create a draft debit note to customer and change check state"
+msgstr "Generará un Nota de Débito en borrador para el cliente y modifica el estado del cheque"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "It will create a draft debit note to supplier and change check state"
+msgstr "Generará una Nota de Débito en borrador al proveedor y modificará el estado del cheque"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "It will create a journal entry from Deferred Check Account to bank account and change check state"
+msgstr "Generará un asiento desde la Cta Cheques Diferidos a la Cta de Banco y modificará el estado del cheque"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "It will create an account entry from bank account to company rejection account and change check state"
+msgstr "Generará un asiento de la cta. de bancos de la compañía a la cta. de rechazo y modificará el estado del cheque"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "It will create an account entry from cash account to company rejection account and change check state"
+msgstr "Generará un asiento contable desde la cta. de caja a la cta. de rechazo y modificará el estado del cheque"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_journal
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_journal_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_journal_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_journal_id
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_journal_id
+#: model:ir.ui.view,arch_db:account_check.view_checks_search
+msgid "Journal"
+msgstr "Diario"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_checkbook_journal_id
+msgid "Journal where it is going to be used"
+msgstr "Diario donde será usado"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_checkbook_debit_journal_id
+msgid "Journal where it is going to be used as Bank"
+msgstr "Diario donde será usado como Banco"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard___last_update
+#: model:ir.model.fields,field_description:account_check.field_account_check___last_update
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation___last_update
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard___last_update
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook___last_update
+msgid "Last Modified on"
+msgstr "Ult. Modificación en"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_write_uid
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_write_uid
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_write_uid
+#: model:ir.model.fields,field_description:account_check.field_account_check_write_uid
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_write_uid
+msgid "Last Updated by"
+msgstr "Ult. Actualización por"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_write_date
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_write_date
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_write_date
+#: model:ir.model.fields,field_description:account_check.field_account_check_write_date
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_write_date
+msgid "Last Updated on"
+msgstr "Ult. Actualización en"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_owner_model
+msgid "Model"
+msgstr "Modelo"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_checks_search
+msgid "NO a la orden"
+msgstr "NO a la orden"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_name
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_next_number
+msgid "Next Number"
+msgstr "Próximo número"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_checkbook_next_number
+msgid "Next number that will be used. This number can be incremented frequently so the displayed value might already be obsolete"
+msgstr "Próximo número que se utilizará. Este número puede incrementarse frecuentemente, por lo que el valor mostrado puede estar ya obsoleto."
+
+#. module: account_check
+#: selection:account.check.wizard,exp_type:0
+msgid "No Expenses"
+msgstr "Sin Gastos"
+
+#. module: account_check
+#: code:addons/account_check/models/res_company.py:80
+#, python-format
+msgid "No checks %s account defined for company %s"
+msgstr "Sin cuenta %s cheques definida para la compañía %s"
+
+#. module: account_check
+#: code:addons/account_check/models/account_payment.py:547
+#, python-format
+msgid "No es posible Cancelar. Existe uno o más Cheques 3ros que no se encuentran en un estado válido"
+msgstr "No es posible Cancelar. Existe uno o más Cheques 3ros que no se encuentran en un estado válido"
+
+#. module: account_check
+#: code:addons/account_check/models/account_payment.py:544
+#, python-format
+msgid "No es posible Cancelar. Existe uno o más Cheques Propios que no se encuentran en un estado válido (Emitido)"
+msgstr "No es posible Cancelar. Existe uno o más Cheques Propios que no se encuentran en un estado válido (Emitido)"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:745
+#, python-format
+msgid "No existe Producto asociado a este estado del cheque, por favor, cree uno nuevo"
+msgstr "No existe Producto asociado a este estado del cheque, por favor, cree uno nuevo"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:974
+#, python-format
+msgid "Not allowed, please fill it from payment"
+msgstr "No está permitido, por favor completar desde el pago"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_notes
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_notes
+msgid "Notes"
+msgstr "Notas"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:390
+#, python-format
+msgid "Nro de Cheque no puede estar en blanco"
+msgstr "El Nro. de Cheque no puede estar en blanco"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_number
+#: model:ir.model.fields,field_description:account_check.field_account_check_number
+msgid "Number"
+msgstr "Número"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_change_check_wizard_payment_date
+#: model:ir.model.fields,help:account_check.field_account_payment_check_payment_date
+msgid "Only if this check is post dated"
+msgstr "Solo si este cheque es post fechado"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_operation
+msgid "Operation"
+msgstr "Operación"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:546
+#, python-format
+msgid "Operation %s not implemented for checks!"
+msgstr "Operación %s sin implementar para Cheques!"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_ids
+msgid "Operation ids"
+msgstr "Ida Operación"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_check_operation
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+#: model:ir.ui.view,arch_db:account_check.view_account_check_operation_form
+msgid "Operations"
+msgstr "Operaciones"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Origin"
+msgstr "Origen"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_origin
+msgid "Origin Document"
+msgstr "Documento Origen"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_origin_name
+msgid "Origin name"
+msgstr "Nombre de Origen"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_original_check_id
+msgid "Original Check"
+msgstr "Cheque Original"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Own Check Accounts Configuration"
+msgstr "Configuración Cuentas Cheques Propios"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_config_settings_own_check_cancelled_account_id
+#: model:ir.model.fields,field_description:account_check.field_nl_setting_block_own_check_cancelled_account_id
+#: model:ir.model.fields,field_description:account_check.field_res_company_own_check_cancelled_account_id
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Own Check Cancelled Account"
+msgstr "Cta. Cheques Propios Cancelados"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_config_settings_own_check_cancelled_account_id
+#: model:ir.model.fields,help:account_check.field_nl_setting_block_own_check_cancelled_account_id
+#: model:ir.model.fields,help:account_check.field_res_company_own_check_cancelled_account_id
+msgid "Own Check Cancelled Account, for eg. \"Own Cancelled Checks\""
+msgstr "Cta. Cheques Propios Cancelados, por ej. \"Cheques Propios Cancelados\""
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Own Check Rejected Account"
+msgstr "Cta. Cheques Propios Rechazados"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_product_product_oc_state
+#: model:ir.model.fields,field_description:account_check.field_product_template_oc_state
+msgid "Own Check State"
+msgstr "Estado de Cheque Propio"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_config_settings_own_check_rejected_account_id
+#: model:ir.model.fields,field_description:account_check.field_nl_setting_block_own_check_rejected_account_id
+#: model:ir.model.fields,field_description:account_check.field_res_company_own_check_rejected_account_id
+msgid "Own Checks Rejected Account"
+msgstr "Cuenta Cheques Propios Rechazados"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_config_settings_own_check_rejected_account_id
+#: model:ir.model.fields,help:account_check.field_nl_setting_block_own_check_rejected_account_id
+#: model:ir.model.fields,help:account_check.field_res_company_own_check_rejected_account_id
+msgid "Own Checks Rejected Account, for eg. \"Own Rejected Checks\""
+msgstr "Cta. Cheques Propios Rechazados, por ej. \"Cheques Propios Rechazados\""
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Own Deferred Check Account"
+msgstr "Cuenta Cheques Propios Diferidos"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_owner_id
+msgid "Owner"
+msgstr "Emisor"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_owner_name
+#: model:ir.model.fields,field_description:account_check.field_account_check_owner_name
+msgid "Owner Name"
+msgstr "Nombre Emisor"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_owner_vat
+#: model:ir.model.fields,field_description:account_check.field_account_check_owner_vat
+msgid "Owner Vat"
+msgstr "Id. Trib Emisor"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_partner_id
+#: model:ir.model.fields,field_description:account_check.field_account_check_partner_id
+#: model:ir.ui.view,arch_db:account_check.view_checks_search
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_partner_id_vat
+msgid "Partner Vat"
+msgstr "Id. Trib. Empresa"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_payment_readonly_amount
+msgid "Payment Amount"
+msgstr "Monto a Pagar"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_payment_date
+#: model:ir.ui.view,arch_db:account_check.view_checks_search
+msgid "Payment Date"
+msgstr "Fecha de Pago"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_payment_date
+msgid "Payment date"
+msgstr "Fecha de Pago"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: account_check
+#: code:addons/account_check/models/account_payment.py:269
+#, python-format
+msgid "Por favor completar. "
+msgstr "Por favor completar. "
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:747
+#, python-format
+msgid "Por favor llene la cuenta de ingresos en el Item"
+msgstr "Por favor, complete la cuenta de ingresos en el Item"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_prev_state
+msgid "Prev State"
+msgstr "Estado Prev"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+msgid "Receive"
+msgstr "En Cartera"
+
+#. module: account_check
+#: model:account.payment.method,name:account_check.account_payment_method_received_third_check
+msgid "Received Third Check"
+msgstr "Cheque 3ros En Cartera"
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Reclaimed"
+msgstr "Reclamado"
+
+#. module: account_check
+#: selection:account.check,state:0
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_chart_template_rejected_check_account_id
+msgid "Rejected Check Account"
+msgstr "Cta. Cheques Rechazados"
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+msgid "Rejection"
+msgstr "Rechazo"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_chart_template_rejected_check_account_id
+msgid "Rejection Checks account, for eg. \"Rejected Checks\""
+msgstr "Cta. Cheques Rechazados, por ej. \"Cheques Rechazados\""
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Return"
+msgstr "Cancelar"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_check_return_wizard
+msgid "Return Check"
+msgstr "Cancelar Cheque"
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Returned"
+msgstr "Cancelado"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_account_revert_return_wizard
+msgid "Revert Return"
+msgstr "Revertir Cancelado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_payment.py:494
+#: code:addons/account_check/models/account_payment.py:504
+#: code:addons/account_check/models/account_payment.py:514
+#, python-format
+msgid "Same check should be used once %s"
+msgstr "El mismo cheque debería ser usado una sola vez %s"
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+msgid "Sell"
+msgstr "Vender"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_form
+msgid "Sell Rejection"
+msgstr "Vender Rechazo"
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Selled"
+msgstr "Vendido"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_sequence_id
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_state
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_state
+#: model:ir.ui.view,arch_db:account_check.view_checks_search
+msgid "State"
+msgstr "Estado"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_chart_template
+msgid "Templates for Account Chart"
+msgstr "Plantillas de plan contable"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:563
+#, python-format
+msgid "The Check must be in draft state for unlink !"
+msgstr "El Cheque debe estar en estado borrador para desvincular !"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_change_check_wizard_issue_check_subtype
+#: model:ir.model.fields,help:account_check.field_account_checkbook_issue_check_subtype
+#: model:ir.model.fields,help:account_check.field_account_payment_check_subtype
+msgid "The only difference bewteen Deferred and Currents is that when delivering a Deferred check a Payment Date is Require"
+msgstr "La única diferencia entre Diferidos y Corrientes es que emitir un Cheque Diferido, la fecha de pago es requerida"
+
+#. module: account_check
+#: selection:account.check,type:0
+msgid "Third Check"
+msgstr "Cheque de 3ros"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_product_product_tc_state
+#: model:ir.model.fields,field_description:account_check.field_product_template_tc_state
+msgid "Third Check State"
+msgstr "Estado de Cheque de 3ros"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.account_journal_dashboard_kanban_view_inherited
+msgid "Third Check(s) on hand"
+msgstr "Cheque(s) de 3ros en mano"
+
+#. module: account_check
+#: model:ir.actions.act_window,name:account_check.action_third_check
+#: model:ir.ui.menu,name:account_check.menu_third_check
+msgid "Third Checks"
+msgstr "Cheques de 3ros"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_config_settings_third_party_checks_bounced_endorsed_account_id
+#: model:ir.model.fields,field_description:account_check.field_nl_setting_block_third_party_checks_bounced_endorsed_account_id
+#: model:ir.model.fields,field_description:account_check.field_res_company_third_party_checks_bounced_endorsed_account_id
+msgid "Third Party Bounced Check Account"
+msgstr "Cta. Cheque de 3ros Rechazados"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_config_settings_third_party_checks_bounced_endorsed_account_id
+#: model:ir.model.fields,help:account_check.field_nl_setting_block_third_party_checks_bounced_endorsed_account_id
+#: model:ir.model.fields,help:account_check.field_res_company_third_party_checks_bounced_endorsed_account_id
+msgid "Third Party Bounced Check Account, for eg. \"Third Party Bounced Checks\""
+msgstr "Cta. Cheque de 3ros Rechazados, por ej. \"Cheques 3ros Rechazados\""
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_config_settings_third_party_checks_cancelled_account_id
+#: model:ir.model.fields,help:account_check.field_nl_setting_block_third_party_checks_cancelled_account_id
+#: model:ir.model.fields,help:account_check.field_res_company_third_party_checks_cancelled_account_id
+msgid "Third Party Cancelled Account, for eg. \"Third Party Cancelled Checks\""
+msgstr "Cta. Cheque de 3ros Cancelado, por ej. \"Cheques 3ros Cancelados\""
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_config_settings_third_party_checks_cancelled_account_id
+#: model:ir.model.fields,field_description:account_check.field_nl_setting_block_third_party_checks_cancelled_account_id
+#: model:ir.model.fields,field_description:account_check.field_res_company_third_party_checks_cancelled_account_id
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Third Party Cancelled Check Account"
+msgstr "Cuenta Cheques de 3ros Cancelados"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Third Party Check Accounts Configuration"
+msgstr "Configuración Cuentas Cheques de 3ros. "
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Third Party Check Bounced from Endorsed Account"
+msgstr "Cuenta Cheques de 3ros Rechazados desde Endosados"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_config_settings_holding_check_account_id
+#: model:ir.model.fields,field_description:account_check.field_nl_setting_block_holding_check_account_id
+#: model:ir.model.fields,field_description:account_check.field_res_company_holding_check_account_id
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Third Party Holding Check Account"
+msgstr "Cuenta Cheque de 3ros en Cartera"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_config_settings_holding_check_account_id
+#: model:ir.model.fields,help:account_check.field_nl_setting_block_holding_check_account_id
+#: model:ir.model.fields,help:account_check.field_res_company_holding_check_account_id
+msgid "Third Party Holding Checks account for third checks, for eg. \"Third Party Holding Checks\""
+msgstr "Cuenta Cheques de 3ros en Cartera, por ej. \"Cheques de 3ros en Cartera\""
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_config_settings_rejected_check_account_id
+#: model:ir.model.fields,field_description:account_check.field_nl_setting_block_rejected_check_account_id
+#: model:ir.model.fields,field_description:account_check.field_res_company_rejected_check_account_id
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Third Party Rejected Check Account"
+msgstr "Cuenta Cheques de 3ros Rechazados"
+
+#. module: account_check
+#: model:ir.model.fields,help:account_check.field_account_config_settings_rejected_check_account_id
+#: model:ir.model.fields,help:account_check.field_nl_setting_block_rejected_check_account_id
+#: model:ir.model.fields,help:account_check.field_res_company_rejected_check_account_id
+msgid "Third Party Rejected Check Account, for eg. \"Third Party Rejected Checks\""
+msgstr "Cuenta Cheques de 3ros Rechazados, por ej. \"Cheques de 3ros Rechazados\""
+
+#. module: account_check
+#: code:addons/account_check/models/account_payment.py:476
+#, python-format
+msgid ""
+"This operatios is not implemented for checks:\n"
+"* Payment type: %s\n"
+"* Partner type: %s\n"
+"* Payment method: %s\n"
+"* Destination journal: %s\n"
+msgstr ""
+"Esta operación no está implementada para cheques:\n"
+"* Tipo de Pago: %s\n"
+"* Tipo de Empresa: %s\n"
+"* Método de Pago: %s\n"
+"* Diario de Destino: %s\n"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_checkbook_range_to
+msgid "To Number"
+msgstr "A Número"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_payment_form_inherited
+msgid "Total"
+msgstr "Total"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_check_tree
+msgid "Total Amount"
+msgstr "Total"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_transdate_move_id
+msgid "Transdate"
+msgstr "Fecha Trans."
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_change_check_wizard_type
+#: model:ir.model.fields,field_description:account_check.field_account_check_type
+#: model:ir.model.fields,field_description:account_check.field_account_check_wizard_exp_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: account_check
+#: code:addons/account_check/models/res_company.py:78
+#, python-format
+msgid "Type %s not implemented!"
+msgstr "Tipo %s no está implementado!"
+
+#. module: account_check
+#: selection:account.checkbook,state:0
+msgid "Used"
+msgstr "Usada"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_config_settings_payment_method_validate_jr
+#: model:ir.model.fields,field_description:account_check.field_nl_setting_block_payment_method_validate_jr
+#: model:ir.model.fields,field_description:account_check.field_res_company_payment_method_validate_jr
+#: model:ir.ui.view,arch_db:account_check.view_account_config_settings
+msgid "Validate Payment Method in Journals"
+msgstr "Valor Métodos de Pago en Diarios"
+
+#. module: account_check
+#: selection:account.check.operation,operation:0
+msgid "Withdrawal"
+msgstr "Retiros"
+
+#. module: account_check
+#: selection:account.check,state:0
+msgid "Withdrawed"
+msgstr "Retirado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_checkbook.py:130
+#, python-format
+msgid "You can drop a checkbook if it has been used on checks!"
+msgstr "Ud. puede dejar la chequera si ha sido utilizada con cheques!"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:549
+#, python-format
+msgid ""
+"You can not \"%s\" a check from state \"%s\"!\n"
+"Check nbr (id): %s (%s)"
+msgstr ""
+"Ud. no puede \"%s\" un cheque desde estado \"%s\"!\n"
+"Cheque nro. (id): %s (%s)"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:474
+#, python-format
+msgid "You can not cancel operation \"%s\" if check is in \"%s\" state"
+msgstr "Ud. no puede cancelar la operación \"%s\" si los cheques están en \"%s\" estado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:78
+#, python-format
+msgid ""
+"You can not delete a check operation that has an origin.\n"
+"You can delete the origin reference and unlink after."
+msgstr ""
+"Ud. no puede borrar una operación de cheque que tiene un origen.\n"
+"Ud. puede borrar la referencia de origen y desvincular posteriormente."
+
+#. module: account_check
+#: code:addons/account_check/wizard/check_operation_wizard.py:169
+#: code:addons/account_check/wizard/check_operation_wizard.py:195
+#: code:addons/account_check/wizard/check_operation_wizard.py:224
+#, python-format
+msgid "You can't claim with Zero Amount!"
+msgstr "No se puede realizar un reclamo con Monto Cero!"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:965
+#, python-format
+msgid "You cannot duplicate checks in other state than draft"
+msgstr "Ud. no puede duplicar cheques en otro estado que no sea borrador"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_checks_search
+msgid "a la orden"
+msgstr "a la orden"
+
+#. module: account_check
+#: model:ir.model.fields,field_description:account_check.field_account_check_operation_move_id
+msgid "account move"
+msgstr "Movimiento contable"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_change_check_wizard
+msgid "account.change.check.wizard"
+msgstr "account.change.check.wizard"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_check_operation
+msgid "account.check.operation"
+msgstr "account.check.operation"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_check_wizard
+msgid "account.check.wizard"
+msgstr "account.check.wizard"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_account_config_settings
+msgid "account.config.settings"
+msgstr "account.config.settings"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:446
+#: code:addons/account_check/models/account_check.py:463
+#, python-format
+msgid "check already used in other payment %s"
+msgstr "el cheque ya fue utilizado en otros pagos %s"
+
+#. module: account_check
+#: code:addons/account_check/models/account_check.py:427
+#, python-format
+msgid "error, numero de cheque mayor a 8 digitos"
+msgstr "error, numero de cheque mayor a 8 digitos"
+
+#. module: account_check
+#: code:addons/account_check/wizard/check_operation_wizard.py:185
+#: code:addons/account_check/wizard/check_operation_wizard.py:209
+#, python-format
+msgid "not implemented yet"
+msgstr "aún no ha sido implementado"
+
+#. module: account_check
+#: model:ir.ui.view,arch_db:account_check.view_account_change_check_wizard
+#: model:ir.ui.view,arch_db:account_check.view_account_check_wizard
+msgid "or"
+msgstr "o"
+
+#. module: account_check
+#: code:addons/account_check/models/account_payment.py:196
+#, python-format
+msgid "the amount in check should be greater than 0"
+msgstr "el monto en el cheque debería ser mayor a 0"
+
+#. module: account_check
+#: code:addons/account_check/models/account_payment.py:194
+#: code:addons/account_check/models/account_payment.py:283
+#, python-format
+msgid "the check should be with the correct partner/checkbook/state"
+msgstr "el cheque debería tener la combinación correcta de empresa/chequera/estado"
+
+#. module: account_check
+#: code:addons/account_check/models/account_payment.py:199
+#, python-format
+msgid "the partner in check shouldn't be empty"
+msgstr "el campo empresa en el cheque no debería estar vacío"
+
+#. module: account_check
+#: model:ir.model,name:account_check.model_wizard_multi_charts_accounts
+msgid "wizard.multi.charts.accounts"
+msgstr "wizard.multi.charts.accounts"

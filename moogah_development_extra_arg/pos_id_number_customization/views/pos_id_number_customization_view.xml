@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Add custom js for pos_id_number_customization -->
+        <template id="pos_id_number_customization_assets" inherit_id="point_of_sale.assets">
+            <xpath expr="." position="inside">
+                <script type="text/javascript"
+                        src="/pos_id_number_customization/static/src/js/pos_id_number_customization.js"/>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

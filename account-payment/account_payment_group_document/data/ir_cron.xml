@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<odoo>
+	<record model="ir.cron" id="fill_dispaly_name_apg_cron">
+        <field name="name">Generate Display Name apg</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">months</field>
+        <field name="numbercall">1</field>
+        <field name="doall" eval="False"/>
+        <field name="model" eval="'account.payment.group'"/>
+        <field name="function" eval="'_onchange_display_name_cron'"/>
+        <field name="args" eval="'()'" />
+    </record>
+</odoo>

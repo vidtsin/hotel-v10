@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="routereport">
+        <t t-call="report.html_container">
+            <t t-call="report.external_layout">
+              <div class="page" style="font-size:14px;">
+                <div class="row">
+                     <div class="col-xs-12 mt12 mb12" >
+                        <h4>
+                            <span style="display:inline-block;line-height:10px;margin-top:20px;">Hoja de Ruta:</span>
+                            <span t-esc="date"/>
+                        </h4>
+                    </div>    
+                <div class="col-xs-6" style="text-align:left; margin-bottom:10px;">
+                    <span>Flete: </span><span t-esc="freight"/>
+                    <br></br>
+                    <span>Cant de Paquetes: </span><span t-esc="tot_pack"/>
+                    <br></br>
+                    <span>Peso Total: </span><span t-esc="tot_sw"/>
+                </div>
+
+                <div class="col-xs-12" style="margin-bottom:20px;margin-top:20px;">
+                    
+                    <br></br>
+                    <br></br>
+                      <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <t t-if="hours == True">
+                                    <th class="text-right">Hora</th>
+                                </t>
+                                <th class="text-center" colspan="2">Direccion</th>
+                                <th class="text-center">Telefono</th>
+                                <th class="text-center">Remito</th>
+                                <th class="text-center">Bultos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="o"> 
+                                <tr>
+                                    <t t-if="hours == True">
+                                        <td class="text-center"><span t-esc="hour[o.id]"/></td>
+                                    </t>
+                                    <t t-if="o.transport_company_id.id!=False">
+                                        <td class="text-center" colspan="2">
+                                            <span t-esc="o.transport_company_id.street"/>
+                                            <span t-esc="o.transport_company_id.street2"/>
+                                            <span t-esc="o.transport_company_id.city"/>
+                                            <span t-esc="o.transport_company_id.country_id.name"/>
+                                        </td>
+                                    </t>
+                                    <t t-if="o.transport_company_id.id==False">
+                                        <td class="text-center" colspan="2">
+                                            <span t-esc="o.partner_id.street"/>
+                                            <span t-esc="o.partner_id.street2"/>
+                                            <span t-esc="o.partner_id.city"/>
+                                            <span t-esc="o.partner_id.country_id.name"/>
+                                        </td>
+                                    </t>
+                                     <t t-if="o.transport_company_id.id!=False">
+                                        <td class="text-center">
+                                            <span t-esc="o.transport_company_id.phone"/>/
+                                            <span t-esc="o.transport_company_id.mobile"/>
+                                        </td>
+                                    </t>
+                                    <t t-if="o.transport_company_id.id==False">
+                                        <td class="text-center">
+                                            <span t-esc="o.partner_id.phone"/>/
+                                            <span t-esc="o.partner_id.mobile"/>
+                                        </td>
+                                    </t>
+                                    <td class="text-center">
+                                        <span t-esc="o.name"/>
+                                    </td>
+                                    <td class="text-center">
+                                        <span t-esc="o.pack_ids_quant(o)"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Notas:</td>
+                                    <td colspan="5" class="text-left">
+                                        <span t-esc="o.transport_note"/>
+                                    </td>
+                                </tr>
+                           </t>  
+                        </tbody>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+            </t>    
+        </t>
+    </template>
+
+</odoo>

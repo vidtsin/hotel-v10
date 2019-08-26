@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_journal_summary_report_wizard" model="ir.ui.view">
+        <field name="name">Journal Summary Wizard</field>
+        <field name="model">journal.summary.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="start_date" />
+                        <field name="end_date" />
+                    </group>
+                    <group>
+                        <field name="legal_no" />
+                        <field name="sort_by" />
+                    </group>
+                </group>
+                <separator colspan="4" string="Journal Entry Summary for: (section)"/>
+                <group>
+                    <group>
+                        <field name="customer_invoices" />
+                        <field name="vendor_invoices" />
+                        <field name="show_reg_number" />
+                    </group>
+                    <group>
+                        <field name="supplier_payments" />
+                        <field name="customer_receipts" />
+                    </group>
+                </group>
+                <footer>
+                    <button name="%(action_journal_summary_report)d" type="action"
+                            class="btn-primary" string="Open" />
+                    <button string="Cancel" class="btn-default" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_journal_summary_report_wizard" model="ir.actions.act_window">
+        <field name="name">Journal Summary Wizard</field>
+        <field name="res_model">journal.summary.report.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_journal_summary_report_wizard"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_action_journal_summary_report_wizard" name="Journal Summary"
+              action="action_journal_summary_report_wizard"
+              parent="detailed_general_ledger_report.account_reports_argentinean_legal_menu"/>
+</odoo>

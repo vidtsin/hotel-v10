@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vitt_partner_dupl_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-25 14:13+0000\n"
+"PO-Revision-Date: 2019-05-10 15:47-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: vitt_partner_dupl_control
+#: model:ir.model.fields,field_description:vitt_partner_dupl_control.field_account_config_settings_main_id_category_ids
+#: model:ir.model.fields,field_description:vitt_partner_dupl_control.field_nl_setting_block_main_id_category_ids
+#: model:ir.model.fields,field_description:vitt_partner_dupl_control.field_res_company_main_id_category_ids
+msgid "Categorias"
+msgstr "Tipos de Documentos"
+
+#. module: vitt_partner_dupl_control
+#: model:ir.ui.view,arch_db:vitt_partner_dupl_control.view_account_config_settings2
+msgid "Category"
+msgstr "Tipos de Documento"
+
+#. module: vitt_partner_dupl_control
+#: model:ir.model,name:vitt_partner_dupl_control.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: vitt_partner_dupl_control
+#: code:addons/vitt_partner_dupl_control/models/models.py:29
+#, python-format
+msgid "NO puede haber 2 contactos con el mismo %s"
+msgstr "Este Nro. de Documento ya existe. No está permitido ingresar más de un Contacto/Empresas con el mismo número: %s"
+
+#. module: vitt_partner_dupl_control
+#: model:ir.ui.view,arch_db:vitt_partner_dupl_control.view_account_config_settings2
+msgid "Partner Category"
+msgstr "Tipo de Documento"
+
+#. module: vitt_partner_dupl_control
+#: model:ir.model,name:vitt_partner_dupl_control.model_account_config_settings
+msgid "account.config.settings"
+msgstr "account.config.settings"
+
+#. module: vitt_partner_dupl_control
+#: model:ir.model,name:vitt_partner_dupl_control.model_res_partner_id_number
+msgid "res.partner.id_number"
+msgstr "res.partner.id_number"

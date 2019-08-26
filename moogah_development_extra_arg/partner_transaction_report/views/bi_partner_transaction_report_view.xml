@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<report
+            id="action_bi_partner_transaction_report"
+            model="partner_transaction_report.report_partner_transaction"
+            string="Partner Transaction Report"
+            report_type="qweb-pdf"
+            name="partner_transaction_report.report_partner_transaction"
+            file="partner_transaction_report.report_partner_transaction"
+        />
+	</data>
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vitt_analytic_tags_account_payment_view" model="ir.ui.view">
+        <field name="name">vitt.analytic.tags.account.payment.form</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account_payment_group.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="analytic_tag_ids" widget="many2many_tags" />
+            </field>
+<!--             <xpath expr="//group/field[@name='analytic_account_id']" position="after">
+                <field name="analytic_tag_ids" widget="many2many_tags" />
+            </xpath> -->
+        </field>
+    </record>
+</odoo>

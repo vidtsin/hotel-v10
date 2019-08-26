@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="True">
+    
+        <record id="f_position_ar_01" model="account.fiscal.position">
+            <field name="name">Operaciones Exentas</field>
+            <field name="afip_code">E</field>
+            <field name="tax_ids"
+            	   eval="[(6, 0, 0), (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_27'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_21'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_105'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_5'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_27'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_21'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_105'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_5'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_E')})]"/>
+        </record>
+
+        <record id="f_position_ar_02" model="account.fiscal.position">
+            <field name="name">No Gravado</field>
+            <field name="afip_code">N</field>
+            <field name="tax_ids"
+            	   eval="[(6, 0, 0), (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_27'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_NG')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_21'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_NG')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_105'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_NG')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_5'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_NG')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_27'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_NG')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_21'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_NG')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_105'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_NG')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_5'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_NG')})]"/>
+        </record>
+
+        <record id="f_position_ar_03" model="account.fiscal.position">
+            <field name="name">Exportaciones a la zona franca</field>
+            <field name="afip_code">Z</field>
+        </record>
+
+        <record id="f_position_ar_04" model="account.fiscal.position">
+            <field name="name">Operaciones con Canje</field>
+            <field name="afip_code">C</field>
+        </record>
+
+        <record id="f_position_ar_05" model="account.fiscal.position">
+            <field name="name">Exportaciones al Exterior</field>
+            <field name="afip_code">X</field>
+            <field name="afip_responsability_type_ids" eval="[(6,0,[ref('l10n_ar_account.res_EXT'), ref('l10n_ar_account.res_CLI_EXT')])]"/>
+            <field name="tax_ids"
+            	   eval="[(6, 0, 0), (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_27'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_21'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_105'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_5'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_NG'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_E'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_27'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_21'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_105'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_5'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_25'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_NG'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_0')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.V_E'), 'tax_dest_id': ref('l10n_ar_moogah_chart.V_0')})]"/>
+        </record>
+
+        <record id="f_position_ar_06" model="account.fiscal.position">
+            <field name="name">Monotributo</field>
+            <field name="afip_responsability_type_ids" eval="[(6,0,[ref('l10n_ar_account.res_RM')])]"/>
+            <field name="tax_ids"
+            	   eval="[(6, 0, 0), (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_27'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_mt')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_21'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_mt')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_105'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_mt')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_5'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_mt')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_25'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_mt')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_0'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_mt')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_E'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_mt')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_NG'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_mt')})]"/>
+        </record>
+
+        <record id="f_position_ar_07" model="account.fiscal.position">
+            <field name="name">Sujeto Exento</field>
+            <field name="afip_responsability_type_ids" eval="[(6,0,[ref('l10n_ar_account.res_IVAE')])]"/>
+            <field name="tax_ids"
+            	   eval="[(6, 0, 0), (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_27'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_21'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_105'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_5'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_25'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_0'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_E'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_NG'), 'tax_dest_id': ref('l10n_ar_moogah_chart.C_E')})]"/>
+        </record>
+
+        <record id="f_position_ar_08" model="account.fiscal.position">
+            <field name="name">Consumidor Final</field>
+            <field name="afip_responsability_type_ids" eval="[(6,0,[ref('l10n_ar_account.res_CF')])]"/>
+            <field name="tax_ids"
+            	   eval="[(6, 0, 0), (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_27'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_cf')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_21'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_cf')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_105'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_cf')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_5'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_cf')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_25'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_cf')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_0'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_cf')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_E'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_cf')}),
+            	   (0, 0, {'tax_src_id': ref('l10n_ar_moogah_chart.C_NG'), 'tax_dest_id': ref('l10n_ar_moogah_chart.c_cf')})]"/>
+        </record>
+	</data>
+</odoo>
